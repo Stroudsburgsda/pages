@@ -1,126 +1,223 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="sda-urgent-wrapper" style="background-color: #000000 !important; color: #e2e8f0 !important; padding: 20px 10px; font-family: 'Inter', sans-serif !important;">
+<div class="sda-full-page" style="background-color: #000000 !important; color: #e2e8f0 !important; padding: 20px 10px; font-family: 'Inter', sans-serif !important; line-height: 1.6;">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        .sda-urgent-wrapper .frame-section {
-            background: rgba(30, 41, 59, 0.6) !important;
+        .sda-full-page .frame-section {
+            background: rgba(30, 41, 59, 0.4) !important;
             border: 2px solid #1e3a8a !important;
-            padding: 15px; /* Reduced for mobile */
-            margin-bottom: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
             border-radius: 4px;
             position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
         @media (min-width: 768px) {
-            .sda-urgent-wrapper .frame-section { padding: 25px; }
-            .sda-urgent-wrapper { padding: 40px 20px; }
+            .sda-full-page .frame-section { padding: 35px; }
+            .sda-full-page { padding: 60px 20px; }
         }
-        .sda-urgent-wrapper .frame-section::before {
-            content: ''; position: absolute; top: -2px; left: -2px; width: 15px; height: 15px;
+        .sda-full-page .frame-section::before {
+            content: ''; position: absolute; top: -2px; left: -2px; width: 25px; height: 25px;
             border-top: 4px solid #3b82f6; border-left: 4px solid #3b82f6;
         }
-        .sda-urgent-wrapper .zoom-btn {
-            background: #1e293b !important;
+        .sda-full-page .frame-section::after {
+            content: ''; position: absolute; bottom: -2px; right: -2px; width: 25px; height: 25px;
+            border-bottom: 4px solid #3b82f6; border-right: 4px solid #3b82f6;
+        }
+        .sda-full-page .zoom-btn {
+            background: linear-gradient(145deg, #1e293b, #0f172a) !important;
             border: 1px solid #334155 !important;
             display: flex;
             align-items: center;
-            padding: 14px;
-            border-radius: 8px;
+            padding: 16px;
+            border-radius: 12px;
             text-decoration: none !important;
             color: #e2e8f0 !important;
-            width: 100%; /* Full width on mobile stacks */
+            transition: all 0.3s ease;
         }
-        .sda-urgent-wrapper .flyer-img {
+        .sda-full-page .zoom-btn:hover {
+            border-color: #3b82f6 !important;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+        }
+        .conference-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .flyer-img {
             width: 100%;
             height: auto !important;
             border-radius: 8px;
             border: 1px solid #334155;
-            margin-bottom: 15px;
+            transition: transform 0.3s ease;
         }
-        /* Mobile-friendly touch targets */
-        .sda-urgent-wrapper a { min-height: 44px; }
+        .flyer-img:hover { transform: scale(1.03); border-color: #3b82f6; }
+        .accent-text { color: #60a5fa !important; font-weight: 700; }
     </style>
 
-    <div style="max-width: 800px; margin: 0 auto;">
+    <div style="max-width: 900px; margin: 0 auto;">
         
-        <div style="text-align: center; border-bottom: 3px solid #3b82f6; margin-bottom: 30px; padding-bottom: 20px;">
-            <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="Stroudsburg SDA Logo" style="height: clamp(80px, 15vw, 120px); margin: 0 auto 15px; display: block;">
-            <h1 style="font-size: clamp(1.5rem, 5vw, 2.25rem); font-weight: 800; color: #60a5fa !important; text-transform: uppercase; letter-spacing: 0.1em; margin: 0;">Announcements</h1>
-            <p style="color: #94a3b8 !important; font-family: monospace; margin-top: 5px; font-size: 0.85rem;">SABBATH, MARCH 7, 2026</p>
+        <div style="text-align: center; margin-bottom: 50px;">
+            <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="Stroudsburg SDA Logo" style="height: 140px; margin: 0 auto 20px; display: block;">
+            <h1 style="font-size: clamp(1.75rem, 6vw, 3rem); font-weight: 900; color: #fff !important; text-transform: uppercase; letter-spacing: 0.2em; line-height: 1.1;">Weekly Worship & <span class="accent-text">Announcements</span></h1>
+            <p style="color: #94a3b8 !important; font-family: monospace; margin-top: 15px; font-size: 1rem; letter-spacing: 2px;">SABBATH, MARCH 7, 2026</p>
+            <div style="max-width: 600px; margin: 25px auto 0; font-size: 1.1rem; color: #cbd5e1; font-style: italic;">
+                "Welcome to our church family. We are a community dedicated to growing in grace and sharing the love of Christ in Stroudsburg and beyond."
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
             <a href="https://us02web.zoom.us/j/797422531" class="zoom-btn">
-                <i class="fas fa-video text-blue-400 mr-3 text-xl"></i>
-                <span class="text-sm font-bold">ZOOM SERVICE</span>
+                <i class="fas fa-video text-blue-400 mr-4 text-2xl"></i>
+                <div>
+                    <span class="block font-black text-white">LIVE ON ZOOM</span>
+                    <span class="text-xs text-slate-400">Join the Sabbath Service</span>
+                </div>
             </a>
             <a href="https://www.youtube.com/@StroudsburgSDAChurch" class="zoom-btn">
-                <i class="fab fa-youtube text-red-500 mr-3 text-xl"></i>
-                <span class="text-sm font-bold">YOUTUBE LIVE</span>
+                <i class="fab fa-youtube text-red-500 mr-4 text-2xl"></i>
+                <div>
+                    <span class="block font-black text-white">YOUTUBE LIVE</span>
+                    <span class="text-xs text-slate-400">Watch the Stream</span>
+                </div>
             </a>
             <a href="https://www.stroudsburgsda.org/giving" class="zoom-btn">
-                <i class="fas fa-heart text-emerald-400 mr-3 text-xl"></i>
-                <span class="text-sm font-bold">GIVING</span>
+                <i class="fas fa-hand-holding-heart text-emerald-400 mr-4 text-2xl"></i>
+                <div>
+                    <span class="block font-black text-white">ONLINE GIVING</span>
+                    <span class="text-xs text-slate-400">Tithes & Offerings</span>
+                </div>
             </a>
         </div>
 
         <div class="frame-section">
-            <h2 style="color: #fbbf24 !important; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; font-size: 1.25rem;">Today</h2>
+            <h2 style="color: #fbbf24 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">
+                <i class="fas fa-church mr-3"></i> Today at Stroudsburg
+            </h2>
             
-            <div style="background: rgba(59, 130, 246, 0.2); border-left: 4px solid #3b82f6; padding: 15px; margin-bottom: 20px;">
-                <p style="font-weight: 700; color: #fff !important; margin-bottom: 5px; font-size: 1rem;">BUSINESS MEETING TONIGHT</p>
-                <p style="font-size: 0.9rem; margin: 0; line-height: 1.5;">Our first business meeting of 2026 begins at <strong>6:30 PM</strong>. All members are encouraged to attend.</p>
+            <div style="background: rgba(30, 64, 175, 0.3); border-left: 5px solid #3b82f6; padding: 25px; margin-bottom: 30px; border-radius: 0 8px 8px 0;">
+                <h3 style="color: #fff !important; font-weight: 800; margin-bottom: 10px; font-size: 1.25rem;">CONGREGATIONAL BUSINESS MEETING</h3>
+                <p style="font-size: 1.05rem; margin-bottom: 0;">Our first and most vital business meeting of 2026 convenes this evening at <span class="accent-text">6:30 PM</span>. We strongly encourage all members to attend as we discuss the mission and vision for the coming year.</p>
             </div>
 
-            <ul style="list-style: none; padding: 0; font-size: 0.95rem;">
-                <li style="margin-bottom: 12px; display: flex; align-items: start;"><i class="fas fa-clock text-blue-400 mr-3 mt-1"></i> <span><strong>3:00 PM – 4:30 PM:</strong> Bible Class (On Zoom)</span></li>
-                <li style="margin-bottom: 12px; display: flex; align-items: start;"><i class="fas fa-sun text-amber-400 mr-3 mt-1"></i> <span><strong>4:30 PM:</strong> AYS Program</span></li>
-            </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="accent-text uppercase text-sm mb-4 tracking-widest">Sabbath Afternoon</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 20px; display: flex; align-items: start;">
+                            <i class="fas fa-book-open text-blue-400 mr-4 mt-1"></i>
+                            <div>
+                                <strong style="display: block; color: #fff;">Bible Class</strong>
+                                <span class="text-sm text-slate-400">3:00 PM – 4:30 PM (On Zoom)</span>
+                                <p class="text-sm mt-1">An interactive study for those seeking deeper spiritual insights.</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: start;">
+                            <i class="fas fa-users text-amber-400 mr-4 mt-1"></i>
+                            <div>
+                                <strong style="display: block; color: #fff;">AYS Program</strong>
+                                <span class="text-sm text-slate-400">Starts at 4:30 PM</span>
+                                <p class="text-sm mt-1">Youth and young adult-led worship and discussion.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; border: 1px dashed rgba(59, 130, 246, 0.3);">
+                    <h4 class="text-white font-bold mb-3">Next Week: Communion</h4>
+                    <p class="text-sm text-slate-300">Sabbath, March 14, will be our Communion Service. Please begin a time of prayer and self-reflection as we prepare for this sacred ordinance together.</p>
+                </div>
+            </div>
         </div>
 
         <div class="frame-section">
-            <h2 style="color: #60a5fa !important; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; font-size: 1.25rem;">This Week</h2>
-            <p style="font-size: 0.9rem; margin-bottom: 15px; line-height: 1.5;"><strong>Communion Service (Next Sabbath, Mar 14):</strong> Let’s begin preparing our hearts and minds.</p>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 6px;">
-                    <p style="font-size: 0.85rem; margin-bottom: 5px; color: #60a5fa !important; font-weight: bold;">PRAYER & VESPER</p>
-                    <p style="font-size: 0.8rem; margin-bottom: 10px;">Wed/Fri at 7:15 PM</p>
-                    <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" style="font-size: 0.8rem; color: #60a5fa !important; text-decoration: underline; font-weight: 600;">Open Zoom Link</a>
+            <h2 style="color: #60a5fa !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
+                <i class="fas fa-heartbeat mr-3"></i> Spiritual Connection Points
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div style="background: #0f172a; padding: 25px; border-radius: 12px; border: 1px solid #1e293b;">
+                    <i class="fas fa-pray text-blue-400 text-3xl mb-4"></i>
+                    <h3 class="text-white font-black text-lg mb-2">MID-WEEK REFRESH</h3>
+                    <p class="text-sm text-slate-400 mb-4">Wednesday Prayer Meeting and Friday Vesper continue at <strong>7:15 PM</strong> via Zoom.</p>
+                    <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" class="accent-text text-sm hover:underline">ACCESS ZOOM ROOM &rarr;</a>
                 </div>
-                <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 6px;">
-                    <p style="font-size: 0.85rem; margin-bottom: 5px; color: #34d399 !important; font-weight: bold;">CLOSER WALK</p>
-                    <p style="font-size: 0.8rem; margin-bottom: 10px;">Mon/Thu at 8:00 PM</p>
-                    <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" style="font-size: 0.8rem; color: #34d399 !important; text-decoration: underline; font-weight: 600;">Open Zoom Link</a>
+                <div style="background: #0f172a; padding: 25px; border-radius: 12px; border: 1px solid #1e293b;">
+                    <i class="fas fa-phone-alt text-emerald-400 text-3xl mb-4"></i>
+                    <h3 class="text-white font-black text-lg mb-2">CLOSER WALK LINE</h3>
+                    <p class="text-sm text-slate-400 mb-4">Join our dedicated prayer line every Monday and Thursday evening from <strong>8:00 PM – 8:30 PM</strong>.</p>
+                    <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" class="accent-text text-sm hover:underline">JOIN THE PRAYER LINE &rarr;</a>
                 </div>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-            <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2026/02/Stock-the-kitchen.png" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/02/Stock-the-kitchen.png" class="flyer-img" alt="Pantry Stock-Up"></a>
-            <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy.jpg" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy.jpg" class="flyer-img" alt="Bible Study"></a>
-            <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy2.jpg" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy2.jpg" class="flyer-img" alt="Study Guide"></a>
+        <div class="frame-section" style="border-color: #10b981 !important;">
+            <h2 style="color: #10b981 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
+                <i class="fas fa-map-marked-alt mr-3"></i> Pennsylvania Conference
+            </h2>
+            <div class="space-y-4">
+                
+                <div class="conference-card">
+                    <h4 class="font-bold text-white mb-1">2028 Devotional Book Submissions</h4>
+                    <p class="text-sm">Share how God is moving in your life! Submissions are open for the next Conference devotional. Deadline is June 30, 2026. <a href="https://paconference.org/devotional-book" class="accent-text">Details & Submission Portal</a></p>
+                </div>
+
+                <div class="conference-card">
+                    <h4 class="font-bold text-white mb-1">Moms & Middle School Girls (Mar 15)</h4>
+                    <p class="text-sm">Fun and conversation for girls 12-16 and their moms from 1:00 – 4:00 PM at Kenhorst Blvd SDA Church. <a href="https://paconference.org/events" class="accent-text">Register at PA Conference Events</a></p>
+                </div>
+
+                <div class="conference-card">
+                    <h4 class="font-bold text-white mb-1">Spring Women’s Retreat (Apr 10-12)</h4>
+                    <p class="text-sm">A space to rest, laugh, and be refreshed at Blue Mountain Academy. Sabbath-only and full-weekend options available. <a href="https://paconference.org/events" class="accent-text">Learn More & Register</a></p>
+                </div>
+
+                <div class="conference-card">
+                    <h4 class="font-bold text-white mb-1">PA Camp Meeting 2026 (June 12-20)</h4>
+                    <p class="text-sm">"Joyful Living: Now and Forever." Featuring Randy Skeete, Mark Finley, and Neil Nedley. Powerful youth/children's programs planned. <a href="https://paconference.org/camp-meeting" class="accent-text">Lodging & Meal Tickets</a></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mb-16">
+            <h2 style="text-align: center; color: #94a3b8; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 30px;">Featured Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2026/02/Stock-the-kitchen.png" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/02/Stock-the-kitchen.png" class="flyer-img" alt="Pantry"></a>
+                <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy.jpg" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy.jpg" class="flyer-img" alt="Study"></a>
+                <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy2.jpg" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy2.jpg" class="flyer-img" alt="Study 2"></a>
+            </div>
         </div>
 
         <div class="frame-section">
-            <h2 style="color: #34d399 !important; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; font-size: 1.25rem;">Upcoming Events</h2>
-            <div style="font-size: 0.95rem; line-height: 1.6;">
-                <p style="margin-bottom: 12px;"><strong>Apr 24-26:</strong> Women's Ministry "Denim and Pearls" Retreat.</p>
-                <p style="margin-bottom: 12px;"><strong>PACS Field Trip:</strong> Sight and Sound trip still has seats. See Sis. Jean-Marie Williams or Dr. Sylvia Ephraim.</p>
-                <p><strong>Pantry Stock-Up:</strong> Help us keep our kitchen ready with nonperishable staples.</p>
+            <h2 style="color: #34d399 !important; font-size: 1.5rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
+                <i class="fas fa-info-circle mr-3"></i> Local Ministry Information
+            </h2>
+            <div class="space-y-6 text-sm">
+                <div style="border-bottom: 1px solid #1e293b; padding-bottom: 15px;">
+                    <p><strong class="text-white">PACS Field Trip to Sight and Sound:</strong> A few seats remain! If you are interested in this day trip, please contact <span class="accent-text">Sis. Jean-Marie Williams</span> or <span class="accent-text">Dr. Sylvia Ephraim</span>.</p>
+                </div>
+                <div style="border-bottom: 1px solid #1e293b; padding-bottom: 15px;">
+                    <p><strong class="text-white">Kitchen/Pantry Stock-Up:</strong> Help us keep our pantry ready for fellowship meals. We are seeking nonperishable staples. Please refer to the full list shared via the weekly text message.</p>
+                </div>
+                <div>
+                    <p><strong class="text-white">Women's Ministry:</strong> Save the date for the <strong>Denim and Pearls Retreat</strong> happening April 24-26, 2026.</p>
+                </div>
             </div>
         </div>
 
-        <div style="text-align: center; border-top: 1px solid #334155; padding-top: 30px; padding-bottom: 20px;">
-            <div style="font-size: 1.75rem; margin-bottom: 15px;">
-                <a href="https://www.facebook.com/StroudsburgSDA" style="color: #94a3b8; margin: 0 20px;"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/stroudsburg_sda" style="color: #94a3b8; margin: 0 20px;"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@StroudsburgSDAChurch" style="color: #94a3b8; margin: 0 20px;"><i class="fab fa-youtube"></i></a>
+        <div style="text-align: center; border-top: 1px solid #1e293b; padding-top: 40px; margin-top: 60px;">
+            <div style="font-size: 1.75rem; margin-bottom: 20px;">
+                <a href="https://www.facebook.com/StroudsburgSDA" style="color: #475569; margin: 0 20px; transition: color 0.3s;" class="hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/stroudsburg_sda" style="color: #475569; margin: 0 20px; transition: color 0.3s;" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@StroudsburgSDAChurch" style="color: #475569; margin: 0 20px; transition: color 0.3s;" class="hover:text-red-600"><i class="fab fa-youtube"></i></a>
             </div>
-            <p style="font-size: 0.75rem; color: #64748b; letter-spacing: 2px; text-transform: uppercase;">Stroudsburg SDA Church</p>
+            <p style="font-size: 0.8rem; color: #64748b; letter-spacing: 3px; text-transform: uppercase;">Stroudsburg Seventh-day Adventist Church</p>
+            <p style="font-size: 0.7rem; color: #475569; margin-top: 10px;">&copy; 2026 Stroudsburg SDA Church. All rights reserved.</p>
         </div>
     </div>
 </div>
