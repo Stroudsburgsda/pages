@@ -45,31 +45,27 @@
         }
         .conference-card {
             background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.2);
             padding: 20px;
             border-radius: 8px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
-        .flyer-img {
-            width: 100%;
-            height: auto !important;
-            border-radius: 8px;
-            border: 1px solid #334155;
-            transition: transform 0.3s ease;
-        }
+        .pantry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
+        .pantry-category { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 6px; border: 1px solid rgba(52, 211, 153, 0.2); }
+        .pantry-category h5 { color: #34d399 !important; font-weight: bold; font-size: 0.85rem; margin-bottom: 8px; text-transform: uppercase; border-bottom: 1px solid rgba(52, 211, 153, 0.3); padding-bottom: 4px; }
+        .pantry-list { font-size: 0.8rem; list-style: disc; padding-left: 15px; color: #cbd5e1; }
+        .flyer-img { width: 100%; height: auto !important; border-radius: 8px; border: 1px solid #334155; transition: transform 0.3s ease; }
         .flyer-img:hover { transform: scale(1.03); border-color: #3b82f6; }
         .accent-text { color: #60a5fa !important; font-weight: 700; }
+        .location-badge { background: #1e3a8a; color: #bfdbfe; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
     </style>
 
     <div style="max-width: 900px; margin: 0 auto;">
         
         <div style="text-align: center; margin-bottom: 50px;">
             <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="Stroudsburg SDA Logo" style="height: 140px; margin: 0 auto 20px; display: block;">
-            <h1 style="font-size: clamp(1.75rem, 6vw, 3rem); font-weight: 900; color: #fff !important; text-transform: uppercase; letter-spacing: 0.2em; line-height: 1.1;">Weekly Worship & <span class="accent-text">Announcements</span></h1>
+            <h1 style="font-size: clamp(1.75rem, 6vw, 3rem); font-weight: 900; color: #fff !important; text-transform: uppercase; letter-spacing: 0.2em; line-height: 1.1;">Stroudsburg <span class="accent-text">Announcements</span></h1>
             <p style="color: #94a3b8 !important; font-family: monospace; margin-top: 15px; font-size: 1rem; letter-spacing: 2px;">SABBATH, MARCH 7, 2026</p>
-            <div style="max-width: 600px; margin: 25px auto 0; font-size: 1.1rem; color: #cbd5e1; font-style: italic;">
-                "Welcome to our church family. We are a community dedicated to growing in grace and sharing the love of Christ in Stroudsburg and beyond."
-            </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
@@ -102,35 +98,107 @@
             </h2>
             
             <div style="background: rgba(30, 64, 175, 0.3); border-left: 5px solid #3b82f6; padding: 25px; margin-bottom: 30px; border-radius: 0 8px 8px 0;">
-                <h3 style="color: #fff !important; font-weight: 800; margin-bottom: 10px; font-size: 1.25rem;">CONGREGATIONAL BUSINESS MEETING</h3>
-                <p style="font-size: 1.05rem; margin-bottom: 0;">Our first and most vital business meeting of 2026 convenes this evening at <span class="accent-text">6:30 PM</span>. We strongly encourage all members to attend as we discuss the mission and vision for the coming year.</p>
+                <h3 style="color: #fff !important; font-weight: 800; margin-bottom: 10px; font-size: 1.25rem;">BUSINESS MEETING TONIGHT</h3>
+                <p style="font-size: 1.05rem; margin-bottom: 0;">Our first and important business meeting of 2026 is at <span class="accent-text">6:30 PM</span>. All members are encouraged to attend this vital session for updates and planning.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <h4 class="accent-text uppercase text-sm mb-4 tracking-widest">Sabbath Afternoon</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 20px; display: flex; align-items: start;">
-                            <i class="fas fa-book-open text-blue-400 mr-4 mt-1"></i>
+                            <i class="fas fa-book-reader text-blue-400 mr-4 mt-1 text-lg"></i>
                             <div>
-                                <strong style="display: block; color: #fff;">Bible Class</strong>
-                                <span class="text-sm text-slate-400">3:00 PM – 4:30 PM (On Zoom)</span>
-                                <p class="text-sm mt-1">An interactive study for those seeking deeper spiritual insights.</p>
+                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+                                    <strong style="color: #fff;">Bible Class</strong>
+                                    <span class="location-badge">In-Person</span>
+                                </div>
+                                <span class="text-sm text-slate-400">3:00 PM – 4:30 PM</span>
+                                <p class="text-sm mt-1 text-slate-300">Join us in the sanctuary for an interactive and deep dive into the Word.</p>
                             </div>
                         </li>
                         <li style="display: flex; align-items: start;">
-                            <i class="fas fa-users text-amber-400 mr-4 mt-1"></i>
+                            <i class="fas fa-users text-amber-400 mr-4 mt-1 text-lg"></i>
                             <div>
-                                <strong style="display: block; color: #fff;">AYS Program</strong>
+                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+                                    <strong style="color: #fff;">AYS Program</strong>
+                                    <span class="location-badge">In-Person</span>
+                                </div>
                                 <span class="text-sm text-slate-400">Starts at 4:30 PM</span>
-                                <p class="text-sm mt-1">Youth and young adult-led worship and discussion.</p>
+                                <p class="text-sm mt-1 text-slate-300">A dynamic worship and community program led by our youth and young adults.</p>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; border: 1px dashed rgba(59, 130, 246, 0.3);">
-                    <h4 class="text-white font-bold mb-3">Next Week: Communion</h4>
-                    <p class="text-sm text-slate-300">Sabbath, March 14, will be our Communion Service. Please begin a time of prayer and self-reflection as we prepare for this sacred ordinance together.</p>
+                <div style="background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 12px; border: 1px dashed rgba(59, 130, 246, 0.4);">
+                    <h4 class="text-white font-bold text-lg mb-2 uppercase tracking-tight">Next Sabbath: Communion</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">Sabbath, <strong>March 14</strong>, will be our Communion Service. Let’s begin preparing our hearts and minds for this special service of renewal.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="frame-section">
+            <h2 style="color: #34d399 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
+                <i class="fas fa-info-circle mr-3"></i> Local Ministry Information
+            </h2>
+            <div class="space-y-10 text-sm leading-relaxed">
+                
+                <div>
+                    <h4 class="text-white font-bold mb-2 uppercase tracking-wide">Church Kitchen Pantry Stock-Up</h4>
+                    <p class="text-slate-300 mb-4">We are currently restocking our pantry to provide nourishing Sabbath meals for our community. Please consider purchasing the following <span class="accent-text">non-perishable</span> items:</p>
+                    
+                    <div class="pantry-grid">
+                        <div class="pantry-category">
+                            <h5>Food Staples</h5>
+                            <ul class="pantry-list">
+                                <li>Rice (white or brown)</li>
+                                <li>Pasta & Flour</li>
+                                <li>Dry or Canned Beans</li>
+                                <li>Lentils & Chick Peas</li>
+                                <li>Red Beans & Cooking Oil</li>
+                                <li>Brown Sugar</li>
+                            </ul>
+                        </div>
+                        <div class="pantry-category">
+                            <h5>Seasonings & Baking</h5>
+                            <ul class="pantry-list">
+                                <li>Salt & Pepper</li>
+                                <li>Garlic & Onion Powder</li>
+                                <li>Paprika / Italian Seasoning</li>
+                                <li>Cinnamon</li>
+                                <li>Baking Powder/Soda</li>
+                                <li>Vegetable Bouillon</li>
+                            </ul>
+                        </div>
+                        <div class="pantry-category">
+                            <h5>Canned & Jarred</h5>
+                            <ul class="pantry-list">
+                                <li>Canned Vegetables & Fruit</li>
+                                <li>Canned Tomatoes (Diced/Sauce)</li>
+                                <li>Broths</li>
+                                <li>Jelly or Jam</li>
+                            </ul>
+                        </div>
+                        <div class="pantry-category">
+                            <h5>Breakfast & Paper</h5>
+                            <ul class="pantry-list">
+                                <li>Ginger & Tea Bags</li>
+                                <li>Hot Cocoa Mix</li>
+                                <li>Stable Creamer & Juice Mix</li>
+                                <li>Ziplock Bags</li>
+                                <li>Foil & Plastic Wrap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border-top: 1px solid #1e293b; padding-top: 20px;">
+                    <h4 class="text-white font-bold mb-2 uppercase tracking-wide">PACS Field Trip: Sight and Sound</h4>
+                    <p class="text-slate-300 mb-3">A few seats are still available for our upcoming trip! If you are interested in experiencing this production, please see <strong>Sis. Jean-Marie Williams</strong> or <strong>Dr. Sylvia Ephraim</strong> today.</p>
+                </div>
+
+                <div style="border-top: 1px solid #1e293b; padding-top: 20px;">
+                    <h4 class="text-white font-bold mb-2 uppercase tracking-wide">Women's Ministry: Denim & Pearls</h4>
+                    <p class="text-slate-300">Save the Date! Our local Denim and Pearls retreat is scheduled for <strong>April 24-26, 2026</strong>. Stay tuned for registration details.</p>
                 </div>
             </div>
         </div>
@@ -142,70 +210,57 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div style="background: #0f172a; padding: 25px; border-radius: 12px; border: 1px solid #1e293b;">
                     <i class="fas fa-pray text-blue-400 text-3xl mb-4"></i>
-                    <h3 class="text-white font-black text-lg mb-2">MID-WEEK REFRESH</h3>
+                    <h3 class="text-white font-black text-lg mb-2 uppercase">MID-WEEK REFRESH</h3>
                     <p class="text-sm text-slate-400 mb-4">Wednesday Prayer Meeting and Friday Vesper continue at <strong>7:15 PM</strong> via Zoom.</p>
-                    <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" class="accent-text text-sm hover:underline">ACCESS ZOOM ROOM &rarr;</a>
+                    <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" class="accent-text text-sm hover:underline font-bold">ACCESS ZOOM ROOM &rarr;</a>
                 </div>
                 <div style="background: #0f172a; padding: 25px; border-radius: 12px; border: 1px solid #1e293b;">
                     <i class="fas fa-phone-alt text-emerald-400 text-3xl mb-4"></i>
-                    <h3 class="text-white font-black text-lg mb-2">CLOSER WALK LINE</h3>
-                    <p class="text-sm text-slate-400 mb-4">Join our dedicated prayer line every Monday and Thursday evening from <strong>8:00 PM – 8:30 PM</strong>.</p>
-                    <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" class="accent-text text-sm hover:underline">JOIN THE PRAYER LINE &rarr;</a>
+                    <h3 class="text-white font-black text-lg mb-2 uppercase">CLOSER WALK LINE</h3>
+                    <p class="text-sm text-slate-400 mb-4">Join our dedicated prayer line every Monday and Thursday from <strong>8:00 PM – 8:30 PM</strong>.</p>
+                    <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" class="accent-text text-sm hover:underline font-bold">JOIN THE PRAYER LINE &rarr;</a>
                 </div>
             </div>
         </div>
 
         <div class="frame-section" style="border-color: #10b981 !important;">
             <h2 style="color: #10b981 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
-                <i class="fas fa-map-marked-alt mr-3"></i> Pennsylvania Conference
+                <i class="fas fa-map-marked-alt mr-3"></i> Pennsylvania Conference Highlights
             </h2>
             <div class="space-y-4">
-                
                 <div class="conference-card">
-                    <h4 class="font-bold text-white mb-1">2028 Devotional Book Submissions</h4>
-                    <p class="text-sm">Share how God is moving in your life! Submissions are open for the next Conference devotional. Deadline is June 30, 2026. <a href="https://paconference.org/devotional-book" class="accent-text">Details & Submission Portal</a></p>
+                    <h4 class="font-bold text-white mb-2 uppercase text-sm tracking-wide">Devotional Book 2028: Call for Authors</h4>
+                    <p class="text-sm text-slate-300">Long to encourage others? share how God is moving in your life for the upcoming 2028 devotional. Submission deadline: June 30, 2026. <a href="https://paconference.org/devotional-book" class="accent-text" target="_blank">Learn More & Submit</a></p>
                 </div>
-
                 <div class="conference-card">
-                    <h4 class="font-bold text-white mb-1">Moms & Middle School Girls (Mar 15)</h4>
-                    <p class="text-sm">Fun and conversation for girls 12-16 and their moms from 1:00 – 4:00 PM at Kenhorst Blvd SDA Church. <a href="https://paconference.org/events" class="accent-text">Register at PA Conference Events</a></p>
+                    <h4 class="font-bold text-white mb-2 uppercase text-sm tracking-wide">Moms & Middle School Girls (Reading, Mar 15)</h4>
+                    <p class="text-sm text-slate-300">Conversation and encouragement for girls ages 12-16 and their moms at Kenhorst Blvd SDA Church. <a href="https://paconference.org/events" class="accent-text" target="_blank">Register Now</a></p>
                 </div>
-
                 <div class="conference-card">
-                    <h4 class="font-bold text-white mb-1">Spring Women’s Retreat (Apr 10-12)</h4>
-                    <p class="text-sm">A space to rest, laugh, and be refreshed at Blue Mountain Academy. Sabbath-only and full-weekend options available. <a href="https://paconference.org/events" class="accent-text">Learn More & Register</a></p>
+                    <h4 class="font-bold text-white mb-2 uppercase text-sm tracking-wide">Spring Women’s Retreat (Apr 10-12)</h4>
+                    <p class="text-sm text-slate-300">Space to rest, laugh, and be spiritually refreshed at Blue Mountain Academy. Sabbath-only and full-weekend options available. <a href="https://paconference.org/events" class="accent-text" target="_blank">Register Today</a></p>
                 </div>
-
                 <div class="conference-card">
-                    <h4 class="font-bold text-white mb-1">PA Camp Meeting 2026 (June 12-20)</h4>
-                    <p class="text-sm">"Joyful Living: Now and Forever." Featuring Randy Skeete, Mark Finley, and Neil Nedley. Powerful youth/children's programs planned. <a href="https://paconference.org/camp-meeting" class="accent-text">Lodging & Meal Tickets</a></p>
+                    <h4 class="font-bold text-white mb-2 uppercase text-sm tracking-wide">PA Camp Meeting 2026 (June 12-20)</h4>
+                    <p class="text-sm text-slate-300">"Joyful Living: Now and Forever" at Blue Mountain Academy. A week of worship and practical health seminars for all ages. <a href="https://paconference.org/camp-meeting" class="accent-text" target="_blank">Lodging & Meal Tickets</a></p>
                 </div>
-
             </div>
         </div>
 
         <div class="mb-16">
-            <h2 style="text-align: center; color: #94a3b8; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 30px;">Featured Resources</h2>
+            <h2 style="text-align: center; color: #94a3b8; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 30px;">Local Resources & Flyers</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2026/02/Stock-the-kitchen.png" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/02/Stock-the-kitchen.png" class="flyer-img" alt="Pantry"></a>
-                <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy.jpg" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy.jpg" class="flyer-img" alt="Study"></a>
-                <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy2.jpg" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy2.jpg" class="flyer-img" alt="Study 2"></a>
-            </div>
-        </div>
-
-        <div class="frame-section">
-            <h2 style="color: #34d399 !important; font-size: 1.5rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
-                <i class="fas fa-info-circle mr-3"></i> Local Ministry Information
-            </h2>
-            <div class="space-y-6 text-sm">
-                <div style="border-bottom: 1px solid #1e293b; padding-bottom: 15px;">
-                    <p><strong class="text-white">PACS Field Trip to Sight and Sound:</strong> A few seats remain! If you are interested in this day trip, please contact <span class="accent-text">Sis. Jean-Marie Williams</span> or <span class="accent-text">Dr. Sylvia Ephraim</span>.</p>
-                </div>
-                <div style="border-bottom: 1px solid #1e293b; padding-bottom: 15px;">
-                    <p><strong class="text-white">Kitchen/Pantry Stock-Up:</strong> Help us keep our pantry ready for fellowship meals. We are seeking nonperishable staples. Please refer to the full list shared via the weekly text message.</p>
+                <div>
+                    <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2026/02/Stock-the-kitchen.png" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/02/Stock-the-kitchen.png" class="flyer-img" alt="Pantry"></a>
+                    <p class="text-center text-[10px] uppercase text-slate-500 mt-2 font-bold">Kitchen Pantry Stock-Up</p>
                 </div>
                 <div>
-                    <p><strong class="text-white">Women's Ministry:</strong> Save the date for the <strong>Denim and Pearls Retreat</strong> happening April 24-26, 2026.</p>
+                    <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy.jpg" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy.jpg" class="flyer-img" alt="Study"></a>
+                    <p class="text-center text-[10px] uppercase text-slate-500 mt-2 font-bold">Bible Class Information</p>
+                </div>
+                <div>
+                    <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy2.jpg" target="_blank"><img src="https://stroudsburgsdachurch.org/wp-content/uploads/2025/11/BibleStudy2.jpg" class="flyer-img" alt="Study 2"></a>
+                    <p class="text-center text-[10px] uppercase text-slate-500 mt-2 font-bold">Foundations Study Guide</p>
                 </div>
             </div>
         </div>
@@ -216,8 +271,8 @@
                 <a href="https://www.instagram.com/stroudsburg_sda" style="color: #475569; margin: 0 20px; transition: color 0.3s;" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.youtube.com/@StroudsburgSDAChurch" style="color: #475569; margin: 0 20px; transition: color 0.3s;" class="hover:text-red-600"><i class="fab fa-youtube"></i></a>
             </div>
-            <p style="font-size: 0.8rem; color: #64748b; letter-spacing: 3px; text-transform: uppercase;">Stroudsburg Seventh-day Adventist Church</p>
-            <p style="font-size: 0.7rem; color: #475569; margin-top: 10px;">&copy; 2026 Stroudsburg SDA Church. All rights reserved.</p>
+            <p style="font-size: 0.8rem; color: #64748b; letter-spacing: 3px; text-transform: uppercase; font-weight: bold;">Stroudsburg Seventh-day Adventist Church</p>
+            <p style="font-size: 0.7rem; color: #475569; margin-top: 10px;">900 N 9th St, Stroudsburg, PA 18360</p>
         </div>
     </div>
 </div>
