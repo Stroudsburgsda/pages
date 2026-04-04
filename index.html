@@ -43,13 +43,11 @@
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
         }
-        .pantry-category { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 6px; border: 1px solid rgba(52, 211, 153, 0.2); }
         .accent-text { color: #60a5fa !important; font-weight: 700; }
         .location-badge { background: #1e3a8a; color: #bfdbfe; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
         .conference-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(16, 185, 129, 0.2); padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        .prayer-focus-box { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); padding: 15px; border-radius: 8px; margin-top: 20px; }
-        .live-link { color: #60a5fa !important; text-decoration: underline !important; font-weight: 600; }
-        .live-link:hover { color: #93c5fd !important; }
+        .deadline-alert { background: rgba(220, 38, 38, 0.2); border: 2px solid #ef4444; padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center; }
+        .ccc-box { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); padding: 20px; border-radius: 8px; margin-top: 20px; }
     </style>
 
     <div style="max-width: 900px; margin: 0 auto;">
@@ -57,31 +55,13 @@
         <div style="text-align: center; margin-bottom: 50px;">
             <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="Stroudsburg SDA Logo" style="height: 140px; margin: 0 auto 20px; display: block;">
             <h1 style="font-size: clamp(1.75rem, 6vw, 3rem); font-weight: 900; color: #fff !important; text-transform: uppercase; letter-spacing: 0.2em; line-height: 1.1;">Stroudsburg <span class="accent-text">Announcements</span></h1>
-            <p style="color: #94a3b8 !important; font-family: monospace; margin-top: 15px; font-size: 1rem; letter-spacing: 2px;">SABBATH, MARCH 28, 2026</p>
+            <p style="color: #94a3b8 !important; font-family: monospace; margin-top: 15px; font-size: 1rem; letter-spacing: 2px;">SABBATH, APRIL 4, 2026</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
-            <a href="https://us02web.zoom.us/j/797422531" class="zoom-btn" target="_blank">
-                <i class="fas fa-video text-blue-400 mr-4 text-2xl"></i>
-                <div>
-                    <span class="block font-black text-white">LIVE ON ZOOM</span>
-                    <span class="text-xs text-slate-400">Join Sabbath Service</span>
-                </div>
-            </a>
-            <a href="https://www.youtube.com/@StroudsburgSDAChurch" class="zoom-btn" target="_blank">
-                <i class="fab fa-youtube text-red-500 mr-4 text-2xl"></i>
-                <div>
-                    <span class="block font-black text-white">YOUTUBE LIVE</span>
-                    <span class="text-xs text-slate-400">Watch the Stream</span>
-                </div>
-            </a>
-            <a href="https://www.stroudsburgsda.org/giving" class="zoom-btn" target="_blank">
-                <i class="fas fa-hand-holding-heart text-emerald-400 mr-4 text-2xl"></i>
-                <div>
-                    <span class="block font-black text-white">ONLINE GIVING</span>
-                    <span class="text-xs text-slate-400">Tithes & Offerings</span>
-                </div>
-            </a>
+        <div class="deadline-alert">
+            <h3 style="color: #f87171 !important; font-weight: 900; font-size: 1.5rem; text-transform: uppercase; margin-bottom: 5px;">Payment Due Today</h3>
+            <p style="font-size: 1.1rem; color: #fff;"><strong>Women's Ministry "Denim & Pearls" Retreat</strong></p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">Attending the retreat on April 24-26? Please see <strong>Sis. Jean-Marie Williams</strong> or any Women's Ministry team member to submit your final payment today.</p>
         </div>
 
         <div class="frame-section">
@@ -102,16 +82,6 @@
                             </div>
                         </li>
                         <li style="margin-bottom: 20px; display: flex; align-items: start;">
-                            <i class="fas fa-gem text-pink-400 mr-4 mt-1 text-lg"></i>
-                            <div>
-                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
-                                    <strong style="color: #fff;">Adventurers</strong>
-                                    <span class="location-badge">Gems Meeting</span>
-                                </div>
-                                <span class="text-sm text-slate-400">4:00 PM – 5:30 PM</span>
-                            </div>
-                        </li>
-                        <li style="display: flex; align-items: start;">
                             <i class="fas fa-users text-amber-400 mr-4 mt-1 text-lg"></i>
                             <div>
                                 <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
@@ -121,69 +91,74 @@
                                 <span class="text-sm text-slate-400">Starts at 4:30 PM</span>
                             </div>
                         </li>
+                        <li style="display: flex; align-items: start;">
+                            <i class="fas fa-clipboard-list text-slate-400 mr-4 mt-1 text-lg"></i>
+                            <div>
+                                <strong style="color: #fff;">Church Board Meeting</strong>
+                                <span class="block text-sm text-slate-400">Tonight at 6:15 PM</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div style="background: rgba(30, 64, 175, 0.2); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 0 8px 8px 0;">
-                    <h4 class="text-white font-bold mb-2 uppercase tracking-tight text-sm">Financial Stewardship</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed">Free <strong>Ramsey Plus</strong> memberships are available. Please see <strong>Dr. Ranelli Williams</strong> after service or contact <a href="mailto:stewardship@stroudsburgsda.org" class="live-link">stewardship@stroudsburgsda.org</a>. Activations must be completed by <strong>March 31st</strong>.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="frame-section">
-            <h2 style="color: #34d399 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
-                <i class="fas fa-calendar-star mr-3"></i> Local Ministry & Events
-            </h2>
-            <div class="space-y-8 text-sm leading-relaxed">
-                
-                <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 20px; border-radius: 8px;">
-                    <h4 class="text-white font-black mb-3 uppercase tracking-widest text-lg">Adventist Possibilities Ministry Launch</h4>
-                    <p class="text-slate-300 mb-4">Launch Meeting: <strong>Sunday, April 6th at 10:30 a.m.</strong> in the Gymnasium. Gathering designed to encourage, strengthen, and empower you for everyday living. Meetings will continue on the 1st and 3rd Sundays each month.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h4 class="text-white font-bold mb-2 uppercase tracking-wide">Community Guest Day</h4>
-                        <p class="text-slate-400 italic">Next Sabbath, April 4th</p>
-                        <p class="text-slate-300 mt-1">Please invite your friends and family to spend the Sabbath with our church family!</p>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-bold mb-2 uppercase tracking-wide">Pantry Needs: We are Seeking</h4>
-                        <div class="pantry-category">
-                            <ul style="list-style: disc; padding-left: 20px;" class="text-xs text-slate-300">
-                                <li>Rice & Pasta</li>
-                                <li>Mustard & Mayo</li>
-                                <li>Drink Mixes</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="border-top: 1px solid #1e293b; padding-top: 20px;">
-                    <h4 class="text-white font-bold mb-2 uppercase tracking-wide">Women's Ministry: Denim & Pearls</h4>
-                    <p class="text-slate-300"><strong>April 24-26, 2026:</strong> Cost/Venue info available in the lobby. Contact <strong>Sis. Jean Marie Williams</strong> for info. <span class="text-amber-400 font-bold">Final payment is due on April 4th.</span></p>
-                </div>
-                
-                <div style="border-top: 1px solid #1e293b; padding-top: 20px;">
-                    <p class="text-slate-300"><strong>Couple's Club:</strong> Resumes April 18th. Stay tuned for details!</p>
+                    <h4 class="text-white font-bold mb-2 uppercase tracking-tight text-sm">Community Guest Day</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">A warm welcome to all friends and family visiting today! We pray our fellowship and worship brings you closer to the heart of God.</p>
                 </div>
             </div>
         </div>
 
         <div class="frame-section">
             <h2 style="color: #60a5fa !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
-                <i class="fas fa-heartbeat mr-3"></i> Spiritual Connections
+                <i class="fas fa-heart mr-3"></i> Family Life Ministry
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div style="background: #0f172a; padding: 25px; border-radius: 12px; border: 1px solid #1e293b;">
-                    <h3 class="text-white font-black text-lg mb-2 uppercase">Restoration Hour</h3>
-                    <p class="text-sm text-slate-400 mb-4"><strong>Tomorrow at 7:15 PM:</strong> Sis. Cheryl John presents <em>"Choose to Forgive and Reconcile."</em></p>
-                    <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="live-link text-sm">JOIN ZOOM ROOM &rarr;</a>
+            <div class="space-y-4">
+                <h4 class="text-white font-black uppercase tracking-widest text-lg">Christian Couples Club (CCC)</h4>
+                <p class="text-sm text-slate-300">The Family Life Dept is excited to announce a new ministry designed to strengthen, enrich, and celebrate marriage through Christ-centered fellowship. Whether you are newly married or have been walking together for years, this club is for you!</p>
+                
+                <div class="ccc-box">
+                    <p class="text-sm font-bold text-blue-300 mb-3 uppercase">What to Expect:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Fun fellowship & laughter</li>
+                            <li>Relationship building exercises</li>
+                            <li>Biblical teaching & principles</li>
+                        </ul>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Group discussions</li>
+                            <li>One-on-one communication</li>
+                            <li>Christ-centered growth</li>
+                        </ul>
+                    </div>
                 </div>
-                <div style="background: #0f172a; padding: 25px; border-radius: 12px; border: 1px solid #1e293b;">
-                    <h3 class="text-white font-black text-lg mb-2 uppercase">Closer Walk</h3>
-                    <p class="text-sm text-slate-400 mb-4">Mon & Thu Prayer Line at <strong>8:00 PM – 8:30 PM</strong> via Zoom.</p>
-                    <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="live-link text-sm">JOIN PRAYER LINE &rarr;</a>
+                
+                <p class="text-sm text-slate-300 mt-4">
+                    <strong>Launch Meeting:</strong> April 18th (Time TBA)<br>
+                    <strong>Contact:</strong> Speak to <strong>Ranelli and Eric Williams</strong> after service for more information.
+                </p>
+            </div>
+        </div>
+
+        <div class="frame-section">
+            <h2 style="color: #34d399 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
+                <i class="fas fa-info-circle mr-3"></i> Local Ministry Updates
+            </h2>
+            <div class="space-y-8 text-sm">
+                
+                <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 20px; border-radius: 8px;">
+                    <h4 class="text-white font-bold mb-2 uppercase tracking-wide">Possibilities Ministry Empowerment</h4>
+                    <p class="text-slate-300">Meetings resume <strong>tomorrow, April 5th at 10:30 a.m.</strong> in the Gymnasium. These faith-filled gatherings continue every 1st and 3rd Sunday to empower you for everyday living.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-white font-bold mb-2 uppercase tracking-wide">PACS Week of Prayer</h4>
+                        <p class="text-slate-400 italic">April 7th – 10th</p>
+                        <p class="text-slate-300 mt-1">Theme: <strong>"Lord, teach us to Pray."</strong> Please remember the Pocono Adventist Christian School students in your personal devotions this week.</p>
+                    </div>
+                    <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px;">
+                        <h4 class="text-white font-bold mb-2 uppercase tracking-wide">Mid-Week Connections</h4>
+                        <p class="text-xs text-slate-400">Wed Prayer & Fri Vesper at 7:15 PM.<br>Mon & Thu Closer Walk at 8:00 PM.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -192,49 +167,31 @@
             <h2 style="color: #10b981 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
                 <i class="fas fa-map-marked-alt mr-3"></i> Conference Updates
             </h2>
-            <div class="space-y-6">
+            <div class="space-y-4">
                 <div class="conference-card">
-                    <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-wide text-emerald-400">Devotional Book 2028</h4>
-                    <p class="text-sm text-slate-300">Share your story! Deadline June 30, 2026. Submit at <a href="https://paconference.org/devotional-book" target="_blank" class="live-link">paconference.org/devotional-book</a>.</p>
+                    <h4 class="font-bold text-white mb-1 uppercase text-xs tracking-wide text-emerald-400">Family Conference (Pittsburgh, Apr 18)</h4>
+                    <p class="text-sm text-slate-300">"Stronger Together" — Register for this free regional event at <a href="https://paconference.org/events" target="_blank" style="color: #60a5fa; text-decoration: underline;">paconference.org/events</a>.</p>
                 </div>
                 <div class="conference-card">
-                    <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-wide">Spring Women’s Retreat (Apr 10-12)</h4>
-                    <p class="text-sm text-slate-300 text-amber-300 font-bold mb-1">Registration Deadline: April 2</p>
-                    <p class="text-sm text-slate-300">Register at <a href="https://paconference.org/events" target="_blank" class="live-link">paconference.org/events</a>.</p>
-                </div>
-                <div class="conference-card">
-                    <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-wide">Family Conference (Apr 18)</h4>
-                    <p class="text-sm text-slate-300">"Stronger Together" — Register for this free Pittsburgh event at <a href="https://paconference.org/events" target="_blank" class="live-link">paconference.org/events</a>.</p>
-                </div>
-                <div class="conference-card">
-                    <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-wide">Blue Mountain Alumni Weekend (Apr 24-26)</h4>
-                    <p class="text-sm text-slate-300">Learn more at <a href="https://bma.us/alumni-weekend" target="_blank" class="live-link">bma.us/alumni-weekend</a>.</p>
-                </div>
-                <div class="conference-card">
-                    <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-wide">Summer Camp 2026</h4>
-                    <p class="text-sm text-slate-300">"Give Me the Mountains" — Register at <a href="https://laurellakesummercamp.com" target="_blank" class="live-link">laurellakesummercamp.com</a>.</p>
-                </div>
-                <div class="conference-card">
-                    <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-wide">PA Camp Meeting (June 12-20)</h4>
-                    <p class="text-sm text-slate-300">Register for lodging/meals at <a href="https://paconference.org/camp-meeting" target="_blank" class="live-link">paconference.org/camp-meeting</a>.</p>
+                    <h4 class="font-bold text-white mb-1 uppercase text-xs tracking-wide">PA Camp Meeting (June 12-20)</h4>
+                    <p class="text-sm text-slate-300">"Joyful Living: Now and Forever." Featuring speakers Randy Skeete and Mark Finley. Info at <a href="https://paconference.org/camp-meeting" target="_blank" style="color: #60a5fa; text-decoration: underline;">paconference.org/camp-meeting</a>.</p>
                 </div>
             </div>
 
-            <div class="prayer-focus-box">
+            <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); padding: 15px; border-radius: 8px; margin-top: 20px;">
                 <h4 class="text-xs font-black uppercase text-slate-500 mb-3 tracking-widest">Regional Prayer Focus</h4>
                 <div class="text-xs space-y-2 text-slate-400">
-                    <p><strong>Mar 29 – Apr 4:</strong> Meridian Road & Shenango Valley (Pr. Alan Diaz)</p>
                     <p><strong>Apr 5 – 11:</strong> Bethel York, Harrisburg, & Shekinah Haitian (Pr. Cherubin Dorcil)</p>
-                    <p class="text-emerald-500"><strong>Education:</strong> <a href="http://hvcs.org" target="_blank" class="live-link">Huntingdon Valley Christian School</a></p>
+                    <p><strong>Apr 12 – 18:</strong> Mt. Pocono Haitian, Pocono Grace, & Stroudsburg (Pr. Christian Ekoto)</p>
                 </div>
             </div>
         </div>
 
         <div style="text-align: center; border-top: 1px solid #1e293b; padding-top: 40px; margin-top: 60px;">
             <div style="font-size: 1.75rem; margin-bottom: 20px;">
-                <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" style="color: #475569; margin: 0 20px;" class="hover:text-blue-500"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" style="color: #475569; margin: 0 20px;" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" style="color: #475569; margin: 0 20px;" class="hover:text-red-600"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" style="color: #475569; margin: 0 20px;"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" style="color: #475569; margin: 0 20px;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" style="color: #475569; margin: 0 20px;"><i class="fab fa-youtube"></i></a>
             </div>
             <p style="font-size: 0.8rem; color: #64748b; letter-spacing: 3px; text-transform: uppercase; font-weight: bold;">Stroudsburg Seventh-day Adventist Church</p>
             <p style="font-size: 0.7rem; color: #475569; margin-top: 10px;">900 N 9th St, Stroudsburg, PA 18360</p>
