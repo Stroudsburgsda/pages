@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midweek Announcements | Stroudsburg SDA</title>
+    <title>Sabbath Announcements | Stroudsburg SDA</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,14 +22,14 @@
             background: rgba(30, 41, 59, 0.4) !important;
             border: 2px solid #1e3a8a !important;
             padding: 25px;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             border-radius: 4px;
             position: relative;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         @media (min-width: 768px) {
-            .frame-section { padding: 40px; }
+            .frame-section { padding: 35px; }
             body { padding: 60px 20px; }
         }
 
@@ -44,55 +44,22 @@
         }
 
         .accent-text { color: #60a5fa !important; font-weight: 700; }
+        .location-badge { background: #1e3a8a; color: #bfdbfe; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
+        .date-badge { background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; display: inline-block; margin-bottom: 15px; }
         
-        .stewardship-item {
+        .event-card {
             background: rgba(15, 23, 42, 0.6);
-            border-left: 4px solid #3b82f6;
+            border: 1px solid rgba(59, 130, 246, 0.2);
             padding: 15px;
-            margin-bottom: 12px;
-            border-radius: 0 8px 8px 0;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
 
-        .lesson-facet {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(52, 211, 153, 0.2);
+        .prayer-list {
+            background: rgba(139, 92, 246, 0.1);
+            border-left: 4px solid #8b5cf6;
             padding: 20px;
-            border-radius: 8px;
-        }
-
-        /* Quiz Styling */
-        .quiz-box {
-            background: linear-gradient(145deg, #1e293b, #0f172a);
-            border: 1px solid #334155;
-            padding: 25px;
-            border-radius: 12px;
-            margin-top: 30px;
-        }
-
-        .quiz-option {
-            display: block;
-            width: 100%;
-            text-align: left;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 14px;
-            margin-top: 10px;
-            border-radius: 8px;
-            color: #cbd5e1;
-            transition: all 0.2s ease;
-        }
-
-        .quiz-option:hover {
-            background: rgba(59, 130, 246, 0.1);
-            border-color: #3b82f6;
-        }
-
-        #quiz-feedback {
-            margin-top: 15px;
-            padding: 12px;
-            border-radius: 6px;
-            display: none;
-            font-weight: bold;
+            border-radius: 0 8px 8px 0;
         }
     </style>
 </head>
@@ -104,153 +71,125 @@
             <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" 
                  alt="Stroudsburg SDA Logo" 
                  style="height: 120px; margin: 0 auto 20px; display: block;">
-            <h1 style="font-size: clamp(1.5rem, 5vw, 2.5rem); font-weight: 900; color: #fff !important; text-transform: uppercase; letter-spacing: 0.15em; line-height: 1.1;">
-                Midweek <span class="accent-text">Announcements</span>
+            <h1 style="font-size: clamp(1.75rem, 6vw, 3rem); font-weight: 900; color: #fff !important; text-transform: uppercase; letter-spacing: 0.2em; line-height: 1.1;">
+                Stroudsburg <span class="accent-text">Announcements</span>
             </h1>
-        </div>
-
-        <div class="frame-section" style="border-color: #8b5cf6 !important;">
-             <h2 style="color: #a78bfa !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase;">
-                <i class="fas fa-hands-praying mr-3"></i> Our Prayer Circle
-            </h2>
-            <p class="text-slate-200 leading-relaxed text-lg">
-                As a church family, let us continue to lift one another up before the throne of grace. We ask that you keep the following families in your special prayers:
-            </p>
-            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 8px; text-align: center;">
-                    <i class="fas fa-heart text-violet-400 mb-2"></i>
-                    <p class="text-white font-bold">The Family of Brother Courtney Humpfrey</p>
-                </div>
-                <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); padding: 20px; border-radius: 8px; text-align: center;">
-                    <i class="fas fa-heart text-violet-400 mb-2"></i>
-                    <p class="text-white font-bold">Sister Stephanie Honore and Family</p>
-                </div>
-            </div>
-            <p class="mt-6 text-slate-400 italic text-center text-sm">
-                "Carry each other’s burdens, and in this way you will fulfill the law of Christ." — Galatians 6:2
-            </p>
+            <p style="color: #94a3b8 !important; font-family: monospace; margin-top: 15px; font-size: 1rem; letter-spacing: 2px;">SABBATH, APRIL 11, 2026</p>
         </div>
 
         <div class="frame-section">
-            <h2 style="color: #fbbf24 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase;">
-                <i class="fas fa-hand-holding-heart mr-3"></i> Stewardship Department Spotlight
+            <h2 style="color: #fbbf24 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
+                <i class="fas fa-church mr-3"></i> Today at Stroudsburg
             </h2>
-            
-            <p class="mb-4 text-slate-200 leading-relaxed">
-                Stewardship is worshiping God through the faithful management of all He has entrusted to us. It goes beyond money and includes how we honor Him with our <strong>Treasure, Time, Temple, Talent, and Testimony.</strong>
-            </p>
-            
-            <p class="mb-6 text-slate-300">
-                This year, the Stewardship Department will focus on helping our church family develop a broader biblical understanding of stewardship, grow in faithfulness and intentionality, highlight practical stewardship principles, engage both adults and youth, and encourage testimonies of God’s provision and faithfulness.
-            </p>
-
-            <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Embracing the Five Key Areas:</h3>
-            
-            <div class="space-y-3">
-                <div class="stewardship-item">
-                    <strong class="text-blue-400">Treasure</strong> — Faithfully managing the financial resources God has entrusted to us.
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="event-card">
+                    <strong class="text-white block mb-1">Bible Class</strong>
+                    <span class="text-sm text-slate-400">3:00 PM – 4:30 PM</span>
                 </div>
-                <div class="stewardship-item" style="border-left-color: #10b981;">
-                    <strong class="text-emerald-400">Time</strong> — Using our time wisely and intentionally for God’s glory.
+                <div class="event-card">
+                    <strong class="text-white block mb-1">AYS Program</strong>
+                    <span class="text-sm text-slate-400">Starts at 4:30 PM</span>
                 </div>
-                <div class="stewardship-item" style="border-left-color: #ec4899;">
-                    <strong class="text-pink-400">Temple</strong> — Caring for our bodies as the temple of the Holy Spirit.
-                </div>
-                <div class="stewardship-item" style="border-left-color: #f59e0b;">
-                    <strong class="text-amber-400">Talent</strong> — Developing and using our God-given gifts in service to Him.
-                </div>
-                <div class="stewardship-item" style="border-left-color: #8b5cf6;">
-                    <strong class="text-violet-400">Testimony</strong> — Sharing God’s faithfulness and the impact of living as faithful stewards.
+                <div class="event-card">
+                    <strong class="text-white block mb-1">Adventurer Club</strong>
+                    <span class="text-sm text-slate-400">4:00 PM – 5:30 PM</span>
                 </div>
             </div>
+        </div>
+
+        <div class="frame-section" style="border-color: #8b5cf6 !important;">
+            <h2 style="color: #a78bfa !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase;">
+                <i class="fas fa-hands-praying mr-3"></i> Prayer Circle
+            </h2>
+            <div class="prayer-list">
+                <p class="text-slate-200 leading-relaxed">
+                    Please continue to lift up our church family in prayer. We ask for special intercession and strength for:
+                </p>
+                <ul class="mt-4 space-y-2 text-white font-bold">
+                    <li><i class="fas fa-heart text-violet-400 mr-2"></i> The Family of Brother Courtney Humpfrey</li>
+                    <li><i class="fas fa-heart text-violet-400 mr-2"></i> Sister Stephanie Honore and Family</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="frame-section">
+            <h2 style="color: #3b82f6 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
+                <i class="fas fa-calendar-alt mr-3"></i> General Announcements
+            </h2>
             
-            <p class="mt-8 text-slate-300 italic border-t border-slate-700 pt-4 text-center">
-                Please keep the Stewardship Department in prayer as we seek to encourage our church family to honor God in every area of life.
-            </p>
+            <div class="space-y-6">
+                <div class="border-b border-slate-700 pb-4">
+                    <span class="date-badge">April 18 | 7:00 PM</span>
+                    <h3 class="text-white font-bold text-lg">The Creation Case with Rich Aguilera</h3>
+                    <p class="text-sm text-slate-400 mt-2">Whitehall Adventist Christian School invites children of all ages to explore the beauty of God’s creation. Contact Sis. Mfon Joseph or Sis. Napiela Nelson.</p>
+                </div>
+
+                <div class="border-b border-slate-700 pb-4">
+                    <span class="date-badge">April 26 | 8:30 AM</span>
+                    <h3 class="text-white font-bold text-lg">Annual Adventurer Fun Day</h3>
+                    <p class="text-sm text-slate-400 mt-2">Join us at Blue Mountain Academy (Hamburg, PA) for a joyful day of fellowship.</p>
+                </div>
+
+                <div class="border-b border-slate-700 pb-4">
+                    <span class="date-badge">April 24-26</span>
+                    <h3 class="text-white font-bold text-lg">Denim and Pearls Women's Retreat</h3>
+                    <p class="text-sm text-amber-400 mt-2 font-bold uppercase tracking-tighter"><i class="fas fa-exclamation-triangle mr-1"></i> Final Payment Due Today</p>
+                    <p class="text-sm text-slate-400">See Sis. Jean-Marie Williams for more information.</p>
+                </div>
+            </div>
         </div>
 
         <div class="frame-section" style="border-color: #10b981 !important;">
-            <h2 style="color: #34d399 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase;">
-                <i class="fas fa-book-open mr-3"></i> Sabbath School Midweek Momentum
+            <h2 style="color: #10b981 !important; font-size: 1.75rem; font-weight: 800; margin-bottom: 25px; text-transform: uppercase;">
+                <i class="fas fa-sync-alt mr-3"></i> Midweek Highlights
             </h2>
-            
-            <p class="mb-6 text-slate-200">
-                Welcome to the first Sabbath School Midweek Momentum. These weekly messages are designed to encourage us to engage with the sabbath school lesson. This quarter’s lessons are especially personal and have the potential to guide us into a deeper relationship with God. 
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                Check our virtual platforms this Wednesday for our newly launched weekly series:
             </p>
-
-            <div class="bg-emerald-900/20 border border-emerald-500/30 p-6 rounded-lg mb-8">
-                <h3 class="text-white font-bold text-xl mb-3 underline decoration-emerald-500">This Week's Lesson: "To Know God"</h3>
-                <p class="text-slate-300 leading-relaxed">
-                    This week takes us on a journey to understand God's character, which is the absolute foundation for a strong relationship with Him. The Bible provides the clearest picture of who God is, actively countering Satan's ancient lies that God is untrustworthy, does not want what is best for us, and is keeping secrets.
-                </p>
-            </div>
-
-            <h3 class="text-white font-bold mb-4">Facets of God's Character (Monday – Wednesday):</h3>
-            
-            <div class="space-y-4">
-                <div class="lesson-facet">
-                    <h4 class="text-emerald-400 font-bold uppercase text-sm mb-2">God Is Holy</h4>
-                    <p class="text-slate-300 text-sm">Holiness is the core of who God is. Being holy means He is completely separated from evil and 100% good from beginning to end. Knowing and understanding that God is completely holy is crucial because it reassures us that His immense power (omnipotence) and knowledge (omniscience) are perfectly good, not tyrannical.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-black/40 p-5 rounded border border-emerald-500/30">
+                    <h4 class="text-emerald-400 font-bold mb-2">Sabbath School Momentum</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed"> recaps of the lesson and thought-provoking questions to encourage deeper study throughout the week.</p>
                 </div>
-
-                <div class="lesson-facet">
-                    <h4 class="text-emerald-400 font-bold uppercase text-sm mb-2">God Is Love</h4>
-                    <p class="text-slate-300 text-sm">The Bible doesn't just say God is loving; it declares that "God is love". This is a pure, selfless, and deeply relational covenant love. The greatest ultimate expression of this radical love was God sending His Son, Jesus, to die for sinners and bridge the gap between humanity and Himself.</p>
+                <div class="bg-black/40 p-5 rounded border border-emerald-500/30">
+                    <h4 class="text-emerald-400 font-bold mb-2">Stewardship Spotlight</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Strengthening our management of <em>Treasure, Time, Temple, Talent, and Testimony.</em></p>
+                    <div class="mt-3 p-2 bg-emerald-900/30 rounded text-[10px] text-emerald-200">
+                        <strong>NEXT WEDNESDAY:</strong> Topic — “God Owns It All” (Treasure Series)
+                    </div>
                 </div>
-
-                <div class="lesson-facet">
-                    <h4 class="text-emerald-400 font-bold uppercase text-sm mb-2">God in Creation</h4>
-                    <p class="text-slate-300 text-sm">Looking at the creation story, the Bible uses two different names to give us a perfectly balanced picture of God. <strong>Elohim</strong> describes the almighty, transcendent Creator who speaks the universe into existence. In contrast, <strong>Yahweh</strong> reveals a personal, intimate God who stoops down to breathe life directly into humanity. Together, they show a God who is both infinitely powerful and beautifully close.</p>
-                </div>
-            </div>
-
-            <div class="quiz-box">
-                <h3 class="text-white font-bold flex items-center mb-4">
-                    <i class="fas fa-question-circle text-emerald-400 mr-2"></i> Test Your Knowledge
-                </h3>
-                <p class="text-slate-200 mb-4"><strong>Question:</strong> Why is God's holiness considered central to His other attributes, such as His omnipotence (being all-powerful) and omniscience (being all-knowing)?</p>
-                
-                <button class="quiz-option" onclick="handleQuiz(true)">
-                    It ensures that His vast power and knowledge are completely free from evil intentions, making Him purely good and trustworthy rather than a tyrannical ruler.
-                </button>
-                <button class="quiz-option" onclick="handleQuiz(false)">
-                    It means that He strictly demands perfection from humanity before He will use His power to help them.
-                </button>
-                <button class="quiz-option" onclick="handleQuiz(false)">
-                    It indicates that His power is limited to spiritual matters rather than the physical creation of the world.
-                </button>
-                <button class="quiz-option" onclick="handleQuiz(false)">
-                    It shows that His love is purely emotional and separated from any kind of justice or judgment.
-                </button>
-
-                <div id="quiz-feedback"></div>
             </div>
         </div>
 
-        <div style="text-align: center; border-top: 1px solid #1e293b; padding-top: 40px; margin-top: 40px;">
-            <p style="font-size: 0.8rem; color: #64748b; letter-spacing: 3px; text-transform: uppercase; font-weight: bold;">
-                Stroudsburg Seventh-day Adventist Church
-            </p>
-            <p style="font-size: 0.7rem; color: #475569; margin-top: 5px;">900 N 9th St, Stroudsburg, PA 18360</p>
+        <div class="frame-section">
+            <h2 style="color: #fff !important; font-size: 1.5rem; font-weight: 800; margin-bottom: 20px; text-transform: uppercase;">
+                Weekly Prayer & Fellowship
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <div class="bg-black/30 p-4 rounded">
+                    <p class="text-blue-400 font-bold mb-1">Prayer Line (Monday & Thursday)</p>
+                    <p class="text-slate-400 text-xs">8:00 PM – 8:30 PM on Zoom</p>
+                </div>
+                <div class="bg-black/30 p-4 rounded">
+                    <p class="text-blue-400 font-bold mb-1">Prayer Meeting (Wednesday)</p>
+                    <p class="text-slate-400 text-xs">7:15 PM on Zoom</p>
+                </div>
+                <div class="bg-black/30 p-4 rounded">
+                    <p class="text-blue-400 font-bold mb-1">Friday Vespers</p>
+                    <p class="text-slate-400 text-xs">7:15 PM on Zoom</p>
+                </div>
+                <div class="bg-black/30 p-4 rounded">
+                    <p class="text-pink-400 font-bold mb-1">Cactusville VBS 2026</p>
+                    <p class="text-slate-400 text-xs">Theme: Cactusville | Ages 5-12. Stay Tuned!</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; border-top: 1px solid #1e293b; padding-top: 40px; margin-top: 60px;">
+            <p style="font-size: 0.8rem; color: #64748b; letter-spacing: 3px; text-transform: uppercase; font-weight: bold;">Stroudsburg Seventh-day Adventist Church</p>
+            <p style="font-size: 0.7rem; color: #475569; margin-top: 10px;">900 N 9th St, Stroudsburg, PA 18360</p>
         </div>
     </div>
 
-    <script>
-        function handleQuiz(isCorrect) {
-            const feedback = document.getElementById('quiz-feedback');
-            feedback.style.display = 'block';
-            if (isCorrect) {
-                feedback.style.backgroundColor = 'rgba(16, 185, 129, 0.2)';
-                feedback.style.color = '#34d399';
-                feedback.style.border = '1px solid #10b981';
-                feedback.innerHTML = '<i class="fas fa-check-circle mr-2"></i> Correct Answer: A. Holiness guarantees that His character is 100% good!';
-            } else {
-                feedback.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
-                feedback.style.color = '#f87171';
-                feedback.style.border = '1px solid #ef4444';
-                feedback.innerHTML = '<i class="fas fa-times-circle mr-2"></i> Not quite. Think about how holiness prevents the misuse of power.';
-            }
-        }
-    </script>
 </body>
 </html>
