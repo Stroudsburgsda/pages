@@ -26,22 +26,24 @@
         }
 
         header {
-            padding: 60px 20px;
+            padding: 80px 20px 60px;
             text-align: center;
             background: linear-gradient(to bottom, #111, #000);
         }
 
         .logo-img {
-            max-height: 50px;
-            margin: 0 auto 20px;
+            max-height: 100px;
+            width: auto;
+            margin: 0 auto 30px;
             filter: grayscale(1) brightness(2);
         }
 
         h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
             font-weight: 900;
             letter-spacing: -1px;
             margin-bottom: 5px;
+            text-transform: uppercase;
         }
 
         h1 span { color: var(--accent-teal); }
@@ -130,14 +132,22 @@
 
         .option:hover { background: rgba(0,0,0,0.15); }
 
-        .btn-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--accent-teal);
-            font-weight: 700;
-            text-decoration: underline;
-            margin-top: 15px;
+        .time-badge {
+            font-family: monospace;
+            background: rgba(255,255,255,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+
+        .flyer-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 20px auto;
+            border: 1px solid #222;
+            display: block;
         }
 
         footer {
@@ -147,15 +157,6 @@
             color: #444;
             font-size: 0.75rem;
             letter-spacing: 2px;
-        }
-
-        .time-badge {
-            font-family: monospace;
-            background: rgba(255,255,255,0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            color: #fff;
         }
     </style>
 </head>
@@ -192,15 +193,19 @@
 
             <p class="mb-4 text-gray-400">Pride inherently leads to a dislike for others who also exhibit pride. Essentially, if you view yourself as superior, you will be bothered when someone else acts that way towards you. The more offended you become by rude remarks and interactions, the more prideful you are. Those who are humble can easily overlook such slights, while prideful individuals become outraged if their pride is challenged.</p>
             
-            <p class="mb-6 text-gray-400">Humility is essential for spiritual growth and for effective missionary work. As long as we maintain a sense of superiority, we cannot truly connect with God. How can we stand before our Creator while harboring pride?</p>
+            <p class="mb-6 text-gray-400">It's important to realize that as long as we maintain a sense of superiority, we cannot truly connect with God. How can we stand before our Creator while harboring pride? Humility is essential for spiritual growth and for effective missionary work.</p>
+            
+            <p class="text-xs text-gray-600 italic mt-4">Reference: Quintana, H. (2025). Growing in a relationship with God. Pacific Press Publishing Association.</p>
 
             <div class="quiz-panel">
                 <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
                 <p class="font-bold mb-4">What does the lesson suggest is the only way to obtain a true knowledge of self and overcome pride?</p>
-                <div class="option" onclick="alert('Not quite. Pride cannot be cured by professional success.')">a) By achieving professional excellence and giving a portion of the credit to God.</div>
-                <div class="option" onclick="alert('Correct Answer (b): Only by beholding Christ can we see ourselves as we truly are.')">b) By beholding Christ and drawing closer to Him.</div>
+                <div class="option" onclick="alert('Try again!')">a) By achieving professional excellence and giving a portion of the credit to God.</div>
+                <div class="option" onclick="alert('Correct Answer (b): By beholding Christ and drawing closer to Him.')">b) By beholding Christ and drawing closer to Him.</div>
                 <div class="option" onclick="alert('Try again!')">c) Through rigorous self-evaluation and psychological analysis.</div>
                 <div class="option" onclick="alert('Try again!')">d) By comparing our accomplishments to those of people less fortunate.</div>
+                
+                <p class="mt-6 text-sm font-bold italic text-black">What do you think is the trickiest form of pride? Come to Sabbath School to hear this answer; you will be surprised.</p>
             </div>
         </div>
     </div>
@@ -210,18 +215,22 @@
             <h2 class="text-3xl font-black mb-2 uppercase">Religious Liberty</h2>
             <p class="text-teal-400 font-bold mb-8 italic">Watching the Signs, Strengthening Our Faith</p>
             
-            <p class="mb-6">Rising tensions involving Iran continue to highlight how fragile global trade systems are. Simultaneously, the federal government convened the final hearing of the <strong>Religious Liberty Commission</strong> to assess the future of religious freedom in America.</p>
+            <p class="mb-6">This week, two major developments remind us how quickly our world is shifting. Rising tensions involving Iran continue to highlight how fragile global trade systems are, especially through critical routes like the Strait of Hormuz. At the same time, here in the United States, the federal government convened the final hearing of the <strong>Religious Liberty Commission</strong>, bringing together national leaders, faith representatives, and policymakers to assess the present and future of religious freedom.</p>
             
             <a href="https://www.justice.gov/" target="_blank" class="btn-link mb-8"><i class="fas fa-external-link-alt"></i> Read the full DOJ article here</a>
 
+            <p class="mb-6 text-gray-400">This final hearing reviewed findings from multiple sessions and is expected to contribute to recommendations shaping the future of religious liberty in America. This shows that concerns about faith, freedom, and conscience are no longer distant ideas, but active discussions at the highest levels of government.</p>
+
             <div class="accent-box">
-                <p class="mb-4">Jesus warned us in <strong>Matthew 24</strong> of unrest and increasing tension. These are reminders that we are living in significant times. While the world sees political and economic challenges, God’s people are called to see prophecy unfolding.</p>
-                <p><strong>Revelation 13:17</strong> tells us of a time when “no man might buy or sell, save he that had the mark.” Current events show how systems of control are aligning in ways once unimaginable.</p>
+                <p class="mb-4">Jesus warned us in <strong>Matthew 24</strong> that there would be signs leading up to the end, including unrest, uncertainty, and increasing tension. These are not random moments. They are reminders that we are living in significant times. While the world sees political and economic challenges, God’s people are called to see prophecy unfolding.</p>
+                <p>The Bible tells us in <strong>Revelation 13:17</strong> that a time will come when “no man might buy or sell, save he that had the mark.” While current events are not themselves the fulfillment of this prophecy, they clearly show how systems of influence, control, and even religious discussion are aligning in ways that were once unimaginable.</p>
             </div>
 
+            <p class="mb-8 text-gray-400">This week, the question is not just what is happening around us, but whether we are spiritually awake. Are we grounded in God’s Word? Are we preparing our hearts to stand? Take time this week to pray for discernment, deepen your study, and draw closer to Christ. <strong>God is not trying to scare us, but to wake us.</strong></p>
+
             <div class="bg-white/5 p-8 border border-white/10">
-                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">Key Takeaways</h4>
-                <ul class="space-y-4 text-teal-400 font-bold">
+                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">What God’s People Should Remember</h4>
+                <ul class="space-y-4 text-teal-400 font-bold text-sm">
                     <li><i class="fas fa-check-circle mr-2"></i> Religious liberty is becoming a major national conversation</li>
                     <li><i class="fas fa-check-circle mr-2"></i> Economic systems and global trade can shift quickly</li>
                     <li><i class="fas fa-check-circle mr-2"></i> Prophecy centers on worship and loyalty to God</li>
@@ -232,17 +241,21 @@
     </div>
 
     <div id="connect" class="content-area">
+        
+        <div class="glass-card text-center">
+            <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Family Life: Couple's Club</h3>
+            <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/04/0D09F7D7-5633-4914-BB25-0E89AA42149E.png" alt="Couple's Club Flyer" class="flyer-img">
+            <p class="text-xs text-gray-500 mt-4 italic">Mark your calendars for next Sabbath!</p>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
             <div class="glass-card">
                 <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Tithe & Offerings</h3>
-                <p class="text-sm mb-6 text-gray-400">Support our ministry through the Adventist Giving portal.</p>
-                <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-6 py-4 font-bold uppercase text-xs inline-block hover:bg-teal-400 transition">Give Online</a>
+                <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-6 py-4 font-bold uppercase text-xs inline-block hover:bg-teal-400 transition w-full text-center">Adventist Giving</a>
             </div>
 
             <div class="glass-card">
                 <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Service Schedule</h3>
-                
                 <div class="space-y-6">
                     <div class="border-b border-white/5 pb-4">
                         <div class="flex justify-between items-center mb-1">
@@ -257,8 +270,7 @@
                             <span class="font-bold">A Closer Walk Prayer Line</span>
                             <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" class="text-teal-400"><i class="fas fa-phone"></i></a>
                         </div>
-                        <p class="text-xs text-gray-500 mb-1">Mondays | <span class="time-badge">5:00 AM</span> & <span class="time-badge">8:00 PM</span></p>
-                        <p class="text-xs text-gray-500">Thursdays | <span class="time-badge">5:00 AM</span> & <span class="time-badge">8:00 PM</span></p>
+                        <p class="text-xs text-gray-500">Mon & Thu | <span class="time-badge">5:00 AM</span> & <span class="time-badge">8:00 PM</span></p>
                     </div>
 
                     <div>
@@ -273,7 +285,7 @@
         </div>
 
         <div class="mt-8 glass-card text-center">
-            <h4 class="text-xs font-bold uppercase tracking-widest mb-6">Socials & Subscriptions</h4>
+            <h4 class="text-xs font-bold uppercase tracking-widest mb-6">Connect With Us</h4>
             <div class="flex justify-center gap-12 text-2xl">
                 <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400"><i class="fab fa-instagram"></i></a>
