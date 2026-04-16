@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midweek Momentum | Stroudsburg SDA</title>
+    <title>Midweek Bulletin | Stroudsburg SDA</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,6 +17,8 @@
             --gray-text: #999999;
         }
 
+        html { scroll-behavior: smooth; }
+
         body {
             background-color: var(--black);
             color: white;
@@ -26,7 +28,7 @@
         }
 
         header {
-            padding: 80px 20px 60px;
+            padding: 80px 20px 40px;
             text-align: center;
             background: linear-gradient(to bottom, #111, #000);
         }
@@ -34,7 +36,7 @@
         .logo-img {
             max-height: 100px;
             width: auto;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
             filter: grayscale(1) brightness(2);
         }
 
@@ -48,54 +50,48 @@
 
         h1 span { color: var(--accent-teal); }
 
-        .tab-wrapper {
+        /* Sticky Navigation Bar */
+        .nav-wrapper {
             border-bottom: 1px solid #222;
-            margin-bottom: 40px;
             position: sticky;
             top: 0;
-            background: var(--black);
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
             z-index: 100;
         }
 
-        .tab-container {
-            max-width: 900px;
+        .nav-container {
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             justify-content: center;
             overflow-x: auto;
         }
 
-        .tab-link {
-            padding: 15px 25px;
+        .nav-link {
+            padding: 15px 20px;
             color: var(--gray-text);
             text-transform: uppercase;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            letter-spacing: 2px;
-            cursor: pointer;
+            letter-spacing: 1px;
+            text-decoration: none;
             white-space: nowrap;
             transition: 0.3s;
-            border-bottom: 3px solid transparent;
         }
 
-        .tab-link:hover { color: white; }
-        .tab-link.active {
-            color: var(--accent-teal);
-            border-bottom-color: var(--accent-teal);
-        }
+        .nav-link:hover { color: var(--accent-teal); }
 
-        .content-area {
-            max-width: 900px;
+        /* Page Layout */
+        .page-content {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px 80px;
-            display: none;
+            padding: 60px 20px;
         }
 
-        .content-area.active { display: block; animation: fadeIn 0.4s ease; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        section {
+            padding-top: 60px;
+            margin-bottom: 100px;
         }
 
         .glass-card {
@@ -108,8 +104,8 @@
         .accent-box {
             border-left: 3px solid var(--accent-teal);
             background: rgba(40, 204, 158, 0.05);
-            padding: 25px;
-            margin: 25px 0;
+            padding: 30px;
+            margin: 30px 0;
         }
 
         .quiz-panel {
@@ -119,18 +115,14 @@
             margin-top: 40px;
         }
 
-        .option {
+        .option-item {
             background: rgba(0,0,0,0.08);
             padding: 12px 15px;
             margin-top: 10px;
-            cursor: pointer;
             border: 1px solid rgba(0,0,0,0.1);
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 600;
-            transition: 0.2s;
         }
-
-        .option:hover { background: rgba(0,0,0,0.15); }
 
         .time-badge {
             font-family: monospace;
@@ -143,16 +135,29 @@
 
         .flyer-img {
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
             height: auto;
-            margin: 20px auto;
-            border: 1px solid #222;
+            border: 2px solid #222;
+            border-radius: 4px;
             display: block;
+            margin: 30px auto;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
+
+        h2.section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 10px;
+        }
+
+        h2.section-title span { color: var(--accent-teal); }
 
         footer {
             border-top: 1px solid #111;
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
             color: #444;
             font-size: 0.75rem;
@@ -168,147 +173,195 @@
         <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Stroudsburg Seventh-day Adventist Church</p>
     </header>
 
-    <div class="tab-wrapper">
-        <div class="tab-container">
-            <div class="tab-link active" onclick="showTab(event, 'sabbath-school')">Sabbath School</div>
-            <div class="tab-link" onclick="showTab(event, 'religious-liberty')">Religious Liberty</div>
-            <div class="tab-link" onclick="showTab(event, 'connect')">Connect & Give</div>
+    <nav class="nav-wrapper">
+        <div class="nav-container">
+            <a href="#sabbath-school" class="nav-link">Sabbath School</a>
+            <a href="#stewardship" class="nav-link">Stewardship</a>
+            <a href="#religious-liberty" class="nav-link">Religious Liberty</a>
+            <a href="#church-family" class="nav-link">Church Family</a>
+            <a href="#connect" class="nav-link">Connect & Give</a>
         </div>
-    </div>
+    </nav>
 
-    <div id="sabbath-school" class="content-area active">
-        <div class="glass-card">
-            <h2 class="text-3xl font-black mb-2 uppercase">Midweek Momentum</h2>
-            <p class="text-teal-400 font-bold mb-8">Week of 4/13/2026</p>
-            
-            <h3 class="text-2xl font-bold mb-4">Pride Versus Humility</h3>
-            <p class="mb-4">Have you had an opportunity to get into this week’s lesson? We’re studying the lesson titled <strong>Pride Versus Humility</strong>. We’re invited to take an introspective look at the effects of pride on our relationship with God.</p>
-            
-            <p class="mb-4 text-gray-400">What is pride? Pride is the exalting of self above God and others. According to the Bible, it is a disposition that the Lord detests (Proverbs 16:5).</p>
-            
-            <div class="accent-box">
-                <h4 class="text-white font-bold mb-3 uppercase tracking-widest text-sm">Is there a pride test?</h4>
-                <p class="text-gray-200">Here’s a one-question test to measure how much pride you have. <strong>How much do I dislike it when other people snub me, or refuse to take any notice of me, or patronize me, or show off?</strong></p>
-            </div>
-
-            <p class="mb-4 text-gray-400">Pride inherently leads to a dislike for others who also exhibit pride. Essentially, if you view yourself as superior, you will be bothered when someone else acts that way towards you. The more offended you become by rude remarks and interactions, the more prideful you are. Those who are humble can easily overlook such slights, while prideful individuals become outraged if their pride is challenged.</p>
-            
-            <p class="mb-6 text-gray-400">It's important to realize that as long as we maintain a sense of superiority, we cannot truly connect with God. How can we stand before our Creator while harboring pride? Humility is essential for spiritual growth and for effective missionary work.</p>
-            
-            <p class="text-xs text-gray-600 italic mt-4">Reference: Quintana, H. (2025). Growing in a relationship with God. Pacific Press Publishing Association.</p>
-
-            <div class="quiz-panel">
-                <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
-                <p class="font-bold mb-4">What does the lesson suggest is the only way to obtain a true knowledge of self and overcome pride?</p>
-                <div class="option" onclick="alert('Try again!')">a) By achieving professional excellence and giving a portion of the credit to God.</div>
-                <div class="option" onclick="alert('Correct Answer (b): By beholding Christ and drawing closer to Him.')">b) By beholding Christ and drawing closer to Him.</div>
-                <div class="option" onclick="alert('Try again!')">c) Through rigorous self-evaluation and psychological analysis.</div>
-                <div class="option" onclick="alert('Try again!')">d) By comparing our accomplishments to those of people less fortunate.</div>
-                
-                <p class="mt-6 text-sm font-bold italic text-black">What do you think is the trickiest form of pride? Come to Sabbath School to hear this answer; you will be surprised.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="religious-liberty" class="content-area">
-        <div class="glass-card">
-            <h2 class="text-3xl font-black mb-2 uppercase">Religious Liberty</h2>
-            <p class="text-teal-400 font-bold mb-8 italic">Watching the Signs, Strengthening Our Faith</p>
-            
-            <p class="mb-6">This week, two major developments remind us how quickly our world is shifting. Rising tensions involving Iran continue to highlight how fragile global trade systems are, especially through critical routes like the Strait of Hormuz. At the same time, here in the United States, the federal government convened the final hearing of the <strong>Religious Liberty Commission</strong>, bringing together national leaders, faith representatives, and policymakers to assess the present and future of religious freedom.</p>
-            
-            <a href="https://www.justice.gov/" target="_blank" class="btn-link mb-8"><i class="fas fa-external-link-alt"></i> Read the full DOJ article here</a>
-
-            <p class="mb-6 text-gray-400">This final hearing reviewed findings from multiple sessions and is expected to contribute to recommendations shaping the future of religious liberty in America. This shows that concerns about faith, freedom, and conscience are no longer distant ideas, but active discussions at the highest levels of government.</p>
-
-            <div class="accent-box">
-                <p class="mb-4">Jesus warned us in <strong>Matthew 24</strong> that there would be signs leading up to the end, including unrest, uncertainty, and increasing tension. These are not random moments. They are reminders that we are living in significant times. While the world sees political and economic challenges, God’s people are called to see prophecy unfolding.</p>
-                <p>The Bible tells us in <strong>Revelation 13:17</strong> that a time will come when “no man might buy or sell, save he that had the mark.” While current events are not themselves the fulfillment of this prophecy, they clearly show how systems of influence, control, and even religious discussion are aligning in ways that were once unimaginable.</p>
-            </div>
-
-            <p class="mb-8 text-gray-400">This week, the question is not just what is happening around us, but whether we are spiritually awake. Are we grounded in God’s Word? Are we preparing our hearts to stand? Take time this week to pray for discernment, deepen your study, and draw closer to Christ. <strong>God is not trying to scare us, but to wake us.</strong></p>
-
-            <div class="bg-white/5 p-8 border border-white/10">
-                <h4 class="text-white font-bold text-lg mb-6 uppercase tracking-widest">What God’s People Should Remember</h4>
-                <ul class="space-y-4 text-teal-400 font-bold text-sm">
-                    <li><i class="fas fa-check-circle mr-2"></i> Religious liberty is becoming a major national conversation</li>
-                    <li><i class="fas fa-check-circle mr-2"></i> Economic systems and global trade can shift quickly</li>
-                    <li><i class="fas fa-check-circle mr-2"></i> Prophecy centers on worship and loyalty to God</li>
-                    <li><i class="fas fa-check-circle mr-2"></i> Now is the time to be spiritually prepared</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="connect" class="content-area">
+    <div class="page-content">
         
-        <div class="glass-card text-center">
-            <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Family Life: Couple's Club</h3>
-            <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/04/0D09F7D7-5633-4914-BB25-0E89AA42149E.png" alt="Couple's Club Flyer" class="flyer-img">
-            <p class="text-xs text-gray-500 mt-4 italic">Mark your calendars for next Sabbath!</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section id="sabbath-school">
+            <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
             <div class="glass-card">
-                <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Tithe & Offerings</h3>
-                <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-6 py-4 font-bold uppercase text-xs inline-block hover:bg-teal-400 transition w-full text-center">Adventist Giving</a>
+                <p class="text-teal-400 font-bold mb-6">Week of 4/13/2026</p>
+                <h3 class="text-2xl font-bold mb-4 uppercase tracking-tight">Pride Versus Humility</h3>
+                <p class="mb-4 text-gray-200">Have you had an opportunity to get into this week’s lesson? We’re studying the lesson titled <strong>Pride Versus Humility</strong>. We’re invited to take an introspective look at the effects of pride on our relationship with God.</p>
+                
+                <p class="mb-4"><strong>What is pride?</strong> Pride is the exalting of self above God and others. According to the Bible, it is a disposition that the Lord detests (Proverbs 16:5).</p>
+                
+                <div class="accent-box">
+                    <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest">Is there a pride test?</h4>
+                    <p class="text-gray-200 italic text-lg">"Here’s a one-question test to measure how much pride you have: How much do I dislike it when other people snub me, or refuse to take any notice of me, or patronize me, or show off?"</p>
+                </div>
+
+                <p class="mb-4 text-gray-400">Pride inherently leads to a dislike for others who also exhibit pride. Essentially, if you view yourself as superior, you will be bothered when someone else acts that way towards you. The more offended you become by rude remarks and interactions, the more prideful you are.</p>
+                
+                <p class="mb-6 text-gray-400">Those who are humble can easily overlook such slights, while prideful individuals become outraged if their pride is challenged. It's important to realize that as long as we maintain a sense of superiority, we cannot truly connect with God. How can we stand before our Creator while harboring pride? Humility is essential for spiritual growth and for effective missionary work.</p>
+
+                <p class="text-xs text-gray-600 mb-8 italic">Reference: Quintana, H. (2025). Growing in a relationship with God. Pacific Press Publishing Association.</p>
+
+                <div class="quiz-panel">
+                    <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
+                    <p class="font-bold mb-4 text-black">What does the lesson suggest is the only way to obtain a true knowledge of self and overcome pride?</p>
+                    
+                    <div class="space-y-2">
+                        <div class="option-item">a) By achieving professional excellence and giving a portion of the credit to God.</div>
+                        <div class="option-item bg-black/20 border-black/40">b) By beholding Christ and drawing closer to Him. (Answer)</div>
+                        <div class="option-item">c) Through rigorous self-evaluation and psychological analysis.</div>
+                        <div class="option-item">d) By comparing our accomplishments to those of people less fortunate.</div>
+                    </div>
+
+                    <p class="mt-8 text-sm font-bold text-black uppercase italic">What do you think is the trickiest form of pride? Come to sabbath school to hear this answer; you will be surprised.</p>
+                </div>
             </div>
+        </section>
 
+        <section id="stewardship">
+            <h2 class="section-title">Stewardship <span>Spotlight</span></h2>
             <div class="glass-card">
-                <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Service Schedule</h3>
-                <div class="space-y-6">
-                    <div class="border-b border-white/5 pb-4">
-                        <div class="flex justify-between items-center mb-1">
-                            <span class="font-bold">Prayer Mtg & Vespers</span>
-                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" class="text-teal-400"><i class="fas fa-video"></i></a>
-                        </div>
-                        <p class="text-xs text-gray-500">Wed & Fri | <span class="time-badge">7:15 PM</span></p>
+                <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider">Theme: God Owns It All</h3>
+                
+                <div class="accent-box">
+                    <p class="text-2xl font-bold italic text-white mb-2">“The earth is the Lord’s, and all its fullness.”</p>
+                    <p class="text-teal-400 font-bold">— Psalm 24:1</p>
+                </div>
+
+                <p class="mb-6 leading-relaxed text-gray-200">Everything we have belongs to God, and we are managers, not owners. Stewardship begins with surrender, not fundraising. When we recognize God as the Source of all we have, our approach to money and resources changes. We become more intentional, more faithful, and more willing to honor Him with our money and in every area of life.</p>
+                
+                <p class="mb-4 text-white font-bold">Ask yourself: Am I truly managing God’s blessings as His steward?</p>
+                <p class="mb-8 text-gray-400">Once you’ve reflected on that question, ask God to show you one way to honor Him this week with the resources He has entrusted to you. There are blessings in store.</p>
+                
+                <p class="text-sm text-gray-500 border-t border-gray-800 pt-6 italic">Have questions? Need support? Reach out to the Stewardship Director, <strong>Sister Ranelli Williams</strong>.</p>
+            </div>
+        </section>
+
+        <section id="religious-liberty">
+            <h2 class="section-title">Religious <span>Liberty</span></h2>
+            <div class="glass-card">
+                <p class="text-teal-400 font-bold mb-8 italic text-lg uppercase tracking-tight">Watching the Signs, Strengthening Our Faith</p>
+                
+                <p class="mb-6">This week, two major developments remind us how quickly our world is shifting. Rising tensions involving Iran continue to highlight how fragile global trade systems are, especially through critical routes like the Strait of Hormuz. At the same time, here in the United States, the federal government convened the final hearing of the <strong>Religious Liberty Commission</strong>, bringing together national leaders, faith representatives, and policymakers to assess the present and future of religious freedom.</p>
+                
+                <p class="mb-6 text-gray-300">This final hearing reviewed findings from multiple sessions and is expected to contribute to recommendations shaping the future of religious liberty in America. This shows that concerns about faith, freedom, and conscience are no longer distant ideas, but active discussions at the highest levels of government.</p>
+
+                <div class="accent-box">
+                    <p class="mb-4 leading-relaxed">Jesus warned us in <strong>Matthew 24</strong> that there would be signs leading up to the end, including unrest, uncertainty, and increasing tension. These are not random moments. They are reminders that we are living in significant times. While the world sees political and economic challenges, God’s people are called to see prophecy unfolding.</p>
+                    <p class="text-gray-200">The Bible tells us in <strong>Revelation 13:17</strong> that a time will come when “no man might buy or sell, save he that had the mark.” While current events are not themselves the fulfillment of this prophecy, they clearly show how systems of influence, control, and even religious discussion are aligning in ways that were once unimaginable.</p>
+                </div>
+
+                <p class="mb-8">This week, the question is not just what is happening around us, but whether we are spiritually awake. Are we grounded in God’s Word? Are we preparing our hearts to stand? Take time this week to pray for discernment, deepen your study, and draw closer to Christ. <strong>God is not trying to scare us, but to wake us.</strong></p>
+
+                <div class="bg-white/5 p-8 border border-white/10">
+                    <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest">What God’s People Should Remember</h4>
+                    <ul class="space-y-4 text-teal-400 font-bold text-sm">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> Religious liberty is becoming a major national conversation</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> Economic systems and global trade can shift quickly</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> Prophecy centers on worship and loyalty to God</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> Now is the time to be spiritually prepared</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="church-family">
+            <h2 class="section-title">Church <span>Family</span></h2>
+            <div class="glass-card">
+                <h3 class="text-2xl font-black mb-8 uppercase text-teal-400">Prayer & Arrangements</h3>
+                
+                <div class="space-y-12">
+                    <div class="border-l-4 border-teal-400 pl-6">
+                        <h4 class="text-white font-bold text-lg mb-2">Memorial: Brother Courtney Humphrey</h4>
+                        <p class="text-sm text-gray-400">Memorial service will be at Stroudsburg SDA Church<br><strong>Sunday, April 19, 2026 @ <span class="time-badge">11:30 AM</span></strong></p>
                     </div>
 
-                    <div class="border-b border-white/5 pb-4">
-                        <div class="flex justify-between items-center mb-1">
-                            <span class="font-bold">A Closer Walk Prayer Line</span>
-                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" class="text-teal-400"><i class="fas fa-phone"></i></a>
+                    <div class="border-l-4 border-teal-400 pl-6">
+                        <h4 class="text-white font-bold text-lg mb-1 uppercase">Dorothy Commock</h4>
+                        <p class="text-xs text-teal-400 font-bold mb-4 italic">(Grandmother of Sister Stephanie Honore)</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                            <div class="bg-white/5 p-4">
+                                <p class="font-bold text-white uppercase mb-2 text-xs">Visitation</p>
+                                <p class="text-gray-400 leading-relaxed text-xs">Sunday, April 19, 2026<br>2:00 PM – 6:00 PM<br>Hartnett Funeral Home<br>561 Jerusalem Avenue<br>Uniondale, NY 11553</p>
+                            </div>
+                            <div class="bg-white/5 p-4">
+                                <p class="font-bold text-white uppercase mb-2 text-xs">Funeral Mass</p>
+                                <p class="text-gray-400 leading-relaxed text-xs">Monday, April 20, 2026<br>10:00 AM<br>Presentation Of The Blessed Virgin Mary Parish<br>88-19 Parsons Blvd.<br>Queens, NY 11432</p>
+                            </div>
+                            <div class="bg-white/5 p-4">
+                                <p class="font-bold text-white uppercase mb-2 text-xs">Graveside Service</p>
+                                <p class="text-gray-400 leading-relaxed text-xs">Monday, April 20, 2026<br>12:00 PM<br>Pinelawn Memorial Park<br>2030 Wellwood Ave.<br>Farmingdale, NY 11735</p>
+                            </div>
                         </div>
-                        <p class="text-xs text-gray-500">Mon & Thu | <span class="time-badge">5:00 AM</span> & <span class="time-badge">8:00 PM</span></p>
                     </div>
 
-                    <div>
-                        <div class="flex justify-between items-center mb-1">
-                            <span class="font-bold">Sabbath Morning Zoom</span>
-                            <a href="https://us02web.zoom.us/j/797422531" class="text-teal-400"><i class="fas fa-video"></i></a>
-                        </div>
-                        <p class="text-xs text-gray-500">Sabbath | <span class="time-badge">9:20 AM</span></p>
+                    <div class="border-l-4 border-teal-400 pl-6">
+                        <h4 class="text-white font-bold text-lg mb-2">Sister Francis</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">Sister Francis is currently hospitalized at <strong>St Luke's hospital, RM 432</strong>. She is awaiting discharge to rehab. Please keep her in your fervent prayers.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="mt-8 glass-card text-center">
-            <h4 class="text-xs font-bold uppercase tracking-widest mb-6">Connect With Us</h4>
-            <div class="flex justify-center gap-12 text-2xl">
-                <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="hover:text-teal-400"><i class="fab fa-youtube"></i></a>
+        <section id="connect">
+            <h2 class="section-title">Connect <span>& Give</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card">
+                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Service Links</h3>
+                    <div class="space-y-6 text-sm">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
+                            <div>
+                                <p class="font-bold">Prayer Meeting & Vespers</p>
+                                <p class="text-xs text-gray-500">Wed/Fri @ 7:15 PM</p>
+                            </div>
+                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
+                            <div>
+                                <p class="font-bold">Evening Prayer Line</p>
+                                <p class="text-xs text-gray-500">Mon/Thu @ 8:00 PM</p>
+                            </div>
+                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-phone fa-lg"></i></a>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="font-bold">Sabbath Morning Zoom</p>
+                                <p class="text-xs text-gray-500">Sabbath @ 9:20 AM</p>
+                            </div>
+                            <a href="https://us02web.zoom.us/j/797422531" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card flex flex-col justify-center">
+                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6 text-center">Tithe & Offerings</h3>
+                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs text-center hover:bg-teal-400 transition mb-10">Give Online Now</a>
+                    
+                    <h4 class="text-xs font-bold uppercase text-center tracking-widest mb-4">Official Channels</h4>
+                    <div class="flex justify-center gap-8 text-xl">
+                        <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="bottom-flyer-box">
+                <h3 class="text-teal-400 font-black uppercase text-xs tracking-widest mb-2">Featured: Family Life</h3>
+                <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/04/0D09F7D7-5633-4914-BB25-0E89AA42149E.png" alt="Couple's Club Flyer" class="flyer-img">
+            </div>
+        </section>
+
     </div>
 
     <footer>
         STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360
     </footer>
 
-    <script>
-        function showTab(evt, tabId) {
-            const areas = document.getElementsByClassName("content-area");
-            for (let a of areas) a.classList.remove("active");
-            
-            const links = document.getElementsByClassName("tab-link");
-            for (let l of links) l.classList.remove("active");
-            
-            document.getElementById(tabId).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
 </body>
 </html>
