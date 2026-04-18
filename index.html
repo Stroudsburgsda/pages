@@ -3,365 +3,679 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midweek Bulletin | Stroudsburg SDA</title>
-    
+    <meta name="description" content="Sabbath Bulletin for Stroudsburg Seventh-day Adventist Church, April 18, 2026">
+    <meta name="theme-color" content="#080808">
+    <title>Sabbath Bulletin | Stroudsburg SDA Church | April 18, 2026</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --accent-teal: #28cc9e;
-            --dark-base: #1a1a1a;
-            --black: #000000;
-            --gray-text: #999999;
+            --teal:        #28cc9e;
+            --teal-dim:    rgba(40,204,158,0.08);
+            --teal-border: rgba(40,204,158,0.30);
+            --bg:          #080808;
+            --card-bg:     #0e0e0e;
+            --card-border: #1d1d1d;
+            --text:        #e2e2e2;
+            --muted:       #888;
+            --dim:         #4a4a4a;
+            --white:       #ffffff;
+            --font-d: 'Barlow Condensed', sans-serif;
+            --font-b: 'Barlow', sans-serif;
+            --font-s: 'Lora', serif;
         }
 
-        html { scroll-behavior: smooth; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 17px; }
+        body { background: var(--bg); color: var(--text); font-family: var(--font-b); font-weight: 400; line-height: 1.75; }
 
-        body {
-            background-color: var(--black);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            line-height: 1.7;
+        /* skip link */
+        .skip { position:absolute; top:-100%; left:0; background:var(--teal); color:#000; padding:8px 16px; font-weight:700; z-index:9999; text-decoration:none; }
+        .skip:focus { top:0; }
+
+        /* header */
+        header { padding:80px 20px 52px; text-align:center; background:linear-gradient(180deg,#101010,#080808); border-bottom:1px solid #141414; position:relative; overflow:hidden; }
+        header::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:700px; height:2px; background:linear-gradient(90deg,transparent,var(--teal),transparent); }
+        .logo-img { max-height:84px; width:auto; margin:0 auto 28px; display:block; filter:grayscale(1) brightness(1.8); opacity:.85; }
+        h1.bulletin-title { font-family:var(--font-d); font-size:clamp(3rem,8vw,5.5rem); font-weight:900; text-transform:uppercase; letter-spacing:-1px; line-height:1; margin-bottom:12px; color:var(--white); }
+        h1.bulletin-title span { color:var(--teal); }
+        .header-date { font-size:.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:5px; }
+
+        /* nav */
+        nav.site-nav { position:sticky; top:0; z-index:200; background:rgba(8,8,8,.96); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid #161616; }
+        .nav-inner { max-width:1100px; margin:0 auto; display:flex; justify-content:center; overflow-x:auto; scrollbar-width:none; }
+        .nav-inner::-webkit-scrollbar { display:none; }
+        .nav-inner a { display:inline-block; padding:15px 17px; color:var(--dim); font-family:var(--font-d); font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; text-decoration:none; white-space:nowrap; transition:color .2s; }
+        .nav-inner a:hover, .nav-inner a:focus { color:var(--teal); outline:none; }
+
+        /* layout */
+        main { max-width:1000px; margin:0 auto; padding:20px 22px 80px; }
+        section { padding-top:72px; margin-bottom:90px; }
+
+        /* section titles */
+        h2.sec-title { font-family:var(--font-d); font-size:2.6rem; font-weight:900; text-transform:uppercase; letter-spacing:-.5px; margin-bottom:28px; padding-bottom:14px; border-bottom:1px solid #191919; color:var(--white); }
+        h2.sec-title span { color:var(--teal); }
+
+        /* cards */
+        .card { background:var(--card-bg); border:1px solid var(--card-border); padding:26px 30px; margin-bottom:18px; border-radius:2px; }
+        .card.featured { border:2px solid var(--teal); background:var(--teal-dim); }
+        .card.dark-featured { border-color:#2c2c2c; background:#0b0b0b; }
+
+        /* accent box */
+        .abox { border-left:3px solid var(--teal); background:rgba(40,204,158,.04); padding:18px 22px; margin:20px 0; }
+        .abox.plain { border-left-color:#2e2e2e; }
+
+        /* typography */
+        h3.chead { font-family:var(--font-d); font-size:1.55rem; font-weight:700; text-transform:uppercase; letter-spacing:.3px; color:var(--teal); margin-bottom:10px; }
+        h3.chead.white { color:var(--white); }
+        h4.sub { font-family:var(--font-d); font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--muted); margin-bottom:7px; }
+        h4.sub.teal { color:var(--teal); }
+        p { font-size:1rem; margin-bottom:13px; }
+        p:last-child { margin-bottom:0; }
+        strong { font-weight:500; }
+        a { color:var(--teal); text-underline-offset:3px; }
+
+        /* grids */
+        .g2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+        .g3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+        @media(max-width:640px) { .g2,.g3,.flyer-side { grid-template-columns:1fr !important; } }
+
+        /* badges */
+        .badge { display:inline-block; font-family:var(--font-d); font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; padding:3px 9px; margin-bottom:10px; }
+        .bc { background:var(--teal-dim); color:var(--teal); border:1px solid var(--teal-border); }
+        .bp { background:rgba(255,255,255,.03); color:#777; border:1px solid #2a2a2a; }
+        .bk { background:rgba(127,119,221,.10); color:#9B94E8; border:1px solid rgba(127,119,221,.20); }
+        .bl { background:rgba(239,159,39,.10); color:#EF9F27; border:1px solid rgba(239,159,39,.22); }
+        .bw { background:rgba(212,83,126,.10); color:#D4537E; border:1px solid rgba(212,83,126,.22); }
+
+        /* time badge */
+        .tbadge { font-family:var(--font-d); font-size:.82rem; letter-spacing:1px; background:rgba(255,255,255,.07); padding:2px 8px; color:var(--white); }
+
+        /* figure / flyer */
+        figure.flyer { margin:0; cursor:zoom-in; flex-shrink:0; }
+        figure.flyer img { width:100%; max-width:240px; height:auto; display:block; border:1px solid #252525; transition:opacity .2s,transform .2s; }
+        figure.flyer:hover img, figure.flyer:focus img { opacity:.88; transform:scale(1.01); outline:none; }
+        figure.flyer figcaption { font-size:.65rem; color:var(--dim); font-family:var(--font-d); text-transform:uppercase; letter-spacing:1px; margin-top:5px; text-align:center; }
+        figure.flyer:focus { outline:2px solid var(--teal); outline-offset:3px; }
+
+        .flyer-side { display:grid; grid-template-columns:1fr 240px; gap:26px; align-items:start; margin-top:14px; }
+
+        /* schedule list */
+        .sched { list-style:none; margin-top:8px; }
+        .sched li { display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid #141414; font-size:.95rem; gap:12px; }
+        .sched li:last-child { border-bottom:none; }
+
+        /* zoom rows */
+        .zoom-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #141414; font-size:.92rem; gap:12px; }
+        .zoom-row:last-child { border-bottom:none; }
+        .zoom-btn { font-family:var(--font-d); font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); text-decoration:none; padding:4px 12px; border:1px solid var(--teal-border); flex-shrink:0; transition:background .2s; }
+        .zoom-btn:hover { background:var(--teal-dim); }
+
+        /* give button */
+        .give-btn { display:inline-block; margin-top:14px; padding:13px 32px; background:var(--teal); color:#000; font-family:var(--font-d); font-weight:700; font-size:.78rem; text-transform:uppercase; letter-spacing:2px; text-decoration:none; transition:opacity .2s; }
+        .give-btn:hover { opacity:.82; color:#000; }
+
+        /* social */
+        .social { display:flex; gap:16px; margin-top:16px; justify-content:center; }
+        .social a { color:var(--dim); font-size:1.15rem; text-decoration:none; transition:color .2s; }
+        .social a:hover { color:var(--teal); }
+
+        /* article body */
+        .ab p { color:#c0c0c0; line-height:1.82; }
+
+        /* scripture blockquote */
+        blockquote.scr { font-family:var(--font-s); font-style:italic; font-size:1.05rem; color:var(--muted); border-left:3px solid #2e2e2e; padding:16px 22px; margin:20px 0; line-height:1.72; }
+        blockquote.scr.tl { border-left-color:var(--teal); }
+        blockquote.scr footer { all:unset; display:block; font-family:var(--font-d); font-style:normal; font-size:.72rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--dim); margin-top:8px; }
+
+        /* pride callout */
+        .pcall { display:flex; gap:20px; background:#0b0b0b; border:1px solid #1e1e1e; padding:22px 26px; margin:22px 0; align-items:flex-start; }
+        .pcall .qi { font-family:var(--font-d); font-size:2.2rem; font-weight:900; color:var(--teal); line-height:1; flex-shrink:0; }
+        .pcall .ql { font-family:var(--font-d); font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--teal); margin-bottom:8px; }
+        .pcall .qt { font-family:var(--font-s); font-style:italic; font-size:1rem; color:var(--white); line-height:1.65; margin:0; }
+
+        /* lesson question */
+        .lq { background:#0b0b0b; border:1px solid #1c1c1c; padding:24px 28px; margin:22px 0; }
+        .lq .ql { font-family:var(--font-d); font-size:.67rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--teal); margin-bottom:10px; }
+        .lq .qt { font-family:var(--font-s); font-size:1.05rem; color:var(--white); margin-bottom:18px; line-height:1.65; }
+        .aopts { list-style:none; counter-reset:opt; }
+        .aopts li { counter-increment:opt; display:flex; gap:10px; font-size:.92rem; color:var(--muted); padding:7px 0; border-bottom:1px solid #141414; line-height:1.55; }
+        .aopts li:last-child { border-bottom:none; }
+        .aopts li::before { content:counter(opt,upper-alpha) '.'; font-family:var(--font-d); font-weight:700; font-size:.88rem; color:var(--dim); min-width:22px; flex-shrink:0; }
+        .aopts li.ok { color:var(--teal); }
+        .aopts li.ok::before { color:var(--teal); }
+        .akey { margin-top:14px; font-family:var(--font-d); font-size:.75rem; text-transform:uppercase; letter-spacing:1px; color:var(--dim); }
+        .akey strong { color:var(--teal); }
+
+        /* takeaways */
+        .takes { list-style:none; margin-top:10px; }
+        .takes li { display:flex; gap:12px; font-size:.95rem; color:var(--text); padding:10px 0; border-bottom:1px solid #141414; line-height:1.55; }
+        .takes li:last-child { border-bottom:none; }
+        .takes li::before { content:'—'; color:var(--teal); font-weight:700; flex-shrink:0; }
+
+        /* reference */
+        .ref { font-size:.78rem; color:var(--dim); font-style:italic; margin-top:18px; padding-top:16px; border-top:1px solid #181818; }
+
+        /* contact strip */
+        .cstrip { background:#0b0b0b; border:1px solid #1e1e1e; padding:14px 18px; display:flex; align-items:center; gap:12px; margin-top:18px; }
+        .cstrip p { font-size:.88rem; color:var(--muted); margin:0; }
+
+        /* event list */
+        .ev-item { display:flex; gap:16px; align-items:flex-start; padding:14px 0; border-bottom:1px solid #141414; }
+        .ev-item:last-child { border-bottom:none; }
+        .ev-date { min-width:50px; text-align:center; background:#111; border:1px solid #1e1e1e; padding:8px 6px; flex-shrink:0; }
+        .ev-date.hl { border-color:var(--teal); background:var(--teal-dim); }
+        .ev-date .mo { font-family:var(--font-d); font-size:.62rem; text-transform:uppercase; letter-spacing:1px; color:var(--muted); }
+        .ev-date .dy { font-family:var(--font-d); font-size:1.6rem; font-weight:700; line-height:1.1; color:var(--white); }
+        .ev-date.hl .dy { color:var(--teal); }
+        .ev-name { font-size:.95rem; font-weight:500; color:var(--white); margin-bottom:3px; }
+        .ev-detail { font-size:.82rem; color:var(--muted); line-height:1.5; margin:0; }
+
+        hr { border:none; border-top:1px solid #181818; margin:24px 0; }
+
+        /* footer */
+        footer.site-footer { border-top:1px solid #111; padding:52px 20px; text-align:center; font-family:var(--font-d); font-size:.72rem; letter-spacing:2px; text-transform:uppercase; color:var(--dim); }
+
+        /* ── NATIVE <dialog> LIGHTBOX ── */
+        dialog#flyer-dialog {
+            background: transparent;
+            border: none;
+            padding: 0;
+            max-width: 95vw;
+            max-height: 95vh;
+            outline: none;
         }
-
-        header {
-            padding: 80px 20px 40px;
-            text-align: center;
-            background: linear-gradient(to bottom, #111, #000);
+        dialog#flyer-dialog::backdrop {
+            background: rgba(0,0,0,0.93);
         }
-
-        .logo-img {
-            max-height: 100px;
-            width: auto;
-            margin: 0 auto 25px;
-            filter: grayscale(1) brightness(2);
-        }
-
-        h1 {
-            font-size: clamp(2.2rem, 6vw, 3.8rem);
-            font-weight: 900;
-            letter-spacing: -1px;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-
-        h1 span { color: var(--accent-teal); }
-
-        /* Sticky Navigation Bar */
-        .nav-wrapper {
-            border-bottom: 1px solid #222;
-            position: sticky;
-            top: 0;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
+        .dlg-inner {
+            position: relative;
             display: flex;
-            justify-content: center;
-            overflow-x: auto;
+            flex-direction: column;
+            align-items: center;
         }
-
-        .nav-link {
-            padding: 15px 20px;
-            color: var(--gray-text);
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-decoration: none;
-            white-space: nowrap;
-            transition: 0.3s;
-        }
-
-        .nav-link:hover { color: var(--accent-teal); }
-
-        /* Page Layout */
-        .page-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        section {
-            padding-top: 60px;
-            margin-bottom: 100px;
-        }
-
-        .glass-card {
-            background: #0d0d0d;
-            padding: 40px;
-            border: 1px solid #1a1a1a;
-            margin-bottom: 30px;
-        }
-
-        .accent-box {
-            border-left: 3px solid var(--accent-teal);
-            background: rgba(40, 204, 158, 0.05);
-            padding: 30px;
-            margin: 30px 0;
-        }
-
-        .quiz-panel {
-            background: var(--accent-teal);
-            color: var(--black);
-            padding: 35px;
-            margin-top: 40px;
-        }
-
-        .option-item {
-            background: rgba(0,0,0,0.08);
-            padding: 12px 15px;
-            margin-top: 10px;
-            border: 1px solid rgba(0,0,0,0.1);
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .time-badge {
-            font-family: monospace;
-            background: rgba(255,255,255,0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            color: #fff;
-        }
-
-        .flyer-img {
-            width: 100%;
-            max-width: 600px;
+        #dlg-img {
+            max-width: 90vw;
+            max-height: 86vh;
+            width: auto;
             height: auto;
-            border: 2px solid #222;
-            border-radius: 4px;
             display: block;
-            margin: 30px auto;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 1px solid #2a2a2a;
         }
-
-        h2.section-title {
-            font-size: 2.5rem;
-            font-weight: 900;
+        #dlg-cap {
+            font-family: var(--font-d);
+            font-size: .72rem;
             text-transform: uppercase;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #1a1a1a;
-            padding-bottom: 10px;
-        }
-
-        h2.section-title span { color: var(--accent-teal); }
-
-        footer {
-            border-top: 1px solid #111;
-            padding: 60px 20px;
+            letter-spacing: 1.5px;
+            color: #555;
+            margin-top: 10px;
             text-align: center;
-            color: #444;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
         }
+        .dlg-close {
+            position: absolute;
+            top: -18px;
+            right: -18px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #1c1c1c;
+            border: 1px solid #333;
+            color: var(--white);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            z-index: 10;
+            transition: background .2s;
+        }
+        .dlg-close:hover { background: #2c2c2c; }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-        <h1>MIDWEEK <span>BULLETIN</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Stroudsburg Seventh-day Adventist Church</p>
-    </header>
+<a class="skip" href="#main-content">Skip to content</a>
 
-    <nav class="nav-wrapper">
-        <div class="nav-container">
-            <a href="#sabbath-school" class="nav-link">Sabbath School</a>
-            <a href="#stewardship" class="nav-link">Stewardship</a>
-            <a href="#religious-liberty" class="nav-link">Religious Liberty</a>
-            <a href="#church-family" class="nav-link">Church Family</a>
-            <a href="#connect" class="nav-link">Connect & Give</a>
-        </div>
-    </nav>
+<header>
+    <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png"
+         alt="Stroudsburg Seventh-day Adventist Church" class="logo-img" width="160" height="84">
+    <h1 class="bulletin-title">Stroudsburg <span>Bulletin</span></h1>
+    <p class="header-date"><time datetime="2026-04-18">Sabbath, April 18, 2026</time></p>
+</header>
 
-    <div class="page-content">
-        
-        <section id="sabbath-school">
-            <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
-            <div class="glass-card">
-                <p class="text-teal-400 font-bold mb-6">Week of 4/13/2026</p>
-                <h3 class="text-2xl font-bold mb-4 uppercase tracking-tight">Pride Versus Humility</h3>
-                <p class="mb-4 text-gray-200">Have you had an opportunity to get into this week’s lesson? We’re studying the lesson titled <strong>Pride Versus Humility</strong>. We’re invited to take an introspective look at the effects of pride on our relationship with God.</p>
-                
-                <p class="mb-4"><strong>What is pride?</strong> Pride is the exalting of self above God and others. According to the Bible, it is a disposition that the Lord detests (Proverbs 16:5).</p>
-                
-                <div class="accent-box">
-                    <h4 class="text-white font-bold mb-3 uppercase text-xs tracking-widest">Is there a pride test?</h4>
-                    <p class="text-gray-200 italic text-lg">"Here’s a one-question test to measure how much pride you have: How much do I dislike it when other people snub me, or refuse to take any notice of me, or patronize me, or show off?"</p>
-                </div>
-
-                <p class="mb-4 text-gray-400">Pride inherently leads to a dislike for others who also exhibit pride. Essentially, if you view yourself as superior, you will be bothered when someone else acts that way towards you. The more offended you become by rude remarks and interactions, the more prideful you are.</p>
-                
-                <p class="mb-6 text-gray-400">Those who are humble can easily overlook such slights, while prideful individuals become outraged if their pride is challenged. It's important to realize that as long as we maintain a sense of superiority, we cannot truly connect with God. How can we stand before our Creator while harboring pride? Humility is essential for spiritual growth and for effective missionary work.</p>
-
-                <p class="text-xs text-gray-600 mb-8 italic">Reference: Quintana, H. (2025). Growing in a relationship with God. Pacific Press Publishing Association.</p>
-
-                <div class="quiz-panel">
-                    <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
-                    <p class="font-bold mb-4 text-black">What does the lesson suggest is the only way to obtain a true knowledge of self and overcome pride?</p>
-                    
-                    <div class="space-y-2">
-                        <div class="option-item">a) By achieving professional excellence and giving a portion of the credit to God.</div>
-                        <div class="option-item bg-black/20 border-black/40">b) By beholding Christ and drawing closer to Him. (Answer)</div>
-                        <div class="option-item">c) Through rigorous self-evaluation and psychological analysis.</div>
-                        <div class="option-item">d) By comparing our accomplishments to those of people less fortunate.</div>
-                    </div>
-
-                    <p class="mt-8 text-sm font-bold text-black uppercase italic">What do you think is the trickiest form of pride? Come to sabbath school to hear this answer; you will be surprised.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="stewardship">
-            <h2 class="section-title">Stewardship <span>Spotlight</span></h2>
-            <div class="glass-card">
-                <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider">Theme: God Owns It All</h3>
-                
-                <div class="accent-box">
-                    <p class="text-2xl font-bold italic text-white mb-2">“The earth is the Lord’s, and all its fullness.”</p>
-                    <p class="text-teal-400 font-bold">— Psalm 24:1</p>
-                </div>
-
-                <p class="mb-6 leading-relaxed text-gray-200">Everything we have belongs to God, and we are managers, not owners. Stewardship begins with surrender, not fundraising. When we recognize God as the Source of all we have, our approach to money and resources changes. We become more intentional, more faithful, and more willing to honor Him with our money and in every area of life.</p>
-                
-                <p class="mb-4 text-white font-bold">Ask yourself: Am I truly managing God’s blessings as His steward?</p>
-                <p class="mb-8 text-gray-400">Once you’ve reflected on that question, ask God to show you one way to honor Him this week with the resources He has entrusted to you. There are blessings in store.</p>
-                
-                <p class="text-sm text-gray-500 border-t border-gray-800 pt-6 italic">Have questions? Need support? Reach out to the Stewardship Director, <strong>Sister Ranelli Williams</strong>.</p>
-            </div>
-        </section>
-
-        <section id="religious-liberty">
-            <h2 class="section-title">Religious <span>Liberty</span></h2>
-            <div class="glass-card">
-                <p class="text-teal-400 font-bold mb-8 italic text-lg uppercase tracking-tight">Watching the Signs, Strengthening Our Faith</p>
-                
-                <p class="mb-6">This week, two major developments remind us how quickly our world is shifting. Rising tensions involving Iran continue to highlight how fragile global trade systems are, especially through critical routes like the Strait of Hormuz. At the same time, here in the United States, the federal government convened the final hearing of the <strong>Religious Liberty Commission</strong>, bringing together national leaders, faith representatives, and policymakers to assess the present and future of religious freedom.</p>
-                
-                <p class="mb-6 text-gray-300">This final hearing reviewed findings from multiple sessions and is expected to contribute to recommendations shaping the future of religious liberty in America. This shows that concerns about faith, freedom, and conscience are no longer distant ideas, but active discussions at the highest levels of government.</p>
-
-                <div class="accent-box">
-                    <p class="mb-4 leading-relaxed">Jesus warned us in <strong>Matthew 24</strong> that there would be signs leading up to the end, including unrest, uncertainty, and increasing tension. These are not random moments. They are reminders that we are living in significant times. While the world sees political and economic challenges, God’s people are called to see prophecy unfolding.</p>
-                    <p class="text-gray-200">The Bible tells us in <strong>Revelation 13:17</strong> that a time will come when “no man might buy or sell, save he that had the mark.” While current events are not themselves the fulfillment of this prophecy, they clearly show how systems of influence, control, and even religious discussion are aligning in ways that were once unimaginable.</p>
-                </div>
-
-                <p class="mb-8">This week, the question is not just what is happening around us, but whether we are spiritually awake. Are we grounded in God’s Word? Are we preparing our hearts to stand? Take time this week to pray for discernment, deepen your study, and draw closer to Christ. <strong>God is not trying to scare us, but to wake us.</strong></p>
-
-                <div class="bg-white/5 p-8 border border-white/10">
-                    <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest">What God’s People Should Remember</h4>
-                    <ul class="space-y-4 text-teal-400 font-bold text-sm">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> Religious liberty is becoming a major national conversation</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> Economic systems and global trade can shift quickly</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> Prophecy centers on worship and loyalty to God</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> Now is the time to be spiritually prepared</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="church-family">
-            <h2 class="section-title">Church <span>Family</span></h2>
-            <div class="glass-card">
-                <h3 class="text-2xl font-black mb-8 uppercase text-teal-400">Prayer & Arrangements</h3>
-                
-                <div class="space-y-12">
-                    <div class="border-l-4 border-teal-400 pl-6">
-                        <h4 class="text-white font-bold text-lg mb-2">Memorial: Brother Courtney Humphrey</h4>
-                        <p class="text-sm text-gray-400">Memorial service will be at Stroudsburg SDA Church<br><strong>Sunday, April 19, 2026 @ <span class="time-badge">11:30 AM</span></strong></p>
-                    </div>
-
-                    <div class="border-l-4 border-teal-400 pl-6">
-                        <h4 class="text-white font-bold text-lg mb-1 uppercase">Dorothy Commock</h4>
-                        <p class="text-xs text-teal-400 font-bold mb-4 italic">(Grandmother of Sister Stephanie Honore)</p>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-                            <div class="bg-white/5 p-4">
-                                <p class="font-bold text-white uppercase mb-2 text-xs">Visitation</p>
-                                <p class="text-gray-400 leading-relaxed text-xs">Sunday, April 19, 2026<br>2:00 PM – 6:00 PM<br>Hartnett Funeral Home<br>561 Jerusalem Avenue<br>Uniondale, NY 11553</p>
-                            </div>
-                            <div class="bg-white/5 p-4">
-                                <p class="font-bold text-white uppercase mb-2 text-xs">Funeral Mass</p>
-                                <p class="text-gray-400 leading-relaxed text-xs">Monday, April 20, 2026<br>10:00 AM<br>Presentation Of The Blessed Virgin Mary Parish<br>88-19 Parsons Blvd.<br>Queens, NY 11432</p>
-                            </div>
-                            <div class="bg-white/5 p-4">
-                                <p class="font-bold text-white uppercase mb-2 text-xs">Graveside Service</p>
-                                <p class="text-gray-400 leading-relaxed text-xs">Monday, April 20, 2026<br>12:00 PM<br>Pinelawn Memorial Park<br>2030 Wellwood Ave.<br>Farmingdale, NY 11735</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="border-l-4 border-teal-400 pl-6">
-                        <h4 class="text-white font-bold text-lg mb-2">Sister Francis</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed">Sister Francis is currently hospitalized at <strong>St Luke's hospital, RM 432</strong>. She is awaiting discharge to rehab. Please keep her in your fervent prayers.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="connect">
-            <h2 class="section-title">Connect <span>& Give</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="glass-card">
-                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Service Links</h3>
-                    <div class="space-y-6 text-sm">
-                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
-                            <div>
-                                <p class="font-bold">Prayer Meeting & Vespers</p>
-                                <p class="text-xs text-gray-500">Wed/Fri @ 7:15 PM</p>
-                            </div>
-                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
-                            <div>
-                                <p class="font-bold">Evening Prayer Line</p>
-                                <p class="text-xs text-gray-500">Mon/Thu @ 8:00 PM</p>
-                            </div>
-                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-phone fa-lg"></i></a>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <p class="font-bold">Sabbath Morning Zoom</p>
-                                <p class="text-xs text-gray-500">Sabbath @ 9:20 AM</p>
-                            </div>
-                            <a href="https://us02web.zoom.us/j/797422531" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card flex flex-col justify-center">
-                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6 text-center">Tithe & Offerings</h3>
-                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs text-center hover:bg-teal-400 transition mb-10">Give Online Now</a>
-                    
-                    <h4 class="text-xs font-bold uppercase text-center tracking-widest mb-4">Official Channels</h4>
-                    <div class="flex justify-center gap-8 text-xl">
-                        <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bottom-flyer-box">
-                <h3 class="text-teal-400 font-black uppercase text-xs tracking-widest mb-2">Featured: Family Life</h3>
-                <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/04/0D09F7D7-5633-4914-BB25-0E89AA42149E.png" alt="Couple's Club Flyer" class="flyer-img">
-            </div>
-        </section>
-
+<nav class="site-nav" aria-label="Section navigation">
+    <div class="nav-inner">
+        <a href="#today">Today</a>
+        <a href="#church-family">Family &amp; Prayer</a>
+        <a href="#womens-ministry">Women</a>
+        <a href="#senior-ministry">Senior Ministry</a>
+        <a href="#momentum">Midweek</a>
+        <a href="#conference">Conference</a>
+        <a href="#calendar">Calendar</a>
+        <a href="#connect">Connect &amp; Give</a>
     </div>
+</nav>
 
-    <footer>
-        STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360
-    </footer>
+<main id="main-content">
+
+    <!-- TODAY -->
+    <section id="today" aria-labelledby="h-today">
+        <h2 class="sec-title" id="h-today">Today at <span>Stroudsburg</span></h2>
+
+        <article class="card featured">
+            <span class="badge bc">Tonight — Special Event</span>
+            <h3 class="chead" style="font-size:1.8rem;">Christian Couples Club</h3>
+            <p style="font-size:1.05rem;color:#ddd;margin-bottom:18px;">Join us for an evening of <strong>L.O.V.E.</strong> — Laughter, Openness, Value-Building, and Edutainment!</p>
+            <div class="flyer-side">
+                <div class="abox" style="margin:0;">
+                    <p><strong>Date:</strong> Tonight, Saturday April 18, 2026</p>
+                    <p><strong>Time:</strong> <span class="tbadge">8:00 PM</span></p>
+                    <p style="margin:0;"><strong>Location:</strong> Church Gym / Fellowship Hall</p>
+                </div>
+                <figure class="flyer" tabindex="0" role="button"
+                        aria-label="View Christian Couples Club flyer full size"
+                        data-src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/04/0D09F7D7-5633-4914-BB25-0E89AA42149E.png"
+                        data-caption="Christian Couples Club — Tonight, April 18, 2026">
+                    <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/04/0D09F7D7-5633-4914-BB25-0E89AA42149E.png"
+                         alt="Christian Couples Club Flyer" loading="lazy">
+                    <figcaption>Tap to enlarge</figcaption>
+                </figure>
+            </div>
+        </article>
+
+        <div class="g2">
+            <div class="card">
+                <h4 class="sub">Afternoon Schedule</h4>
+                <ul class="sched">
+                    <li><span>Bible Class</span><span class="tbadge">3:00–4:30 PM</span></li>
+                    <li><span>AYS Program <em style="font-size:.8rem;color:var(--teal);">(time change)</em></span><span class="tbadge" style="background:var(--teal-dim);color:var(--teal);">5:00 PM</span></li>
+                    <li><span>Gems Adventurer Club</span><span class="tbadge">3:00–5:30 PM</span></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4 class="sub">Off-Site Tonight</h4>
+                <h3 class="chead">Creation Case</h3>
+                <p>Rich Aguilera from 3ABN presents a special exploration of faith and creation.</p>
+                <div class="abox" style="padding:12px 16px;margin-bottom:0;">
+                    <p style="margin:0;"><strong>7:00 PM</strong> — Whitehall Adventist School</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHURCH FAMILY -->
+    <section id="church-family" aria-labelledby="h-family">
+        <h2 class="sec-title" id="h-family">Church <span>Family</span></h2>
+
+        <article class="card dark-featured">
+            <span class="badge bp">Memorial Service</span>
+            <h3 class="chead white">Celebrating Bro. Courtney Humphrey</h3>
+            <p>Memorial Service: <strong>Tomorrow, Sunday, <time datetime="2026-04-19">April 19</time> at 11:30 AM</strong> at the church.</p>
+            <p style="color:var(--muted);margin:0;">Repast to follow. All are welcome to join the family in celebrating his life.</p>
+        </article>
+
+        <article class="card">
+            <span class="badge bp">Bereavement</span>
+            <h3 class="chead white">Dorothy Commock</h3>
+            <p style="color:var(--teal);font-size:.82rem;margin-bottom:16px;font-family:var(--font-d);text-transform:uppercase;letter-spacing:1px;">Grandmother of Sister Stephanie Honore</p>
+            <div class="g3">
+                <div>
+                    <h4 class="sub">Visitation</h4>
+                    <p>Sun, <time datetime="2026-04-19">April 19</time><br>2:00–6:00 PM<br>Hartnett Funeral Home, NY</p>
+                </div>
+                <div>
+                    <h4 class="sub">Funeral Mass</h4>
+                    <p>Mon, <time datetime="2026-04-20">April 20</time><br>10:00 AM<br>Virgin Mary Parish, Queens, NY</p>
+                </div>
+                <div>
+                    <h4 class="sub">Graveside</h4>
+                    <p>Mon, <time datetime="2026-04-20">April 20</time><br>12:00 PM<br>Pinelawn Memorial Park</p>
+                </div>
+            </div>
+        </article>
+
+        <aside class="card" aria-label="Prayer request">
+            <div class="abox" style="margin:0;">
+                <h4 class="sub teal">Prayer Request</h4>
+                <p style="margin:0;"><strong>Sister Francis</strong> is hospitalized at St. Luke's, Room 432. She is awaiting discharge to rehabilitation. Please keep her in your prayers this week.</p>
+            </div>
+        </aside>
+    </section>
+
+    <!-- WOMEN'S MINISTRY -->
+    <section id="womens-ministry" aria-labelledby="h-women">
+        <h2 class="sec-title" id="h-women">Women's <span>Ministry</span></h2>
+        <article class="card">
+            <span class="badge bw">Retreat</span>
+            <div class="flyer-side">
+                <div>
+                    <h3 class="chead">Denim and Pearls Retreat</h3>
+                    <p>Attendees: Please meet with <strong>Sis. Jean-Marie Williams</strong> in her classroom immediately after service today for final details.</p>
+                    <div class="abox" style="margin-bottom:0;">
+                        <h4 class="sub">Location</h4>
+                        <address style="font-style:normal;">
+                            <strong>Tuscarora Inn and Conference Center</strong><br>
+                            3300 River Road, Mount Bethel, PA 18343
+                        </address>
+                    </div>
+                </div>
+                <figure class="flyer" tabindex="0" role="button"
+                        aria-label="View Denim and Pearls Retreat flyer full size"
+                        data-src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/04/82099f29-54e6-4a46-b3d7-c2fd797170eb.jpg.jpeg"
+                        data-caption="Denim and Pearls Retreat — Women's Ministry">
+                    <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/04/82099f29-54e6-4a46-b3d7-c2fd797170eb.jpg.jpeg"
+                         alt="Denim and Pearls Women's Retreat Flyer" loading="lazy">
+                    <figcaption>Tap to enlarge</figcaption>
+                </figure>
+            </div>
+        </article>
+    </section>
+
+    <!-- SENIOR MINISTRY -->
+    <section id="senior-ministry" aria-labelledby="h-senior">
+        <h2 class="sec-title" id="h-senior">Senior <span>Ministry</span></h2>
+        <article class="card featured">
+            <span class="badge bc">Resuming Soon</span>
+            <div class="flyer-side">
+                <div>
+                    <h3 class="chead" style="font-size:1.8rem;">New Beginnings Senior Ministry</h3>
+                    <p style="font-size:1.05rem;color:#ddd;margin-bottom:18px;">The New Beginnings Senior Ministry is resuming — join us for exercise, music, financial advice, and more!</p>
+                    <div class="abox" style="margin:0;">
+                        <p><strong>Date:</strong> <time datetime="2026-05-05">Tuesday, May 5, 2026</time></p>
+                        <p><strong>Time:</strong> <span class="tbadge">10:30 AM – 12:30 PM</span></p>
+                        <p style="margin:0;"><strong>Location:</strong> Community Center</p>
+                    </div>
+                </div>
+                <figure class="flyer" tabindex="0" role="button"
+                        aria-label="View New Beginnings Senior Ministry flyer full size"
+                        data-src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/04/NEW-BEGINNINGS-SENIOR-FLYER.png"
+                        data-caption="New Beginnings Senior Ministry — May 5, 2026">
+                    <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/04/NEW-BEGINNINGS-SENIOR-FLYER.png"
+                         alt="New Beginnings Senior Ministry Flyer" loading="lazy">
+                    <figcaption>Tap to enlarge</figcaption>
+                </figure>
+            </div>
+        </article>
+    </section>
+
+    <!-- MIDWEEK MOMENTUM -->
+    <section id="momentum" aria-labelledby="h-momentum">
+        <h2 class="sec-title" id="h-momentum">Midweek <span>Momentum</span></h2>
+        <p style="color:var(--muted);font-size:.88rem;margin-bottom:32px;">
+            Week of <time datetime="2026-04-13">April 13, 2026</time> &nbsp;·&nbsp;
+            Stay current at <a href="https://news.stroudsburgsda.org">news.stroudsburgsda.org</a>
+        </p>
+
+        <!-- SABBATH SCHOOL -->
+        <article class="card" style="margin-bottom:18px;">
+            <span class="badge bc">Sabbath School</span>
+            <h3 class="chead" style="font-size:1.6rem;">Pride Versus Humility</h3>
+            <p style="color:var(--muted);font-size:.8rem;margin-bottom:20px;font-family:var(--font-d);text-transform:uppercase;letter-spacing:1px;">Sabbath School Lesson — This Week</p>
+            <div class="ab">
+                <p>This week's lesson invites us to take an introspective look at the effects of pride on our relationship with God.</p>
+                <div class="abox">
+                    <h4 class="sub teal">What Is Pride?</h4>
+                    <p style="margin:0;">Pride is the exalting of self above God and others. According to the Bible, it is a disposition that the Lord detests — <strong style="color:var(--white);">Proverbs 16:5</strong>.</p>
+                </div>
+                <div class="pcall">
+                    <div class="qi">?</div>
+                    <div>
+                        <p class="ql">The One-Question Pride Test</p>
+                        <p class="qt">"How much do I dislike it when other people snub me, or refuse to take any notice of me, or patronize me, or show off?"</p>
+                    </div>
+                </div>
+                <p>Pride inherently leads to a dislike for others who also exhibit it. If you view yourself as superior, you will be bothered when someone else acts that way toward you. The more offended you become by rude remarks, the more prideful you are.</p>
+                <p>Those who are humble can easily overlook such slights, while prideful individuals become outraged if their pride is challenged. As long as we maintain a sense of superiority, we cannot truly connect with God. <strong style="color:var(--white);">Humility is essential for spiritual growth and for effective missionary work.</strong></p>
+            </div>
+            <hr>
+            <div class="lq">
+                <p class="ql">Question of the Week</p>
+                <p class="qt">What does the lesson suggest is the only way to obtain a true knowledge of self and overcome pride?</p>
+                <ul class="aopts">
+                    <li>By achieving professional excellence and giving a portion of the credit to God.</li>
+                    <li class="ok">By beholding Christ and drawing closer to Him.</li>
+                    <li>Through rigorous self-evaluation and psychological analysis.</li>
+                    <li>By comparing our accomplishments to those of people less fortunate.</li>
+                </ul>
+                <p class="akey">Answer: <strong>B</strong></p>
+            </div>
+            <div class="abox plain" style="margin-bottom:0;">
+                <p style="color:var(--teal);font-family:var(--font-d);font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;">Come to Sabbath School</p>
+                <p style="margin:0;">What is the <em>trickiest</em> form of pride? Come to Sabbath School to hear the answer — you will be surprised.</p>
+            </div>
+            <p class="ref">Reference: Quintana, H. (2025). <cite>Growing in a relationship with God.</cite> Pacific Press Publishing Association.</p>
+        </article>
+
+        <!-- RELIGIOUS LIBERTY -->
+        <article class="card" style="margin-bottom:18px;">
+            <span class="badge bl">Religious Liberty</span>
+            <h3 class="chead" style="font-size:1.6rem;">Watching the Signs, Strengthening Our Faith</h3>
+            <p style="color:var(--muted);font-size:.8rem;margin-bottom:22px;font-family:var(--font-d);text-transform:uppercase;letter-spacing:1px;">Week of April 13, 2026</p>
+            <div class="ab">
+                <p>This week, two major developments remind us how quickly our world is shifting. Rising tensions involving Iran continue to highlight how fragile global trade systems are — especially through critical routes like the Strait of Hormuz.</p>
+                <p>At the same time, here in the United States, the federal government convened the final hearing of the Religious Liberty Commission, bringing together national leaders, faith representatives, and policymakers to assess the present and future of religious freedom.</p>
+                <div class="abox">
+                    <h4 class="sub teal">Religious Liberty Commission — Final Hearing</h4>
+                    <p>This final hearing reviewed findings from multiple sessions and is expected to contribute to recommendations shaping the future of religious liberty in America. Concerns about faith, freedom, and conscience are no longer distant ideas — they are active discussions at the highest levels of government.</p>
+                    <p style="margin-top:10px;margin-bottom:0;"><a href="https://www.justice.gov/religious-liberty-commission/upcoming-hearings" target="_blank" rel="noopener">Read the full DOJ article &rarr;</a></p>
+                </div>
+                <blockquote class="scr">
+                    "…no man might buy or sell, save he that had the mark."
+                    <footer><cite>Revelation 13:17</cite></footer>
+                </blockquote>
+                <p>Jesus warned us in Matthew 24 that there would be signs leading up to the end — including unrest, uncertainty, and increasing tension. These are not random moments. They are reminders that we are living in significant times.</p>
+                <p>While the world sees political and economic challenges, God's people are called to see prophecy unfolding. Current events are not themselves the fulfillment of this prophecy, but they clearly show how systems of influence and control are aligning in ways that were once unimaginable.</p>
+                <p>The question is not just <em>what is happening around us</em>, but whether we are spiritually awake. Are we grounded in God's Word? Take time this week to pray for discernment, deepen your study, and draw closer to Christ. God is not trying to scare us — but to wake us.</p>
+            </div>
+            <hr>
+            <h4 class="sub" style="margin-bottom:12px;">What God's People Should Remember</h4>
+            <ul class="takes">
+                <li>Religious liberty is becoming a major national conversation</li>
+                <li>Economic systems and global trade can shift quickly</li>
+                <li>Prophecy centers on worship and loyalty to God</li>
+                <li>Now is the time to be spiritually prepared</li>
+            </ul>
+        </article>
+
+        <!-- STEWARDSHIP SPOTLIGHT -->
+        <article class="card featured">
+            <span class="badge bc">Stewardship Department Spotlight</span>
+            <h3 class="chead" style="font-size:1.6rem;">God Owns It All</h3>
+            <p style="color:var(--muted);font-size:.8rem;margin-bottom:22px;font-family:var(--font-d);text-transform:uppercase;letter-spacing:1px;">This Week's Theme</p>
+            <blockquote class="scr tl">
+                "The earth is the Lord's, and all its fullness."
+                <footer><cite>Psalm 24:1</cite></footer>
+            </blockquote>
+            <div class="ab">
+                <p>Everything we have belongs to God, and we are managers, not owners. Stewardship begins with surrender, not fundraising. When we recognize God as the Source of all we have, our approach to money and resources changes. We become more intentional, more faithful, and more willing to honor Him with our money and in every area of life.</p>
+            </div>
+            <div class="abox" style="margin:20px 0;">
+                <p style="font-family:var(--font-s);font-style:italic;font-size:1rem;color:var(--white);margin-bottom:10px;">Ask yourself: Am I truly managing God's blessings as His steward?</p>
+                <p style="color:var(--muted);margin:0;">Once you've reflected, ask God to show you one way to honor Him this week with the resources He has entrusted to you.</p>
+            </div>
+            <p style="font-family:var(--font-d);font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:1px;color:var(--teal);">There are blessings in store.</p>
+            <div class="cstrip">
+                <i class="fas fa-envelope" style="color:var(--teal);font-size:.9rem;flex-shrink:0;" aria-hidden="true"></i>
+                <p>Have questions or need support? Reach out to the Stewardship Director, <strong style="color:var(--white);">Sister Ranelli Williams</strong>.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- PA CONFERENCE -->
+    <section id="conference" aria-labelledby="h-conf">
+        <h2 class="sec-title" id="h-conf">PA <span>Conference</span></h2>
+        <div class="g2">
+            <article class="card">
+                <span class="badge bk">Camp Meeting</span>
+                <h3 class="chead">Camp Meeting 2026</h3>
+                <p>"Joyful Living" — <time datetime="2026-06-12">June 12</time>–<time datetime="2026-06-20">20</time> at BMA. Worship services, health seminars, and youth outings for the whole family.</p>
+            </article>
+            <article class="card">
+                <span class="badge bk">Youth</span>
+                <h3 class="chead">Summer Camp</h3>
+                <p>"Give Me the Mountains" — Begins <time datetime="2026-06-21">June 21</time>. A life-impacting experience for youth ages 7–16.</p>
+            </article>
+            <article class="card">
+                <span class="badge bk">Writing</span>
+                <h3 class="chead">2028 Devotional Book</h3>
+                <p>Share your story with the conference! Submission deadline: <strong><time datetime="2026-06-30">June 30, 2026</time></strong>.</p>
+            </article>
+            <article class="card">
+                <span class="badge bk">Alumni</span>
+                <h3 class="chead">BMA Alumni Weekend</h3>
+                <p><time datetime="2026-04-24">April 24</time>–<time datetime="2026-04-26">26</time> · Join fellow alumni celebrating <strong>70 years</strong> of Blue Mountain Academy.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- CALENDAR -->
+    <section id="calendar" aria-labelledby="h-cal">
+        <h2 class="sec-title" id="h-cal">Upcoming <span>Events</span></h2>
+        <div class="card">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center;">
+                <span style="font-size:.7rem;color:var(--dim);font-family:var(--font-d);text-transform:uppercase;letter-spacing:1px;">Key:</span>
+                <span class="badge bc" style="margin:0;">Church / Ministry</span>
+                <span class="badge bp" style="margin:0;">Pastoral</span>
+                <span class="badge bk" style="margin:0;">Conference</span>
+                <span class="badge bw" style="margin:0;">Women's</span>
+            </div>
+            <ol style="list-style:none;">
+                <li class="ev-item">
+                    <div class="ev-date hl"><div class="mo">Apr</div><div class="dy">18</div></div>
+                    <div><p class="ev-name"><span class="badge bc" style="margin-right:6px;vertical-align:middle;">Church</span>Christian Couples Club</p><p class="ev-detail"><time datetime="2026-04-18T20:00">8:00 PM</time> · Church Gym / Fellowship Hall · LOVE Night</p></div>
+                </li>
+                <li class="ev-item">
+                    <div class="ev-date hl"><div class="mo">Apr</div><div class="dy">18</div></div>
+                    <div><p class="ev-name"><span class="badge bc" style="margin-right:6px;vertical-align:middle;">Church</span>Creation Case — Rich Aguilera (3ABN)</p><p class="ev-detail"><time datetime="2026-04-18T19:00">7:00 PM</time> · Whitehall Adventist School</p></div>
+                </li>
+                <li class="ev-item">
+                    <div class="ev-date"><div class="mo">Apr</div><div class="dy">19</div></div>
+                    <div><p class="ev-name"><span class="badge bp" style="margin-right:6px;vertical-align:middle;">Memorial</span>Memorial Service: Bro. Courtney Humphrey</p><p class="ev-detail"><time datetime="2026-04-19T11:30">11:30 AM</time> · Stroudsburg SDA Church · Repast to follow</p></div>
+                </li>
+                <li class="ev-item">
+                    <div class="ev-date"><div class="mo">Apr</div><div class="dy">19</div></div>
+                    <div><p class="ev-name"><span class="badge bp" style="margin-right:6px;vertical-align:middle;">Pastoral</span>Visitation: Dorothy Commock</p><p class="ev-detail"><time datetime="2026-04-19T14:00">2:00</time>–<time datetime="2026-04-19T18:00">6:00 PM</time> · Hartnett Funeral Home, NY</p></div>
+                </li>
+                <li class="ev-item">
+                    <div class="ev-date"><div class="mo">Apr</div><div class="dy">20</div></div>
+                    <div><p class="ev-name"><span class="badge bp" style="margin-right:6px;vertical-align:middle;">Pastoral</span>Funeral Mass &amp; Graveside: Dorothy Commock</p><p class="ev-detail"><time datetime="2026-04-20T10:00">10:00 AM</time> Funeral Mass · Virgin Mary Parish, Queens, NY &nbsp;·&nbsp; <time datetime="2026-04-20T12:00">12:00 PM</time> Graveside · Pinelawn Memorial Park</p></div>
+                </li>
+                <li class="ev-item">
+                    <div class="ev-date"><div class="mo">Apr</div><div class="dy">24</div></div>
+                    <div><p class="ev-name"><span class="badge bk" style="margin-right:6px;vertical-align:middle;">Conference</span>BMA Alumni Weekend</p><p class="ev-detail"><time datetime="2026-04-24">April 24</time>–<time datetime="2026-04-26">26</time> · Blue Mountain Academy · 70 Years</p></div>
+                </li>
+                <li class="ev-item">
+                    <div class="ev-date"><div class="mo">May</div><div class="dy">5</div></div>
+                    <div><p class="ev-name"><span class="badge bc" style="margin-right:6px;vertical-align:middle;">Church</span>New Beginnings Senior Ministry — Resumes</p><p class="ev-detail"><time datetime="2026-05-05T10:30">10:30 AM</time>–<time datetime="2026-05-05T12:30">12:30 PM</time> · Community Center · Exercise, music, financial advice &amp; more</p></div>
+                </li>
+                <li class="ev-item">
+                    <div class="ev-date"><div class="mo">Jun</div><div class="dy">12</div></div>
+                    <div><p class="ev-name"><span class="badge bk" style="margin-right:6px;vertical-align:middle;">Conference</span>Camp Meeting 2026: "Joyful Living"</p><p class="ev-detail"><time datetime="2026-06-12">June 12</time>–<time datetime="2026-06-20">20</time> · Blue Mountain Academy</p></div>
+                </li>
+                <li class="ev-item">
+                    <div class="ev-date"><div class="mo">Jun</div><div class="dy">21</div></div>
+                    <div><p class="ev-name"><span class="badge bk" style="margin-right:6px;vertical-align:middle;">Conference</span>Summer Camp: "Give Me the Mountains"</p><p class="ev-detail">Begins <time datetime="2026-06-21">June 21</time> · Ages 7–16</p></div>
+                </li>
+                <li class="ev-item">
+                    <div class="ev-date"><div class="mo">Jun</div><div class="dy">30</div></div>
+                    <div><p class="ev-name"><span class="badge bk" style="margin-right:6px;vertical-align:middle;">Conference</span>2028 Devotional Book — Submissions Due</p><p class="ev-detail">Deadline: <time datetime="2026-06-30">June 30, 2026</time> · PA Conference</p></div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- CONNECT & GIVE -->
+    <section id="connect" aria-labelledby="h-connect">
+        <h2 class="sec-title" id="h-connect">Connect <span>&amp; Give</span></h2>
+        <div class="g2">
+            <div class="card">
+                <h3 class="chead">Zoom Services</h3>
+                <div style="margin-top:14px;">
+                    <div class="zoom-row">
+                        <span>Evening Prayer Line<br><em style="font-size:.8rem;color:var(--muted);">Mon &amp; Thu 8:00 PM</em></span>
+                        <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" rel="noopener" class="zoom-btn" aria-label="Join Evening Prayer Line on Zoom">Join <i class="fas fa-video" style="font-size:.75rem;" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="zoom-row">
+                        <span>Prayer Mtg &amp; Vespers<br><em style="font-size:.8rem;color:var(--muted);">Wed &amp; Fri 7:15 PM</em></span>
+                        <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" rel="noopener" class="zoom-btn" aria-label="Join Prayer Meeting and Vespers on Zoom">Join <i class="fas fa-video" style="font-size:.75rem;" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="zoom-row">
+                        <span>Sabbath Morning<br><em style="font-size:.8rem;color:var(--muted);">Saturday 9:20 AM</em></span>
+                        <a href="https://us02web.zoom.us/j/797422531" target="_blank" rel="noopener" class="zoom-btn" aria-label="Join Sabbath Morning on Zoom">Join <i class="fas fa-video" style="font-size:.75rem;" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+                <h3 class="chead">Adventist Giving</h3>
+                <p style="color:var(--muted);">Support the mission of Stroudsburg SDA Church online.</p>
+                <a href="https://www.stroudsburgsda.org/giving" target="_blank" rel="noopener" class="give-btn">Give Online</a>
+                <nav class="social" aria-label="Social media">
+                    <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <address style="font-style:normal;">Stroudsburg Seventh-day Adventist Church &nbsp;·&nbsp; 900 N 9th St, Stroudsburg, PA 18360</address>
+</footer>
+
+<!-- NATIVE <dialog> LIGHTBOX -->
+<dialog id="flyer-dialog" aria-modal="true" aria-label="Flyer viewer">
+    <div class="dlg-inner">
+        <button class="dlg-close" id="dlg-close" aria-label="Close flyer">&times;</button>
+        <img id="dlg-img" src="" alt="">
+        <p id="dlg-cap"></p>
+    </div>
+</dialog>
+
+<script>
+    const dlg    = document.getElementById('flyer-dialog');
+    const dlgImg = document.getElementById('dlg-img');
+    const dlgCap = document.getElementById('dlg-cap');
+
+    function openFlyer(src, caption) {
+        dlgImg.src = src;
+        dlgImg.alt = caption;
+        dlgCap.textContent = caption;
+        dlg.showModal();
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeFlyer() {
+        dlg.close();
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('dlg-close').addEventListener('click', closeFlyer);
+
+    // click on the backdrop area closes the dialog
+    dlg.addEventListener('click', function(e) {
+        if (e.target === dlg) closeFlyer();
+    });
+
+    // reset after close (covers Esc key too)
+    dlg.addEventListener('close', function() {
+        document.body.style.overflow = '';
+        dlgImg.src = '';
+    });
+
+    // wire up every figure.flyer
+    document.querySelectorAll('figure.flyer').forEach(function(fig) {
+        function trigger() { openFlyer(fig.dataset.src, fig.dataset.caption); }
+        fig.addEventListener('click', trigger);
+        fig.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger(); }
+        });
+    });
+</script>
 
 </body>
 </html>
