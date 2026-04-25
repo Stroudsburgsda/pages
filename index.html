@@ -24,24 +24,24 @@
             color: white;
             font-family: 'Inter', sans-serif;
             margin: 0;
-            line-height: 1.7;
+            line-height: 1.55;
         }
 
         header {
-            padding: 80px 20px 40px;
+            padding: 52px 20px 28px;
             text-align: center;
             background: linear-gradient(to bottom, #111, #000);
         }
 
         .logo-img {
-            max-height: 100px;
+            max-height: 86px;
             width: auto;
-            margin: 0 auto 25px;
+            margin: 0 auto 18px;
             filter: grayscale(1) brightness(2);
         }
 
         h1 {
-            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-size: clamp(2rem, 6vw, 3.6rem);
             font-weight: 900;
             letter-spacing: -1px;
             margin-bottom: 5px;
@@ -50,7 +50,6 @@
 
         h1 span { color: var(--accent-teal); }
 
-        /* Sticky Navigation Bar */
         .nav-wrapper {
             border-bottom: 1px solid #222;
             position: sticky;
@@ -61,7 +60,7 @@
         }
 
         .nav-container {
-            max-width: 1100px;
+            max-width: 1180px;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -69,10 +68,10 @@
         }
 
         .nav-link {
-            padding: 15px 18px;
+            padding: 13px 14px;
             color: var(--gray-text);
             text-transform: uppercase;
-            font-size: 0.65rem;
+            font-size: 0.63rem;
             font-weight: 700;
             letter-spacing: 1px;
             text-decoration: none;
@@ -82,30 +81,30 @@
 
         .nav-link:hover { color: var(--accent-teal); }
 
-        /* Page Layout */
         .page-content {
-            max-width: 1000px;
+            max-width: 1060px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 24px 16px 36px;
         }
 
         section {
-            padding-top: 60px;
-            margin-bottom: 80px;
+            scroll-margin-top: 62px;
+            padding-top: 36px;
+            margin-bottom: 48px;
         }
 
         .glass-card {
             background: #0d0d0d;
-            padding: 40px;
+            padding: 28px;
             border: 1px solid #1a1a1a;
-            margin-bottom: 30px;
+            margin-bottom: 18px;
         }
 
         .accent-box {
             border-left: 3px solid var(--accent-teal);
             background: rgba(40, 204, 158, 0.05);
-            padding: 30px;
-            margin: 25px 0;
+            padding: 22px;
+            margin: 18px 0;
         }
 
         .time-badge {
@@ -120,26 +119,26 @@
         .quiz-panel {
             background: var(--accent-teal);
             color: var(--black);
-            padding: 35px;
-            margin-top: 40px;
+            padding: 28px;
+            margin-top: 28px;
         }
 
         .option-item {
             background: rgba(0,0,0,0.08);
-            padding: 12px 15px;
-            margin-top: 10px;
+            padding: 10px 14px;
+            margin-top: 8px;
             border: 1px solid rgba(0,0,0,0.1);
             font-size: 1rem;
             font-weight: 600;
         }
 
         h2.section-title {
-            font-size: 2.2rem;
+            font-size: clamp(1.65rem, 5vw, 2.2rem);
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 35px;
+            margin-bottom: 22px;
             border-bottom: 2px solid #1a1a1a;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
 
         h2.section-title span { color: var(--accent-teal); }
@@ -150,16 +149,70 @@
             text-decoration: underline;
             display: block;
             margin-bottom: 5px;
-            word-break: break-all;
+            word-break: break-word;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 12px;
+        }
+
+        .calendar-item {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: #0d0d0d;
+            border: 1px solid #1f1f1f;
+            border-left: 3px solid var(--accent-teal);
+            padding: 14px 16px;
+            min-height: 100%;
+            transition: transform .2s ease, border-color .2s ease, background .2s ease;
+        }
+
+        .calendar-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-teal);
+            background: rgba(40, 204, 158, 0.07);
+        }
+
+        .calendar-date {
+            color: var(--accent-teal);
+            font-size: .7rem;
+            font-weight: 900;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .calendar-title {
+            color: #fff;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: .82rem;
+            line-height: 1.3;
+        }
+
+        .calendar-meta {
+            color: #9ca3af;
+            font-size: .76rem;
+            line-height: 1.45;
+            margin-top: 6px;
         }
 
         footer {
             border-top: 1px solid #111;
-            padding: 40px 20px;
+            padding: 32px 20px;
             text-align: center;
             color: #444;
             font-size: 0.75rem;
             letter-spacing: 2px;
+        }
+
+        @media (max-width: 640px) {
+            .glass-card { padding: 22px; }
+            .accent-box { padding: 18px; }
+            header { padding-top: 40px; }
         }
     </style>
 </head>
@@ -174,6 +227,7 @@
     <nav class="nav-wrapper">
         <div class="nav-container">
             <a href="#today" class="nav-link">Today</a>
+            <a href="#calendar" class="nav-link">Calendar</a>
             <a href="#church-family" class="nav-link">Family & Prayer</a>
             <a href="#upcoming" class="nav-link">Upcoming</a>
             <a href="#conference" class="nav-link">Conference</a>
@@ -191,11 +245,11 @@
                 <div class="glass-card">
                     <h3 class="text-teal-400 font-black uppercase text-sm mb-4">Service Details</h3>
                     <ul class="space-y-4 text-sm">
-                        <li>
+                        <li id="children-church">
                             <strong class="text-white">Children’s Church:</strong> 
                             <p class="text-gray-400 mt-1">Today in the last classroom on the left. Children 14 years old and under are warmly welcome to attend.</p>
                         </li>
-                        <li>
+                        <li id="afternoon-schedule">
                             <strong class="text-white">Afternoon Schedule:</strong>
                             <p class="text-gray-400 mt-1">Bible Class: 3:00 PM – 4:30 PM</p>
                             <p class="text-gray-400">AYS Program: <span class="text-teal-400">5:00 PM</span> (Note time change)</p>
@@ -204,36 +258,128 @@
                 </div>
                 <div class="glass-card">
                     <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Announcements</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                    <p id="couples-club" class="text-sm text-gray-400 leading-relaxed mb-4">
                         <strong>Couples Club:</strong> Heartfelt thanks to the 24 couples who made our first event a success! Next gathering: <strong>Saturday, May 23</strong>.
                     </p>
-                    <p class="text-sm text-gray-400 italic">Note: No Adventurer Club meeting today.</p>
+                    <p id="adventurer-note" class="text-sm text-gray-400 italic">Note: No Adventurer Club meeting today.</p>
                 </div>
             </div>
         </section>
+
+        <section id="calendar">
+            <h2 class="section-title">Event <span>Calendar</span></h2>
+            <div class="calendar-grid">
+                <a href="#children-church" class="calendar-item">
+                    <div class="calendar-date">Sabbath, April 25, 2026</div>
+                    <div class="calendar-title">Children’s Church</div>
+                    <div class="calendar-meta">Today in the last classroom on the left. Children 14 years old and under are warmly welcome to attend.</div>
+                </a>
+                <a href="#afternoon-schedule" class="calendar-item">
+                    <div class="calendar-date">Sabbath, April 25, 2026</div>
+                    <div class="calendar-title">Bible Class</div>
+                    <div class="calendar-meta">3:00 PM – 4:30 PM</div>
+                </a>
+                <a href="#afternoon-schedule" class="calendar-item">
+                    <div class="calendar-date">Sabbath, April 25, 2026</div>
+                    <div class="calendar-title">AYS Program</div>
+                    <div class="calendar-meta">5:00 PM. Note time change.</div>
+                </a>
+                <a href="#adventurer-note" class="calendar-item">
+                    <div class="calendar-date">Sabbath, April 25, 2026</div>
+                    <div class="calendar-title">No Adventurer Club Meeting</div>
+                    <div class="calendar-meta">Note: No Adventurer Club meeting today.</div>
+                </a>
+                <a href="#pathfinder-fair" class="calendar-item">
+                    <div class="calendar-date">Sunday, May 3, 2026</div>
+                    <div class="calendar-title">Pathfinder Fair</div>
+                    <div class="calendar-meta">Beginning at 8:30 am with the parade.</div>
+                </a>
+                <a href="#senior-ministry" class="calendar-item">
+                    <div class="calendar-date">Tuesday, May 5, 2026</div>
+                    <div class="calendar-title">New Beginning Senior Ministry Resumes</div>
+                    <div class="calendar-meta">10:00 AM – 12:30 PM at the Community Services Center.</div>
+                </a>
+                <a href="#mission-trips" class="calendar-item">
+                    <div class="calendar-date">Sunday, May 17, 2026</div>
+                    <div class="calendar-title">Mission Trips in Pennsylvania</div>
+                    <div class="calendar-meta">Breakfast at 8:00 am; jobs assigned at 8:45 am; workday begins at 9:00 am.</div>
+                </a>
+                <a href="#couples-club" class="calendar-item">
+                    <div class="calendar-date">Saturday, May 23, 2026</div>
+                    <div class="calendar-title">Couples Club Next Gathering</div>
+                    <div class="calendar-meta">Next gathering: Saturday, May 23.</div>
+                </a>
+                <a href="#master-guide-camporee" class="calendar-item">
+                    <div class="calendar-date">June 5–7, 2026</div>
+                    <div class="calendar-title">Master Guide Camporee</div>
+                    <div class="calendar-meta">Kamp Keystone, Hamburg, Pa. Michael Campos speaking. Register at paconference.org/events.</div>
+                </a>
+                <a href="#camp-meeting" class="calendar-item">
+                    <div class="calendar-date">June 12–20, 2026</div>
+                    <div class="calendar-title">Camp Meeting 2026: “Joyful Living”</div>
+                    <div class="calendar-meta">Blue Mountain Academy, Hamburg, Pa. Worship, practical seminars, youth and children’s meetings.</div>
+                </a>
+                <a href="#summer-camp" class="calendar-item">
+                    <div class="calendar-date">Begins June 21, 2026</div>
+                    <div class="calendar-title">Summer Camp 2026</div>
+                    <div class="calendar-meta">“Give Me the Mountains” begins with Adventurer Camp and Cowgirl Camp for ages 7-16.</div>
+                </a>
+                <a href="#vbs" class="calendar-item">
+                    <div class="calendar-date">July 6–10, 2026</div>
+                    <div class="calendar-title">VBS 2026: Cactusville</div>
+                    <div class="calendar-meta">Bible stories, crafts, games, and food for ages 5-12.</div>
+                </a>
+                <a href="#summer-camp" class="calendar-item">
+                    <div class="calendar-date">July 21–26, 2026</div>
+                    <div class="calendar-title">Family Camp</div>
+                    <div class="calendar-meta">Extended family camp at Laurel Lake.</div>
+                </a>
+                <a href="#dentistry-scholarships" class="calendar-item">
+                    <div class="calendar-date">Ongoing Opportunity</div>
+                    <div class="calendar-title">Dentistry Scholarships</div>
+                    <div class="calendar-meta">Two Loma Linda School of Dentistry scholarships offering up to 100% tuition coverage for eligible applicants.</div>
+                </a>
+                <a href="#prayer-meeting-vespers" class="calendar-item">
+                    <div class="calendar-date">Wednesdays & Fridays</div>
+                    <div class="calendar-title">Prayer Meeting & Vespers</div>
+                    <div class="calendar-meta">Wed/Fri @ 7:15 PM</div>
+                </a>
+                <a href="#evening-prayer-line" class="calendar-item">
+                    <div class="calendar-date">Mondays & Thursdays</div>
+                    <div class="calendar-title">Evening Prayer Line</div>
+                    <div class="calendar-meta">Mon/Thu @ 8:00 PM</div>
+                </a>
+                <a href="#sabbath-morning-zoom" class="calendar-item">
+                    <div class="calendar-date">Sabbath Mornings</div>
+                    <div class="calendar-title">Sabbath Morning Zoom</div>
+                    <div class="calendar-meta">Sabbath Morning @ 9:20 AM</div>
+                </a>
+            </div>
+        </section>
+
 
         <section id="church-family">
             <h2 class="section-title">Church <span>Family</span></h2>
             <div class="glass-card">
                 <div class="space-y-8">
-                    <div class="accent-box">
+                    <div id="patricia-francis" class="accent-box">
                         <h4 class="text-white font-bold mb-2 uppercase text-xs">Sister Patricia Francis</h4>
                         <p class="text-sm text-gray-200 leading-relaxed">
-                            Sister Patricia was discharged on April 21 and is now recovering at <strong>Forest Hills Rehabilitation and Healthcare Center</strong>, 1000 Evergreen Ave, Weatherly, PA 18255. She would greatly appreciate your calls and visits as she continues her recovery.
+                            Sister Patricia was discharged on April 21 and is now recovering at <strong>Forest Hills Rehabilitation and Healthcare Center</strong>, <a href="https://www.google.com/maps/search/?api=1&query=1000+Evergreen+Ave%2C+Weatherly%2C+PA+18255" target="_blank" rel="noopener" class="text-teal-400 font-bold underline">1000 Evergreen Ave, Weatherly, PA 18255</a>. She would greatly appreciate your calls and visits as she continues her recovery.
                         </p>
                     </div>
 
-                    <div class="p-4 border-l-2 border-white/20 bg-white/5">
+                    <div id="prayer-circle" class="p-4 border-l-2 border-white/20 bg-white/5">
                         <h4 class="text-white font-bold mb-2 uppercase text-xs">Prayer Circle</h4>
                         <p class="text-sm text-gray-400">
                             Please continue to keep the families of <strong>Brother Courtney Humphrey</strong> and <strong>Sister Stephanie Honore</strong> in your prayers.
                         </p>
                     </div>
 
-                    <div>
+                    <div id="mens-ministry-notice">
                         <h4 class="text-teal-400 font-bold mb-2 uppercase text-xs tracking-widest">Men’s Ministry Notice</h4>
                         <p class="text-sm text-gray-400 leading-relaxed">
-                            Men, please remember the commitment that Brother Eric shared last week. Donations can be submitted online through <strong>Men's Ministry via Adventist Giving</strong>, or placed in a tithe envelope. Contact Brother Eric or Brother Derrick Francis for details.
+                            Men, please remember the commitment that Brother Eric shared last week. Donations can be submitted online through <a href="https://www.stroudsburgsda.org/giving" target="_blank" rel="noopener" class="text-teal-400 font-bold underline">Men's Ministry via Adventist Giving</a>, or placed in a tithe envelope. Contact Brother Eric or Brother Derrick Francis for details.
                         </p>
                     </div>
                 </div>
@@ -243,13 +389,13 @@
         <section id="upcoming">
             <h2 class="section-title">Upcoming <span>Events</span></h2>
             <div class="glass-card">
-                <h3 class="text-teal-400 font-black uppercase text-xl mb-2">VBS 2026: Cactusville</h3>
+                <h3 id="vbs" class="text-teal-400 font-black uppercase text-xl mb-2">VBS 2026: Cactusville</h3>
                 <p class="text-white font-bold mb-2">July 6th — July 10th</p>
                 <p class="text-sm text-gray-300 leading-relaxed mb-6">
                     Join us for Bible stories, crafts, games, and food! We welcome all children and community members ages 5-12. If you are interested in volunteering, please see our coordinator, <strong>Sister Terina Jackson</strong>.
                 </p>
                 <hr class="border-white/10 my-6">
-                <h4 class="text-white font-bold uppercase text-xs mb-2">New Beginning Senior Ministry</h4>
+                <h4 id="senior-ministry" class="text-white font-bold uppercase text-xs mb-2">New Beginning Senior Ministry</h4>
                 <p class="text-sm text-gray-400">Resuming <strong>May 5th</strong> (10:00 AM – 12:30 PM) at the Community Services Center.</p>
             </div>
         </section>
@@ -257,31 +403,34 @@
         <section id="conference">
             <h2 class="section-title">PA <span>Conference</span></h2>
             <div class="space-y-6">
-                <div class="glass-card">
+                <div id="pathfinder-fair" class="glass-card">
                     <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Pathfinder Fair | Sunday, May 3</h4>
-                    <p class="text-sm text-gray-300">Join us for a day filled with Pathfinder fun beginning at 8:30 am with the parade. Cheer on your favorite Pathfinders as they work through drills and skills. Support this important ministry by enjoying delicious food from the food booths.</p>
+                    <p class="text-sm text-gray-300">Pathfinder Fair – Join us for a day filled with Pathfinder fun on Sunday, May 3, beginning at 8:30 am with the parade. Cheer on your favorite Pathfinders as they work through drills and skills. Support this important ministry by enjoying delicious food from the food booths.</p>
                 </div>
 
-                <div class="glass-card">
+                <div id="mission-trips" class="glass-card">
                     <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Mission Trips in Pennsylvania | Sunday, May 17</h4>
-                    <p class="text-sm text-gray-300 mb-4">Ever wish you could go on a mission trip but find the time and finances a challenge? Join one of two one-day mission trips here in Pennsylvania. Begin the day with breakfast at 8:00 am at either Blue Mountain Academy, Hamburg, Pa., or Laurel Lake Camp, Rossiter, Pa. Jobs assigned at 8:45 am; workday begins at 9:00 am. Lunch provided. Register at <a href="https://paconference.org/mission-trip-registration" class="underline">paconference.org</a>.</p>
+                    <p class="text-sm text-gray-300 mb-4">Mission Trips in Pennsylvania – Ever wish you could go on a mission trip but find the time and finances a challenge? We have an opportunity for you! Join one of two one-day mission trips here in Pennsylvania on Sunday, May 17. Begin the day with breakfast at 8:00 am at either Blue Mountain Academy, Hamburg, Pa., or Laurel Lake Camp, Rossiter, Pa. Jobs will be assigned at 8:45 am, and the workday begins at 9:00 am. Lunch will be provided. Learn more and register at <a href="https://paconference.org/mission-trip-registration" target="_blank" rel="noopener" class="underline text-teal-400 font-bold">paconference.org/mission-trip-registration</a>.</p>
                 </div>
 
-                <div class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Camp Meeting 2026: "Joyful Living" | June 12-20</h4>
-                    <p class="text-sm text-gray-300 mb-4">Plan now to attend at Blue Mountain Academy. Focus: Growing stronger physically, mentally, and spiritually. Speakers include Randy Skeete, Neil Nedley, Mark and Teenie Finley, Dr. Jonathan Burt, Gail McKenzie, Gary Gibbs, Dee Casper, Ryan Musser, and Dr. Clinton Wahlen. Children explore “Wild About Health.” Register for lodging and meals at <a href="https://paconference.org/camp-meeting" class="underline">paconference.org/camp-meeting</a>.</p>
+                <div id="master-guide-camporee" class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Master Guide Camporee | June 5-7, 2026</h4>
+                    <p class="text-sm text-gray-300 mb-4">Master Guide Camporee - Master Guides are invited to a camporee just for them at the Pennsylvania Conference’s Kamp Keystone, Hamburg, Pa., June 5-7, 2026. Our guest speaker is Michael Campos, executive secretary for the Illinois Conference. Register at <a href="https://paconference.org/events" target="_blank" rel="noopener" class="underline text-teal-400 font-bold">paconference.org/events</a>.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="p-4 bg-white/5 border border-white/10 text-xs text-gray-400">
-                        <strong class="text-white uppercase">Master Guide Camporee</strong><br>June 5-7 @ Kamp Keystone. Michael Campos speaking. Register at paconference.org.
-                    </div>
-                    <div class="p-4 bg-white/5 border border-white/10 text-xs text-gray-400">
-                        <strong class="text-white uppercase">Summer Camp 2026</strong><br>Begins June 21 at Laurel Lake. Family camp July 21-26. Register at laurellakesummercamp.com.
-                    </div>
-                    <div class="p-4 bg-white/5 border border-white/10 text-xs text-gray-400">
-                        <strong class="text-white uppercase">Dentistry Scholarships</strong><br>Up to 100% tuition coverage for Loma Linda. Contact president@paconference.org.
-                    </div>
+                <div id="camp-meeting" class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Camp Meeting 2026: “Joyful Living” | June 12-20, 2026</h4>
+                    <p class="text-sm text-gray-300 mb-4">Camp Meeting – Plan now to attend this year’s camp meeting, June 12-20, 2026, at Blue Mountain Academy, Hamburg, Pa. It will be a powerful week of powerful worship and practical seminars at our Pennsylvania Conference Camp Meeting 2026! This year’s focus is on “Joyful Living: Now and Forever—growing stronger physically, mentally, and spiritually—as we discover God’s plan for vibrant, healthy, and joyful living. Speakers include Randy Skeete, Neil Nedley, Mark and Teenie Finley, Dr. Jonathan Burt, Gail McKenzie, Gary Gibbs, Dee Casper, Ryan Musser, and Dr. Clinton Wahlen—offering messages of hope and health for today’s world. Children will enjoy meetings and activities planned for them as they explore “Wild About Health.” Powerful worship and fun outings are planned for our youth and young adults. Learn more, register for lodging, and purchase meal tickets at <a href="https://paconference.org/camp-meeting" target="_blank" rel="noopener" class="underline text-teal-400 font-bold">paconference.org/camp-meeting</a>.</p>
+                </div>
+
+                <div id="summer-camp" class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Summer Camp 2026: “Give Me the Mountains” | Begins June 21</h4>
+                    <p class="text-sm text-gray-300 mb-4">Summer Camp – Our 2026 summer camp, “Give Me the Mountains,” begins June 21 with Adventurer Camp and Cowgirl Camp. It will be a fun and life-impacting week for young people ages 7-16, and for families during our extended family camp, July 21-26. Learn more and register at <a href="https://laurellakesummercamp.com" target="_blank" rel="noopener" class="underline text-teal-400 font-bold">laurellakesummercamp.com</a>.</p>
+                </div>
+
+                <div id="dentistry-scholarships" class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Scholarships Available for Dentistry Students</h4>
+                    <p class="text-sm text-gray-300 mb-4">Scholarships Available for Dentistry Students - Ever thought about becoming a dentist? A donor to the Pennsylvania Conference has made available two scholarships for Loma Linda’s School of Dentistry, offering up to 100% tuition coverage for eligible applicants. The scholarships are available for new and current students. For more information, contact <a href="mailto:president@paconference.org" class="underline text-teal-400 font-bold">president@paconference.org</a>.</p>
                 </div>
             </div>
         </section>
@@ -362,10 +511,10 @@
                     </div>
                     <div>
                         <h4 class="text-white font-bold text-xs mb-4 uppercase tracking-widest">Resources: CBDC Explained</h4>
-                        <a href="https://youtu.be/Esv76a-W_jo" target="_blank" class="resource-link">Part 1: Overview</a>
-                        <a href="https://youtu.be/ApkEgP7uzSY" target="_blank" class="resource-link">Part 2: Economic Oversight</a>
-                        <a href="https://youtu.be/fGmQ8-pZU6s" target="_blank" class="resource-link">Part 3: Digital Payments</a>
-                        <a href="https://youtu.be/J1Uk0L4QIjM" target="_blank" class="resource-link">Part 4: Prophetic Perspective</a>
+                        <a href="https://youtu.be/Esv76a-W_jo" target="_blank" rel="noopener" class="resource-link">Part 1: Overview</a>
+                        <a href="https://youtu.be/ApkEgP7uzSY" target="_blank" rel="noopener" class="resource-link">Part 2: Economic Oversight</a>
+                        <a href="https://youtu.be/fGmQ8-pZU6s" target="_blank" rel="noopener" class="resource-link">Part 3: Digital Payments</a>
+                        <a href="https://youtu.be/J1Uk0L4QIjM" target="_blank" rel="noopener" class="resource-link">Part 4: Prophetic Perspective</a>
                     </div>
                 </div>
             </div>
@@ -377,36 +526,36 @@
                 <div class="glass-card">
                     <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Service Links</h3>
                     <div class="space-y-6 text-sm">
-                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
+                        <div id="prayer-meeting-vespers" class="flex justify-between items-center border-b border-white/5 pb-4 gap-4">
                             <div>
                                 <p class="font-bold text-white">Prayer Meeting & Vespers</p>
                                 <p class="text-xs text-gray-500">Wed/Fri @ 7:15 PM</p>
                             </div>
-                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-teal-400"><i class="fas fa-video fa-lg"></i></a>
+                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" rel="noopener" class="text-teal-400"><i class="fas fa-video fa-lg"></i></a>
                         </div>
-                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
+                        <div id="evening-prayer-line" class="flex justify-between items-center border-b border-white/5 pb-4 gap-4">
                             <div>
                                 <p class="font-bold text-white">Evening Prayer Line</p>
                                 <p class="text-xs text-gray-500">Mon/Thu @ 8:00 PM</p>
                             </div>
-                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-teal-400"><i class="fas fa-phone fa-lg"></i></a>
+                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" rel="noopener" class="text-teal-400"><i class="fas fa-phone fa-lg"></i></a>
                         </div>
-                        <div class="flex justify-between items-center">
+                        <div id="sabbath-morning-zoom" class="flex justify-between items-center gap-4">
                             <div>
                                 <p class="font-bold text-white">Sabbath Morning Zoom</p>
                                 <p class="text-xs text-gray-500">Sabbath Morning @ 9:20 AM</p>
                             </div>
-                            <a href="https://us02web.zoom.us/j/797422531" target="_blank" class="text-teal-400"><i class="fas fa-video fa-lg"></i></a>
+                            <a href="https://us02web.zoom.us/j/797422531" target="_blank" rel="noopener" class="text-teal-400"><i class="fas fa-video fa-lg"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="glass-card flex flex-col justify-center items-center text-center">
                     <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Adventist Giving</h3>
-                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs hover:bg-teal-400 transition mb-10">Give Online Now</a>
+                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" rel="noopener" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs hover:bg-teal-400 transition mb-10">Give Online Now</a>
                     <div class="flex gap-10 text-2xl text-gray-500">
-                        <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" rel="noopener" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" rel="noopener" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" rel="noopener" class="hover:text-teal-400 transition"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -415,7 +564,7 @@
     </div>
 
     <footer>
-        STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360
+        STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | <a href="https://www.google.com/maps/search/?api=1&query=900+N+9th+St%2C+Stroudsburg%2C+PA+18360" target="_blank" rel="noopener">900 N 9th St, Stroudsburg, PA 18360</a>
     </footer>
 
 </body>
