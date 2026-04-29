@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabbath Announcements | Stroudsburg SDA</title>
+    <title>Midweek Bulletin | Stroudsburg SDA</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,24 +24,24 @@
             color: white;
             font-family: 'Inter', sans-serif;
             margin: 0;
-            line-height: 1.55;
+            line-height: 1.7;
         }
 
         header {
-            padding: 52px 20px 28px;
+            padding: 80px 20px 40px;
             text-align: center;
             background: linear-gradient(to bottom, #111, #000);
         }
 
         .logo-img {
-            max-height: 86px;
+            max-height: 100px;
             width: auto;
-            margin: 0 auto 18px;
+            margin: 0 auto 25px;
             filter: grayscale(1) brightness(2);
         }
 
         h1 {
-            font-size: clamp(2rem, 6vw, 3.6rem);
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
             font-weight: 900;
             letter-spacing: -1px;
             margin-bottom: 5px;
@@ -50,6 +50,7 @@
 
         h1 span { color: var(--accent-teal); }
 
+        /* Sticky Navigation Bar */
         .nav-wrapper {
             border-bottom: 1px solid #222;
             position: sticky;
@@ -60,7 +61,7 @@
         }
 
         .nav-container {
-            max-width: 1180px;
+            max-width: 1100px;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -68,10 +69,10 @@
         }
 
         .nav-link {
-            padding: 13px 14px;
+            padding: 15px 18px;
             color: var(--gray-text);
             text-transform: uppercase;
-            font-size: 0.63rem;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 1px;
             text-decoration: none;
@@ -81,138 +82,79 @@
 
         .nav-link:hover { color: var(--accent-teal); }
 
+        /* Page Layout */
         .page-content {
-            max-width: 1060px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 24px 16px 36px;
+            padding: 40px 20px;
         }
 
         section {
-            scroll-margin-top: 62px;
-            padding-top: 36px;
-            margin-bottom: 48px;
+            padding-top: 60px;
+            margin-bottom: 100px;
         }
 
         .glass-card {
             background: #0d0d0d;
-            padding: 28px;
+            padding: 40px;
             border: 1px solid #1a1a1a;
-            margin-bottom: 18px;
+            margin-bottom: 30px;
         }
 
         .accent-box {
             border-left: 3px solid var(--accent-teal);
             background: rgba(40, 204, 158, 0.05);
-            padding: 22px;
-            margin: 18px 0;
-        }
-
-        .time-badge {
-            font-family: monospace;
-            background: rgba(255,255,255,0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            color: #fff;
+            padding: 30px;
+            margin: 25px 0;
         }
 
         .quiz-panel {
             background: var(--accent-teal);
             color: var(--black);
-            padding: 28px;
-            margin-top: 28px;
+            padding: 35px;
+            margin-top: 40px;
         }
 
         .option-item {
             background: rgba(0,0,0,0.08);
-            padding: 10px 14px;
-            margin-top: 8px;
+            padding: 12px 15px;
+            margin-top: 10px;
             border: 1px solid rgba(0,0,0,0.1);
             font-size: 1rem;
             font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
         }
 
-        h2.section-title {
-            font-size: clamp(1.65rem, 5vw, 2.2rem);
-            font-weight: 900;
+        .option-item:hover {
+            background: rgba(0,0,0,0.15);
+        }
+
+        /* Quiz Feedback States */
+        .option-item.correct {
+            background: #1a6d4a !important;
+            color: white !important;
+            border-color: #000;
+        }
+
+        #quiz-answer-revealed {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255,255,255,0.2);
+            font-weight: 800;
             text-transform: uppercase;
-            margin-bottom: 22px;
-            border-bottom: 2px solid #1a1a1a;
-            padding-bottom: 8px;
-        }
-
-        h2.section-title span { color: var(--accent-teal); }
-
-        .resource-link {
-            color: var(--accent-teal);
-            font-weight: 700;
-            text-decoration: underline;
-            display: block;
-            margin-bottom: 5px;
-            word-break: break-word;
-        }
-
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 12px;
-        }
-
-        .calendar-item {
-            display: block;
-            text-decoration: none;
-            color: inherit;
-            background: #0d0d0d;
-            border: 1px solid #1f1f1f;
-            border-left: 3px solid var(--accent-teal);
-            padding: 14px 16px;
-            min-height: 100%;
-            transition: transform .2s ease, border-color .2s ease, background .2s ease;
-        }
-
-        .calendar-item:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent-teal);
-            background: rgba(40, 204, 158, 0.07);
-        }
-
-        .calendar-date {
-            color: var(--accent-teal);
-            font-size: .7rem;
-            font-weight: 900;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
-
-        .calendar-title {
-            color: #fff;
-            font-weight: 900;
-            text-transform: uppercase;
-            font-size: .82rem;
-            line-height: 1.3;
-        }
-
-        .calendar-meta {
-            color: #9ca3af;
-            font-size: .76rem;
-            line-height: 1.45;
-            margin-top: 6px;
+            letter-spacing: 1px;
+            text-align: center;
         }
 
         footer {
             border-top: 1px solid #111;
-            padding: 32px 20px;
+            padding: 60px 20px;
             text-align: center;
             color: #444;
             font-size: 0.75rem;
             letter-spacing: 2px;
-        }
-
-        @media (max-width: 640px) {
-            .glass-card { padding: 22px; }
-            .accent-box { padding: 18px; }
-            header { padding-top: 40px; }
         }
     </style>
 </head>
@@ -220,302 +162,93 @@
 
     <header>
         <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-        <h1>STROUDSBURG <span>SABBATH</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, April 25, 2026</p>
+        <h1>MIDWEEK <span>MOMENTUM</span></h1>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Stroudsburg Seventh-day Adventist Church</p>
     </header>
 
     <nav class="nav-wrapper">
         <div class="nav-container">
-            <a href="#today" class="nav-link">Today</a>
-            <a href="#calendar" class="nav-link">Calendar</a>
-            <a href="#church-family" class="nav-link">Family & Prayer</a>
-            <a href="#upcoming" class="nav-link">Upcoming</a>
-            <a href="#conference" class="nav-link">Conference</a>
-            <a href="#momentum" class="nav-link">Midweek Momentum</a>
-            <a href="#religious-liberty" class="nav-link">Religious Liberty</a>
+            <a href="#momentum" class="nav-link">Sabbath School</a>
+            <a href="#worship" class="nav-link">Religious Liberty</a>
             <a href="#connect" class="nav-link">Connect & Give</a>
         </div>
     </nav>
 
     <div class="page-content">
         
-        <section id="today">
-            <h2 class="section-title">Today at <span>Stroudsburg</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-card">
-                    <h3 class="text-teal-400 font-black uppercase text-sm mb-4">Service Details</h3>
-                    <ul class="space-y-4 text-sm">
-                        <li id="children-church">
-                            <strong class="text-white">Children’s Church:</strong> 
-                            <p class="text-gray-400 mt-1">Today in the last classroom on the left. Children 14 years old and under are warmly welcome to attend.</p>
-                        </li>
-                        <li id="afternoon-schedule">
-                            <strong class="text-white">Afternoon Schedule:</strong>
-                            <p class="text-gray-400 mt-1">Bible Class: 3:00 PM – 4:30 PM</p>
-                            <p class="text-gray-400">AYS Program: <span class="text-teal-400">5:00 PM</span> (Note time change)</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="glass-card">
-                    <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Announcements</h3>
-                    <p id="couples-club" class="text-sm text-gray-400 leading-relaxed mb-4">
-                        <strong>Couples Club:</strong> Heartfelt thanks to the 24 couples who made our first event a success! Next gathering: <strong>Saturday, May 23</strong>.
-                    </p>
-                    <p id="adventurer-note" class="text-sm text-gray-400 italic">Note: No Adventurer Club meeting today.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="calendar">
-            <h2 class="section-title">Event <span>Calendar</span></h2>
-            <div class="calendar-grid">
-                <a href="#children-church" class="calendar-item">
-                    <div class="calendar-date">Sabbath, April 25, 2026</div>
-                    <div class="calendar-title">Children’s Church</div>
-                    <div class="calendar-meta">Today in the last classroom on the left. Children 14 years old and under are warmly welcome to attend.</div>
-                </a>
-                <a href="#afternoon-schedule" class="calendar-item">
-                    <div class="calendar-date">Sabbath, April 25, 2026</div>
-                    <div class="calendar-title">Bible Class</div>
-                    <div class="calendar-meta">3:00 PM – 4:30 PM</div>
-                </a>
-                <a href="#afternoon-schedule" class="calendar-item">
-                    <div class="calendar-date">Sabbath, April 25, 2026</div>
-                    <div class="calendar-title">AYS Program</div>
-                    <div class="calendar-meta">5:00 PM. Note time change.</div>
-                </a>
-                <a href="#adventurer-note" class="calendar-item">
-                    <div class="calendar-date">Sabbath, April 25, 2026</div>
-                    <div class="calendar-title">No Adventurer Club Meeting</div>
-                    <div class="calendar-meta">Note: No Adventurer Club meeting today.</div>
-                </a>
-                <a href="#pathfinder-fair" class="calendar-item">
-                    <div class="calendar-date">Sunday, May 3, 2026</div>
-                    <div class="calendar-title">Pathfinder Fair</div>
-                    <div class="calendar-meta">Beginning at 8:30 am with the parade.</div>
-                </a>
-                <a href="#senior-ministry" class="calendar-item">
-                    <div class="calendar-date">Tuesday, May 5, 2026</div>
-                    <div class="calendar-title">New Beginning Senior Ministry Resumes</div>
-                    <div class="calendar-meta">10:00 AM – 12:30 PM at the Community Services Center.</div>
-                </a>
-                <a href="#mission-trips" class="calendar-item">
-                    <div class="calendar-date">Sunday, May 17, 2026</div>
-                    <div class="calendar-title">Mission Trips in Pennsylvania</div>
-                    <div class="calendar-meta">Breakfast at 8:00 am; jobs assigned at 8:45 am; workday begins at 9:00 am.</div>
-                </a>
-                <a href="#couples-club" class="calendar-item">
-                    <div class="calendar-date">Saturday, May 23, 2026</div>
-                    <div class="calendar-title">Couples Club Next Gathering</div>
-                    <div class="calendar-meta">Next gathering: Saturday, May 23.</div>
-                </a>
-                <a href="#master-guide-camporee" class="calendar-item">
-                    <div class="calendar-date">June 5–7, 2026</div>
-                    <div class="calendar-title">Master Guide Camporee</div>
-                    <div class="calendar-meta">Kamp Keystone, Hamburg, Pa. Michael Campos speaking. Register at paconference.org/events.</div>
-                </a>
-                <a href="#camp-meeting" class="calendar-item">
-                    <div class="calendar-date">June 12–20, 2026</div>
-                    <div class="calendar-title">Camp Meeting 2026: “Joyful Living”</div>
-                    <div class="calendar-meta">Blue Mountain Academy, Hamburg, Pa. Worship, practical seminars, youth and children’s meetings.</div>
-                </a>
-                <a href="#summer-camp" class="calendar-item">
-                    <div class="calendar-date">Begins June 21, 2026</div>
-                    <div class="calendar-title">Summer Camp 2026</div>
-                    <div class="calendar-meta">“Give Me the Mountains” begins with Adventurer Camp and Cowgirl Camp for ages 7-16.</div>
-                </a>
-                <a href="#vbs" class="calendar-item">
-                    <div class="calendar-date">July 6–10, 2026</div>
-                    <div class="calendar-title">VBS 2026: Cactusville</div>
-                    <div class="calendar-meta">Bible stories, crafts, games, and food for ages 5-12.</div>
-                </a>
-                <a href="#summer-camp" class="calendar-item">
-                    <div class="calendar-date">July 21–26, 2026</div>
-                    <div class="calendar-title">Family Camp</div>
-                    <div class="calendar-meta">Extended family camp at Laurel Lake.</div>
-                </a>
-                <a href="#dentistry-scholarships" class="calendar-item">
-                    <div class="calendar-date">Ongoing Opportunity</div>
-                    <div class="calendar-title">Dentistry Scholarships</div>
-                    <div class="calendar-meta">Two Loma Linda School of Dentistry scholarships offering up to 100% tuition coverage for eligible applicants.</div>
-                </a>
-                <a href="#prayer-meeting-vespers" class="calendar-item">
-                    <div class="calendar-date">Wednesdays & Fridays</div>
-                    <div class="calendar-title">Prayer Meeting & Vespers</div>
-                    <div class="calendar-meta">Wed/Fri @ 7:15 PM</div>
-                </a>
-                <a href="#evening-prayer-line" class="calendar-item">
-                    <div class="calendar-date">Mondays & Thursdays</div>
-                    <div class="calendar-title">Evening Prayer Line</div>
-                    <div class="calendar-meta">Mon/Thu @ 8:00 PM</div>
-                </a>
-                <a href="#sabbath-morning-zoom" class="calendar-item">
-                    <div class="calendar-date">Sabbath Mornings</div>
-                    <div class="calendar-title">Sabbath Morning Zoom</div>
-                    <div class="calendar-meta">Sabbath Morning @ 9:20 AM</div>
-                </a>
-            </div>
-        </section>
-
-
-        <section id="church-family">
-            <h2 class="section-title">Church <span>Family</span></h2>
-            <div class="glass-card">
-                <div class="space-y-8">
-                    <div id="patricia-francis" class="accent-box">
-                        <h4 class="text-white font-bold mb-2 uppercase text-xs">Sister Patricia Francis</h4>
-                        <p class="text-sm text-gray-200 leading-relaxed">
-                            Sister Patricia was discharged on April 21 and is now recovering at <strong>Forest Hills Rehabilitation and Healthcare Center</strong>, <a href="https://www.google.com/maps/search/?api=1&query=1000+Evergreen+Ave%2C+Weatherly%2C+PA+18255" target="_blank" rel="noopener" class="text-teal-400 font-bold underline">1000 Evergreen Ave, Weatherly, PA 18255</a>. She would greatly appreciate your calls and visits as she continues her recovery.
-                        </p>
-                    </div>
-
-                    <div id="prayer-circle" class="p-4 border-l-2 border-white/20 bg-white/5">
-                        <h4 class="text-white font-bold mb-2 uppercase text-xs">Prayer Circle</h4>
-                        <p class="text-sm text-gray-400">
-                            Please continue to keep the families of <strong>Brother Courtney Humphrey</strong> and <strong>Sister Stephanie Honore</strong> in your prayers.
-                        </p>
-                    </div>
-
-                    <div id="mens-ministry-notice">
-                        <h4 class="text-teal-400 font-bold mb-2 uppercase text-xs tracking-widest">Men’s Ministry Notice</h4>
-                        <p class="text-sm text-gray-400 leading-relaxed">
-                            Men, please remember the commitment that Brother Eric shared last week. Donations can be submitted online through <a href="https://www.stroudsburgsda.org/giving" target="_blank" rel="noopener" class="text-teal-400 font-bold underline">Men's Ministry via Adventist Giving</a>, or placed in a tithe envelope. Contact Brother Eric or Brother Derrick Francis for details.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="upcoming">
-            <h2 class="section-title">Upcoming <span>Events</span></h2>
-            <div class="glass-card">
-                <h3 id="vbs" class="text-teal-400 font-black uppercase text-xl mb-2">VBS 2026: Cactusville</h3>
-                <p class="text-white font-bold mb-2">July 6th — July 10th</p>
-                <p class="text-sm text-gray-300 leading-relaxed mb-6">
-                    Join us for Bible stories, crafts, games, and food! We welcome all children and community members ages 5-12. If you are interested in volunteering, please see our coordinator, <strong>Sister Terina Jackson</strong>.
-                </p>
-                <hr class="border-white/10 my-6">
-                <h4 id="senior-ministry" class="text-white font-bold uppercase text-xs mb-2">New Beginning Senior Ministry</h4>
-                <p class="text-sm text-gray-400">Resuming <strong>May 5th</strong> (10:00 AM – 12:30 PM) at the Community Services Center.</p>
-            </div>
-        </section>
-
-        <section id="conference">
-            <h2 class="section-title">PA <span>Conference</span></h2>
-            <div class="space-y-6">
-                <div id="pathfinder-fair" class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Pathfinder Fair | Sunday, May 3</h4>
-                    <p class="text-sm text-gray-300">Pathfinder Fair – Join us for a day filled with Pathfinder fun on Sunday, May 3, beginning at 8:30 am with the parade. Cheer on your favorite Pathfinders as they work through drills and skills. Support this important ministry by enjoying delicious food from the food booths.</p>
-                </div>
-
-                <div id="mission-trips" class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Mission Trips in Pennsylvania | Sunday, May 17</h4>
-                    <p class="text-sm text-gray-300 mb-4">Mission Trips in Pennsylvania – Ever wish you could go on a mission trip but find the time and finances a challenge? We have an opportunity for you! Join one of two one-day mission trips here in Pennsylvania on Sunday, May 17. Begin the day with breakfast at 8:00 am at either Blue Mountain Academy, Hamburg, Pa., or Laurel Lake Camp, Rossiter, Pa. Jobs will be assigned at 8:45 am, and the workday begins at 9:00 am. Lunch will be provided. Learn more and register at <a href="https://paconference.org/mission-trip-registration" target="_blank" rel="noopener" class="underline text-teal-400 font-bold">paconference.org/mission-trip-registration</a>.</p>
-                </div>
-
-                <div id="master-guide-camporee" class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Master Guide Camporee | June 5-7, 2026</h4>
-                    <p class="text-sm text-gray-300 mb-4">Master Guide Camporee - Master Guides are invited to a camporee just for them at the Pennsylvania Conference’s Kamp Keystone, Hamburg, Pa., June 5-7, 2026. Our guest speaker is Michael Campos, executive secretary for the Illinois Conference. Register at <a href="https://paconference.org/events" target="_blank" rel="noopener" class="underline text-teal-400 font-bold">paconference.org/events</a>.</p>
-                </div>
-
-                <div id="camp-meeting" class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Camp Meeting 2026: “Joyful Living” | June 12-20, 2026</h4>
-                    <p class="text-sm text-gray-300 mb-4">Camp Meeting – Plan now to attend this year’s camp meeting, June 12-20, 2026, at Blue Mountain Academy, Hamburg, Pa. It will be a powerful week of powerful worship and practical seminars at our Pennsylvania Conference Camp Meeting 2026! This year’s focus is on “Joyful Living: Now and Forever—growing stronger physically, mentally, and spiritually—as we discover God’s plan for vibrant, healthy, and joyful living. Speakers include Randy Skeete, Neil Nedley, Mark and Teenie Finley, Dr. Jonathan Burt, Gail McKenzie, Gary Gibbs, Dee Casper, Ryan Musser, and Dr. Clinton Wahlen—offering messages of hope and health for today’s world. Children will enjoy meetings and activities planned for them as they explore “Wild About Health.” Powerful worship and fun outings are planned for our youth and young adults. Learn more, register for lodging, and purchase meal tickets at <a href="https://paconference.org/camp-meeting" target="_blank" rel="noopener" class="underline text-teal-400 font-bold">paconference.org/camp-meeting</a>.</p>
-                </div>
-
-                <div id="summer-camp" class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Summer Camp 2026: “Give Me the Mountains” | Begins June 21</h4>
-                    <p class="text-sm text-gray-300 mb-4">Summer Camp – Our 2026 summer camp, “Give Me the Mountains,” begins June 21 with Adventurer Camp and Cowgirl Camp. It will be a fun and life-impacting week for young people ages 7-16, and for families during our extended family camp, July 21-26. Learn more and register at <a href="https://laurellakesummercamp.com" target="_blank" rel="noopener" class="underline text-teal-400 font-bold">laurellakesummercamp.com</a>.</p>
-                </div>
-
-                <div id="dentistry-scholarships" class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Scholarships Available for Dentistry Students</h4>
-                    <p class="text-sm text-gray-300 mb-4">Scholarships Available for Dentistry Students - Ever thought about becoming a dentist? A donor to the Pennsylvania Conference has made available two scholarships for Loma Linda’s School of Dentistry, offering up to 100% tuition coverage for eligible applicants. The scholarships are available for new and current students. For more information, contact <a href="mailto:president@paconference.org" class="underline text-teal-400 font-bold">president@paconference.org</a>.</p>
-                </div>
-            </div>
-        </section>
-
         <section id="momentum">
-            <h2 class="section-title">Midweek <span>Momentum</span></h2>
+            <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
             <div class="glass-card">
-                <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider">When was the last time The Word spoke to you?</h3>
-                <p class="text-sm text-gray-300 leading-relaxed mb-4">
-                    Our lives are filled with words from emails, texts, lectures, and conversations (just to name a few), but how often do we pause to listen to The Word? In this week’s lesson, we’re studying “The Role of the Bible” and the power of Scripture in our daily lives. The bible is living, powerful, deeply personal, and capable of reaching into the very core of who we are.
-                </p>
-                <p class="text-sm text-gray-300 leading-relaxed mb-4">
-                    Neglecting scripture doesn’t just affect our knowledge of God; it affects our relationships, our peace, our decision-making, and even the condition of our hearts. Conversely, when we intentionally spend time in the Word, something transformative happens. We are corrected, strengthened, nourished, and guided.
-                </p>
+                <p class="text-teal-400 font-bold mb-2">Lesson for Sabbath 5/2/2026</p>
+                <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">From Routine to Relationship: Learning How to Study the Bible</h3>
                 
+                <p class="mb-4 text-gray-200">Many of us own Bibles in multiple versions; however, our challenge does not lie in owning Bibles but in engaging with the Bibles we own.</p>
+                
+                <p class="mb-4 text-gray-200">This week’s lesson, “How to Study the Bible,” moves us beyond the question of why Scripture matters and presses into something even more practical: How do we actually study the Bible to experience its power in our daily lives?</p>
+                
+                <p class="mb-4 text-gray-200">It’s possible to read the Bible quickly, check the box, move on, and walk away unchanged. This week challenges us to move beyond this kind of surface-level interaction into something deeper. Scripture isn’t meant to be rushed through; it’s meant to be lingered over, wrestled with, and internalized.</p>
+
                 <div class="accent-box">
-                    <p class="text-white font-bold text-lg italic">"The Bible becomes not just something we read, but something that reads us."</p>
+                    <p class="text-white font-bold text-lg mb-2">A Lamp for Your Path</p>
+                    <p class="text-gray-200 italic">Think about the imagery presented this week: God’s Word as a lamp lighting a dark path. It doesn’t flood the entire area with light; it illuminates just enough for the next step. That means Bible study is not a sprint for information but a slow, intentional walk with God. That walk requires structure.</p>
                 </div>
 
-                <p class="text-sm text-gray-300 leading-relaxed mb-8">
-                    One of the most compelling ideas in this week’s lesson is that God is not silent. The question is not whether He is speaking, but whether we are creating space to listen. So, as you move through this week, don’t approach this lesson as just another study. Approach it as an invitation to reconnect, realign, and rediscover God’s voice through His Word.
-                </p>
+                <p class="mb-4 text-gray-200">Time must be carved out intentionally. A place must be chosen deliberately. Distractions must be resisted consistently. Even Jesus modeled this: rising early, seeking solitude, prioritizing communion with the Father before anything else. If Jesus needed that rhythm and structure, how much more do we?</p>
+                
+                <p class="mb-4 text-gray-200">This lesson does not just provide logistics; it pushes us into method. Pray before you read. Write as you reflect. Revisit passages. Share what you learn. These are not just techniques; they are pathways to transformation. Because when the Word moves from page → to mind → to heart → to action, it begins to shape not just what we know, but who we become.</p>
 
-                <div class="quiz-panel">
+                <p class="mb-8 text-gray-200">Perhaps one of the most powerful ideas this week is the concept of the “double blessing.” When we study, we are strengthened, but when we share, that growth multiplies. The Word was never meant to stay contained within us; it is meant to flow outward into the lives of others.</p>
+
+                <div class="bg-white/5 p-6 border border-white/10 rounded mb-10 text-center">
+                    <p class="text-teal-400 font-black uppercase text-xs tracking-widest mb-2">This week’s invitation:</p>
+                    <p class="text-xl font-bold">Don’t just read the Bible—engage it deeply, consistently, and relationally.</p>
+                </div>
+
+                <div class="quiz-panel" id="quiz-container">
                     <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
-                    <p class="font-bold mb-4 text-black">How does the lesson define the appropriate relationship between human reason and the Bible?</p>
+                    <p class="font-bold mb-4 text-black">The lesson mentions that sharing what we learned through Bible study results in a 'double blessing.' What is the specific cognitive benefit for the person doing the sharing?</p>
+                    
                     <div class="space-y-2">
-                        <div class="option-item border-black/20 text-black">A. Reason and the Bible are equal partners in the search for truth.</div>
-                        <div class="option-item border-black/20 text-black">B. Reason must be bypassed entirely because it is inherently deceptive.</div>
-                        <div class="option-item bg-black/10 border-black/40 text-white font-black">C. Reason is an essential tool that must be submitted to the Word and wisdom of God. (Answer)</div>
-                        <div class="option-item border-black/20 text-black">D. Reason acts as the ultimate filter to determine which parts of the Bible are still relevant.</div>
+                        <div class="option-item" onclick="revealAnswer(this, false)">A. It provides public proof of one’s spiritual progress.</div>
+                        <div class="option-item" onclick="revealAnswer(this, false)">B. It eliminates the need for further personal study of that topic.</div>
+                        <div class="option-item" onclick="revealAnswer(this, false)">C. It fulfills the requirements of the Great Commission.</div>
+                        <div id="correct-option" class="option-item" onclick="revealAnswer(this, true)">D. It triggers the summarizing and synthesizing process, which consolidates thoughts.</div>
                     </div>
-                    <div class="mt-8 border-t border-black/10 pt-4">
-                        <h5 class="font-black uppercase text-xs text-black mb-2">Food for Thought:</h5>
-                        <p class="text-sm text-black italic leading-relaxed">If the Bible truly is living and powerful, what specific changes should be evident in my daily life? Is it possible to read and know the Word of God and be unchanged?</p>
+
+                    <div id="quiz-answer-revealed">Correct Answer: D</div>
+
+                    <div class="mt-8 border-t border-black/10 pt-4 text-black">
+                        <h5 class="font-black uppercase text-xs mb-2">Food for Thought:</h5>
+                        <p class="text-sm italic">What specific change can you make to your current Bible study routine (time, place, or method) that would move it from a habit of reading to a practice that genuinely transforms your daily life?</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="religious-liberty">
-            <h2 class="section-title">Religious <span>Liberty</span></h2>
+        <section id="worship">
+            <h2 class="section-title">A Matter of <span>Worship</span></h2>
             <div class="glass-card">
-                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">The Rise of Control:</h3>
-                <p class="text-teal-400 font-bold mb-8 italic text-lg">When Systems Shape Freedom</p>
+                <p class="mb-6 text-gray-200">This week, global and national headlines are increasingly highlighting a growing call for unity through faith. Across the United States, preparations are underway for the National Day of Prayer on May 7, where thousands will gather across the country in collective prayer. This year’s observance carries added significance as it aligns with the nation’s 250th anniversary, emphasizing unity, reflection, and a return to spiritual foundations.</p>
                 
-                <p class="text-sm text-gray-200 leading-relaxed mb-6">
-                    This week, global momentum continues to build around digital financial systems and centralized economic oversight. Around the world, governments and financial institutions are exploring Central Bank Digital Currencies (CBDCs) as a response to real pressures. Rising inflation, increasing debt, and economic instability have pushed leaders to look for faster, more controlled ways to manage money. At the same time, the steady decline of cash and the rise of digital payments have made society more prepared than ever for fully digital systems.
-                </p>
-                
-                <p class="text-sm text-gray-200 leading-relaxed mb-6">
-                    Geopolitical tensions are also accelerating this shift. Conflicts involving countries like Iran, along with ongoing sanctions and trade disruptions, have shown how powerful financial systems can be. Nations have already demonstrated the ability to restrict access to global banking systems, influencing economies and behavior. In response, many countries are now seeking greater control over their own financial infrastructure, further advancing the development of digital currencies.
-                </p>
-
-                <p class="text-sm text-gray-200 leading-relaxed mb-6">
-                    These developments are often presented as progress and efficiency. Yet they also highlight how quickly financial systems can become centralized, traceable, and capable of restriction. Unlike physical cash, digital systems can be monitored and potentially limited. While we are not claiming that today’s systems are the direct fulfillment of prophecy, we can clearly see how the infrastructure for economic control is forming.
-                </p>
+                <p class="mb-6 text-gray-200">In addition, a major national prayer gathering is scheduled for May 17 on the National Mall, where Americans are being invited to come together in prayer and rededicate the nation as “one nation under God.” These events, along with broader celebrations surrounding the 250th anniversary of the United States, reflect a growing emphasis on faith, unity, and shared spiritual identity at a national level.</p>
 
                 <div class="accent-box">
-                    <p class="text-sm text-white leading-relaxed">
-                        The Bible gives us a prophetic lens through which to understand these changes. <strong>Revelation 13:16–17</strong> warns of a time when buying and selling will be tied to allegiance. This reminds us that the final issue is not merely economic, but spiritual. It is about worship and loyalty. Current events help us see how quickly systems can shift and how easily dependence can replace freedom.
-                    </p>
+                    <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Scriptural Insight</p>
+                    <p class="text-gray-200 mb-4">While prayer and unity can be positive, Scripture gives us a deeper lens. The Bible warns that in the last days, the issue will center not just on belief, but on worship. <strong>Revelation 14</strong> calls all people to “worship Him that made heaven and earth,” drawing a clear distinction between true worship and systems that seek allegiance apart from God.</p>
                 </div>
 
-                <p class="text-sm text-gray-200 leading-relaxed mb-8">
-                    As believers, our trust must not rest in the systems of this world, but in Christ. This week, take time to examine where your confidence truly lies. Ask God to build in you a faith that will not be shaken by pressure or uncertainty. The goal is not fear, but preparation. The Lord is calling His people to be watchful, grounded, and ready.
-                </p>
+                <p class="mb-6 text-gray-200">This is where discernment becomes critical. Unity that respects truth is one thing. Unity that requires compromise is another. As movements grow that bring people together under shared spiritual goals, we must ask: what happens when unity begins to override conviction? What happens when standing for truth is seen as division?</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white/5 p-6 border border-white/10">
-                        <h4 class="text-white font-bold text-xs mb-4 uppercase tracking-widest">What God’s People Should Remember</h4>
-                        <ul class="space-y-3 text-teal-400 font-bold text-xs">
-                            <li><i class="fas fa-check-circle mr-2"></i> Economic instability is accelerating shifts</li>
-                            <li><i class="fas fa-check-circle mr-2"></i> Digital payments are preparing society</li>
-                            <li><i class="fas fa-check-circle mr-2"></i> Financial systems are being used as leverage</li>
-                            <li><i class="fas fa-check-circle mr-2"></i> Our trust must be in God alone</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-bold text-xs mb-4 uppercase tracking-widest">Resources: CBDC Explained</h4>
-                        <a href="https://youtu.be/Esv76a-W_jo" target="_blank" rel="noopener" class="resource-link">Part 1: Overview</a>
-                        <a href="https://youtu.be/ApkEgP7uzSY" target="_blank" rel="noopener" class="resource-link">Part 2: Economic Oversight</a>
-                        <a href="https://youtu.be/fGmQ8-pZU6s" target="_blank" rel="noopener" class="resource-link">Part 3: Digital Payments</a>
-                        <a href="https://youtu.be/J1Uk0L4QIjM" target="_blank" rel="noopener" class="resource-link">Part 4: Prophetic Perspective</a>
-                    </div>
+                <p class="mb-8 text-gray-200 font-bold">As God’s people, we must prepare now. The final conflict is not political, it is spiritual. It is about loyalty. Who do we follow when there is a difference between God’s Word and human agreement? This week, ask God to root you deeply in truth so that your faith is not shaped by pressure, but by conviction.</p>
+
+                <div class="bg-white/5 p-8 border border-white/10">
+                    <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest text-teal-400">What God’s People Should Remember</h4>
+                    <ul class="space-y-4 text-gray-300 font-bold text-sm">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> National and interfaith unity efforts are increasing</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> Faith is becoming part of public and national identity conversations</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> The final issue centers on worship and loyalty to God</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> Discernment is essential in times of growing unity</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -526,36 +259,36 @@
                 <div class="glass-card">
                     <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Service Links</h3>
                     <div class="space-y-6 text-sm">
-                        <div id="prayer-meeting-vespers" class="flex justify-between items-center border-b border-white/5 pb-4 gap-4">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
                             <div>
                                 <p class="font-bold text-white">Prayer Meeting & Vespers</p>
                                 <p class="text-xs text-gray-500">Wed/Fri @ 7:15 PM</p>
                             </div>
-                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" rel="noopener" class="text-teal-400"><i class="fas fa-video fa-lg"></i></a>
+                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
                         </div>
-                        <div id="evening-prayer-line" class="flex justify-between items-center border-b border-white/5 pb-4 gap-4">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
                             <div>
                                 <p class="font-bold text-white">Evening Prayer Line</p>
                                 <p class="text-xs text-gray-500">Mon/Thu @ 8:00 PM</p>
                             </div>
-                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" rel="noopener" class="text-teal-400"><i class="fas fa-phone fa-lg"></i></a>
+                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-phone fa-lg"></i></a>
                         </div>
-                        <div id="sabbath-morning-zoom" class="flex justify-between items-center gap-4">
+                        <div class="flex justify-between items-center">
                             <div>
                                 <p class="font-bold text-white">Sabbath Morning Zoom</p>
                                 <p class="text-xs text-gray-500">Sabbath Morning @ 9:20 AM</p>
                             </div>
-                            <a href="https://us02web.zoom.us/j/797422531" target="_blank" rel="noopener" class="text-teal-400"><i class="fas fa-video fa-lg"></i></a>
+                            <a href="https://us02web.zoom.us/j/797422531" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="glass-card flex flex-col justify-center items-center text-center">
-                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Adventist Giving</h3>
-                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" rel="noopener" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs hover:bg-teal-400 transition mb-10">Give Online Now</a>
-                    <div class="flex gap-10 text-2xl text-gray-500">
-                        <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" rel="noopener" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" rel="noopener" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" rel="noopener" class="hover:text-teal-400 transition"><i class="fab fa-youtube"></i></a>
+                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Support Our Mission</h3>
+                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs text-center hover:bg-teal-400 transition w-full mb-10">Give Online Now</a>
+                    <div class="flex gap-10 text-2xl">
+                        <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -564,8 +297,22 @@
     </div>
 
     <footer>
-        STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | <a href="https://www.google.com/maps/search/?api=1&query=900+N+9th+St%2C+Stroudsburg%2C+PA+18360" target="_blank" rel="noopener">900 N 9th St, Stroudsburg, PA 18360</a>
+        STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360
     </footer>
 
+    <script>
+        function revealAnswer(element, isCorrect) {
+            // Reveal the footer text
+            document.getElementById('quiz-answer-revealed').style.display = 'block';
+            
+            // Highlight the actual correct option
+            document.getElementById('correct-option').classList.add('correct');
+            
+            if (!isCorrect) {
+                element.style.opacity = "0.5";
+                element.style.textDecoration = "line-through";
+            }
+        }
+    </script>
 </body>
 </html>
