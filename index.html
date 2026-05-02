@@ -1,178 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Midweek Announcements | Stroudsburg SDA</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-<style>
-  :root { --accent-teal: #28cc9e; --black: #000; --gray-text: #999; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--black); color: #fff; font-family: 'Inter', sans-serif; margin: 0; line-height: 1.7; }
-  header { padding: 80px 20px 40px; text-align: center; background: linear-gradient(to bottom, #111, #000); }
-  .logo-img { max-height: 100px; width: auto; margin: 0 auto 25px; filter: grayscale(1) brightness(2); display:block; }
-  h1 { font-size: clamp(2.2rem,6vw,3.8rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 5px; text-transform: uppercase; }
-  h1 span { color: var(--accent-teal); }
-  .nav-wrapper { border-bottom: 1px solid #222; position: sticky; top: 0; background: rgba(0,0,0,.95); backdrop-filter: blur(10px); z-index: 100; }
-  .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; overflow-x: auto; }
-  .nav-link { padding: 15px 18px; color: var(--gray-text); text-transform: uppercase; font-size: .65rem; font-weight: 700; letter-spacing: 1px; text-decoration: none; white-space: nowrap; transition: .3s; }
-  .nav-link:hover { color: var(--accent-teal); }
-  .page-content { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-  section { padding-top: 60px; margin-bottom: 80px; }
-  .glass-card { background: #0d0d0d; padding: 40px; border: 1px solid #1a1a1a; margin-bottom: 30px; }
-  .accent-box { border-left: 3px solid var(--accent-teal); background: rgba(40,204,158,.05); padding: 30px; margin: 25px 0; }
-  .quiz-panel { background: var(--accent-teal); color: var(--black); padding: 35px; margin-top: 40px; }
-  .option-item { background: rgba(0,0,0,.08); padding: 12px 15px; margin-top: 10px; border: 1px solid rgba(0,0,0,.1); font-size: 1rem; font-weight: 600; cursor: pointer; transition: background .15s, border-color .15s; user-select: none; }
-  .option-item:hover:not(.selected):not(.revealed) { background: rgba(0,0,0,.16); }
-  .option-item.selected-correct { background: #000; color: #28cc9e; border-color: #000; font-weight: 900; }
-  .option-item.selected-wrong { background: rgba(180,0,0,.25); color: #fff; border-color: rgba(180,0,0,.5); font-weight: 900; }
-  .option-item.reveal-correct { background: rgba(0,0,0,.15); color: #000; border-color: rgba(0,0,0,.2); font-weight: 900; }
-  .quiz-result { margin-top: 18px; font-size: .9rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; min-height: 1.4em; }
-  .quiz-result.correct { color: #000; }
-  .quiz-result.wrong { color: #7a0000; }
-  .calendar-item { display: flex; border-bottom: 1px solid #222; padding: 15px 0; align-items: center; }
-  .calendar-date { min-width: 100px; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; font-size: .85rem; }
-  h2.section-title { font-size: 2.2rem; font-weight: 900; text-transform: uppercase; margin-bottom: 35px; border-bottom: 2px solid #1a1a1a; padding-bottom: 10px; }
-  h2.section-title span { color: var(--accent-teal); }
-  .time-badge { font-family: monospace; background: rgba(255,255,255,.1); padding: 2px 6px; border-radius: 4px; font-size: .8rem; color: #fff; }
-  .flyer-img { width: 100%; max-width: 600px; height: auto; border: 2px solid #222; border-radius: 4px; display: block; margin: 30px auto; box-shadow: 0 20px 50px rgba(0,0,0,.5); }
-  footer { border-top: 1px solid #111; padding: 40px 20px; text-align: center; color: #444; font-size: .75rem; letter-spacing: 2px; }
-  .highlights-strip { max-width: 1000px; margin: 0 auto; padding: 40px 20px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 16px; }
-  .highlight-box { border-left: 3px solid var(--accent-teal); background: rgba(40,204,158,.06); padding: 18px 20px; }
-  .highlight-box .hl-label { font-size: .6rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-teal); margin-bottom: 6px; }
-  .highlight-box .hl-text { font-size: .9rem; color: #ddd; line-height: 1.6; font-style: italic; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabbath Announcements | Stroudsburg SDA</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent-teal: #28cc9e;
+            --dark-base: #1a1a1a;
+            --black: #000000;
+            --gray-text: #999999;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--black);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 80px 20px 40px;
+            text-align: center;
+            background: linear-gradient(to bottom, #111, #000);
+        }
+
+        .logo-img {
+            max-height: 100px;
+            width: auto;
+            margin: 0 auto 25px;
+            filter: grayscale(1) brightness(2);
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        h1 span { color: var(--accent-teal); }
+
+        .nav-wrapper {
+            border-bottom: 1px solid #222;
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+        }
+
+        .nav-link {
+            padding: 15px 18px;
+            color: var(--gray-text);
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { color: var(--accent-teal); }
+
+        .page-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            padding-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        .glass-card {
+            background: #0d0d0d;
+            padding: 40px;
+            border: 1px solid #1a1a1a;
+            margin-bottom: 30px;
+        }
+
+        .calendar-row {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .calendar-row:last-child { border-bottom: none; }
+        .date-box {
+            min-width: 80px;
+            text-align: center;
+            margin-right: 30px;
+        }
+        .date-box .month { font-size: 0.7rem; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; }
+        .date-box .day { font-size: 1.8rem; font-weight: 900; line-height: 1; }
+
+        .accent-box {
+            border-left: 3px solid var(--accent-teal);
+            background: rgba(40, 204, 158, 0.05);
+            padding: 30px;
+            margin: 25px 0;
+        }
+
+        .quiz-panel {
+            background: var(--accent-teal);
+            color: var(--black);
+            padding: 35px;
+            margin-top: 40px;
+        }
+
+        .option-item {
+            background: rgba(0,0,0,0.08);
+            padding: 12px 15px;
+            margin-top: 10px;
+            border: 1px solid rgba(0,0,0,0.1);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .correct-reveal { background: rgba(255,255,255,0.3) !important; border: 2px solid #000 !important; }
+        #quiz-answer-revealed { display: none; margin-top: 20px; font-weight: 800; text-transform: uppercase; }
+
+        h2.section-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 10px;
+        }
+
+        h2.section-title span { color: var(--accent-teal); }
+
+        footer {
+            border-top: 1px solid #111;
+            padding: 40px 20px;
+            text-align: center;
+            color: #444;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+        }
+    </style>
 </head>
 <body>
-<header>
-  <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-  <h1>MIDWEEK <span>ANNOUNCEMENTS</span></h1>
-  <p style="color:var(--gray-text);text-transform:uppercase;letter-spacing:4px;font-size:.65rem;">WEDNESDAY, APRIL 29, 2026</p>
-</header>
-<nav class="nav-wrapper">
-  <div class="nav-container"><a href="#section-0" class="nav-link">Midweek</a><a href="#section-1" class="nav-link">Religious Liberty</a><a href="#section-2" class="nav-link">Stewardship</a><a href="#section-3" class="nav-link">Church Family</a><a href="#section-4" class="nav-link">More</a><a href="#section-5" class="nav-link">Connect & Give</a></div>
-</nav>
 
-<div class="page-content">
+    <header>
+        <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
+        <h1>STROUDSBURG <span>SABBATH</span></h1>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, May 2, 2026</p>
+    </header>
 
-<section id="section-0">
-  <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
-  <div class="glass-card">
-    <p class="text-teal-400 font-bold mb-6">Lesson for Sabbath 5/2/2026</p>
-    <h3 class="text-2xl font-bold mb-4 uppercase tracking-tight">From Routine to Relationship: Learning How to Study the Bible</h3>
-    <div class="text-gray-200 leading-relaxed mb-4"><p class="mb-4 text-gray-300">Many of us own Bibles in multiple versions; however, our challenge does not lie in owning Bibles but in engaging with the Bibles we own.</p><p class="mb-4 text-gray-300">This week's lesson, "How to Study the Bible," moves us beyond the question of why Scripture matters and presses into something even more practical: How do we actually study the Bible to experience its power in our daily lives?</p><p class="mb-4 text-gray-300">It's possible to read the Bible quickly, check the box, move on, and walk away unchanged. This week challenges us to move beyond this kind of surface-level interaction into something deeper. Scripture isn't meant to be rushed through; it's meant to be lingered over, wrestled with, and internalized.</p><p class="mb-4 text-gray-300">Think about the imagery presented this week: God's Word as a lamp lighting a dark path. It doesn't flood the entire area with light; it illuminates just enough for the next step. That means Bible study is not a sprint for information but a slow, intentional walk with God. That walk requires structure.</p><p class="mb-4 text-gray-300">Time must be carved out intentionally. A place must be chosen deliberately. Distractions must be resisted consistently. Even Jesus modeled this: rising early, seeking solitude, prioritizing communion with the Father before anything else. If Jesus needed that rhythm and structure, how much more do we?</p><p class="mb-4 text-gray-300">This lesson does not just provide logistics; it pushes us into method. Pray before you read. Write as you reflect. Revisit passages. Share what you learn. These are not just techniques; they are pathways to transformation. Because when the Word moves from page → to mind → to heart → to action, it begins to shape not just what we know, but who we become.</p><p class="mb-4 text-gray-300">Perhaps one of the most powerful ideas this week is the concept of the "double blessing." When we study, we are strengthened, but when we share, that growth multiplies. The Word was never meant to stay contained within us; it is meant to flow outward into the lives of others.</p><p class="mb-4 text-gray-300">This week's invitation is simple: Don't just read the Bible—engage it deeply, consistently, and relationally.</p></div>
-    
-    
-    <div class="quiz-panel" id="quiz-section-0">
-      <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
-      <p class="font-bold mb-4 text-black">The lesson mentions that sharing what we learned through Bible study results in a 'double blessing.' What is the specific cognitive benefit for the person doing the sharing?</p>
-      <p style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:.6;margin-bottom:6px;">Select your answer:</p>
-      <div class="space-y-2"><div class="option-item" data-correct="false" data-idx="0" onclick="handleQuizChoice('quiz-section-0', this)">It provides public proof of one's spiritual progress.</div><div class="option-item" data-correct="false" data-idx="1" onclick="handleQuizChoice('quiz-section-0', this)">It eliminates the need for further personal study of that topic.</div><div class="option-item" data-correct="false" data-idx="2" onclick="handleQuizChoice('quiz-section-0', this)">It fulfills the requirements of the Great Commission.</div><div class="option-item" data-correct="true" data-idx="3" onclick="handleQuizChoice('quiz-section-0', this)">It triggers the summarizing and synthesizing process, which consolidates thoughts.</div></div>
-      <div class="quiz-result"></div>
-      <p class="mt-8 text-sm font-bold text-black uppercase italic border-t border-black/10 pt-4">What specific change can you make to your current Bible study routine (time, place, or method) that would move it from a habit of reading to a practice that genuinely transforms your daily life?</p>
-    </div>
-<script>
-function handleQuizChoice(quizId, el) {
-  var panel = document.getElementById(quizId);
-  if (panel.dataset.answered) return;
-  panel.dataset.answered = '1';
-  var isCorrect = el.dataset.correct === 'true';
-  var allOpts = panel.querySelectorAll('.option-item');
-  allOpts.forEach(function(opt) {
-    opt.style.cursor = 'default';
-    if (opt.dataset.correct === 'true') {
-      opt.classList.add('reveal-correct');
-    }
-  });
-  if (isCorrect) {
-    el.classList.add('selected-correct');
-    panel.querySelector('.quiz-result').textContent = '✓ Correct! Well done.';
-    panel.querySelector('.quiz-result').className = 'quiz-result correct';
-  } else {
-    el.classList.add('selected-wrong');
-    panel.querySelector('.quiz-result').textContent = '✗ Not quite — the correct answer is highlighted above.';
-    panel.querySelector('.quiz-result').className = 'quiz-result wrong';
-  }
-}
-</script>
-  </div>
-</section>
+    <nav class="nav-wrapper">
+        <div class="nav-container">
+            <a href="#today" class="nav-link">Today</a>
+            <a href="#calendar" class="nav-link">Calendar</a>
+            <a href="#momentum" class="nav-link">Sabbath School</a>
+            <a href="#stewardship" class="nav-link">Stewardship</a>
+            <a href="#worship" class="nav-link">Religious Liberty</a>
+            <a href="#conference" class="nav-link">Conference</a>
+        </div>
+    </nav>
 
-<section id="section-1">
-  <h2 class="section-title">Religious <span>Liberty</span></h2>
-  <div class="glass-card">
-    <p class="text-teal-400 font-bold mb-8 italic text-lg uppercase tracking-tight">A Matter of Worship</p>
-    <div class="text-gray-200 leading-relaxed mb-6"><p class="mb-4 text-gray-300">This week, global and national headlines are increasingly highlighting a growing call for unity through faith. Across the United States, preparations are underway for the National Day of Prayer on May 7, where thousands will gather across the country in collective prayer. This year's observance carries added significance as it aligns with the nation's 250th anniversary, emphasizing unity, reflection, and a return to spiritual foundations.</p><p class="mb-4 text-gray-300">In addition, a major national prayer gathering is scheduled for May 17 on the National Mall, where Americans are being invited to come together in prayer and rededicate the nation as "one nation under God." These events, along with broader celebrations surrounding the 250th anniversary of the United States, reflect a growing emphasis on faith, unity, and shared spiritual identity at a national level.</p><p class="mb-4 text-gray-300">While prayer and unity can be positive, Scripture gives us a deeper lens. The Bible warns that in the last days, the issue will center not just on belief, but on worship. Revelation 14 calls all people to "worship Him that made heaven and earth," drawing a clear distinction between true worship and systems that seek allegiance apart from God.</p><p class="mb-4 text-gray-300">This is where discernment becomes critical. Unity that respects truth is one thing. Unity that requires compromise is another. As movements grow that bring people together under shared spiritual goals, we must ask: what happens when unity begins to override conviction? What happens when standing for truth is seen as division?</p><p class="mb-4 text-gray-300">As God's people, we must prepare now. The final conflict is not political, it is spiritual. It is about loyalty. Who do we follow when there is a difference between God's Word and human agreement? This week, ask God to root you deeply in truth so that your faith is not shaped by pressure, but by conviction.</p></div>
-    <div class="bg-white/5 p-8 border border-white/10 mt-6"><h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest">What God's People Should Remember</h4><ul class="space-y-4 text-teal-400 font-bold text-sm"><li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> National and interfaith unity efforts are increasing</li><li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> Faith is becoming part of public and national identity conversations</li><li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> The final issue centers on worship and loyalty to God</li><li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1"></i> Discernment is essential in times of growing unity</li></ul></div>
-    
-  </div>
-</section>
+    <div class="page-content">
+        
+        <section id="today">
+            <h2 class="section-title">Today at <span>Stroudsburg</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card" style="border-left: 4px solid var(--accent-teal);">
+                    <h3 class="text-teal-400 font-black uppercase text-sm mb-4 tracking-widest">Afternoon Schedule</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <strong class="text-white text-lg">3:00 PM – 4:30 PM</strong> 
+                            <p class="text-gray-400">Bible Class</p>
+                        </li>
+                        <li>
+                            <strong class="text-white text-lg">5:00 PM</strong>
+                            <p class="text-teal-400 font-bold uppercase text-xs">AYS Program (Time Change)</p>
+                        </li>
+                        <li>
+                            <strong class="text-white text-lg">7:15 PM</strong>
+                            <p class="text-gray-400">Board Meeting</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-card">
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Local Notices</h3>
+                    <p class="text-sm text-gray-200 leading-relaxed mb-6">
+                        <strong>Sis. Humphrey:</strong> A heartfelt thank you message has been shared with the church.
+                    </p>
+                    <hr class="border-white/10 my-4">
+                    <p class="text-sm text-gray-200">
+                        <strong>Women's Ministry:</strong> Sister Jean-Marie Williams would like to meet briefly with all the ladies for 10 minutes immediately after the service.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-<section id="section-2">
-  <h2 class="section-title">Stewardship <span>Spotlight</span></h2>
-  <div class="glass-card">
-    <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider">Theme: Prove Me Now</h3>
-    <div class="accent-box"><p class="text-2xl font-bold italic text-white mb-2">&quot;Bring the whole tithe into the storehouse… Prove me now herewith,&quot; says the Lord of Hosts, &quot;and see if I will not open the windows of heaven…&quot; (Malachi 3:10)</p></div>
-    <div class="text-gray-200 leading-relaxed mb-4"><p class="mb-4 text-gray-300">This week, we're reflecting on a powerful invitation from Malachi, one of the only places in Scripture where God invites us to prove Him.</p><p class="mb-4 text-gray-300">What does it mean to "prove God"? It's an invitation to trust Him enough to act on His Word, even when it feels uncomfortable or uncertain.</p><p class="mb-4 text-gray-300">Especially when funds feel tight, expenses are rising, and you're trying to make everything stretch — that's where faith meets action.</p><p class="mb-4 text-gray-300">A Practical Way to Walk This Out:<br>Pray first — Ask God to align your heart and strengthen your faith to trust Him as your Source.<br>Decide intentionally — Return tithe and give offering as an act of worship, not pressure.<br>Step out in faith — Even when it feels like a stretch, choose obedience.<br>Watch what God does — Look for His provision, His peace, and the ways He makes room for you.</p><p class="mb-4 text-gray-300">A Word for All Ages:<br>Whether you are just starting to earn, managing a household, or in your "Young At Heart" season, this invitation is for all of us.</p><p class="mb-4 text-gray-300">To our youth: This is a powerful opportunity to build faith-filled habits early. Trust God enough to obey His call. Your whole life will benefit from it.</p><p class="mb-4 text-gray-300">To our young adults and families: This is where trust deepens in real-life decisions. Choosing to honor God first, even when things feel tight, strengthens your faith and invites Him into your daily provision.</p><p class="mb-4 text-gray-300">To our Young At Heart: Your continued faithfulness is a testimony and a covering for generations coming behind you. Your consistency shows that God can be trusted through every season of life.</p><p class="mb-4 text-gray-300">No matter your stage of life, God is inviting each of us to trust Him as our Source.</p><p class="mb-4 text-gray-300">Our Encouragement This Week: We invite you to take God at His Word.</p></div>
-    
-  </div>
-</section>
+        <section id="calendar">
+            <h2 class="section-title">Sabbath <span>Calendar</span></h2>
+            <div class="glass-card">
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">02</div></div>
+                    <div><p class="font-bold text-white uppercase text-xs tracking-widest">Sabbath Services</p><p class="text-gray-400 text-sm">Bible Class, AYS, & Board Meeting</p></div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">03</div></div>
+                    <div><p class="font-bold text-white uppercase text-xs tracking-widest">Conference Event</p><p class="text-gray-400 text-sm">8:30 AM: Pathfinder Fair & Parade</p></div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">05</div></div>
+                    <div><p class="font-bold text-white uppercase text-xs tracking-widest">Senior Ministry</p><p class="text-gray-400 text-sm">10:00 AM: Senior Ministry Resumes (@ CSC)</p></div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">17</div></div>
+                    <div><p class="font-bold text-white uppercase text-xs tracking-widest">Mission & Prayer</p><p class="text-gray-400 text-sm">PA Mission Trip / National Mall Prayer Gathering</p></div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">23</div></div>
+                    <div><p class="font-bold text-white uppercase text-xs tracking-widest">Family Life</p><p class="text-gray-400 text-sm">Couple’s Club Meeting</p></div>
+                </div>
+            </div>
+        </section>
 
-<section id="section-3">
-  <h2 class="section-title">Church <span>Family</span></h2>
-  <div class="glass-card">
-    <h3 class="text-2xl font-black mb-8 uppercase text-teal-400">Prayer &amp; Arrangements</h3>
-    <div class="space-y-8">
-      <div class="accent-box"></div>
-      
-    </div>
-  </div>
-</section>
+        <section id="momentum">
+            <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
+            <div class="glass-card">
+                <p class="text-teal-400 font-bold mb-2">Lesson for Sabbath 5/2/2026</p>
+                <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">From Routine to Relationship: Learning How to Study the Bible</h3>
+                <p class="mb-4 text-gray-200">Many of us own Bibles in multiple versions; however, our challenge does not lie in owning Bibles but in engaging with the Bibles we own. This week’s lesson, “How to Study the Bible,” moves us beyond the question of why Scripture matters and presses into something even more practical: How do we actually study the Bible to experience its power in our daily lives?</p>
+                <p class="mb-4 text-gray-200">It’s possible to read the Bible quickly, check the box, move on, and walk away unchanged. This week challenges us to move beyond this kind of surface-level interaction into something deeper. Scripture isn’t meant to be rushed through; it’s meant to be lingered over, wrestled with, and internalized.</p>
+                <div class="accent-box">
+                    <p class="text-gray-200 italic">Think about the imagery presented this week: God’s Word as a lamp lighting a dark path. It doesn’t flood the entire area with light; it illuminates just enough for the next step. That means Bible study is not a sprint for information but a slow, intentional walk with God. That walk requires structure.</p>
+                </div>
+                <p class="mb-4 text-gray-200">Time must be carved out intentionally. A place must be chosen deliberately. Distractions must be resisted consistently. Even Jesus modeled this: rising early, seeking solitude, prioritizing communion with the Father before anything else. If Jesus needed that rhythm and structure, how much more do we?</p>
+                <p class="mb-4 text-gray-200">This lesson does not just provide logistics; it pushes us into method. Pray before you read. Write as you reflect. Revisit passages. Share what you learn. These are not just techniques; they are pathways to transformation. Because when the Word moves from page → to mind → to heart → to action, it begins to shape not just what we know, but who we become.</p>
+                <p class="mb-8 text-gray-200">Perhaps one of the most powerful ideas this week is the concept of the “double blessing.” When we study, we are strengthened, but when we share, that growth multiplies. The Word was never meant to stay contained within us; it is meant to flow outward into the lives of others.</p>
+                <div class="bg-white/5 p-6 border border-white/10 text-center mb-8">
+                    <p class="text-teal-400 font-black uppercase text-xs tracking-widest mb-2">This week’s invitation:</p>
+                    <p class="text-xl font-bold uppercase">Don’t just read the Bible—engage it deeply, consistently, and relationally.</p>
+                </div>
 
-<section id="section-4">
-  <h2 class="section-title">Women's Ministry</h2>
-  <div class="glass-card">
-    <div class="text-gray-200 leading-relaxed"><p class="mb-4 text-gray-300">Thank you to all the women who attended the Denim and Pearl Retreat last weekend. It was truly a memorable experience as we released our burdens and allowed God to move in a powerful way.</p><p class="mb-4 text-gray-300">Additionally, Sister Jean-Marie Williams would like to meet briefly with all the ladies on Sabbath for about 10 minutes, especially those who attended the retreat.</p></div>
-  </div>
-</section>
-<section id="connect">
-  <h2 class="section-title">Connect <span>&amp; Give</span></h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div class="glass-card">
-      <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Service Links</h3>
-      <div class="space-y-6 text-sm">
-    <div class="flex justify-between items-center border-b border-white/5 pb-4">
-      <div>
-        <p class="font-bold">Prayer Meeting & Vespers</p>
-        <p class="text-xs text-gray-500">Wed/Fri @ 7:15 PM</p>
-      </div>
-      <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+                <div class="quiz-panel">
+                    <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
+                    <p class="font-bold mb-4 text-black">The lesson mentions that sharing what we learned through Bible study results in a 'double blessing.' What is the specific cognitive benefit for the person doing the sharing?</p>
+                    <div class="space-y-2">
+                        <div class="option-item" onclick="revealAns(this, false)">A. It provides public proof of one’s spiritual progress.</div>
+                        <div class="option-item" onclick="revealAns(this, false)">B. It eliminates the need for further personal study of that topic.</div>
+                        <div class="option-item" onclick="revealAns(this, false)">C. It fulfills the requirements of the Great Commission.</div>
+                        <div id="correct-opt" class="option-item" onclick="revealAns(this, true)">D. It triggers the summarizing and synthesizing process, which consolidates thoughts.</div>
+                    </div>
+                    <div id="quiz-answer-revealed">Correct Answer: D</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stewardship">
+            <h2 class="section-title">Stewardship <span>Spotlight</span></h2>
+            <div class="glass-card">
+                <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider">Theme: Prove Me Now</h3>
+                <div class="accent-box">
+                    <p class="text-2xl font-bold italic text-white mb-2">“Bring the whole tithe into the storehouse… Prove me now herewith,” says the Lord of Hosts, “and see if I will not open the windows of heaven…”</p>
+                    <p class="text-teal-400 font-bold">— Malachi 3:10</p>
+                </div>
+                <p class="mb-6 text-gray-200 font-bold leading-relaxed">This week, we're reflecting on a powerful invitation from Malachi, one of the only places in Scripture where God invites us to prove Him. What does it mean to "prove God"? It's an invitation to trust Him enough to act on His Word, even when it feels uncomfortable or uncertain. Especially when funds feel tight, expenses are rising, and you're trying to make everything stretch — that's where faith meets action.</p>
+                
+                <h4 class="text-white font-black uppercase text-sm mb-4">A Practical Way to Walk This Out:</h4>
+                <ul class="space-y-4 text-sm text-gray-400 mb-8">
+                    <li><strong class="text-teal-400">Pray first</strong> — Ask God to align your heart and strengthen your faith to trust Him as your Source.</li>
+                    <li><strong class="text-teal-400">Decide intentionally</strong> — Return tithe and give offering as an act of worship, not pressure.</li>
+                    <li><strong class="text-teal-400">Step out in faith</strong> — Even when it feels like a stretch, choose obedience.</li>
+                    <li><strong class="text-teal-400">Watch what God does</strong> — Look for His provision, His peace, and the ways He makes room for you.</li>
+                </ul>
+
+                <div class="bg-white/5 p-8 border border-white/10">
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs">A Word for All Ages</h4>
+                    <p class="text-sm text-gray-300 mb-4"><strong>To our youth:</strong> Trust God enough to obey His call. Your whole life will benefit from it.</p>
+                    <p class="text-sm text-gray-300 mb-4"><strong>To our young adults:</strong> Choosing to honor God first, even when things feel tight, strengthens your faith.</p>
+                    <p class="text-sm text-gray-300"><strong>To our Young At Heart:</strong> Your continued faithfulness is a testimony and a covering for generations coming behind you.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="worship">
+            <h2 class="section-title">A Matter of <span>Worship</span></h2>
+            <div class="glass-card">
+                <p class="mb-6 text-gray-200">Across the United States, preparations are underway for the National Day of Prayer on May 7. This year's observance carries added significance as it aligns with the nation's 250th anniversary. In addition, a major national prayer gathering is scheduled for May 17 on the National Mall.</p>
+                <div class="accent-box">
+                    <p class="text-gray-200">The Bible warns that in the last days, the issue will center not just on belief, but on worship. <strong>Revelation 14</strong> calls all people to “worship Him that made heaven and earth,” drawing a clear distinction between true worship and systems that seek allegiance apart from God.</p>
+                </div>
+                <p class="mb-6 text-gray-200">Who do we follow when there is a difference between God’s Word and human agreement? This week, ask God to root you deeply in truth so that your faith is not shaped by pressure, but by conviction.</p>
+                <div class="bg-white/5 p-8 border border-white/10">
+                    <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest text-teal-400">What God’s People Should Remember</h4>
+                    <ul class="space-y-4 text-gray-300 font-bold text-sm">
+                        <li><i class="fas fa-check-circle mt-1 text-teal-400"></i> National and interfaith unity efforts are increasing</li>
+                        <li><i class="fas fa-check-circle mt-1 text-teal-400"></i> The final issue centers on worship and loyalty to God</li>
+                        <li><i class="fas fa-check-circle mt-1 text-teal-400"></i> Discernment is essential in times of growing unity</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="conference">
+            <h2 class="section-title">PA <span>Conference</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Pathfinder Fair</h4>
+                    <p class="text-sm text-gray-300">Sunday, May 3, beginning at 8:30 am with the parade. Cheer on drills and skills and enjoy the food booths.</p>
+                </div>
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">PA Mission Trips</h4>
+                    <p class="text-sm text-gray-300">Sunday, May 17. One-day trips at Blue Mountain Academy or Laurel Lake Camp. Register: paconference.org/mission-trip-registration.</p>
+                </div>
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Camp Meeting 2026</h4>
+                    <p class="text-sm text-gray-300">June 12-20, 2026, at BMA. Focus: “Joyful Living: Now and Forever.” Speakers: Randy Skeete, Neil Nedley, Mark and Teenie Finley, and more. Register: paconference.org/camp-meeting.</p>
+                </div>
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Scholarships</h4>
+                    <p class="text-sm text-gray-300">Two scholarships for Loma Linda’s School of Dentistry. Contact: president@paconference.org.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="connect">
+            <h2 class="section-title">Connect <span>& Give</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div class="glass-card">
+                    <h3 class="font-black text-teal-400 uppercase text-xs mb-6">Service Links</h3>
+                    <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" class="text-white font-bold block mb-4">Prayer Meeting & Vespers (7:15 PM)</a>
+                    <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" class="text-white font-bold block">Prayer Line (8:00 PM)</a>
+                </div>
+                <div class="glass-card">
+                    <h3 class="font-black text-teal-400 uppercase text-xs mb-6">Giving</h3>
+                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs block hover:bg-teal-400 transition">Adventist Giving</a>
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="flex justify-between items-center border-b border-white/5 pb-4">
-      <div>
-        <p class="font-bold">Evening Prayer Line</p>
-        <p class="text-xs text-gray-500">Mon/Thu @ 8:00 PM</p>
-      </div>
-      <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-phone fa-lg"></i></a>
-    </div>
-    <div class="flex justify-between items-center ">
-      <div>
-        <p class="font-bold">Sabbath Morning Zoom</p>
-        <p class="text-xs text-gray-500">Sabbath @ 9:20 AM</p>
-      </div>
-      <a href="https://us02web.zoom.us/j/797422531" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
-    </div></div>
-    </div>
-    <div class="glass-card flex flex-col justify-center items-center text-center">
-      <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Tithe &amp; Offerings</h3>
-      <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs text-center hover:bg-teal-400 transition mb-8 w-full">Give Online Now</a>
-      <div class="flex gap-10 text-2xl text-gray-500"><a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a><a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-youtube"></i></a></div>
-    </div>
-  </div>
-</section>
-</div>
-<footer>STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360</footer>
+
+    <footer>STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360</footer>
+
+    <script>
+        function revealAns(el, isCorrect) {
+            document.getElementById('quiz-answer-revealed').style.display = 'block';
+            document.getElementById('correct-opt').classList.add('correct-reveal');
+            if(!isCorrect) { el.style.opacity = '0.5'; el.style.textDecoration = 'line-through'; }
+        }
+    </script>
 </body>
 </html>
