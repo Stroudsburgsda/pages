@@ -1,208 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Midweek Announcements | Stroudsburg SDA</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-<style>
-  :root { --accent-teal: #28cc9e; --black: #000; --gray-text: #999; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--black); color: #fff; font-family: 'Inter', sans-serif; margin: 0; line-height: 1.7; }
-  header { padding: 80px 20px 40px; text-align: center; background: linear-gradient(to bottom, #111, #000); }
-  .logo-img { max-height: 100px; width: auto; margin: 0 auto 25px; filter: grayscale(1) brightness(2); display:block; }
-  h1 { font-size: clamp(2.2rem,6vw,3.8rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 5px; text-transform: uppercase; }
-  h1 span { color: var(--accent-teal); }
-  .nav-wrapper { border-bottom: 1px solid #222; position: sticky; top: 0; background: rgba(0,0,0,.95); backdrop-filter: blur(10px); z-index: 100; }
-  .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; overflow-x: auto; }
-  .nav-link { padding: 15px 18px; color: var(--gray-text); text-transform: uppercase; font-size: .65rem; font-weight: 700; letter-spacing: 1px; text-decoration: none; white-space: nowrap; transition: .3s; }
-  .nav-link:hover { color: var(--accent-teal); }
-  .page-content { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-  section { padding-top: 60px; margin-bottom: 80px; }
-  .glass-card { background: #0d0d0d; padding: 40px; border: 1px solid #1a1a1a; margin-bottom: 30px; }
-  .accent-box { border-left: 3px solid var(--accent-teal); background: rgba(40,204,158,.05); padding: 30px; margin: 25px 0; }
-  .quiz-panel { background: var(--accent-teal); color: var(--black); padding: 35px; margin-top: 40px; }
-  .option-item { background: rgba(0,0,0,.08); padding: 12px 15px; margin-top: 10px; border: 1px solid rgba(0,0,0,.1); font-size: 1rem; font-weight: 600; cursor: pointer; transition: background .15s, border-color .15s; user-select: none; }
-  .option-item:hover:not(.selected):not(.revealed) { background: rgba(0,0,0,.16); }
-  .option-item.selected-correct { background: #000; color: #28cc9e; border-color: #000; font-weight: 900; }
-  .option-item.selected-wrong { background: rgba(180,0,0,.25); color: #fff; border-color: rgba(180,0,0,.5); font-weight: 900; }
-  .option-item.reveal-correct { background: rgba(0,0,0,.15); color: #000; border-color: rgba(0,0,0,.2); font-weight: 900; }
-  .quiz-result { margin-top: 18px; font-size: .9rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; min-height: 1.4em; }
-  .calendar-item { display: flex; border-bottom: 1px solid #222; padding: 15px 0; align-items: center; }
-  .calendar-date { min-width: 100px; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; font-size: .85rem; }
-  h2.section-title { font-size: 2.2rem; font-weight: 900; text-transform: uppercase; margin-bottom: 35px; border-bottom: 2px solid #1a1a1a; padding-bottom: 10px; }
-  h2.section-title span { color: var(--accent-teal); }
-  .flyer-img { width: 100%; max-width: 600px; height: auto; border: 2px solid #222; border-radius: 4px; display: block; margin: 30px auto; box-shadow: 0 20px 50px rgba(0,0,0,.5); }
-  footer { border-top: 1px solid #111; padding: 40px 20px; text-align: center; color: #444; font-size: .75rem; letter-spacing: 2px; }
-  .highlights-strip { max-width: 1000px; margin: 0 auto; padding: 40px 20px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 16px; }
-  .highlight-box { border-left: 3px solid var(--accent-teal); background: rgba(40,204,158,.06); padding: 18px 20px; }
-  .highlight-box .hl-label { font-size: .6rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-teal); margin-bottom: 6px; }
-  .highlight-box .hl-text { font-size: .9rem; color: #ddd; line-height: 1.6; font-style: italic; }
-  
-  /* Enhanced Typography */
-  .prose { font-size: 1.05rem; }
-  .prose p { margin-bottom: 1.8em; line-height: 1.85; color: #d1d5db; }
-  .prose ul, .prose ol { margin-bottom: 1.8em; padding-left: 1.5em; }
-  .prose li { margin-bottom: 0.75em; line-height: 1.7; }
-  .prose li p { margin-bottom: 0.5em; }
-  .prose strong { color: #fff; font-weight: 700; }
-  .prose h1, .prose h2, .prose h3, .prose h4 { color: #fff; margin-top: 2em; margin-bottom: 1em; font-weight: 800; line-height: 1.3; }
-  .prose a { color: var(--accent-teal); text-decoration: none; border-bottom: 1px solid rgba(40,204,158,0.3); transition: border-color 0.2s; }
-  .prose a:hover { border-color: rgba(40,204,158,1); }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabbath Announcements | Stroudsburg SDA</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent-teal: #28cc9e;
+            --dark-base: #1a1a1a;
+            --black: #000000;
+            --gray-text: #999999;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--black);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 80px 20px 40px;
+            text-align: center;
+            background: linear-gradient(to bottom, #111, #000);
+        }
+
+        .logo-img {
+            max-height: 100px;
+            width: auto;
+            margin: 0 auto 25px;
+            filter: grayscale(1) brightness(2);
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        h1 span { color: var(--accent-teal); }
+
+        .nav-wrapper {
+            border-bottom: 1px solid #222;
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+        }
+
+        .nav-link {
+            padding: 15px 18px;
+            color: var(--gray-text);
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { color: var(--accent-teal); }
+
+        .page-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            padding-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        .glass-card {
+            background: #0d0d0d;
+            padding: 40px;
+            border: 1px solid #1a1a1a;
+            margin-bottom: 30px;
+        }
+
+        .calendar-row {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .calendar-row:last-child { border-bottom: none; }
+        .date-box {
+            min-width: 80px;
+            text-align: center;
+            margin-right: 30px;
+        }
+        .date-box .month { font-size: 0.7rem; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; }
+        .date-box .day { font-size: 1.8rem; font-weight: 900; line-height: 1; }
+
+        .accent-box {
+            border-left: 3px solid var(--accent-teal);
+            background: rgba(40, 204, 158, 0.05);
+            padding: 30px;
+            margin: 25px 0;
+        }
+
+        .quiz-panel {
+            background: var(--accent-teal);
+            color: var(--black);
+            padding: 35px;
+            margin-top: 40px;
+        }
+
+        .option-item {
+            background: rgba(0,0,0,0.08);
+            padding: 12px 15px;
+            margin-top: 10px;
+            border: 1px solid rgba(0,0,0,0.1);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .correct-reveal { background: rgba(255,255,255,0.3) !important; border: 2px solid #000 !important; }
+        #quiz-answer-revealed { display: none; margin-top: 20px; font-weight: 800; text-transform: uppercase; }
+
+        h2.section-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 10px;
+        }
+
+        h2.section-title span { color: var(--accent-teal); }
+
+        footer {
+            border-top: 1px solid #111;
+            padding: 40px 20px;
+            text-align: center;
+            color: #444;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+        }
+    </style>
 </head>
 <body>
-<header>
-  <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-  <h1>MIDWEEK <span>ANNOUNCEMENTS</span></h1>
-  <p style="color:var(--gray-text);text-transform:uppercase;letter-spacing:4px;font-size:.65rem;">WEDNESDAY, MAY 6, 2026</p>
-</header>
-<nav class="nav-wrapper">
-  <div class="nav-container"><a href="#section-0" class="nav-link">Midweek</a><a href="#section-1" class="nav-link">Stewardship</a><a href="#section-2" class="nav-link">More</a><a href="#section-3" class="nav-link">Connect & Give</a></div>
-</nav>
 
-<div class="page-content">
+    <header>
+        <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
+        <h1>STROUDSBURG <span>SABBATH</span></h1>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, May 9, 2026</p>
+    </header>
 
-<section id="section-0">
-  <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
-  <div class="glass-card">
-    <p class="text-teal-400 font-bold mb-6">Sabbath 5/9/2026</p>
-    <h3 class="text-2xl font-bold mb-4 uppercase tracking-tight">Prayer Warriors</h3>
-    <div class="prose prose-invert prose-teal max-w-none text-gray-200 leading-relaxed mb-4"><p>What happens when prayer moves from routine to relationship?<br>In this week’s lesson, “Prayer Warriors,” we look closely at the lives of Moses, Enoch, and Daniel. They didn’t just talk about prayer; they lived it. We also discover that prayer is not an accessory to the Christian life; it is the lifeline.</p>
-<p>In crisis and in the ordinary rhythm of life Daniel prayed. He prayed consistently, openly, and without compromise. Even when his life was threatened, his habit of prayer did not change. That kind of faithfulness doesn’t develop overnight; it is built through daily, intentional communion with God.<br>Enoch’s entire life is summarized in one powerful phrase: “he walked with God.” His relationship wasn’t confined to a specific moment, it was continuous. Prayer, wasn’t just something he did; it was the atmosphere he lived in.</p>
-<p>Moses was a leader, intercessor, and friend of God. His prayers weren’t shallow or self-focused. He pleaded for others, he stood in the gap, and trusted God even when the answers were difficult. His life reminds us that prayer is not only about personal connection, but it’s also about intercession and influence.</p>
-<p>Daniel, Enoch, and Moses teach us that:<br>Prayer is consistent. Prayer is relational. Prayer is transformative.</p>
-<p>Prayer doesn’t just change situations, it changes people. It deepens trust, clarifies purpose, strengthens faith, and aligns our hearts with God’s will.</p>
-<p>Yet many of us struggle with prayer.<br>Not because prayer is complicated, but because it requires intentionality. We must set aside time, resist distraction, and cultivate the habit of prayer. When we do, the reward will be a living, growing relationship with a God who hears, responds, and draws near.<br>So this week’s study is more than just one of prayer, it’s an invitation to become a people of prayer.<br>To move beyond rushed words and into meaningful conversation.<br>To shift from inconsistency to rhythm.<br>To experience what it truly means to walk and talk with God.</p>
-</div>
-    
-    
-    <div class="quiz-panel" id="quiz-section-0">
-      <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
-      <p class="font-bold mb-4 text-black">According to the lesson on 'The Posture of Prayer,' what is the significance of kneeling?</p>
-      <p style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:.6;margin-bottom:6px;">Select your answer:</p>
-      <div class="space-y-2"><div class="option-item" data-correct="false" data-idx="0" onclick="handleQuizChoice('quiz-section-0', this)">It is a posture primarily intended to show superiority over others in the community.</div><div class="option-item" data-correct="true" data-idx="1" onclick="handleQuizChoice('quiz-section-0', this)">It acts as a physical declaration to the powers of darkness that the individual chooses God.</div><div class="option-item" data-correct="false" data-idx="2" onclick="handleQuizChoice('quiz-section-0', this)">It is the only posture that the Bible identifies as acceptable for communication with God.</div><div class="option-item" data-correct="false" data-idx="3" onclick="handleQuizChoice('quiz-section-0', this)">It is a requirement for those who wish to have their prayers heard.</div></div>
-      <div class="quiz-result"></div>
-      <p class="mt-8 text-sm font-bold text-black uppercase italic border-t border-black/10 pt-4">Food for Thought: Which aspect of the prayer lives of Daniel, Enoch, or Moses (consistency, communion, or intercession) do you most need to develop right now, and what specific step will you take this week to strengthen it?</p>
-    </div>
-<script>
-function handleQuizChoice(quizId, el) {
-  var panel = document.getElementById(quizId);
-  if (panel.dataset.answered) return;
-  panel.dataset.answered = '1';
-  var isCorrect = el.dataset.correct === 'true';
-  var allOpts = panel.querySelectorAll('.option-item');
-  allOpts.forEach(function(opt) {
-    opt.style.cursor = 'default';
-    if (opt.dataset.correct === 'true') opt.classList.add('reveal-correct');
-  });
-  if (isCorrect) {
-    el.classList.add('selected-correct');
-    panel.querySelector('.quiz-result').textContent = '✓ Correct! Well done.';
-    panel.querySelector('.quiz-result').className = 'quiz-result correct';
-  } else {
-    el.classList.add('selected-wrong');
-    panel.querySelector('.quiz-result').textContent = '✗ Not quite — the correct answer is highlighted above.';
-    panel.querySelector('.quiz-result').className = 'quiz-result wrong';
-  }
-}
-</script>
-  </div>
-</section>
+    <nav class="nav-wrapper">
+        <div class="nav-container">
+            <a href="#today" class="nav-link">Today</a>
+            <a href="#calendar" class="nav-link">Calendar</a>
+            <a href="#momentum" class="nav-link">Sabbath School</a>
+            <a href="#stewardship" class="nav-link">Stewardship</a>
+            <a href="#conference" class="nav-link">Conference</a>
+            <a href="#connect" class="nav-link">Connect</a>
+        </div>
+    </nav>
 
-<section id="section-1">
-  <h2 class="section-title">Stewardship <span>Spotlight</span></h2>
-  <div class="glass-card">
-    <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider">Theme: Where Does It Go?</h3>
-    <div class="accent-box"><p class="text-2xl font-bold italic text-white mb-2">Malachi (prove Him)</p></div>
-    <div class="prose prose-invert prose-teal max-w-none text-gray-200 leading-relaxed mb-4"><p>Last week, we were reminded of God’s invitation in Malachi to “prove Him” through faithful returning of tithe and offering.</p>
-<p>This week, we want to bring clarity to an important question:<br>Where do our tithe and offerings go?<br>In our church structure:</p>
-<ul>
-<li>All tithe is sent to the Pennsylvania Conference of Seventh-day Adventists to support the broader work of the church—pastors, evangelism, and ministry across the conference.</li>
-<li>Offerings, specifically Combined Budget, stay right here in our local church.</li>
-</ul>
-<p>What does the Combined Budget support?<br>The Combined Budget helps meet the ongoing needs of our church, including:</p>
-<ul>
-<li>Utilities (electricity, trash, etc.)</li>
-<li>Sabbath meals and fellowship</li>
-<li>Sabbath School quarterlies</li>
-<li>Departmental ministries and events</li>
-<li>Day-to-day operations of the church<br>Additionally, there are opportunities to give to specific areas such as:</li>
-<li>AY (Youth Ministries)</li>
-<li>Family Life</li>
-<li>Benevolent Fund</li>
-<li>And other ministries that serve our church and community</li>
-</ul>
-<p>Why This Matters<br>Returning tithe is an act of obedience and trust in God.<br>Giving offering is also a call from God—as seen in Malachi—and while He does not specify an amount, it is an invitation for each of us to give willingly and faithfully to support His house locally.<br>If we return tithe but do not give offering, the local church does not have the resources needed to function, serve, and grow.</p>
-<p>A Shared Responsibility<br>Each of us plays a part in sustaining and strengthening God’s church.<br>When we give:</p>
-<ul>
-<li>We support the mission</li>
-<li>We meet real needs</li>
-<li>We create space for ministry to happen</li>
-<li>We impact lives—right here in our church and in our community</li>
-</ul>
-<p>Our Encouragement This Week<br>As you continue to prove God in your giving, consider not only your tithe, but also how you can support your local church through offering.<br>Trust Him. Honor Him. And watch how He blesses:</p>
-<ul>
-<li>You</li>
-<li>Your family</li>
-<li>Your church</li>
-<li>And your community<br>Because stewardship is not just about what we give—it’s about who we trust.<br>May God richly bless your faithfulness as you trust Him.</li>
-</ul>
-</div>
-    
-  </div>
-</section>
+    <div class="page-content">
+        
+        <!-- SECTION 1: TODAY AT STROUDSBURG -->
+        <section id="today">
+            <h2 class="section-title">Today at <span>Stroudsburg</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card" style="border-left: 4px solid var(--accent-teal);">
+                    <h3 class="text-teal-400 font-black uppercase text-sm mb-4 tracking-widest">Sabbath Schedule</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <strong class="text-white text-lg">3:00 PM – 4:30 PM</strong> 
+                            <p class="text-gray-400 font-bold mb-1">Bible Class: "Living Water"</p>
+                            <p class="text-xs text-gray-500 italic">Conducted by the Family Life Department. A 3-week series on relationships, spiritual protection, and God's truth.</p>
+                        </li>
+                        <li>
+                            <strong class="text-gray-600 text-lg line-through">5:00 PM</strong>
+                            <p class="text-red-500 font-bold uppercase text-xs">NO AYS TODAY</p>
+                            <p class="text-xs text-gray-500">AYS will resume next Sabbath, 5/16/2026.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-card">
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">This Week</h3>
+                    <p class="text-sm text-gray-400 mb-2"><strong>Wed/Fri:</strong> Prayer Meeting & Vespers @ 7:15 PM (Zoom)</p>
+                    <p class="text-sm text-gray-400 mb-2"><strong>Mon/Thu:</strong> Closer Walk Prayer Line @ 8:00 PM (Zoom)</p>
+                    <p class="text-sm text-gray-400"><strong>Tuesday 5/12:</strong> Senior Ministry @ 10:00 AM (CSC)</p>
+                    <hr class="border-white/10 my-4">
+                    <p class="text-xs text-gray-500 italic uppercase">Notice: The Couple’s Club meeting for May 23rd has been canceled.</p>
+                </div>
+            </div>
+        </section>
 
-<section id="section-2">
-  <h2 class="section-title">Family <span>Life</span></h2>
-  <div class="glass-card">
-    <div class="prose prose-invert prose-teal max-w-none text-gray-200 leading-relaxed"><p>Last Week’s Sabbath School lesson, “How to Study the Bible,” gave us a glimpse into the purpose of Bible study — the how, when, and where — the double blessings it brings, and the sweetness of God’s Word that brings healing to our souls and transformation to our characters.</p>
-<p>Over the next 3 weeks, the Family Life Department will bring you a Bible study designed not to condemn, but to pour out Living Water — water meant to quench your thirst, answer your questions, strengthen your relationships with God and with others, satisfy the longing of your heart, and draw you into a deeper understanding of His love and truth.</p>
-<p>Together, we will explore practical and biblical topics such as spiritual protection through the whole armor of God, building healthy Christ-centered relationships before and within marriage, understanding submission from God’s perspective, how husbands are called to love their wives, and safeguarding our hearts and minds in a world filled with temptation.</p>
-<p>This Bible study is for the young and the young at heart. We have prepared it with the entire church family in mind.</p>
-<p>So we invite you to:<br>Bring your Bible.<br>Bring your notebook.<br>Bring your questions.<br>And most of all, bring an open heart.</p>
-<p>We look forward to studying, growing, and journeying together in God’s Word.</p>
-</div>
-  </div>
-</section>
-<section id="connect">
-  <h2 class="section-title">Connect <span>&amp; Give</span></h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="glass-card !p-8">
-      <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-5">Service Links</h3>
-      <div class="space-y-3 text-sm">
-    <div class="flex justify-between items-center border-b border-white/5 pb-3">
-      <div>
-        <p class="font-bold">Prayer Meeting & Vespers</p>
-        <p class="text-xs text-gray-500">Wed/Fri @ 7:15 PM</p>
-      </div>
-      <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+        <!-- SECTION 2: CALENDAR OF EVENTS -->
+        <section id="calendar">
+            <h2 class="section-title">Sabbath <span>Calendar</span></h2>
+            <div class="glass-card">
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">09</div></div>
+                    <div><p class="font-bold text-white uppercase text-xs tracking-widest">Sabbath Services</p><p class="text-gray-400 text-sm">Bible Class: Family Life Series Begins</p></div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">16</div></div>
+                    <div><p class="font-bold text-white uppercase text-xs tracking-widest">Ministry Meetings</p><p class="text-gray-400 text-sm">AYS Resumes / VBS Volunteer Meeting after Service</p></div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">17</div></div>
+                    <div><p class="font-bold text-white uppercase text-xs tracking-widest">Mission & Prayer</p><p class="text-gray-400 text-sm">PA Mission Trip / National Mall Prayer Gathering</p></div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jun</div><div class="day">12</div></div>
+                    <div><p class="font-bold text-white uppercase text-xs tracking-widest">PA Conference</p><p class="text-gray-400 text-sm">Camp Meeting 2026 Begins (June 12-20)</p></div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jul</div><div class="day">06</div></div>
+                    <div><p class="font-bold text-white uppercase text-xs tracking-widest">Youth Ministry</p><p class="text-gray-400 text-sm">VBS 2026: Cactusville Begins (July 6-10)</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SABBATH SCHOOL MOMENTUM (FULL) -->
+        <section id="momentum">
+            <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
+            <div class="glass-card">
+                <p class="text-teal-400 font-bold mb-2">Lesson for Sabbath 5/9/2026</p>
+                <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">Prayer - That Changes Everything</h3>
+                
+                <p class="mb-4 text-gray-200">What happens when prayer moves from routine to relationship? In this week’s lesson, “Prayer Warriors,” we look closely at the lives of Moses, Enoch, and Daniel. They didn’t just talk about prayer; they lived it. We also discover that prayer is not an accessory to the Christian life; it is the lifeline.</p>
+                
+                <p class="mb-4 text-gray-200">In crisis and in the ordinary rhythm of life Daniel prayed. He prayed consistently, openly, and without compromise. Enoch’s entire life is summarized in one powerful phrase: “he walked with God.” Moses was a leader, intercessor, and friend of God. His life reminds us that prayer is not only about personal connection, but it’s also about intercession and influence.</p>
+
+                <div class="accent-box">
+                    <p class="text-white font-bold mb-2">Relational & Transformative</p>
+                    <p class="text-gray-200 italic">Prayer doesn’t just change situations, it changes people. It deepens trust, clarifies purpose, strengthens faith, and aligns our hearts with God’s will. This week’s study is an invitation to become a people of prayer—to move beyond rushed words and into meaningful conversation.</p>
+                </div>
+
+                <div class="quiz-panel">
+                    <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
+                    <p class="font-bold mb-4 text-black">According to the lesson on 'The Posture of Prayer,' what is the significance of kneeling?</p>
+                    <div class="space-y-2">
+                        <div class="option-item" onclick="revealAns(this, false)">A. It is a posture primarily intended to show superiority over others.</div>
+                        <div id="correct-opt" class="option-item" onclick="revealAns(this, true)">B. It acts as a physical declaration to the powers of darkness that the individual chooses God.</div>
+                        <div class="option-item" onclick="revealAns(this, false)">C. It is the only posture that the Bible identifies as acceptable.</div>
+                        <div class="option-item" onclick="revealAns(this, false)">D. It is a requirement for those who wish to have their prayers heard.</div>
+                    </div>
+                    <div id="quiz-answer-revealed">Correct Answer: B</div>
+                    <div class="mt-8 border-t border-black/10 pt-4 text-black">
+                        <h5 class="font-black uppercase text-xs mb-2">Food for Thought:</h5>
+                        <p class="text-sm italic">Which aspect of the prayer lives of Daniel, Enoch, or Moses do you most need to develop right now, and what specific step will you take this week to strengthen it?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: STEWARDSHIP SPOTLIGHT (FULL) -->
+        <section id="stewardship">
+            <h2 class="section-title">Stewardship <span>Spotlight</span></h2>
+            <div class="glass-card">
+                <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider">Where Does It Go?</h3>
+                
+                <div class="accent-box">
+                    <p class="text-white font-bold mb-2 uppercase text-xs">The Structure of Giving</p>
+                    <p class="text-gray-200 mb-4"><strong>All Tithe</strong> is sent to the Pennsylvania Conference to support pastors, evangelism, and broader conference ministry.</p>
+                    <p class="text-gray-200"><strong>Offerings (Combined Budget)</strong> stay right here to support our local church needs.</p>
+                </div>
+
+                <p class="mb-4 text-gray-200">The Combined Budget supports utilities, Sabbath meals, quarterlies, departmental ministries, and day-to-day operations. Returning tithe is an act of obedience, while giving offering is an invitation to support His house locally.</p>
+
+                <div class="bg-white/5 p-6 border border-white/10 mb-8">
+                    <h4 class="text-teal-400 font-bold text-xs uppercase mb-4">A Shared Responsibility</h4>
+                    <p class="text-sm text-gray-300">If we return tithe but do not give offering, the local church does not have the resources needed to function and grow. When we give, we create space for ministry to happen right here in our community.</p>
+                </div>
+
+                <p class="text-center font-bold text-white uppercase text-sm italic">"Stewardship is not just about what we give — it’s about who we trust."</p>
+            </div>
+        </section>
+
+        <!-- SECTION 5: PA CONFERENCE (UNABRIDGED) -->
+        <section id="conference">
+            <h2 class="section-title">PA <span>Conference</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">One-Day Mission Trips | Sunday, May 17</h4>
+                    <p class="text-sm text-gray-300 mb-4">Join us at either Blue Mountain Academy or Laurel Lake Camp. Breakfast at 8:00 am, workday begins at 9:00 am. Lunch provided. Register at <a href="https://paconference.org/mission-trip-registration" target="_blank" class="underline">paconference.org</a>.</p>
+                </div>
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Master Guide Camporee | June 5-7</h4>
+                    <p class="text-sm text-gray-300">At Kamp Keystone, Hamburg, Pa. Guest speaker: Michael Campos. Register at <a href="https://paconference.org/events" target="_blank" class="underline">paconference.org/events</a>.</p>
+                </div>
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Camp Meeting 2026 | June 12-20</h4>
+                    <p class="text-sm text-gray-300 mb-4">"Joyful Living" at Blue Mountain Academy. Featuring speakers Randy Skeete, Neil Nedley, Mark and Teenie Finley, and more. Register at <a href="https://paconference.org/camp-meeting" target="_blank" class="underline">paconference.org/camp-meeting</a>.</p>
+                </div>
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Summer Camp: "Give Me the Mountains"</h4>
+                    <p class="text-sm text-gray-300">Begins June 21. Family camp: July 21-26. Ages 7-16. Register: <a href="https://laurellakesummercamp.com" target="_blank" class="underline">laurellakesummercamp.com</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: CONNECT -->
+        <section id="connect">
+            <h2 class="section-title">Connect <span>& Give</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div class="glass-card">
+                    <h3 class="font-black text-teal-400 uppercase text-xs mb-6">Service Links</h3>
+                    <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" class="text-white font-bold block mb-4">Prayer Meeting & Vespers (7:15 PM)</a>
+                    <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" class="text-white font-bold block">Prayer Line (8:00 PM)</a>
+                </div>
+                <div class="glass-card">
+                    <h3 class="font-black text-teal-400 uppercase text-xs mb-6">Giving</h3>
+                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs block hover:bg-teal-400 transition">Give Online Now</a>
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="flex justify-between items-center border-b border-white/5 pb-3">
-      <div>
-        <p class="font-bold">Evening Prayer Line</p>
-        <p class="text-xs text-gray-500">Mon/Thu @ 8:00 PM</p>
-      </div>
-      <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
-    </div>
-    <div class="flex justify-between items-center ">
-      <div>
-        <p class="font-bold">Sabbath Morning Zoom</p>
-        <p class="text-xs text-gray-500">Sabbath @ 9:20 AM</p>
-      </div>
-      <a href="https://us02web.zoom.us/j/797422531" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
-    </div></div>
-    </div>
-    <div class="glass-card !p-8 flex flex-col justify-center items-center text-center">
-      <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-5">Tithe &amp; Offerings</h3>
-      <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-6 py-3 font-bold uppercase text-xs text-center hover:bg-teal-400 transition mb-6 w-full">Give Online Now</a>
-      <div class="flex gap-6 text-2xl text-gray-500"><a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a><a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-youtube"></i></a></div>
-    </div>
-  </div>
-</section>
-</div>
-<footer>STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360</footer>
+
+    <footer>STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360</footer>
+
+    <script>
+        function revealAns(el, isCorrect) {
+            document.getElementById('quiz-answer-revealed').style.display = 'block';
+            document.getElementById('correct-opt').classList.add('correct-reveal');
+            if(!isCorrect) { el.style.opacity = '0.5'; el.style.textDecoration = 'line-through'; }
+        }
+    </script>
 </body>
 </html>
