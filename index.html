@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midweek Bulletin | Stroudsburg SDA</title>
+    <title>Sabbath Announcements | Stroudsburg SDA</title>
     
     <!-- Dependencies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -51,6 +51,7 @@
 
         h1 span { color: var(--accent-teal); }
 
+        /* Sticky Navigation Bar */
         .nav-wrapper {
             border-bottom: 1px solid #222;
             position: sticky;
@@ -72,7 +73,7 @@
             padding: 15px 18px;
             color: var(--gray-text);
             text-transform: uppercase;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 700;
             letter-spacing: 1px;
             text-decoration: none;
@@ -82,6 +83,7 @@
 
         .nav-link:hover { color: var(--accent-teal); }
 
+        /* Page Layout */
         .page-content {
             max-width: 1000px;
             margin: 0 auto;
@@ -90,7 +92,7 @@
 
         section {
             padding-top: 60px;
-            margin-bottom: 100px;
+            margin-bottom: 80px;
         }
 
         .glass-card {
@@ -100,6 +102,22 @@
             margin-bottom: 30px;
         }
 
+        /* Calendar Row Styling */
+        .calendar-row {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .calendar-row:last-child { border-bottom: none; }
+        .date-box {
+            min-width: 80px;
+            text-align: center;
+            margin-right: 30px;
+        }
+        .date-box .month { font-size: 0.7rem; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; }
+        .date-box .day { font-size: 1.8rem; font-weight: 900; line-height: 1; }
+
         .accent-box {
             border-left: 3px solid var(--accent-teal);
             background: rgba(40, 204, 158, 0.05);
@@ -107,6 +125,7 @@
             margin: 25px 0;
         }
 
+        /* Quiz Styling */
         .quiz-panel {
             background: var(--accent-teal);
             color: var(--black);
@@ -152,6 +171,12 @@
 
         h2.section-title span { color: var(--accent-teal); }
 
+        .vbs-link {
+            color: var(--accent-teal);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
         footer {
             border-top: 1px solid #111;
             padding: 40px 20px;
@@ -166,27 +191,115 @@
 
     <header>
         <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-        <h1>MIDWEEK <span>MOMENTUM</span></h1>
+        <h1>STROUDSBURG <span>SABBATH</span></h1>
         <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, May 16, 2026</p>
     </header>
 
     <nav class="nav-wrapper">
         <div class="nav-container">
+            <a href="#today" class="nav-link">Today</a>
+            <a href="#calendar" class="nav-link" style="color: var(--accent-teal);">Calendar</a>
             <a href="#momentum" class="nav-link">Sabbath School</a>
             <a href="#stewardship" class="nav-link">Stewardship</a>
             <a href="#liberty" class="nav-link">Religious Liberty</a>
-            <a href="#fellowship" class="nav-link">Fellowship & Care</a>
+            <a href="#conference" class="nav-link">Conference</a>
             <a href="#connect" class="nav-link">Connect</a>
         </div>
     </nav>
 
     <div class="page-content">
         
-        <!-- SECTION: SABBATH SCHOOL -->
+        <!-- SECTION 1: TODAY AT STROUDSBURG -->
+        <section id="today">
+            <h2 class="section-title">Today at <span>Stroudsburg</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card" style="border-left: 4px solid var(--accent-teal);">
+                    <h3 class="text-teal-400 font-black uppercase text-sm mb-4 tracking-widest">Sabbath Schedule</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <strong class="text-white text-lg">3:00 PM – 4:30 PM</strong> 
+                            <p class="text-gray-400 font-bold mb-1">Bible Class</p>
+                            <p class="text-xs text-gray-500 italic">For the next 2 weeks, the Family Life Department will be conducting the Bible study.</p>
+                        </li>
+                        <li>
+                            <strong class="text-white text-lg">5:00 PM</strong>
+                            <p class="text-teal-400 font-bold uppercase text-xs">AYS Program</p>
+                        </li>
+                        <li class="pt-2 border-t border-white/5">
+                            <strong class="text-white uppercase text-xs block mb-1 text-teal-400">VBS Volunteer Meeting Today</strong>
+                            <p class="text-xs text-gray-400">If you are interested in serving our children and children of the community during this year’s Vacation Bible School, please plan to meet with Sister Terina Jackson immediately after church service today, May 16th.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-card">
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">This Week's Services</h3>
+                    <p class="text-sm text-teal-400 font-bold mb-2">
+                        <i class="fas fa-calendar-day mr-2"></i>Tomorrow (Sunday) @ 7:15 PM
+                    </p>
+                    <p class="text-sm text-gray-300 mb-4 leading-relaxed">
+                        The Women’s Ministry Department invites us to a special Sunday evening service on <strong>Church Hurt</strong>. We will hear from our very own Sis. Michelle Ekoto.
+                    </p>
+                    <hr class="border-white/10 my-4">
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><strong>Wed/Fri @ 7:15 PM:</strong> Prayer Meeting & Friday Evening Vesper continue on Zoom.</li>
+                        <li><strong>Mon/Thu @ 8:00 - 8:30 PM:</strong> Closer Walk Prayer Line on Zoom.</li>
+                        <li><strong>Tuesday @ 10:00 AM:</strong> The New Beginning Senior Ministry meets on Tuesday, May 19, 2026, at the Community Services Center.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CALENDAR OF EVENTS -->
+        <section id="calendar">
+            <h2 class="section-title">Sabbath <span>Calendar</span></h2>
+            <div class="glass-card">
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">16</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Sabbath Services & Meetings</p>
+                        <p class="text-gray-400 text-sm">Bible Class, AYS, & VBS Interest Meeting today.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">17</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry Special Service</p>
+                        <p class="text-gray-400 text-sm">7:15 PM: Service on "Church Hurt" with Sis. Michelle Ekoto.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">19</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Senior Ministry</p>
+                        <p class="text-gray-400 text-sm">10:00 AM: New Beginning Senior Ministry at Community Services Center.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jun</div><div class="day">06</div></div>
+                    <div>
+                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest">Benefit Concert</p>
+                        <p class="text-gray-400 text-sm">5:00 PM: Benefit Concert at Stroudsburg SDA. Listen out today for more details.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jul</div><div class="day">06</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Vacation Bible School</p>
+                        <p class="text-gray-400 text-sm">July 6th – July 10th: VBS 2026 "Cactusville." <a href="https://vbs.stroudsburgsda.org" target="_blank" class="vbs-link">Registration is open online</a>.</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-white/5 border border-white/10 mt-6 rounded">
+                    <p class="text-xs text-gray-400 italic uppercase"><i class="fas fa-exclamation-circle text-teal-400 mr-2"></i>Notice: The Couple’s Club meeting originally scheduled for May 23rd has been canceled.</p>
+                    <p class="text-xs text-gray-400 italic uppercase mt-2"><i class="fas fa-heart text-teal-400 mr-2"></i>Church Care: Please remember Sister Patricia Francis in your prayers. She is currently at Forest Hill Rehab Center, 1000 Evergreen Ave, Weatherly, PA 18255.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SABBATH SCHOOL MOMENTUM (UNABRIDGED) -->
         <section id="momentum">
             <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
             <div class="glass-card">
-                <p class="text-teal-400 font-bold mb-2 uppercase tracking-widest text-xs">Lesson for Sabbath 5/16/2026</p>
+                <p class="text-teal-400 font-bold mb-2">Lesson for Sabbath 5/16/2026</p>
                 <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">A Prayer Life That Goes Beyond Routine</h3>
                 
                 <p class="mb-4 text-gray-200">For the second week in a row, the lesson focuses on prayer. This week’s lesson, “Practical Prayer,” invites us to rethink prayer. Prayer is not a religious obligation, but it is what sustains a vibrant, daily connection with God. Prayer is meant to be more than a quick request before meals or a desperate cry during difficult moments.</p>
@@ -194,12 +307,13 @@
                 <p class="mb-4 text-gray-200">As we study Scripture, we see that some of the most powerful moments happened through honest, heartfelt prayer. Hannah prayed through her heartbreak. Elijah prayed in exhaustion and fear. Daniel prayed with humility, confession, and hope. Their prayers were not polished performances; rather, they were real conversations with a God who listens. God is not waiting for perfect words; He is seeking sincere hearts.</p>
 
                 <div class="accent-box">
-                    <p class="text-white font-bold text-lg mb-2">Simplicity & Surrender</p>
+                    <p class="text-white font-bold text-lg mb-2">Simplicity, Authenticity, Surrender, and Trust</p>
                     <p class="text-gray-200 italic">In the Lord’s Prayer, Jesus Himself taught that prayer is not about impressing others with eloquent language or lengthy speeches. Instead, He modeled simplicity, authenticity, surrender, and trust. Prayer becomes transformative when it moves beyond repetition and becomes a relationship.</p>
                 </div>
 
                 <p class="mb-8 text-gray-200">How do we handle prayers that seem to be unanswered? Do we trust God only when the answers come quickly and clearly? Or can we continue praying in seasons of waiting, silence, or uncertainty? Sometimes God answers us dramatically, like fire from heaven on Mount Carmel. Other times, He speaks through the “still small voice” that requires us to slow down and listen. Prayer calls us to pause to pour out our hearts before God. So this week’s lesson is more than a study of prayer techniques. It is an invitation to deepen our communion with Christ, strengthen our trust in God’s timing, and cultivate a prayer life that is practical, personal, and persistent.</p>
 
+                <!-- INTERACTIVE QUIZ PANEL -->
                 <div class="quiz-panel">
                     <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
                     <p class="font-bold mb-4 text-black">According to the lesson, why is it sometimes necessary to pray even though God already knows our needs and thoughts?</p>
@@ -221,13 +335,11 @@
             </div>
         </section>
 
-        <!-- SECTION: STEWARDSHIP SPOTLIGHT -->
+        <!-- SECTION 4: STEWARDSHIP SPOTLIGHT (UNABRIDGED) -->
         <section id="stewardship">
             <h2 class="section-title">Stewardship <span>Spotlight</span></h2>
             <div class="glass-card">
-                <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider text-teal-400">Count the Cost</h3>
-                
-                <p class="mb-6 text-gray-200 italic">This week, we turn our attention to a powerful question found in Gospel of Luke:</p>
+                <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider text-teal-400">Theme: Count the Cost</h3>
                 
                 <div class="accent-box">
                     <p class="text-white font-bold text-lg mb-2">“For which of you, intending to build a tower, does not sit down first and count the cost…?”</p>
@@ -235,8 +347,9 @@
                 </div>
 
                 <h4 class="text-white font-black uppercase text-sm mb-4">What does it mean to “count the cost”?</h4>
-                <p class="mb-4 text-gray-200">It means to be intentional. Before we commit, before we spend, before we build—we pause, we plan, and we seek understanding. In our financial lives, this looks like:</p>
+                <p class="mb-4 text-gray-200">It means to be intentional. Before we commit, before we spend, before we build—we pause, we plan, and we seek understanding.</p>
                 
+                <p class="mb-4 text-gray-200">In our financial lives, this looks like:</p>
                 <ul class="space-y-2 text-sm text-gray-400 mb-6 list-disc list-inside">
                     <li>Not rushing into decisions</li>
                     <li>Not spending impulsively</li>
@@ -260,13 +373,13 @@
 
                 <div class="text-center border-t border-white/10 pt-6">
                     <h4 class="text-white font-bold uppercase text-xs mb-4">Our Encouragement This Week:</h4>
-                    <p class="text-gray-200 mb-6">Take time to reflect on this scripture. Before your next financial decision—big or small: **Pause. Pray. Plan.** Invite God into your decisions and count the cost.</p>
-                    <p class="text-teal-400 font-black uppercase tracking-widest">Stewardship is about honoring God with every decision.</p>
+                    <p class="text-gray-200 mb-6">Take time to reflect on this scripture. Before your next financial decision—big or small: <strong>Pause. Pray. Plan.</strong> Invite God into your decisions and count the cost.</p>
+                    <p class="text-teal-400 font-black uppercase tracking-widest">Because stewardship is not just about managing money—it’s about honoring God with every decision we make. May God richly bless your faithfulness as you walk in wisdom and intention.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: RELIGIOUS LIBERTY -->
+        <!-- SECTION 5: RELIGIOUS LIBERTY (UNABRIDGED) -->
         <section id="liberty">
             <h2 class="section-title">Religious <span>Liberty</span></h2>
             <div class="glass-card">
@@ -275,84 +388,89 @@
                 
                 <p class="mb-6 text-gray-200">This week, President Donald Trump issued a proclamation recognizing a national day of prayer specifically connected to the Jewish community and the importance of faith in America’s identity. While many view this as a positive gesture of solidarity and religious support, it also highlights an important prophetic principle: once government leaders begin publicly recognizing, promoting, or setting aside specific days connected to worship and religious observance, a precedent is established.</p>
                 
+                <p class="mb-6 text-gray-200">Throughout history, moments of national crisis or moral concern have often led societies to call for prayer, repentance, and religious unity. Today, we are seeing increasing cooperation between faith and government, along with growing public support for national spiritual initiatives. What is especially significant is not simply the prayer itself, but the normalization of government involvement in encouraging collective religious observance.</p>
+
                 <div class="accent-box">
-                    <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">The Prophetic Principle</p>
-                    <p class="text-gray-200 mb-4 leading-relaxed">If leaders can call for recognition surrounding one faith community’s sacred observance, it becomes easier for future calls to be made around broader Christian worship practices, including Sunday observance. In times of crisis, economic instability, natural disasters, or social unrest, calls for national prayer and Sunday rest laws could increasingly be framed as solutions for moral restoration and national unity.</p>
+                    <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Prophetic Perspective</p>
+                    <p class="text-gray-200 mb-4 leading-relaxed">From a prophetic perspective, this matters because it reveals how quickly public religious movements can gain national influence. If leaders can call for recognition surrounding one faith community’s sacred observance, it becomes easier for future calls to be made around broader Christian worship practices, including Sunday observance. For many Sunday-keeping Christians, Sunday is viewed as America’s historic day of worship and rest. In times of crisis, economic instability, natural disasters, or social unrest, calls for national prayer and Sunday rest laws could increasingly be framed as solutions for moral restoration and national unity.</p>
                 </div>
 
-                <p class="mb-6 text-gray-200">The Bible warns that the final conflict will center on worship and allegiance. Revelation 13 describes a union of religious influence and civil power that ultimately pressures conscience. Revelation 14 calls God’s people back to worship the Creator according to His Word. The issue at the end of time is not merely politics. It is worship. Who has authority over conscience: God or man?</p>
+                <p class="mb-6 text-gray-200 leading-relaxed">The Bible warns that the final conflict will center on worship and allegiance. Revelation 13 describes a union of religious influence and civil power that ultimately pressures conscience. Revelation 14 calls God’s people back to worship the Creator according to His Word. The issue at the end of time is not merely politics. It is worship. Who has authority over conscience: God or man?</p>
 
-                <p class="mb-8 text-gray-200 font-bold leading-relaxed">As God’s people, we must respond with discernment, not fear. Now is the time to know why we believe what we believe. A faith that stands in the final moments will not be built on emotion, culture, or popular opinion, but on a deep personal conviction rooted in the Word of God.</p>
+                <p class="mb-6 text-gray-200 leading-relaxed">This does not mean that every national prayer event is itself the fulfillment of prophecy. But it does show how society is becoming more comfortable with the idea of government-supported religious observance. What once may have seemed impossible is becoming increasingly acceptable in public conversation.</p>
 
-                <div class="bg-white/5 p-8 border border-white/10 rounded">
-                    <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest text-teal-400">Important Reminders</h4>
+                <p class="mb-8 text-gray-200 font-bold leading-relaxed">As God’s people, we must respond with discernment, not fear. We are called to respect others while remaining firmly grounded in Scripture. Now is the time to know why we believe what we believe. A faith that stands in the final moments will not be built on emotion, culture, or popular opinion, but on a deep personal conviction rooted in the Word of God. This week, ask the Lord to strengthen your understanding of truth and prepare your heart to stand faithfully no matter how the world changes around you. The pressure may grow, but God’s people do not stand alone.</p>
+
+                <div class="bg-white/5 p-8 border border-white/10 rounded mb-6">
+                    <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest text-teal-400">What God’s People Should Remember</h4>
                     <ul class="space-y-4 text-gray-300 font-bold text-sm">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> Government recognition establishes precedent</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> Crises increase calls for religious unity</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> The final issue centers on worship and conscience</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> Government recognition of religious observances establishes precedent</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> National crises often increase calls for religious unity and public worship</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> The final prophetic issue centers on worship and conscience</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> A strong faith is built daily, before it is tested</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> God calls His people to stand faithfully on His Word</li>
                     </ul>
                 </div>
+
+                <div class="border-t border-white/10 pt-6">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4">Related Reading:</h4>
+                    <p class="text-xs text-gray-400 italic">Revelation 13 and 14 | Daniel 3: Worship and conscience under civil authority</p>
+                </div>
             </div>
         </section>
 
-        <!-- SECTION: FELLOWSHIP & CARE -->
-        <section id="fellowship">
-            <h2 class="section-title">Fellowship <span>& Care</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="glass-card" style="border-top: 4px solid var(--accent-teal);">
-                    <h3 class="text-white font-black uppercase text-sm mb-4 tracking-widest">Sabbath Fellowship</h3>
-                    <p class="text-gray-200 mb-6">We are looking forward to our **Church Potluck** this Sabbath! We invite everyone to bring a dish or item to share as we enjoy fellowship together.</p>
-                    <p class="text-xs font-bold uppercase text-teal-400 italic text-center">Nourishing Body and Soul</p>
+        <!-- SECTION 6: CONFERENCE ANNOUNCEMENTS (UNABRIDGED) -->
+        <section id="conference">
+            <h2 class="section-title">Conference <span>Announcements</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Master Guide Camporee | June 5-7, 2026</h4>
+                    <p class="text-sm text-gray-300">Master Guides are invited to a camporee just for them at the Pennsylvania Conference’s Kamp Keystone, Hamburg, Pa., June 5-7, 2026. Our guest speaker is Michael Campos, executive secretary for the Illinois Conference. Register at <a href="https://paconference.org/events" target="_blank" class="underline">paconference.org/events</a>.</p>
                 </div>
 
                 <div class="glass-card">
-                    <h3 class="text-white font-black uppercase text-sm mb-4 tracking-widest">Prayer & Care</h3>
-                    <p class="text-gray-200 mb-4 leading-relaxed">Please remember **Sister Patricia Francis** in your prayers. She is currently at:</p>
-                    <div class="accent-box" style="margin: 0; padding: 20px;">
-                        <p class="text-white font-bold">Forest Hill Rehab Center</p>
-                        <p class="text-sm text-gray-400">1000 Evergreen Ave, Weatherly, PA 18255</p>
-                    </div>
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Camp Meeting | June 12-20, 2026</h4>
+                    <p class="text-sm text-gray-300 mb-4">Plan now to attend this year’s camp meeting, June 12-20, 2026, at Blue Mountain Academy, Hamburg, Pa. It will be a powerful week of powerful worship and practical seminars at our Pennsylvania Conference Camp Meeting 2026! This year’s focus is on “Joyful Living: Now and Forever—growing stronger physically, mentally, and spiritually—as we discover God’s plan for vibrant, healthy, and joyful living. Speakers include Randy Skeete, Neil Nedley, Mark and Teenie Finley, Dr. Jonathan Burt, Gail McKenzie, Gary Gibbs, Dee Casper, Ryan Musser, and Dr. Clinton Wahlen—offering messages of hope and health for today’s world. Children will enjoy meetings and activities planned for them as they explore “Wild About Health.” Powerful worship and fun outings are planned for our youth and young adults. Learn more, register for lodging, and purchase meal tickets at <a href="https://paconference.org/camp-meeting" target="_blank" class="underline">paconference.org/camp-meeting</a>.</p>
+                </div>
+
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Summer Camp 2026</h4>
+                    <p class="text-sm text-gray-300">Our 2026 summer camp, “Give Me the Mountains,” begins June 21 with Adventurer Camp and Cowgirl Camp. It will be a fun and life-impacting week for young people ages 7-16, and for families during our extended family camp, July 21-26. Learn more and register at <a href="https://laurellakesummercamp.com" target="_blank" class="underline">laurellakesummercamp.com</a>.</p>
+                </div>
+
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Scholarships Available for Dentistry Students</h4>
+                    <p class="text-sm text-gray-300">Ever thought about becoming a dentist? A donor to the Pennsylvania Conference has made available two scholarships for Loma Linda’s School of Dentistry, offering up to 100% tuition coverage for eligible applicants. The scholarships are available for new and current students. For more information, contact president@paconference.org.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: CONNECT -->
+        <!-- SECTION 7: CONNECT -->
         <section id="connect">
             <h2 class="section-title">Connect <span>& Give</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
                 <div class="glass-card">
-                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Midweek Zoom Links</h3>
-                    <div class="space-y-6 text-sm">
-                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
-                            <div><p class="font-bold text-white">Prayer Meeting & Vespers</p><p class="text-xs text-gray-500">Wed/Fri @ 7:15 PM</p></div>
-                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-teal-400"><i class="fas fa-video fa-lg"></i></a>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div><p class="font-bold text-white">Evening Prayer Line</p><p class="text-xs text-gray-500">Mon/Thu @ 8:00 PM</p></div>
-                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-teal-400"><i class="fas fa-phone fa-lg"></i></a>
-                        </div>
-                    </div>
+                    <h3 class="font-black text-teal-400 uppercase text-xs mb-6">Online Service Access</h3>
+                    <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-white font-bold block mb-4 hover:text-teal-400 transition">Prayer Meeting & Vespers (7:15 PM)</a>
+                    <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-white font-bold block hover:text-teal-400 transition">Evening Prayer Line (8:00 PM)</a>
                 </div>
-                <div class="glass-card flex flex-col justify-center items-center text-center">
-                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Support Our Mission</h3>
-                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs text-center hover:bg-teal-400 transition w-full">Give Online Now</a>
+                <div class="glass-card flex flex-col justify-center items-center">
+                    <h3 class="font-black text-teal-400 uppercase text-xs mb-6">Support the Local Mission</h3>
+                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs block hover:bg-teal-400 transition w-full">Adventist Giving</a>
                 </div>
             </div>
         </section>
-
     </div>
 
-    <footer>
-        STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360
-    </footer>
+    <footer>STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360</footer>
 
     <script>
         function revealQuizAnswer(element, isCorrect) {
             document.getElementById('quiz-answer-revealed').style.display = 'block';
             document.getElementById('correct-answer').classList.add('correct-reveal');
             if(!isCorrect) {
-                element.style.opacity = "0.5";
-                element.style.textDecoration = "line-through";
+                element.style.opacity = '0.5';
+                element.style.textDecoration = 'line-through';
             }
         }
     </script>
