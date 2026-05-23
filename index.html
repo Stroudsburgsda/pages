@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midweek Bulletin | Stroudsburg SDA</title>
+    <title>Sabbath Announcements | Stroudsburg SDA</title>
     
-    <!-- Dependencies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -51,6 +50,7 @@
 
         h1 span { color: var(--accent-teal); }
 
+        /* Sticky Navigation Bar */
         .nav-wrapper {
             border-bottom: 1px solid #222;
             position: sticky;
@@ -72,7 +72,7 @@
             padding: 15px 18px;
             color: var(--gray-text);
             text-transform: uppercase;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 700;
             letter-spacing: 1px;
             text-decoration: none;
@@ -82,6 +82,7 @@
 
         .nav-link:hover { color: var(--accent-teal); }
 
+        /* Page Layout */
         .page-content {
             max-width: 1000px;
             margin: 0 auto;
@@ -100,6 +101,22 @@
             margin-bottom: 30px;
         }
 
+        /* Calendar Row Styling */
+        .calendar-row {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .calendar-row:last-child { border-bottom: none; }
+        .date-box {
+            min-width: 80px;
+            text-align: center;
+            margin-right: 30px;
+        }
+        .date-box .month { font-size: 0.7rem; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; }
+        .date-box .day { font-size: 1.8rem; font-weight: 900; line-height: 1; }
+
         .accent-box {
             border-left: 3px solid var(--accent-teal);
             background: rgba(40, 204, 158, 0.05);
@@ -107,6 +124,19 @@
             margin: 25px 0;
         }
 
+        /* Inline Flyer Frame */
+        .flyer-frame {
+            border: 1px solid #222;
+            border-radius: 4px;
+            max-width: 480px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 25px auto;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+        }
+
+        /* Quiz Styling */
         .quiz-panel {
             background: var(--accent-teal);
             color: var(--black);
@@ -152,6 +182,12 @@
 
         h2.section-title span { color: var(--accent-teal); }
 
+        .vbs-link {
+            color: var(--accent-teal);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
         footer {
             border-top: 1px solid #111;
             padding: 40px 20px;
@@ -166,25 +202,136 @@
 
     <header>
         <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-        <h1>MIDWEEK <span>MOMENTUM</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Stroudsburg Seventh-day Adventist Church</p>
+        <h1>STROUDSBURG <span>SABBATH</span></h1>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, May 23, 2026</p>
     </header>
 
     <nav class="nav-wrapper">
         <div class="nav-container">
+            <a href="#today" class="nav-link">Today</a>
+            <a href="#calendar" class="nav-link" style="color: var(--accent-teal);">Calendar</a>
             <a href="#momentum" class="nav-link">Sabbath School</a>
             <a href="#liberty" class="nav-link">Religious Liberty</a>
+            <a href="#conference" class="nav-link">Conference</a>
             <a href="#connect" class="nav-link">Connect</a>
         </div>
     </nav>
 
     <div class="page-content">
         
-        <!-- SECTION: SABBATH SCHOOL -->
+        <section id="today">
+            <h2 class="section-title">Today at <span>Stroudsburg</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card" style="border-left: 4px solid var(--accent-teal);">
+                    <h3 class="text-teal-400 font-black uppercase text-sm mb-4 tracking-widest">Sabbath Schedule</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <strong class="text-white text-lg">3:00 PM – 4:30 PM</strong> 
+                            <p class="text-gray-400 font-bold mb-1">Bible Class</p>
+                            <p class="text-xs text-gray-500 italic">Conducted by the Family Life Department today.</p>
+                        </li>
+                        <li>
+                            <strong class="text-white text-lg">5:00 PM</strong>
+                            <p class="text-teal-400 font-bold uppercase text-xs">AYS Program</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-card">
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">This Week's Services</h3>
+                    <ul class="space-y-3 text-xs text-gray-400">
+                        <li><strong>Wed/Fri @ 7:15 PM:</strong> Prayer Meeting & Friday Evening Vesper continue on Zoom.</li>
+                        <li><strong>Mon/Thu @ 8:00 - 8:30 PM:</strong> Closer Walk Prayer Line on Zoom.</li>
+                        <li><strong>1st & 3rd Tuesdays @ 10:00 AM:</strong> New Beginnings Senior Ministry meets at the Community Services Center.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="calendar">
+            <h2 class="section-title">Sabbath <span>Calendar</span></h2>
+            <div class="glass-card">
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">May</div><div class="day">23</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Sabbath Services</p>
+                        <p class="text-gray-400 text-sm">Today: Family Life Bible Class & AYS Program.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jun</div><div class="day">05-07</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Conference Event</p>
+                        <p class="text-gray-400 text-sm">Master Guide Camporee at Kamp Keystone.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jun</div><div class="day">06</div></div>
+                    <div>
+                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest">Benefit Concert</p>
+                        <p class="text-gray-400 text-sm">5:00 PM: Evening of Love and Benevolence concert for Bro. David Foster.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jun</div><div class="day">12-20</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">PA Conference</p>
+                        <p class="text-gray-400 text-sm">Pennsylvania Conference Camp Meeting at Blue Mountain Academy.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jun</div><div class="day">21</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Youth Camp</p>
+                        <p class="text-gray-400 text-sm">PA Summer Camp "Give Me the Mountains" begins at Laurel Lake.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jul</div><div class="day">06-10</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Vacation Bible School</p>
+                        <p class="text-gray-400 text-sm">VBS 2026 "Cactusville." Online registration open at <a href="https://vbs.stroudsburgsda.org" target="_blank" class="vbs-link">vbs.stroudsburgsda.org</a>.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Aug</div><div class="day">21-23</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Youth Retreat</p>
+                        <p class="text-gray-400 text-sm">Hispanic Youth Retreat: Crossover with Pastor Japhet Garcia.</p>
+                    </div>
+                </div>
+
+                <div class="accent-box" style="margin-top: 30px;">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-heart text-teal-400 mr-2"></i>Church Care &amp; Visitation</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-2">Please continue to remember <strong>Sister Patricia Francis</strong> in your daily prayers and consider stopping by to visit her at the facility:</p>
+                    <p class="text-sm text-white font-bold">Forest Hill Rehab Center</p>
+                    <p class="text-xs text-gray-400">1000 Evergreen Ave, Weatherly, PA 18255</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="upcoming-notices">
+            <h2 class="section-title">Featured <span>Notices</span></h2>
+            <div class="glass-card">
+                <h3 class="text-teal-400 font-black uppercase text-sm mb-2 tracking-widest">Evening of Love and Benevolence</h3>
+                <p class="text-sm text-gray-300 mb-4">
+                    Let us all prepare for the Evening of Love and Benevolence concert on <strong>June 6th at 5 pm</strong>. This concert will benefit our Music Ministry Director, Bro. David Foster.
+                </p>
+                
+                <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/05/Benfit_Concert.png" alt="Evening of Love and Benevolence Concert Flyer" class="flyer-frame" />
+                
+                <hr class="border-white/10 my-6">
+                
+                <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Vacation Bible School 2026</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    If you are interested in serving our children and children of the community during this year’s Vacation Bible School, please plan to meet with Sister Terina Jackson next Sabbath immediately after church service. Also, please remember to keep VBS in your prayers and on your prayer lists. Registration for VBS is open and can be completed online at <a href="https://vbs.stroudsburgsda.org" target="_blank" class="vbs-link">vbs.stroudsburgsda.org</a>.
+                </p>
+            </div>
+        </section>
+
         <section id="momentum">
             <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
             <div class="glass-card">
-                <p class="text-teal-400 font-bold mb-2 uppercase tracking-widest text-xs">Lesson for Sabbath 5/23/2026</p>
+                <p class="text-teal-400 font-bold mb-2">Lesson for Sabbath 5/23/2026</p>
                 <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">When Faith Feels Fragile</h3>
                 
                 <p class="mb-4 text-gray-200">It’s easy to have faith when life is going well. However, when prayers seem unanswered, doubts creep in, and circumstances don’t make sense, our faith can feel fragile. In this week’s lesson, we are reminded that faith is “the reality of what we hope for” and “the evidence of things we cannot see.” However, strong faith does not mean the absence of struggle, questions, or even moments of unbelief.</p>
@@ -192,13 +339,12 @@
                 <p class="mb-4 text-gray-200">One of the most powerful reminders from this week’s study is that faith is not a feeling. Feelings fluctuate, and circumstances shift. Faith chooses to trust God’s character even when clarity is limited and emotions are unsettled.</p>
 
                 <div class="accent-box">
-                    <p class="text-white font-bold text-lg mb-2">Anchored in the Promises</p>
+                    <p class="text-white font-bold text-lg mb-2">Hebrews 11 Reflection</p>
                     <p class="text-gray-200 italic">In Hebrews 11, we find a beautiful portrait of ordinary people who anchored their lives in God’s promises. They did not see everything fulfilled in their lifetime, yet they believed, obeyed, and persevered. Their stories remind us that faith is not built on what we can control or fully understand; it is built on the One who is faithful.</p>
                 </div>
 
                 <p class="mb-8 text-gray-200">The invitation of this week’s lesson is not to attempt to manufacture stronger faith through our effort, but to cultivate a deeper relationship with Christ, who is the Author and Finisher of our faith. As you study this week, engage with the questions, revisit the stories, and explore what it truly means to live by faith.</p>
 
-                <!-- INTERACTIVE QUIZ PANEL -->
                 <div class="quiz-panel">
                     <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
                     <p class="font-bold mb-4 text-black">What is the relationship between “feeling” and “faith” in the Christian experience?</p>
@@ -220,7 +366,6 @@
             </div>
         </section>
 
-        <!-- SECTION: RELIGIOUS LIBERTY -->
         <section id="liberty">
             <h2 class="section-title">Religious <span>Liberty</span></h2>
             <div class="glass-card">
@@ -231,56 +376,84 @@
                 <p class="mb-6 text-gray-200">Jesus repeatedly warned that one of the major signs of the last days would be spiritual deception. “Take heed that no man deceive you” (Matthew 24:4), and “For there shall arise false Christs, and false prophets, and shall shew great signs and wonders” (Matthew 24:24). Christ warned that powerful religious movements would arise appearing spiritual and persuasive, yet capable of leading many away from truth. Scripture teaches that supernatural manifestations alone are never proof of God’s approval.</p>
 
                 <div class="accent-box">
-                    <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Sobering Warnings</p>
+                    <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">The Great Controversy Reality</p>
                     <p class="text-gray-200 mb-4 leading-relaxed">The Great Controversy also warns that popular revivals can rely heavily on emotion and excitement while neglecting important biblical truths. “Popular revivals are too often carried by appeals to the imagination, by exciting the emotions…” (The Great Controversy, p. 463). The issue is not prayer itself or even unity itself. The concern arises when emotional experiences become more important than Scripture and when movements seek broad agreement while avoiding truths that require self-denial, obedience, and commitment to all of God’s Word.</p>
                 </div>
 
                 <p class="mb-6 text-gray-200 leading-relaxed">Bible prophecy warns of a coming religious movement that will influence the world through authority, worship, and even miraculous signs. Revelation 13:14 says that deception will occur “by the means of those miracles which he had power to do.” As Seventh-day Adventists, we understand that the final issue centers on worship and allegiance to God. The concern is not merely religious gatherings, but the possibility of increasing religious influence joining with civil power in ways that eventually place pressure on conscience.</p>
 
                 <p class="mb-8 text-gray-200 font-bold leading-relaxed">As believers, we are called not to respond with fear, but with discernment. True revival will never lead us away from Scripture or minimize God’s truth in exchange for unity and emotional experience. Genuine revival points people to Jesus Christ, faithfulness to His commandments, and complete surrender to His will. Now more than ever, God’s people must test every movement by His Word: “To the law and to the testimony” (Isaiah 8:20).</p>
+            </div>
+        </section>
 
-                <div class="bg-white/5 p-8 border border-white/10 rounded mb-6">
-                    <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest text-teal-400">What God’s People Should Remember</h4>
-                    <ul class="space-y-4 text-gray-300 font-bold text-sm">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> Government recognition of religious observances establishes precedent</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> National crises often increase calls for religious unity and public worship</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> The final prophetic issue centers on worship and conscience</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> A strong faith is built daily, before it is tested</li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-teal-400"></i> God calls His people to stand faithfully on His Word</li>
-                    </ul>
+        <section id="conference">
+            <h2 class="section-title">Conference <span>Announcements</span></h2>
+            <div class="space-y-6">
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Master Guide Camporee</h4>
+                    <p class="text-sm text-gray-300">Master Guides are invited to a camporee just for them at the Pennsylvania Conference’s Kamp Keystone, Hamburg, Pa., June 5-7, 2026. Our guest speaker is Michael Campos, executive secretary for the Illinois Conference. Register at paconference.org/events.</p>
                 </div>
 
-                <div class="border-t border-white/10 pt-6">
-                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4">Related Reading:</h4>
-                    <p class="text-xs text-gray-400 italic">Revelation 13 and 14 | Daniel 3: Worship and conscience under civil authority</p>
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Camp Meeting</h4>
+                    <p class="text-sm text-gray-300 mb-4">Plan now to attend this year’s camp meeting, June 12-20, 2026, at Blue Mountain Academy, Hamburg, Pa. It will be a powerful week of powerful worship and practical seminars at our Pennsylvania Conference Camp Meeting 2026! This year’s focus is on “Joyful Living: Now and Forever—growing stronger physically, mentally, and spiritually—as we discover God’s plan for vibrant, healthy, and joyful living. Speakers include Randy Skeete, Neil Nedley, Mark and Teenie Finley, Dr. Jonathan Burt, Gail McKenzie, Gary Gibbs, Dee Casper, Ryan Musser, and Dr. Clinton Wahlen—offering messages of hope and health for today’s world. Children will enjoy meetings and activities planned for them as they explore “Wild About Health.” Powerful worship and fun outings are planned for our youth and young adults. Learn more, register for lodging, and purchase meal tickets at paconference.org/camp-meeting.</p>
+                </div>
+
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Summer Camp</h4>
+                    <p class="text-sm text-gray-300">Our 2026 summer camp, “Give Me the Mountains,” begins June 21 with Adventurer Camp and Cowgirl Camp. It will be a fun and life-impacting week for young people ages 7-16, and for families during our extended family camp, July 21-26. Learn more and register at laurellakesummercamp.com.</p>
+                </div>
+
+                <div class="glass-card">
+                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Hispanic Youth Retreat: Crossover</h4>
+                    <p class="text-sm text-gray-300">Join Pastor Japhet Garcia on August 21-23, 2026, at our Hispanic youth retreat, Crossover. It’s an event that will change your life, helping you discover what God wants to do in you. Learn more and register at paconference.org/events.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 7: CONNECT -->
         <section id="connect">
-            <h2 class="section-title">Connect <span>& Give</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-                <div class="glass-card">
-                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-6">Online Service Access</h3>
-                    <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-white font-bold block mb-4 hover:text-teal-400 transition">Prayer Meeting & Vespers (7:15 PM)</a>
-                    <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-white font-bold block mb-6 hover:text-teal-400 transition">Evening Prayer Line (8:00 PM)</a>
-                    
-                    <div class="flex justify-center gap-10 text-2xl text-gray-500 border-t border-white/5 pt-6">
+            <h2 class="section-title">Connect <span>&amp; Give</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card !p-8">
+                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-5">Service Links</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-3">
+                            <div>
+                                <p class="font-bold text-white">Prayer Meeting &amp; Vespers</p>
+                                <p class="text-xs text-gray-500">Wed/Fri @ 7:15 PM</p>
+                            </div>
+                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-3">
+                            <div>
+                                <p class="font-bold text-white">Evening Prayer Line</p>
+                                <p class="text-xs text-gray-500">Mon/Thu @ 8:00 PM</p>
+                            </div>
+                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="font-bold text-white">Sabbath Morning Zoom</p>
+                                <p class="text-xs text-gray-500">Sabbath @ 9:20 AM</p>
+                            </div>
+                            <a href="https://us02web.zoom.us/j/797422531" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card !p-8 flex flex-col justify-center items-center text-center">
+                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-5">Tithe &amp; Offerings</h3>
+                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-6 py-3 font-bold uppercase text-xs text-center hover:bg-teal-400 transition mb-6 w-full">Give Online Now</a>
+                    <div class="flex gap-6 text-2xl text-gray-500">
                         <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="glass-card flex flex-col justify-center items-center">
-                    <h3 class="font-black text-teal-400 uppercase text-xs mb-6">Support the Local Mission</h3>
-                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-8 py-4 font-bold uppercase text-xs block hover:bg-teal-400 transition w-full">Adventist Giving</a>
-                </div>
             </div>
         </section>
     </div>
 
-    <footer>STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 900 N 9th St, Stroudsburg, PA 18360</footer>
+    <footer>STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 2001 West Main Street, Stroudsburg, PA 18360</footer>
 
     <script>
         function revealQuizAnswer(element, isCorrect) {
