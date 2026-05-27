@@ -124,7 +124,6 @@
             margin: 25px 0;
         }
 
-        /* Inline Flyer Frame */
         .flyer-frame {
             border: 1px solid #222;
             border-radius: 4px;
@@ -136,39 +135,12 @@
             box-shadow: 0 20px 45px rgba(0,0,0,0.6);
         }
 
-        /* Quiz Styling */
-        .quiz-panel {
-            background: var(--accent-teal);
-            color: var(--black);
-            padding: 35px;
-            margin-top: 40px;
-        }
-
-        .option-item {
-            background: rgba(0,0,0,0.08);
-            padding: 12px 15px;
-            margin-top: 10px;
-            border: 1px solid rgba(0,0,0,0.1);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s ease;
-        }
-
-        .option-item:hover { background: rgba(0,0,0,0.15); }
-
-        .correct-reveal {
-            background: rgba(255,255,255,0.3) !important;
-            border: 2px solid #000 !important;
-        }
-
-        #quiz-answer-revealed {
-            display: none;
-            margin-top: 20px;
-            padding: 15px;
-            background: rgba(0,0,0,0.1);
-            font-weight: 800;
-            text-transform: uppercase;
+        .resource-link {
+            color: var(--accent-teal);
+            font-weight: 700;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 5px;
         }
 
         h2.section-title {
@@ -203,7 +175,7 @@
     <header>
         <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
         <h1>STROUDSBURG <span>SABBATH</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, May 23, 2026</p>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, May 30, 2026</p>
     </header>
 
     <nav class="nav-wrapper">
@@ -211,6 +183,7 @@
             <a href="#today" class="nav-link">Today</a>
             <a href="#calendar" class="nav-link" style="color: var(--accent-teal);">Calendar</a>
             <a href="#momentum" class="nav-link">Sabbath School</a>
+            <a href="#stewardship" class="nav-link">Stewardship</a>
             <a href="#liberty" class="nav-link">Religious Liberty</a>
             <a href="#conference" class="nav-link">Conference</a>
             <a href="#connect" class="nav-link">Connect</a>
@@ -228,7 +201,7 @@
                         <li>
                             <strong class="text-white text-lg">3:00 PM – 4:30 PM</strong> 
                             <p class="text-gray-400 font-bold mb-1">Bible Class</p>
-                            <p class="text-xs text-gray-500 italic">Conducted by the Family Life Department today.</p>
+                            <p class="text-xs text-gray-500 italic">Conducted by the Family Life Department.</p>
                         </li>
                         <li>
                             <strong class="text-white text-lg">5:00 PM</strong>
@@ -237,11 +210,18 @@
                     </ul>
                 </div>
                 <div class="glass-card">
-                    <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">This Week's Services</h3>
-                    <ul class="space-y-3 text-xs text-gray-400">
-                        <li><strong>Wed/Fri @ 7:15 PM:</strong> Prayer Meeting & Friday Evening Vesper continue on Zoom.</li>
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Fellowship &amp; Midweek Rhythm</h3>
+                    <p class="text-sm text-teal-400 font-bold mb-2">
+                        <i class="fas fa-utensils mr-2"></i>Potluck This Sabbath
+                    </p>
+                    <p class="text-sm text-gray-300 mb-4 leading-relaxed">
+                        Everyone is warmly encouraged to contribute a prepared vegetarian dish to share as we enjoy fellowship together.
+                    </p>
+                    <hr class="border-white/10 my-4">
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><strong>Wed/Fri @ 7:15 PM:</strong> Prayer Meeting &amp; Friday Evening Vesper continue on Zoom.</li>
                         <li><strong>Mon/Thu @ 8:00 - 8:30 PM:</strong> Closer Walk Prayer Line on Zoom.</li>
-                        <li><strong>1st & 3rd Tuesdays @ 10:00 AM:</strong> New Beginnings Senior Ministry meets at the Community Services Center.</li>
+                        <li><strong>1st &amp; 3rd Tuesdays @ 10:00 AM:</strong> New Beginnings Senior Ministry meets at the Community Services Center.</li>
                     </ul>
                 </div>
             </div>
@@ -251,10 +231,10 @@
             <h2 class="section-title">Sabbath <span>Calendar</span></h2>
             <div class="glass-card">
                 <div class="calendar-row">
-                    <div class="date-box"><div class="month">May</div><div class="day">23</div></div>
+                    <div class="date-box"><div class="month">May</div><div class="day">30</div></div>
                     <div>
                         <p class="font-bold text-white uppercase text-xs tracking-widest">Sabbath Services</p>
-                        <p class="text-gray-400 text-sm">Today: Family Life Bible Class & AYS Program.</p>
+                        <p class="text-gray-400 text-sm">Today: Family Life Bible Class, AYS, and Fellowship Potluck.</p>
                     </div>
                 </div>
                 <div class="calendar-row">
@@ -292,16 +272,9 @@
                         <p class="text-gray-400 text-sm">VBS 2026 "Cactusville." Online registration open at <a href="https://vbs.stroudsburgsda.org" target="_blank" class="vbs-link">vbs.stroudsburgsda.org</a>.</p>
                     </div>
                 </div>
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Aug</div><div class="day">21-23</div></div>
-                    <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Youth Retreat</p>
-                        <p class="text-gray-400 text-sm">Hispanic Youth Retreat: Crossover with Pastor Japhet Garcia.</p>
-                    </div>
-                </div>
 
                 <div class="accent-box" style="margin-top: 30px;">
-                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-heart text-teal-400 mr-2"></i>Church Care &amp; Visitation</h4>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-heart text-teal-400 mr-2"></i>Church Care &amp;尊 Visitation</h4>
                     <p class="text-sm text-gray-300 leading-relaxed mb-2">Please continue to remember <strong>Sister Patricia Francis</strong> in your daily prayers and consider stopping by to visit her at the facility:</p>
                     <p class="text-sm text-white font-bold">Forest Hill Rehab Center</p>
                     <p class="text-xs text-gray-400">1000 Evergreen Ave, Weatherly, PA 18255</p>
@@ -331,37 +304,65 @@
         <section id="momentum">
             <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
             <div class="glass-card">
-                <p class="text-teal-400 font-bold mb-2">Lesson for Sabbath 5/23/2026</p>
-                <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">When Faith Feels Fragile</h3>
+                <p class="text-teal-400 font-bold mb-2">Lesson for Sabbath 5/30/2026</p>
+                <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">When Sin Isn’t Taken Seriously</h3>
                 
-                <p class="mb-4 text-gray-200">It’s easy to have faith when life is going well. However, when prayers seem unanswered, doubts creep in, and circumstances don’t make sense, our faith can feel fragile. In this week’s lesson, we are reminded that faith is “the reality of what we hope for” and “the evidence of things we cannot see.” However, strong faith does not mean the absence of struggle, questions, or even moments of unbelief.</p>
-                
-                <p class="mb-4 text-gray-200">One of the most powerful reminders from this week’s study is that faith is not a feeling. Feelings fluctuate, and circumstances shift. Faith chooses to trust God’s character even when clarity is limited and emotions are unsettled.</p>
+                <p class="mb-4 text-gray-200">What happens when we stop calling sin… sin?</p>
+                <p class="mb-4 text-gray-200">Sin is often softened, renamed, excused, or normalized. We call it weakness, preference, personality, or simply “being human.” But this week’s lesson, “Sin, the Gospel, and the Law,” challenges us to look at sin through God’s eyes; not to condemn us, but to awaken us.</p>
+                <p class="mb-4 text-gray-200">The Bible presents sin as more than isolated mistakes or bad habits. Sin damages our relationship with God, distorts our relationships with others, and quietly reshapes our hearts. The lesson doesn’t leave us trapped in guilt; rather, it points us to the purpose of God’s law and the hope of the gospel. God’s law acts like a mirror; it reveals what we might otherwise ignore. It exposes the reality of sin and reflects God’s character of love and righteousness. However, the law was never meant to save us.</p>
 
                 <div class="accent-box">
-                    <p class="text-white font-bold text-lg mb-2">Hebrews 11 Reflection</p>
-                    <p class="text-gray-200 italic">In Hebrews 11, we find a beautiful portrait of ordinary people who anchored their lives in God’s promises. They did not see everything fulfilled in their lifetime, yet they believed, obeyed, and persevered. Their stories remind us that faith is not built on what we can control or fully understand; it is built on the One who is faithful.</p>
+                    <p class="text-white font-bold text-lg mb-2">The Hope of the Gospel</p>
+                    <p class="text-gray-200 italic">The gospel reminds us that our standing before God does not rest on flawless law-keeping, self-improvement, or religious performance. Our hope rests in Christ’s righteousness, His life, His sacrifice, His victory on our behalf. From that place of grace, obedience becomes a response of love, not a burden to earn salvation.</p>
                 </div>
 
-                <p class="mb-8 text-gray-200">The invitation of this week’s lesson is not to attempt to manufacture stronger faith through our effort, but to cultivate a deeper relationship with Christ, who is the Author and Finisher of our faith. As you study this week, engage with the questions, revisit the stories, and explore what it truly means to live by faith.</p>
+                <p class="mb-8 text-gray-200">This week’s lesson invites us into an honest conversation about sin, surrender, law, grace, and what it truly means to know God, not just intellectually, but relationally and transformationally. Study deeply this week. Reflect honestly. And allow Scripture to challenge both your understanding and your walk with Christ.</p>
 
-                <div class="quiz-panel">
-                    <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
-                    <p class="font-bold mb-4 text-black">What is the relationship between “feeling” and “faith” in the Christian experience?</p>
-                    
-                    <div class="space-y-2">
-                        <div class="option-item border-black/20" onclick="revealQuizAnswer(this, false)">A. The feeling of peace is the primary indicator that a person has exercised faith.</div>
-                        <div class="option-item border-black/20" onclick="revealQuizAnswer(this, false)">B. If a person lacks joyful feelings, it is a definitive sign that they do not have a saving measure of faith.</div>
-                        <div class="option-item border-black/20" onclick="revealQuizAnswer(this, false)">C. Faith and feeling are identical in the Greek text of the New Testament.</div>
-                        <div id="correct-answer" class="option-item border-black/20" onclick="revealQuizAnswer(this, true)">D. Faith is a human response prompted by the Spirit, whereas joyful feeling is a blessing that God may choose to give as a result of faith.</div>
-                    </div>
+                <div class="bg-white/5 p-6 border border-white/10 rounded">
+                    <h5 class="font-black text-teal-400 uppercase text-xs mb-2 tracking-widest">Food for Thought (for Sabbath discussion):</h5>
+                    <p class="text-sm italic text-gray-300">How can we take sin seriously, uphold the importance of God’s law, and live so rooted in the gospel that our obedience flows from love rather than fear, guilt, or legalism?</p>
+                </div>
+            </div>
+        </section>
 
-                    <div id="quiz-answer-revealed">Correct Answer: D</div>
+        <section id="stewardship">
+            <h2 class="section-title">Stewardship <span>Spotlight</span></h2>
+            <div class="glass-card">
+                <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider text-teal-400">Theme: Count the Cost</h3>
+                
+                <div class="accent-box">
+                    <p class="text-white font-bold text-lg mb-2">“For which of you, intending to build a tower, does not sit down first and count the cost…?”</p>
+                    <p class="text-teal-400 font-bold uppercase text-xs">— Luke 14:28</p>
+                </div>
 
-                    <div class="mt-8 border-t border-black/10 pt-4 text-black">
-                        <h5 class="font-black uppercase text-xs mb-2">Food for Thought:</h5>
-                        <p class="text-sm italic">When your faith is tested, what most shapes your response: your feelings, your circumstances, past experiences, or your understanding of God’s character? How can Scripture help strengthen your trust?</p>
-                    </div>
+                <h4 class="text-white font-black uppercase text-sm mb-4">What does it mean to “count the cost”?</h4>
+                <p class="mb-4 text-gray-200">It means to be intentional. Before we commit, before we spend, before we build—we pause, we plan, and we seek understanding. In our financial lives, this looks like:</p>
+                
+                <ul class="space-y-2 text-sm text-gray-400 mb-6 list-disc list-inside">
+                    <li>Not rushing into decisions</li>
+                    <li>Not spending impulsively</li>
+                    <li>Not committing beyond what we can sustain</li>
+                </ul>
+
+                <p class="mb-6 text-gray-200">Instead, it means asking: Can I afford this? Is this aligned with my priorities? Have I invited God into this decision?</p>
+
+                <h4 class="text-white font-black uppercase text-sm mb-4">A Stewardship Perspective</h4>
+                <p class="mb-4 text-gray-200">Being a good steward means we don’t move—big or small—without speaking to God first, counting the cost, and building it into our spending plan. Impulse decisions often lead to stress, strain, and misalignment. Intentional decisions lead to peace, clarity, and alignment with God’s will.</p>
+
+                <div class="bg-white/5 p-8 border border-white/10 rounded mb-8">
+                    <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest text-teal-400">A Word for All Generations</h4>
+                    <ul class="space-y-4 text-gray-300 text-sm">
+                        <li><strong>To our youth:</strong> learning to pause before you spend is a powerful habit that will serve you for life.</li>
+                        <li><strong>To our young adults and families:</strong> planning ahead brings order to your finances and helps you avoid unnecessary pressure.</li>
+                        <li><strong>To our Young At Heart:</strong> your wisdom and experience remind us all of the value of patience, planning, and trusting God’s timing.</li>
+                        <li class="italic text-teal-400">And to all: you are never too young or too old to develop new habits and change old ones.</li>
+                    </ul>
+                </div>
+
+                <div class="text-center border-t border-white/10 pt-6">
+                    <h4 class="text-white font-bold uppercase text-xs mb-4">Our Encouragement This Week:</h4>
+                    <p class="text-gray-200 mb-6">Take time to reflect on this scripture. Before your next financial decision—big or small: <strong>Pause. Pray. Plan.</strong> Invite God into your decisions and count the cost.</p>
+                    <p class="text-teal-400 font-black uppercase tracking-widest">Because stewardship is not just about managing money—it’s about honoring God with every decision we make. May God richly bless your faithfulness as you walk in wisdom and intention.</p>
                 </div>
             </div>
         </section>
@@ -369,20 +370,34 @@
         <section id="liberty">
             <h2 class="section-title">Religious <span>Liberty</span></h2>
             <div class="glass-card">
-                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">Rededicate 250: Revival or Something More?</h3>
+                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">Rome, Unity, and the Growing Push for Social Order</h3>
                 
-                <p class="mb-6 text-gray-200">The recent Rededicate 250 gathering in Washington D.C. featured repeated calls for miracles, revival, fire, healing, power, deliverance, and a new beginning for America. While prayer and repentance are needed in our nation, an important question must be asked: What kind of revival is being promoted? From a biblical perspective, true revival is not simply emotional worship, public enthusiasm, or national unity. Genuine revival always leads people back to deeper obedience to God, His Word, and His truth.</p>
+                <p class="mb-6 text-gray-200">Two major developments this week highlight the increasing global influence of Rome in both religious and social affairs. First, the U.S. Catholic bishops announced plans to consecrate America to the “Sacred Heart of Jesus” on June 11, 2026, as part of the nation’s 250th anniversary observance. At the same time, Pope Leo XIV continues advancing ecumenical efforts aimed at achieving “full unity” with the Orthodox churches. These initiatives are being presented as movements for healing, peace, reconciliation, and moral renewal, yet they also reveal Rome’s growing effort to strengthen its spiritual and moral influence on a global scale.</p>
                 
-                <p class="mb-6 text-gray-200">Jesus repeatedly warned that one of the major signs of the last days would be spiritual deception. “Take heed that no man deceive you” (Matthew 24:4), and “For there shall arise false Christs, and false prophets, and shall shew great signs and wonders” (Matthew 24:24). Christ warned that powerful religious movements would arise appearing spiritual and persuasive, yet capable of leading many away from truth. Scripture teaches that supernatural manifestations alone are never proof of God’s approval.</p>
+                <p class="mb-6 text-gray-200">According to the Catholic Herald article, the United States Conference of Catholic Bishops will lead a national consecration during its Spring Plenary Assembly in Orlando, Florida. Catholics nationwide are being encouraged to participate through Eucharistic adoration, works of mercy, and prayer leading up to the event. Meanwhile, Vatican News reported Pope Leo XIV’s renewed call for stronger ecumenical commitment and “full unity” with the Orthodox churches, emphasizing that such unity is urgently needed in a world marked by conflict and division.</p>
 
                 <div class="accent-box">
-                    <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">The Great Controversy Reality</p>
-                    <p class="text-gray-200 mb-4 leading-relaxed">The Great Controversy also warns that popular revivals can rely heavily on emotion and excitement while neglecting important biblical truths. “Popular revivals are too often carried by appeals to the imagination, by exciting the emotions…” (The Great Controversy, p. 463). The issue is not prayer itself or even unity itself. The concern arises when emotional experiences become more important than Scripture and when movements seek broad agreement while avoiding truths that require self-denial, obedience, and commitment to all of God’s Word.</p>
+                    <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Prophetic Perspective</p>
+                    <p class="text-gray-200 mb-4 leading-relaxed">From a prophetic perspective, these developments are significant because Scripture warns that the Papacy’s influence would increase again in the last days. Revelation 13 describes a power whose “deadly wound was healed: and all the world wondered after the beast” (Revelation 13:3). Seventh-day Adventists have long understood this to point toward a restoration of global religious influence centered in Rome. The concern is not merely that churches seek cooperation, but that increasing religious unity combined with moral and political influence may eventually place pressure upon conscience and blur the line between church and state.</p>
                 </div>
 
-                <p class="mb-6 text-gray-200 leading-relaxed">Bible prophecy warns of a coming religious movement that will influence the world through authority, worship, and even miraculous signs. Revelation 13:14 says that deception will occur “by the means of those miracles which he had power to do.” As Seventh-day Adventists, we understand that the final issue centers on worship and allegiance to God. The concern is not merely religious gatherings, but the possibility of increasing religious influence joining with civil power in ways that eventually place pressure on conscience.</p>
+                <p class="mb-6 text-gray-200 leading-relaxed">At the same time, Pope Leo XIV released a new encyclical titled Magnifica Humanitas, addressing labor, economics, government, digital regulation, and the “common good.” The document repeatedly builds upon Rerum Novarum and the teachings of Pope Leo XIII, who openly advocated for government protection of Sunday rest. While the new encyclical never explicitly mentions Sunday observance, it strongly emphasizes the role of governments in ensuring proper balance between “work, leisure, and rest” and calls for greater cooperation between civil authorities and Catholic social teaching.</p>
 
-                <p class="mb-8 text-gray-200 font-bold leading-relaxed">As believers, we are called not to respond with fear, but with discernment. True revival will never lead us away from Scripture or minimize God’s truth in exchange for unity and emotional experience. Genuine revival points people to Jesus Christ, faithfulness to His commandments, and complete surrender to His will. Now more than ever, God’s people must test every movement by His Word: “To the law and to the testimony” (Isaiah 8:20).</p>
+                <p class="mb-6 text-gray-200 leading-relaxed">The encyclical also advocates stronger oversight of digital platforms, economic systems, and global governance structures. Pope Leo XIV warns against allowing major technological and economic powers to operate without increased regulation and public oversight. These appeals are being framed around fairness, unity, worker protection, and social stability. Yet from a prophetic viewpoint, increasing centralized control over economics, communication, and social order raises important questions about liberty of conscience and the future ability of dissenting voices to freely operate.</p>
+
+                <p class="mb-6 text-gray-200 leading-relaxed">As Seventh-day Adventists, we recognize that the final crisis described in Revelation centers on worship and allegiance to God. The issue is not whether rest, unity, or social order are valuable. The issue is who ultimately defines truth and whether religious influence will increasingly shape civil law and public policy. History repeatedly demonstrates that when church and state unite for the “common good,” individual liberty of conscience often suffers.</p>
+
+                <p class="mb-8 text-gray-200 font-bold leading-relaxed">The Great Controversy warned of this very development: “She is silently growing into power. Her doctrines are exerting their influence in legislative halls, in the churches, and in the hearts of men” (The Great Controversy, p. 581). While these events do not themselves constitute the final fulfillment of prophecy, they do reveal the growing conditions Scripture warned would exist before earth’s closing scenes. Now more than ever, God’s people must remain grounded in Scripture, faithful to Christ, and spiritually discerning. The world is increasingly searching for moral leadership, unity, and solutions to global instability. As these movements continue to grow, we must carefully test every message, every movement, and every call for unity by the Word of God.</p>
+
+                <div class="bg-white/5 p-6 border border-white/10 rounded mb-6">
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-widest text-teal-400">Resources &amp; Sources</h4>
+                    <span class="resource-link">Catholic Herald: U.S. Bishops to Consecrate America to the Sacred Heart of Jesus</span>
+                    <span class="resource-link">Vatican News: Pope Leo XIV Calls for “Full Unity” with Orthodox Churches</span>
+                    <span class="resource-link">Vatican: Magnifica Humanitas Encyclical by Pope Leo XIV</span>
+                    <p class="text-xs text-gray-400 mt-4 italic">
+                        The Great Controversy, pp. 463–464, 581 | The Holy Bible: Revelation 13:3, 13–17, Revelation 14:9–12, Matthew 24:4, 11, 24, Isaiah 8:20, Daniel 3
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -454,16 +469,5 @@
     </div>
 
     <footer>STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 2001 West Main Street, Stroudsburg, PA 18360</footer>
-
-    <script>
-        function revealQuizAnswer(element, isCorrect) {
-            document.getElementById('quiz-answer-revealed').style.display = 'block';
-            document.getElementById('correct-answer').classList.add('correct-reveal');
-            if(!isCorrect) {
-                element.style.opacity = '0.5';
-                element.style.textDecoration = 'line-through';
-            }
-        }
-    </script>
 </body>
 </html>
