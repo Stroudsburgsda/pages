@@ -189,6 +189,14 @@
             text-decoration: underline;
         }
 
+        .resource-link {
+            color: var(--accent-teal);
+            font-weight: 700;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 5px;
+        }
+
         footer {
             border-top: 1px solid #111;
             padding: 40px 20px;
@@ -211,11 +219,12 @@
         <div class="nav-container">
             <a href="#today" class="nav-link">Today</a>
             <a href="#calendar" class="nav-link" style="color: var(--accent-teal);">Calendar</a>
-            <a href="#momentum" class="nav-link">Sabbath School</a>
-            <a href="#stewardship" class="nav-link">Stewardship</a>
+            <a href="#upcoming-notices" class="nav-link">Featured Notices</a>
             <a href="#wm-series" class="nav-link">Women's Ministry</a>
-            <a href="#liberty" class="nav-link">Religious Liberty</a>
+            <a href="#stewardship" class="nav-link">Stewardship</a>
             <a href="#conference" class="nav-link">Conference</a>
+            <a href="#momentum" class="nav-link">Sabbath School</a>
+            <a href="#liberty" class="nav-link">Religious Liberty</a>
             <a href="#connect" class="nav-link">Connect</a>
         </div>
     </nav>
@@ -314,7 +323,7 @@
                     <div class="date-box"><div class="month">Jul</div><div class="day">06-10</div></div>
                     <div>
                         <p class="font-bold text-white uppercase text-xs tracking-widest">Vacation Bible School</p>
-                        <p class="text-gray-400 text-sm">VBS 2026 "Cactusville." Online registration open at <a href="https://vbs.stroudsburgsda.org" target="_blank" class="inline-link">vbs.stroudsburgsda.org</a>.</p>
+                        <p class="text-gray-400 text-sm">VBS 2026 "Cactusville." Online registration open at <a href="https://vbs.stroudsburgsda.org" target="_blank" class="vbs-link">vbs.stroudsburgsda.org</a>.</p>
                     </div>
                 </div>
                 <div class="calendar-row">
@@ -349,36 +358,76 @@
             </div>
         </section>
 
-        <!-- SECTION 3: SABBATH SCHOOL MOMENTUM (UNABRIDGED) -->
-        <section id="momentum">
-            <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
+        <!-- SECTION 3: UPCOMING LOCAL & FEATURED FLYER -->
+        <section id="upcoming-notices">
+            <h2 class="section-title">Featured <span>Notices</span></h2>
             <div class="glass-card">
-                <p class="text-teal-400 font-bold mb-2">Lesson for Sabbath 5/30/2026</p>
-                <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">When Sin Isn’t Taken Seriously</h3>
+                <h3 class="text-teal-400 font-black uppercase text-sm mb-2 tracking-widest">Evening of Love and Benevolence</h3>
+                <p class="text-sm text-gray-300 mb-4">
+                    Let us all prepare for the Evening of Love and Benevolence concert on <strong>June 6th at 5 pm</strong>. This concert will benefit our Music Ministry Director, Bro. David Foster.
+                </p>
                 
-                <p class="mb-4 text-gray-200">What happens when we stop calling sin… sin?</p>
-                <p class="mb-4 text-gray-200">Sin is often softened, renamed, excused, or normalized. We call it weakness, preference, personality, or simply “being human.” But this week’s lesson, “Sin, the Gospel, and the Law,” challenges us to look at sin through God’s eyes; not to condemn us, but to awaken us.</p>
-                <p class="mb-4 text-gray-200">The Bible presents sin as more than isolated mistakes or bad habits. Sin damages our relationship with God, distorts our relationships with others, and quietly reshapes our hearts. The lesson doesn’t leave us trapped in guilt; rather, it points us to the purpose of God’s law and the hope of the gospel. God’s law acts like a mirror; it reveals what we might otherwise ignore. It exposes the reality of sin and reflects God’s character of love and righteousness. However, the law was never meant to save us.</p>
+                <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/05/Benfit_Concert.png" alt="Evening of Love and Benevolence Concert Flyer" class="flyer-frame" />
+                
+                <hr class="border-white/10 my-6">
+                
+                <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Vacation Bible School 2026</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    If you are interested in serving our children and the children of the community during this year’s Vacation Bible School, please see Sis Terina Jackson. You can also contact her by texting the phone number on the flyer in the lobby. Also, please remember to keep VBS in your prayers and on your prayer lists. Registration for VBS is open and can be completed at <a href="https://vbs.stroudsburgsda.org" target="_blank" class="vbs-link">vbs.stroudsburgsda.org</a>. Please begin registering your children.
+                </p>
+            </div>
+        </section>
 
+        <!-- SECTION 4: WOMEN'S MINISTRY SERIES -->
+        <section id="wm-series">
+            <h2 class="section-title">Women's <span>Ministry</span></h2>
+            <div class="glass-card">
+                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">Church Hurt Series</h3>
+                <p class="text-teal-400 font-bold mb-6 italic text-sm">Restoration Hour of Prayer (Upcoming Quarter)</p>
+                
+                <p class="mb-6 text-gray-200">We have a powerful and deeply meaningful quarter ahead for our Women’s Ministries department during the Restoration Hour of Prayer. Over the next few months, they will continue covering the vital topic of "Church Hurt."</p>
+                
                 <div class="accent-box">
-                    <p class="text-white font-bold text-lg mb-2">The Hope of the Gospel</p>
-                    <p class="text-gray-200 italic">The gospel reminds us that our standing before God does not rest on flawless law-keeping, self-improvement, or religious performance. Our hope rests in Christ’s righteousness, His life, His sacrifice, His victory on our behalf. From that place of grace, obedience becomes a response of love, not a burden to earn salvation.</p>
+                    <p class="text-white font-bold mb-1 text-sm uppercase tracking-widest">Understanding the Reality</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">“Church hurt” refers to the emotional, psychological, or spiritual harm inflicted by church leaders or fellow believers. It can leave deep wounds, but recognizing your pain is valid is the first step toward healing.</p>
+                    
+                    <strong class="text-xs uppercase text-white block mb-2 tracking-widest">Sources of Church Hurt:</strong>
+                    <ul class="list-disc list-inside text-xs text-gray-400 space-y-1 mb-4">
+                        <li><strong>Misuse of Spiritual Authority:</strong> Leaders using scripture or spiritual language to control, shame, or exploit others.</li>
+                        <li><strong>Relational Harm:</strong> Gossip, betrayal, exclusion, or failure of the church to support you in a crisis.</li>
+                        <li><strong>Toxic Church Culture:</strong> Prioritizing numerical growth over people or allowing immature/unhealthy patterns to go unchecked.</li>
+                    </ul>
+
+                    <strong class="text-xs uppercase text-white block mb-2 tracking-widest">Steps for Healing:</strong>
+                    <ul class="list-disc list-inside text-xs text-gray-400 space-y-1">
+                        <li><strong>Grieve &amp; Detangle:</strong> Allow yourself to feel the pain. It is important to separate your personal faith and view of God from the imperfect, fallible humans who caused your pain.</li>
+                        <li><strong>Set Boundaries:</strong> You have the right to step away from a toxic environment or take a break from attending services to protect your mental health.</li>
+                        <li><strong>Seek Support:</strong> Healing is rarely a solo journey. Speaking with a licensed mental health professional can help you process religious trauma or deep-seated emotional wounds.</li>
+                    </ul>
                 </div>
 
-                <p class="mb-8 text-gray-200">This week’s lesson invites us into an honest conversation about sin, surrender, law, grace, and what it truly means to know God, not just intellectually, but relationally and transformationally. Study deeply this week. Reflect honestly. And allow Scripture to challenge both your understanding and your walk with Christ.</p>
+                <h4 class="text-white font-black uppercase text-sm mb-4 tracking-widest">Upcoming Speakers:</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                    <div class="p-4 bg-white/5 border border-white/10">
+                        <span class="text-teal-400 font-bold block mb-1">June 28</span>
+                        <strong class="text-white block">Sister Fiona Harewood</strong>
+                        <span class="text-xs text-gray-400 italic">"God Didn't Hurt You, People Did."</span>
+                    </div>
+                    <div class="p-4 bg-white/5 border border-white/10">
+                        <span class="text-teal-400 font-bold block mb-1">July 26</span>
+                        <strong class="text-white block">Sister Vernie Charles</strong>
+                        <span class="text-xs text-gray-400 italic">"Not Everyone Deserves Access to You."</span>
+                    </div>
+                </div>
 
-                <!-- INTERACTIVE QUIZ PANEL (PLACEHOLDER TEXT RESTORED TO FULL PARAGRAPH FORMAT) -->
-                <div class="quiz-panel">
-                    <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question Matrix</h4>
-                    <p class="font-bold mb-4 text-black">Food for Thought (for Sabbath discussion):</p>
-                    <p class="text-sm text-black italic bg-white/20 p-4 rounded">
-                        How can we take sin seriously, uphold the importance of God’s law, and live so rooted in the gospel that our obedience flows from love rather than fear, guilt, or legalism?
-                    </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm border-t border-white/5 pt-6 text-gray-400">
+                    <div><strong>August 02:</strong> Spa Day at SoJo</div>
+                    <div><strong>August 22:</strong> End-it Now - Sis. Legett</div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 4: STEWARDSHIP SPOTLIGHT (UNABRIDGED) -->
+        <!-- SECTION 5: STEWARDSHIP SPOTLIGHT (UNABRIDGED) -->
         <section id="stewardship">
             <h2 class="section-title">Stewardship <span>Spotlight</span></h2>
             <div class="glass-card">
@@ -390,9 +439,8 @@
                 </div>
 
                 <h4 class="text-white font-black uppercase text-sm mb-4">What does it mean to “count the cost”?</h4>
-                <p class="mb-4 text-gray-200">It means to be intentional. Before we commit, before we spend, before we build—we pause, we plan, and we seek understanding.</p>
+                <p class="mb-4 text-gray-200">It means to be intentional. Before we commit, before we spend, before we build—we pause, we plan, and we seek understanding. In our financial lives, this looks like:</p>
                 
-                <p class="mb-4 text-gray-200">In our financial lives, this looks like:</p>
                 <ul class="space-y-2 text-sm text-gray-400 mb-6 list-disc list-inside">
                     <li>Not rushing into decisions</li>
                     <li>Not spending impulsively</li>
@@ -422,85 +470,7 @@
             </div>
         </section>
 
-        <!-- SECTION 5: WOMEN'S MINISTRY SERIES -->
-        <section id="wm-series">
-            <h2 class="section-title">Women's <span>Ministry</span></h2>
-            <div class="glass-card">
-                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">Church Hurt Series</h3>
-                <p class="text-teal-400 font-bold mb-6 italic text-sm">Restoration Hour of Prayer (Upcoming Quarter)</p>
-                
-                <p class="mb-6 text-gray-200">We have a powerful and deeply meaningful quarter ahead for our Women’s Ministries department during the Restoration Hour of Prayer. Over the next few months, they will continue covering the vital topic of "Church Hurt."</p>
-                
-                <div class="accent-box">
-                    <p class="text-white font-bold mb-1 text-sm uppercase tracking-widest">Understanding the Reality</p>
-                    <p class="text-sm text-gray-300 leading-relaxed mb-4">“Church hurt” refers to the emotional, psychological, or spiritual harm inflicted by church leaders or fellow believers. It can leave deep wounds, but recognizing your pain is valid is the first step toward healing.</p>
-                    
-                    <strong class="text-xs uppercase text-white block mb-2 tracking-widest">Sources of Church Hurt:</strong>
-                    <ul class="list-disc list-inside text-xs text-gray-400 space-y-1 mb-4">
-                        <li><strong>Misuse of Spiritual Authority:</strong> Leaders using scripture or spiritual language to control, shame, or exploit others.</li>
-                        <li><strong>Relational Harm:</strong> Gossip, betrayal, exclusion, or failure of the church to support you in a crisis.</li>
-                        <li><strong>Toxic Church Culture:</strong> Prioritizing numerical growth over people or allowing unhealthy patterns to go unchecked.</li>
-                    </ul>
-
-                    <strong class="text-xs uppercase text-white block mb-2 tracking-widest">Steps for Healing:</strong>
-                    <ul class="list-disc list-inside text-xs text-gray-400 space-y-1">
-                        <li><strong>Grieve &amp; Detangle:</strong> Feel the pain. Separate personal faith and views of God from fallible humans.</li>
-                        <li><strong>Set Boundaries:</strong> You have the right to step away from a toxic environment to protect mental health.</li>
-                        <li><strong>Seek Support:</strong> Connect with a licensed mental mental professional to help process religious trauma.</li>
-                    </ul>
-                </div>
-
-                <h4 class="text-white font-black uppercase text-sm mb-4 tracking-widest">Upcoming Speakers:</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
-                    <div class="p-4 bg-white/5 border border-white/10">
-                        <span class="text-teal-400 font-bold block mb-1">June 28</span>
-                        <strong class="text-white block">Sister Fiona Harewood</strong>
-                        <span class="text-xs text-gray-400 italic">"God Didn't Hurt You, People Did."</span>
-                    </div>
-                    <div class="p-4 bg-white/5 border border-white/10">
-                        <span class="text-teal-400 font-bold block mb-1">July 26</span>
-                        <strong class="text-white block">Sister Vernie Charles</strong>
-                        <span class="text-xs text-gray-400 italic">"Not Everyone Deserves Access to You."</span>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm border-t border-white/5 pt-6 text-gray-400">
-                    <div><strong>August 02:</strong> Spa Day at SoJo (Rest &amp; Fellowship)</div>
-                    <div><strong>August 22:</strong> End It Now Presentation (Sister Legett)</div>
-                </div>
-                
-                <p class="mt-6 text-xs text-center text-gray-500">
-                    The full calendar and topic details are live on our website. Head to <a href="https://news.stroudsburgsda.org" target="_blank" class="inline-link">news.stroudsburgsda.org</a> to view the complete listing.
-                </p>
-            </div>
-        </section>
-
-        <!-- SECTION 6: RELIGIOUS LIBERTY -->
-        <section id="liberty">
-            <h2 class="section-title">Religious <span>Liberty</span></h2>
-            <div class="glass-card">
-                <h3 class="text-xl font-bold mb-4 text-white uppercase tracking-wider">Community Outreach Initiative</h3>
-                <p class="text-sm text-gray-200 mb-6">
-                    On <strong>Saturday, July 4th, after the Divine Service</strong>, we’ll be taking our END GAME: Hope in the Last Days invitations into the community. We invite everyone to join us as we connect with people, share hope, and invite them to our upcoming summer series. Please sign up on the sheet located on the bulletin board if you would like to participate.
-                </p>
-                
-                <div class="accent-box">
-                    <p class="text-sm text-white italic">"Let’s pray that God will go before us, prepare hearts, and lead us to those who are searching for answers, purpose, and hope in these challenging times."</p>
-                </div>
-
-                <!-- EMBEDDED RELIGIOUS LIBERTY FLYER IMAGE -->
-                <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/05/RL-Summer.png" alt="END GAME: Hope in the Last Days Summer Series Outreach Flyer" class="flyer-frame" />
-
-                <hr class="border-white/10 my-6">
-
-                <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-2">Vacation Bible School Coordination</h4>
-                <p class="text-xs text-gray-400 leading-relaxed">
-                    If you are interested in serving our children and the children of the community during this year’s Vacation Bible School, please see Sister Terina Jackson. You can also contact her by texting the phone number on the flyer in the lobby. Remember to keep VBS in your prayers.
-                </p>
-            </div>
-        </section>
-
-        <!-- SECTION 7: CONFERENCE ANNOUNCEMENTS -->
+        <!-- SECTION 6: CONFERENCE ANNOUNCEMENTS (UNABRIDGED) -->
         <section id="conference">
             <h2 class="section-title">Conference <span>Announcements</span></h2>
             <div class="space-y-6">
@@ -516,7 +486,7 @@
 
                 <div class="glass-card">
                     <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Summer Camp 2026</h4>
-                    <p class="text-sm text-gray-300">Our 2026 summer camp, “Give Me the Mountains,” begins June 21 with Adventurer Camp and Cowgirl Camp. It will be a fun and life-impacting week for young people ages 7-16, and for families during our extended family camp, July 21-26. Learn more and register at <a href="https://laurellakesummercamp.com" target="_blank" class="inline-link">laurellakesummercamp.com</a>.</p>
+                    <p class="text-sm text-gray-300">Our 2026 summer camp, “Give Me the Mountains,” begins June 21 with Adventurer Camp and Cowgirl Camp. It will be a fun and life-impacting week for young people ages 7-16, and for families during our extended family camp, July 21-26. Learn more and register at laurellakesummercamp.com.</p>
                 </div>
 
                 <div class="glass-card">
@@ -531,7 +501,81 @@
             </div>
         </section>
 
-        <!-- SECTION 8: CONNECT & GIVE -->
+        <!-- SECTION 7: SABBATH SCHOOL MOMENTUM (MOVED TO END) -->
+        <section id="momentum">
+            <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
+            <div class="glass-card">
+                <p class="text-teal-400 font-bold mb-2">Lesson for Sabbath 5/30/2026</p>
+                <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">When Sin Isn’t Taken Seriously</h3>
+                
+                <p class="mb-4 text-gray-200">What happens when we stop calling sin… sin?</p>
+                <p class="mb-4 text-gray-200">Sin is often softened, renamed, excused, or normalized. We call it weakness, preference, personality, or simply “being human.” But this week’s lesson, “Sin, the Gospel, and the Law,” challenges us to look at sin through God’s eyes; not to condemn us, but to awaken us.</p>
+                <p class="mb-4 text-gray-200">The Bible presents sin as more than isolated mistakes or bad habits. Sin damages our relationship with God, distorts our relationships with others, and quietly reshapes our hearts. The lesson doesn’t leave us trapped in guilt; rather, it points us to the purpose of God’s law and the hope of the gospel. God’s law acts like a mirror; it reveals what we might otherwise ignore. It exposes the reality of sin and reflects God’s character of love and righteousness. However, the law was never meant to save us.</p>
+
+                <div class="accent-box">
+                    <p class="text-white font-bold text-lg mb-2">The Hope of the Gospel</p>
+                    <p class="text-gray-200 italic">The gospel reminds us that our standing before God does not rest on flawless law-keeping, self-improvement, or religious performance. Our hope rests in Christ’s righteousness, His life, His sacrifice, His victory on our behalf. From that place of grace, obedience becomes a response of love, not a burden to earn salvation.</p>
+                </div>
+
+                <p class="mb-8 text-gray-200">This week’s lesson invites us into an honest conversation about sin, surrender, law, grace, and what it truly means to know God, not just intellectually, but relationally and transformationally. Study deeply this week. Reflect honestly. And allow Scripture to challenge both your understanding and your walk with Christ.</p>
+
+                <div class="quiz-panel">
+                    <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question Matrix</h4>
+                    <p class="font-bold mb-4 text-black">Food for Thought (for Sabbath discussion):</p>
+                    <p class="text-sm text-black italic bg-white/20 p-4 rounded">
+                        How can we take sin seriously, uphold the importance of God’s law, and live so rooted in the gospel that our obedience flows from love rather than fear, guilt, or legalism?
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: RELIGIOUS LIBERTY (MOVED TO END) -->
+        <section id="liberty">
+            <h2 class="section-title">Religious <span>Liberty</span></h2>
+            <div class="glass-card">
+                <h3 class="text-xl font-bold mb-4 text-white uppercase tracking-wider">Rome, Unity, and the Growing Push for Social Order</h3>
+                
+                <p class="mb-6 text-gray-200">Two major developments this week highlight the increasing global influence of Rome in both religious and social affairs. First, the U.S. Catholic bishops announced plans to consecrate America to the “Sacred Heart of Jesus” on June 11, 2026, as part of the nation’s 250th anniversary observance. At the same time, Pope Leo XIV continues advancing ecumenical efforts aimed at achieving “full unity” with the Orthodox churches. These initiatives are being presented as movements for healing, peace, reconciliation, and moral renewal, yet they also reveal Rome’s growing effort to strengthen its spiritual and moral influence on a global scale.</p>
+                
+                <p class="mb-6 text-gray-200">According to the Catholic Herald article, the United States Conference of Catholic Bishops will lead a national consecration during its Spring Plenary Assembly in Orlando, Florida. Catholics nationwide are being encouraged to participate through Eucharistic adoration, works of mercy, and prayer leading up to the event. Meanwhile, Vatican News reported Pope Leo XIV’s renewed call for stronger ecumenical commitment and “full unity” with the Orthodox churches, emphasizing that such unity is urgently needed in a world marked by conflict and division.</p>
+
+                <div class="accent-box">
+                    <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Prophetic Perspective</p>
+                    <p class="text-gray-200 mb-4 leading-relaxed">From a prophetic perspective, these developments are significant because Scripture warns that the Papacy’s influence would increase again in the last days. Revelation 13 describes a power whose “deadly wound was healed: and all the world wondered after the beast” (Revelation 13:3). Seventh-day Adventists have long understood this to point toward a restoration of global religious influence centered in Rome. The concern is not merely that churches seek cooperation, but that increasing religious unity combined with moral and political influence may eventually place pressure upon conscience and blur the line between church and state.</p>
+                </div>
+
+                <p class="mb-6 text-gray-200 leading-relaxed">At the same time, Pope Leo XIV released a new encyclical titled Magnifica Humanitas, addressing labor, economics, government, digital regulation, and the “common good.” The document repeatedly builds upon Rerum Novarum and the teachings of Pope Leo XIII, who openly advocated for government protection of Sunday rest. While the new encyclical never explicitly mentions Sunday observance, it strongly emphasizes the role of governments in ensuring proper balance between “work, leisure, and rest” and calls for greater cooperation between civil authorities and Catholic social teaching.</p>
+
+                <p class="mb-6 text-gray-200 leading-relaxed">The encyclical also advocates stronger oversight of digital platforms, economic systems, and global governance structures. Pope Leo XIV warns against allowing major technological and economic powers to operate without increased regulation and public oversight. These appeals are being framed around fairness, unity, worker protection, and social stability. Yet from a prophetic viewpoint, increasing centralized control over economics, communication, and social order raises important questions about liberty of conscience and the future ability of dissenting voices to freely operate.</p>
+
+                <p class="mb-6 text-gray-200 leading-relaxed">As Seventh-day Adventists, we recognize that the final crisis described in Revelation centers on worship and allegiance to God. The issue is not whether rest, unity, or social order are valuable. The issue is who ultimately defines truth and whether religious influence will increasingly shape civil law and public policy. History repeatedly demonstrates that when church and state unite for the “common good,” individual liberty of conscience often suffers.</p>
+
+                <p class="mb-6 text-gray-200 font-bold leading-relaxed">The Great Controversy warned of this very development: “She is silently growing into power. Her doctrines are exerting their influence in legislative halls, in the churches, and in the hearts of men” (The Great Controversy, p. 581). While these events do not themselves constitute the final fulfillment of prophecy, they do reveal the growing conditions Scripture warned would exist before earth’s closing scenes. Now more than ever, God’s people must remain grounded in Scripture, faithful to Christ, and spiritually discerning. The world is increasingly searching for moral leadership, unity, and solutions to global instability. As these movements continue to grow, we must carefully test every message, every movement, and every call for unity by the Word of God.</p>
+
+                <div class="bg-white/5 p-6 border border-white/10 rounded mb-8">
+                    <h4 class="text-white font-bold text-sm mb-4 uppercase tracking-widest text-teal-400">Resources &amp; Sources</h4>
+                    <span class="resource-link">Catholic Herald: U.S. Bishops to Consecrate America to the Sacred Heart of Jesus</span>
+                    <span class="resource-link">Vatican News: Pope Leo XIV Calls for “Full Unity” with Orthodox Churches</span>
+                    <span class="resource-link">Vatican: Magnifica Humanitas Encyclical by Pope Leo XIV</span>
+                    <p class="text-xs text-gray-400 mt-4 italic">
+                        The Great Controversy, pp. 463–464, 581 | The Holy Bible: Revelation 13:3, 13–17, Revelation 14:9–12, Matthew 24:4, 11, 24, Isaiah 8:20, Daniel 3
+                    </p>
+                </div>
+
+                <hr class="border-white/10 my-6">
+
+                <h3 class="text-xl font-bold mb-4 text-white uppercase tracking-wider">Community Outreach Initiative | July 4</h3>
+                <p class="text-sm text-gray-300 mb-6">
+                    On <strong>Saturday, July 4th, after the Divine Service</strong>, we’ll be taking our END GAME: Hope in the Last Days invitations into the community. We invite everyone to join us as we connect with people, share hope, and invite them to our upcoming summer series. Please sign up on the sheet located on the bulletin board if you would like to participate.
+                </p>
+                <div class="accent-box">
+                    <p class="text-sm text-white italic">"Let’s pray that God will go before us, prepare hearts, and lead us to those who are searching for answers, purpose, and hope in these challenging times."</p>
+                </div>
+                <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/05/RL-Summer.png" alt="END GAME Outreach Flyer" class="flyer-frame" />
+            </div>
+        </section>
+
+        <!-- SECTION 9: CONNECT & GIVE -->
         <section id="connect">
             <h2 class="section-title">Connect <span>&amp; Give</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
