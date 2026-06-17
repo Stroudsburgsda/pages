@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabbath Announcements | Stroudsburg SDA</title>
+    <title>Midweek Bulletin | Stroudsburg SDA</title>
     
     <!-- Dependencies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -73,7 +73,7 @@
             padding: 15px 18px;
             color: var(--gray-text);
             text-transform: uppercase;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 1px;
             text-decoration: none;
@@ -102,22 +102,6 @@
             margin-bottom: 30px;
         }
 
-        /* Calendar Row Styling */
-        .calendar-row {
-            display: flex;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #1a1a1a;
-        }
-        .calendar-row:last-child { border-bottom: none; }
-        .date-box {
-            min-width: 80px;
-            text-align: center;
-            margin-right: 30px;
-        }
-        .date-box .month { font-size: 0.7rem; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; }
-        .date-box .day { font-size: 1.8rem; font-weight: 900; line-height: 1; }
-
         .accent-box {
             border-left: 3px solid var(--accent-teal);
             background: rgba(40, 204, 158, 0.05);
@@ -125,51 +109,11 @@
             margin: 25px 0;
         }
 
-        /* Inline Flyer Frame */
-        .flyer-frame {
-            border: 1px solid #222;
-            border-radius: 4px;
-            max-width: 480px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 25px auto;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.6);
-        }
-
-        /* Quiz Panel Layout */
-        .quiz-panel {
+        .reflection-panel {
             background: var(--accent-teal);
             color: var(--black);
             padding: 35px;
             margin-top: 40px;
-        }
-
-        .option-item {
-            background: rgba(0,0,0,0.08);
-            padding: 12px 15px;
-            margin-top: 10px;
-            border: 1px solid rgba(0,0,0,0.1);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s ease;
-        }
-
-        .option-item:hover { background: rgba(0,0,0,0.15); }
-
-        .correct-reveal {
-            background: rgba(255,255,255,0.3) !important;
-            border: 2px solid #000 !important;
-        }
-
-        #quiz-answer-revealed {
-            display: none;
-            margin-top: 20px;
-            padding: 15px;
-            background: rgba(0,0,0,0.1);
-            font-weight: 800;
-            text-transform: uppercase;
         }
 
         h2.section-title {
@@ -183,18 +127,15 @@
 
         h2.section-title span { color: var(--accent-teal); }
 
-        .vbs-link {
-            color: var(--accent-teal);
-            font-weight: 700;
-            text-decoration: underline;
-        }
-
-        .resource-link {
-            color: var(--accent-teal);
-            font-weight: 700;
-            text-decoration: underline;
+        .flyer-frame {
+            border: 1px solid #222;
+            border-radius: 4px;
+            max-width: 480px;
+            width: 100%;
+            height: auto;
             display: block;
-            margin-bottom: 5px;
+            margin: 25px auto;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.6);
         }
 
         footer {
@@ -211,18 +152,12 @@
 
     <header>
         <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-        <h1>STROUDSBURG <span>SABBATH</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, June 13, 2026</p>
+        <h1>MIDWEEK <span>MOMENTUM</span></h1>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Stroudsburg Seventh-day Adventist Church</p>
     </header>
 
     <nav class="nav-wrapper">
         <div class="nav-container">
-            <a href="#today" class="nav-link">Today</a>
-            <a href="#calendar" class="nav-link" style="color: var(--accent-teal);">Calendar</a>
-            <a href="#upcoming-notices" class="nav-link">VBS Mission</a>
-            <a href="#wm-series" class="nav-link">Women's Ministry</a>
-            <a href="#stewardship" class="nav-link">Stewardship</a>
-            <a href="#conference" class="nav-link">Conference</a>
             <a href="#momentum" class="nav-link">Sabbath School</a>
             <a href="#liberty" class="nav-link">Religious Liberty</a>
             <a href="#connect" class="nav-link">Connect</a>
@@ -231,317 +166,85 @@
 
     <div class="page-content">
         
-        <!-- SECTION 1: TODAY AT STROUDSBURG -->
-        <section id="today">
-            <h2 class="section-title">Today at <span>Stroudsburg</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-card" style="border-left: 4px solid var(--accent-teal);">
-                    <h3 class="text-teal-400 font-black uppercase text-sm mb-4 tracking-widest">Sabbath Schedule</h3>
-                    <div class="p-4 bg-white/5 border border-white/10 rounded mb-4">
-                        <p class="text-xs font-bold text-teal-400 uppercase tracking-wider mb-1"><i class="fas fa-calendar-times mr-2"></i>Afternoon Recess</p>
-                        <p class="text-sm text-gray-300 leading-relaxed font-bold">Please note there will be no afternoon Bible Class or AYS program during the month of June. Both services will resume in July.</p>
-                    </div>
-                </div>
-                <div class="glass-card">
-                    <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Weekly Services Rhythm</h3>
-                    <ul class="space-y-2 text-xs text-gray-400">
-                        <li><strong>Wed/Fri @ 7:15 PM:</strong> Prayer Meeting &amp; Friday Evening Vesper continue on Zoom.</li>
-                        <li><strong>Mon/Thu @ 8:00 - 8:30 PM:</strong> Closer Walk Prayer Line on Zoom.</li>
-                        <li><strong>Every 1st &amp; 3rd Tuesday @ 10:00 AM:</strong> New Beginnings Senior Ministry meets at the Community Service Center.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 2: CALENDAR OF EVENTS -->
-        <section id="calendar">
-            <h2 class="section-title">Sabbath <span>Calendar</span></h2>
-            <div class="glass-card">
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Jun</div><div class="day">12-20</div></div>
-                    <div>
-                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest">PA Conference Event</p>
-                        <p class="text-gray-400 text-sm">Pennsylvania Conference Camp Meeting running at Blue Mountain Academy.</p>
-                    </div>
-                </div>
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Jun</div><div class="day">13</div></div>
-                    <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">URGENT Local VBS Meeting</p>
-                        <p class="text-gray-400 text-sm">1:00 PM – 3:00 PM: Critical VBS volunteer assembly at the church.</p>
-                    </div>
-                </div>
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Jun</div><div class="day">21</div></div>
-                    <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Conference Youth Camp</p>
-                        <p class="text-gray-400 text-sm">PA Summer Camp "Give Me the Mountains" opens at Laurel Lake.</p>
-                    </div>
-                </div>
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Jun</div><div class="day">28</div></div>
-                    <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry</p>
-                        <p class="text-gray-400 text-sm">Restoration Hour of Prayer: Sis. Fiona Harewood ("God Didn't Hurt You, People Did.")</p>
-                    </div>
-                </div>
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Jul</div><div class="day">04</div></div>
-                    <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Community Outreach</p>
-                        <p class="text-gray-400 text-sm">After Divine Service: END GAME neighborhood outreach initiative.</p>
-                    </div>
-                </div>
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Jul</div><div class="day">06-10</div></div>
-                    <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Vacation Bible School</p>
-                        <p class="text-gray-400 text-sm">VBS 2026 "Cactusville." Online child registration open at <a href="https://vbs.stroudsburgsda.org" target="_blank" class="vbs-link">vbs.stroudsburgsda.org</a>.</p>
-                    </div>
-                </div>
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Jul</div><div class="day">26</div></div>
-                    <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Conference / Local Events</p>
-                        <p class="text-gray-400 text-sm">2:00 PM: Princess Tea (Harrisburg First) / Restoration Hour: Sis. Vernie Charles.</p>
-                    </div>
-                </div>
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Aug</div><div class="day">02</div></div>
-                    <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry</p>
-                        <p class="text-gray-400 text-sm">Spa Day at SoJo.</p>
-                    </div>
-                </div>
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Aug</div><div class="day">22</div></div>
-                    <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry Event</p>
-                        <p class="text-gray-400 text-sm">End It Now presentation from Sister Legett.</p>
-                    </div>
-                </div>
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Aug</div><div class="day">21-23</div></div>
-                    <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Conference Event</p>
-                        <p class="text-gray-400 text-sm">Hispanic Youth Retreat: Crossover with Pastor Japhet Garcia.</p>
-                    </div>
-                </div>
-
-                <!-- CHURCH CARE & VISITATION DETAILS -->
-                <div class="accent-box" style="margin-top: 30px;">
-                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-heart text-teal-400 mr-2"></i>Church Care &amp; Visitation</h4>
-                    <p class="text-sm text-gray-300 leading-relaxed mb-2">Please continue to hold <strong>Sister Patricia Francis</strong> in your daily prayers and consider stopping by to visit her at the facility:</p>
-                    <p class="text-sm text-white font-bold">Forest Hill Rehab Center</p>
-                    <p class="text-xs text-gray-400">1000 Evergreen Ave, Weatherly, PA 18255</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 3: URGENT VBS VOLUNTEER COORDINATION -->
-        <section id="upcoming-notices">
-            <h2 class="section-title">VBS <span>Mission</span></h2>
-            <div class="glass-card">
-                <div class="p-6 bg-red-950/30 border border-red-900/50 rounded mb-6" style="border-left: 4px solid #ef4444;">
-                    <h3 class="text-red-400 font-black uppercase text-sm mb-2 tracking-widest"><i class="fas fa-exclamation-triangle mr-2"></i>Urgent Call for Volunteers</h3>
-                    <p class="text-sm text-gray-200 leading-relaxed mb-4">
-                        If you are interested in volunteering for Vacation Bible School this year, please meet Sister Terina Jackson at church **tomorrow (June 13th) between 1:00 PM and 3:00 PM**. We cannot host a Vacation Bible School without your dedicated service.
-                    </p>
-                </div>
-                <p class="text-sm text-gray-300 leading-relaxed">
-                    Registration for VBS is officially open and can be completed at <a href="https://vbs.stroudsburgsda.org" target="_blank" class="vbs-link">vbs.stroudsburgsda.org</a>. Please begin registering your children online so our supply lines and planning teams can finalize logistics.
-                </p>
-            </div>
-        </section>
-
-        <!-- SECTION 4: WOMEN'S MINISTRY SERIES -->
-        <section id="wm-series">
-            <h2 class="section-title">Women's <span>Ministry</span></h2>
-            <div class="glass-card">
-                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">Church Hurt Series</h3>
-                <p class="text-teal-400 font-bold mb-6 italic text-sm">Restoration Hour of Prayer (Upcoming Quarter)</p>
-                
-                <p class="mb-6 text-gray-200">Women’s Ministry is planning a powerful and deeply meaningful quarter. The Restoration Hour of Prayer will continue to cover the important topic of “Church Hurt.”</p>
-                
-                <div class="accent-box">
-                    <p class="text-white font-bold mb-1 text-sm uppercase tracking-widest">Understanding the Reality</p>
-                    <p class="text-sm text-gray-300 leading-relaxed mb-4">“Church hurt” refers to the emotional, psychological, or spiritual harm inflicted by church leaders or fellow believers. It can leave deep wounds, but recognizing your pain is valid is the first step toward healing.</p>
-                    
-                    <strong class="text-xs uppercase text-white block mb-2 tracking-widest">Sources of Church Hurt:</strong>
-                    <ul class="list-disc list-inside text-xs text-gray-400 space-y-1 mb-4">
-                        <li><strong>Misuse of Spiritual Authority:</strong> Leaders using scripture or spiritual language to control, shame, or exploit others.</li>
-                        <li><strong>Relational Harm:</strong> Gossip, betrayal, exclusion, or failure of the church to support you in a crisis.</li>
-                        <li><strong>Toxic Church Culture:</strong> Prioritizing numerical growth over people or allowing immature/unhealthy patterns to go unchecked.</li>
-                    </ul>
-
-                    <strong class="text-xs uppercase text-white block mb-2 tracking-widest">Steps for Healing:</strong>
-                    <ul class="list-disc list-inside text-xs text-gray-400 space-y-1">
-                        <li><strong>Grieve &amp; Detangle:</strong> Allow yourself to feel the pain. It is important to separate your personal faith and view of God from the imperfect, fallible humans who caused your pain.</li>
-                        <li><strong>Set Boundaries:</strong> You have the right to step away from a toxic environment or take a break from attending services to protect your mental health.</li>
-                        <li><strong>Seek Support:</strong> Healing is rarely a solo journey. Speaking with a licensed mental health professional can help you process religious trauma or deep-seated emotional wounds.</li>
-                    </ul>
-                </div>
-
-                <h4 class="text-white font-black uppercase text-sm mb-4 tracking-widest">Upcoming Speakers:</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
-                    <div class="p-4 bg-white/5 border border-white/10">
-                        <span class="text-teal-400 font-bold block mb-1">June 28</span>
-                        <strong class="text-white block">Sister Fiona Harewood</strong>
-                        <span class="text-xs text-gray-400 italic">"God Didn't Hurt You, People Did."</span>
-                    </div>
-                    <div class="p-4 bg-white/5 border border-white/10">
-                        <span class="text-teal-400 font-bold block mb-1">July 26</span>
-                        <strong class="text-white block">Sister Vernie Charles</strong>
-                        <span class="text-xs text-gray-400 italic">"Not Everyone Deserves Access to You."</span>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm border-t border-white/5 pt-6 text-gray-400">
-                    <div><strong>August 02:</strong> Spa Day at SoJo</div>
-                    <div><strong>August 22:</strong> End It Now - Special presentation from Sister Legett</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 5: STEWARDSHIP SPOTLIGHT -->
-        <section id="stewardship">
-            <h2 class="section-title">Stewardship <span>Spotlight</span></h2>
-            <div class="glass-card">
-                <h3 class="text-xl font-bold mb-6 text-white uppercase tracking-wider text-teal-400">Theme: Count the Cost</h3>
-                
-                <div class="accent-box">
-                    <p class="text-white font-bold text-lg mb-2">“For which of you, intending to build a tower, does not sit down first and count the cost…?”</p>
-                    <p class="text-teal-400 font-bold uppercase text-xs">— Luke 14:28</p>
-                </div>
-
-                <h4 class="text-white font-black uppercase text-sm mb-4">What does it mean to “count the cost”?</h4>
-                <p class="mb-4 text-gray-200">It means to be intentional. Before we commit, before we spend, before we build—we pause, we plan, and we seek understanding. In our financial lives, this looks like:</p>
-                
-                <ul class="space-y-2 text-sm text-gray-400 mb-6 list-disc list-inside">
-                    <li>Not rushing into decisions</li>
-                    <li>Not spending impulsively</li>
-                    <li>Not committing beyond what we can sustain</li>
-                </ul>
-
-                <p class="mb-6 text-gray-200">Instead, it means asking: Can I afford this? Is this aligned with my priorities? Have I invited God into this decision?</p>
-
-                <h4 class="text-white font-black uppercase text-sm mb-4">A Stewardship Perspective</h4>
-                <p class="mb-4 text-gray-200">Being a good steward means we don’t move—big or small—without speaking to God first, counting the cost, and building it into our spending plan. Impulse decisions often lead to stress, strain, and misalignment. Intentional decisions lead to peace, clarity, and alignment with God’s will.</p>
-
-                <div class="bg-white/5 p-8 border border-white/10 rounded mb-8">
-                    <h4 class="text-white font-bold text-sm mb-6 uppercase tracking-widest text-teal-400">A Word for All Generations</h4>
-                    <ul class="space-y-4 text-gray-300 text-sm">
-                        <li><strong>To our youth:</strong> learning to pause before you spend is a powerful habit that will serve you for life.</li>
-                        <li><strong>To our young adults and families:</strong> planning ahead brings order to your finances and helps you avoid unnecessary pressure.</li>
-                        <li><strong>To our Young At Heart:</strong> your wisdom and experience remind us all of the value of patience, planning, and trusting God’s timing.</li>
-                        <li class="italic text-teal-400">And to all: you are never too young or too old to develop new habits and change old ones.</li>
-                    </ul>
-                </div>
-
-                <div class="text-center border-t border-white/10 pt-6">
-                    <h4 class="text-white font-bold uppercase text-xs mb-4">Our Encouragement This Week:</h4>
-                    <p class="text-gray-200 mb-6">Take time to reflect on this scripture. Before your next financial decision—big or small: <strong>Pause. Pray. Plan.</strong> Invite God into your decisions and count the cost.</p>
-                    <p class="text-teal-400 font-black uppercase tracking-widest">Because stewardship is not just about managing money—it’s about honoring God with every decision we make. May God richly bless your faithfulness as you walk in wisdom and intention.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 6: CONFERENCE ANNOUNCEMENTS (UNABRIDGED) -->
-        <section id="conference">
-            <h2 class="section-title">Conference <span>Announcements</span></h2>
-            <div class="space-y-6">
-                <div class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Pennsylvania Conference Camp Meeting | June 12-20, 2026</h4>
-                    <p class="text-sm text-gray-300 mb-4">Plan now to attend this year’s camp meeting, June 12-20, 2026, at Blue Mountain Academy, Hamburg, Pa. It will be a powerful week of powerful worship and practical seminars at our Pennsylvania Conference Camp Meeting 2026! This year’s focus is on “Joyful Living: Now and Forever—growing stronger physically, mentally, and spiritually—as we discover God’s plan for vibrant, healthy, and joyful living. Speakers include Randy Skeete, Neil Nedley, Mark and Teenie Finley, Dr. Jonathan Burt, Gail McKenzie, Gary Gibbs, Dee Casper, Ryan Musser, and Dr. Clinton Wahlen—offering messages of hope and health for today’s world. Children will enjoy meetings and activities planned for them as they explore “Wild About Health.” Powerful worship and fun outings are planned for our youth and young adults. Learn more, register for lodging, and purchase meal tickets at <a href="https://paconference.org/camp-meeting" target="_blank" class="inline-link">paconference.org/camp-meeting</a>.</p>
-                </div>
-
-                <div class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Master Guide Camporee</h4>
-                    <p class="text-sm text-gray-300">Master Guides are invited to a camporee just for them at the Pennsylvania Conference’s Kamp Keystone, Hamburg, Pa., June 5-7, 2026. Our guest speaker is Michael Campos, executive secretary for the Illinois Conference. Register at <a href="https://paconference.org/events" target="_blank" class="inline-link">paconference.org/events</a>.</p>
-                </div>
-
-                <div class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Summer Camp 2026</h4>
-                    <p class="text-sm text-gray-300">Our 2026 summer camp, “Give Me the Mountains,” begins June 21 with Adventurer Camp and Cowgirl Camp. It will be a fun and life-impacting week for young people ages 7-16, and for families during our extended family camp, July 21-26. Learn more and register at <a href="https://laurellakesummercamp.com" target="_blank" class="underline">laurellakesummercamp.com</a>.</p>
-                </div>
-
-                <div class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Princess Tea | Sunday, July 26</h4>
-                    <p class="text-sm text-gray-300">Girls 10 and under are invited to bring their moms, aunts, grandmoms, and friends to our Princess Tea on Sunday, July 26, 2:00-4:00 pm, at the Harrisburg First Seventh-day Adventist Church, 424 N. Progress Av, Harrisburg, Pa. Register at <a href="https://paconference.org/events" target="_blank" class="inline-link">paconference.org/events</a>.</p>
-                </div>
-
-                <div class="glass-card">
-                    <h4 class="text-teal-400 font-black uppercase text-sm mb-4">Hispanic Youth Retreat: Crossover | August 21-23, 2026</h4>
-                    <p class="text-sm text-gray-300">Join Pastor Japhet Garcia on August 21-23, 2026, at our Hispanic youth retreat, Crossover. It’s an event that will change your life, helping you discover what God wants to do in you. Learn more and register at <a href="https://paconference.org/events" target="_blank" class="inline-link">paconference.org/events</a>.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 7: SABBATH SCHOOL MOMENTUM (MOVED TO END FROM MIDWEEK) -->
+        <!-- SECTION 1: SABBATH SCHOOL MOMENTUM (UNABRIDGED) -->
         <section id="momentum">
             <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
             <div class="glass-card">
-                <p class="text-teal-400 font-bold mb-2">Lesson for Sabbath 6/13/2026</p>
-                <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">When Life Doesn’t Go According to Plan</h3>
+                <p class="text-teal-400 font-bold mb-2 uppercase tracking-widest text-xs">Lesson for Sabbath 6/20/2026</p>
+                <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">Sharing Him: Your Life Speaks Before Your Words</h3>
                 
-                <p class="mb-4 text-gray-200">A health diagnosis. A financial struggle. The loss of someone we love. A prayer that seems unanswered. In moments like these, it’s easy to wonder where God is and why He seems silent. Few things test our faith like setbacks. This week’s lesson takes us into the stories of people who faced disappointment, suffering, confusion, and loss, yet discovered that God had not abandoned them.</p>
-                <p class="mb-4 text-gray-200">The disciples were caught in a violent storm on the Sea of Galilee. While they feared for their lives, Jesus slept peacefully in the boat. Their question, “Do you not care?” is one many believers have echoed in their own storms. The lesson reminds us that God's apparent silence is not evidence of His absence. Often, He is working in ways we cannot yet see.</p>
+                <p class="mb-4 text-gray-200">Every day, whether we realize it or not, we are telling a story. Through our words, our reactions, our patience, our kindness, or even our frustration, we reveal something about the God we claim to serve.</p>
+                
+                <p class="mb-4 text-gray-200">This week’s lesson, “Share Him,” reminds us that witnessing is not simply about giving Bible studies or preaching sermons. Often, it begins long before that. It begins in the ordinary moments of life. Someone is always watching, not for our perfection, but for evidence of Jesus in us. That’s the heart of witnessing.</p>
 
                 <div class="accent-box">
-                    <p class="text-white font-bold text-lg mb-2">Choosing to Reach</p>
-                    <p class="text-gray-200 italic">Then there is the woman who suffered for years, exhausted every resource, and still found no relief. Instead of giving up, she pressed through the crowd to reach Jesus. Her story reminds us that faith is not the absence of struggle; it is choosing to reach for Christ in the midst of it.</p>
+                    <p class="text-white font-bold text-lg mb-2">Overflow of the Heart</p>
+                    <p class="text-gray-200 italic">The Great Commission was never reserved for pastors, Bible workers, or extroverts. It is a calling for every believer. Effective witnessing doesn’t flow from pressure; it flows from overflow. When God’s love fills our hearts, sharing Him becomes a natural response. We speak because we’ve experienced Him. We love because He first loved us.</p>
                 </div>
 
-                <p class="mb-4 text-gray-200">Few people have experienced the deep loss and confusion that Job faced. Even when he could not understand God’s plans, he refused to abandon his faith. Through his suffering, Job gained a deeper understanding of God’s grace and character than he had known before.</p>
-                <p class="mb-4 text-gray-200">On the road to Emmaus, the disciples thought their hopes had been shattered. What felt like the greatest setback in history was actually part of God's greatest victory. Jesus was walking beside them long before they recognized Him. The same is true for us. Our setbacks may not make sense today. We may not see the full picture. But Scripture repeatedly points us to a God who remains faithful, whose love remains constant, and who can bring purpose even out of pain.</p>
-                <p class="mb-8 text-gray-200">In studying this week’s lesson, you may discover that the greatest threat to your faith is not the setback itself, but forgetting that Jesus is still in the boat, still on the road, and still at work.</p>
+                <p class="mb-4 text-gray-200">Peter and John said it best: “We cannot but speak the things which we have seen and heard.” Their witness wasn’t built on polished arguments but on personal experience. They had been with Jesus, and it showed. The real question for us is, can people tell we’ve been with Jesus?</p>
+                
+                <p class="mb-4 text-gray-200">The lesson also reminds us that sharing Christ must be marked by compassion, patience, and authenticity. We don’t force faith. We reflect it. We build relationships. We pray for opportunities. We listen. We love. And we trust the Holy Spirit to do the work only He can do.</p>
+                
+                <p class="mb-8 text-gray-200">As you continue to study this week, ask God not just to teach you how to witness, but to shape you into someone whose life makes others curious about Him. Sometimes the most powerful sermon you will ever preach is the one you live.</p>
 
-                <!-- INTERACTIVE QUIZ INTERFACE (UNABRIDGED COMMENTARY CONTENT INTEGRATED) -->
-                <div class="quiz-panel">
-                    <h4 class="font-black uppercase mb-4 text-sm tracking-widest text-black">Question of the Week</h4>
-                    <p class="font-bold mb-4 text-black">During the storm on the Sea of Galilee, Jesus was sleeping at the stern on a pillow. What is the significance of this specific location in the boat?</p>
-                    <div class="space-y-2">
-                        <div class="option-item border-black/20" onclick="revealQuizAnswer(this, false)">A. The stern was the area reserved for honored guests to rest away from the spray of the water.</div>
-                        <div class="option-item border-black/20" onclick="revealQuizAnswer(this, false)">B. The stern contained the only storage area where a pillow could be kept dry.</div>
-                        <div class="option-item border-black/20" onclick="revealQuizAnswer(this, false)">C. The stern was the most stable part of the fishing boat during a heavy storm.</div>
-                        <div id="correct-answer" class="option-item border-black/20" onclick="revealQuizAnswer(this, true)">D. The stern was the position of the boat’s driver, implying Jesus was “at the wheel” even while asleep.</div>
-                    </div>
-                    <div id="quiz-answer-revealed">Correct Answer: D</div>
-                    <div class="mt-8 border-t border-black/10 pt-4 text-black">
-                        <h5 class="font-black uppercase text-xs mb-2">Food for Thought (for Sabbath discussion):</h5>
-                        <p class="text-sm italic">When facing setbacks, what most determines whether your faith grows stronger or weaker, and how can you learn to recognize God's presence even when His purposes are not yet clear?</p>
-                    </div>
+                <!-- INTERACTIVE DISCUSSION PANEL -->
+                <div class="reflection-panel rounded">
+                    <h4 class="font-black uppercase mb-4 text-xs tracking-widest text-black"><i class="fas fa-comments mr-2"></i>Sabbath Discussion Prep</h4>
+                    <p class="font-bold text-black mb-3">Food for Thought:</p>
+                    <p class="text-sm text-black italic bg-white/20 p-4 rounded leading-relaxed font-semibold">
+                        "If someone were to observe your life this week: your words, reactions, and relationships, what picture of Jesus would they walk away with, and how does that shape your understanding of what it means to “share Him”?"
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 8: RELIGIOUS LIBERTY (MOVED TO END FROM MIDWEEK) -->
+        <!-- SECTION 2: RELIGIOUS LIBERTY (UNABRIDGED) -->
         <section id="liberty">
-            <h2 class="section-title">Rel. <span>Liberty</span></h2>
+            <h2 class="section-title">Religious <span>Liberty</span></h2>
             <div class="glass-card">
-                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">Following the Pattern of the Early Church</h3>
-                <p class="text-teal-400 font-bold mb-6 italic text-sm">A Collective Invitation for July 4th</p>
+                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">When Heaven Went Silent</h3>
+                <p class="text-teal-400 font-bold mb-6 italic text-sm">God Was Preparing the Way Then. Is He Preparing the Way Now?</p>
                 
-                <p class="mb-4 text-gray-200">One of the most remarkable characteristics of the early Christian church was its commitment to reaching people where they were. The book of Acts reveals a church that did not remain within its walls. Believers went into cities, marketplaces, homes, and public spaces sharing the hope of Christ. Through personal connections, acts of kindness, Bible-centered conversations, and the power of the Holy Spirit, the gospel spread rapidly throughout the known world. Today, God is calling His church to follow that same model.</p>
-                <p class="mb-4 text-gray-200">We are living in prophetic times. The world is experiencing growing uncertainty, moral confusion, social division, economic instability, and increasing restrictions on freedom of conscience. At such a time as this, the Three Angels' Messages of Revelation 14 must be shared more urgently than ever before. The message of salvation through Christ, obedience to God's commandments, and preparation for His soon return is not merely information. It is Heaven's final appeal to a dying world.</p>
-
                 <div class="accent-box">
-                    <p class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Prophetic Milestones: America at 250</p>
-                    <p class="text-gray-200 mb-4 leading-relaxed">This year also marks a significant milestone in American history: the approaching 250th anniversary of the United States. Students of Bible prophecy recognize that America occupies a unique place in Revelation 13. A nation founded upon principles of civil and religious liberty has been greatly used by God to advance the gospel throughout the world. Yet prophecy also warns of future challenges to those freedoms. As we reflect on 250 years of American history, we are reminded that now is the time to strengthen our witness, share truth in love, and help our communities understand God's Word before the final events unfold.</p>
+                    <p class="text-white font-bold text-lg mb-2">“Behold, I will send my messenger, and he shall prepare the way before me…”</p>
+                    <p class="text-teal-400 font-bold uppercase text-xs">— Malachi 3:1</p>
                 </div>
 
-                <p class="mb-4 text-gray-200">For this reason, the Religious Liberty Team is inviting every church member, ministry leader, church officer, department, ministry team, and family to participate in the July 4 Community Outreach initiative. This is not simply another church event. It is an opportunity for the entire church family to unite in mission and connect with our community in a meaningful way.</p>
-                <p class="mb-4 text-gray-200">The early church grew because every believer saw themselves as a missionary. The same can be true today. Whether you distribute literature, offer prayer, engage in conversation, invite someone to our upcoming End Game prophecy series, or simply show Christ's love through kindness, your participation matters. As we prepare for July 4 and the months of outreach that will follow, let us pray for open doors, receptive hearts, and a renewed burden for souls. The harvest is still plentiful, and God is calling His people to labor while there is time.</p>
+                <p class="mb-6 text-gray-200">When the book of Malachi closes, something remarkable happens. Heaven goes silent. For approximately four hundred years, no prophet arises in Israel. No new Scripture is written. No divine messenger appears with a fresh word from the Lord. To many, it may have seemed that God had stopped working. But God was not absent. He was preparing.</p>
+                
+                <p class="mb-6 text-gray-200">While heaven appeared silent, history was moving exactly according to God’s plan. Empires rose and fell. The Greek language spread across much of the known world, creating a common means of communication. The Scriptures were translated into Greek, making God’s Word accessible to millions. Synagogues were established throughout the Mediterranean region, providing centers where people gathered to study Scripture and discuss spiritual matters. Then Rome emerged. The Romans built roads, trade routes, and transportation networks unlike anything the world had previously seen. Cities became connected. Travel became easier. Communication became faster.</p>
 
-                <hr class="border-white/10 my-6">
+                <p class="mb-6 text-gray-200">The roads were not built for the gospel. Yet God would use them for the gospel. When John the Baptist appeared, the way had been prepared. When Jesus began His ministry, the way had been prepared. When the disciples were commissioned to carry the gospel to the world, the way had been prepared.</p>
 
-                <h4 class="text-xl font-bold mb-4 text-white uppercase tracking-wider">Community Outreach Initiative | July 4</h4>
-                <p class="text-sm text-gray-300 mb-6">On Saturday, July 4th, after the Divine Service, we’ll be taking our END GAME: Hope in the Last Days invitations into the community. We invite everyone to join us as we connect with people, share hope, and invite them to our upcoming summer series. If you would like to participate, please sign up on the sheet located on the bulletin board.</p>
-                <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/05/RL-Summer.png" alt="END GAME Outreach Flyer" class="flyer-frame" />
+                <p class="mb-6 text-gray-200">The same roads used by merchants and soldiers became highways for the message of salvation. Paul traveled from city to city. Churches were planted. Letters circulated among believers. The gospel spread throughout the Roman Empire with remarkable speed. What appeared to be silence was actually preparation. The Romans built roads for commerce. God used them for the gospel. Today, God has placed new roads before us. On July 4, we step onto those roads with a message of hope for a world that desperately needs it.</p>
+
+                <div class="bg-white/5 p-6 border border-white/10 rounded mb-8">
+                    <h4 class="text-teal-400 font-bold text-sm mb-4 uppercase tracking-widest"><i class="fas fa-road mr-2"></i>Modern Highways of Truth</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">
+                        As we approach our community outreach on July 4, we would do well to consider what God has placed in our hands. The early church had Roman roads. We have highways, automobiles, smartphones, websites, social media, livestreams, email, text messaging, and instant communication with people around the world.
+                    </p>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Never before has God’s church had access to so many avenues for sharing truth. The challenge facing us is not a lack of opportunity. The challenge is whether we will use the opportunities God has already provided.
+                    </p>
+                </div>
+
+                <p class="mb-6 text-gray-200">As Seventh-day Adventists, we believe God has entrusted us with a message of hope for these last days. The Three Angels’ Messages are not intended to remain within the walls of our church. They are meant to reach every person possible before Christ returns. On July 4, we are not simply handing out literature. We are stepping onto the roads God has placed before us. Every conversation, every flyer, every prayer offered, every invitation extended may be the very thing the Holy Spirit uses to reach a searching heart.</p>
+
+                <p class="mb-8 text-gray-200">Malachi’s generation was called to prepare the way for Christ’s first coming. We have been called to help prepare the way for His second coming. Perhaps God is doing today what He did during those four hundred years of silence. Perhaps He has been preparing communities, opening hearts, creating opportunities, and building pathways for the gospel that we cannot yet fully see. The roads are already built. The question is whether we will walk them. On July 4, let us answer that question together. The King is coming.</p>
+
+                <!-- PORTAL SIGN-UP ACTION CARD -->
+                <div class="p-6 bg-white/5 border border-white/10 rounded text-center mb-6">
+                    <p class="text-white uppercase font-bold text-xs tracking-widest mb-3">Community Outreach | July 4</p>
+                    <a href="https://news.stroudsburgsda.org" target="_blank" class="bg-white text-black px-8 py-3 font-bold uppercase text-xs inline-block hover:bg-teal-400 transition rounded tracking-wider">July 4 Community Outreach Sign-Up Form</a>
+                </div>
+
+                <!-- OUTREACH CAMPAIGN FLYER IMAGE EMBED -->
+                <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/05/RL-Summer.png" alt="END GAME Summer Outreach Campaign" class="flyer-frame" />
             </div>
         </section>
 
-        <!-- SECTION 9: CONNECT & GIVE -->
+        <!-- SECTION 3: CONNECT & GIVE (STABLE FOOTER PORTALS) -->
         <section id="connect">
             <h2 class="section-title">Connect <span>&amp; Give</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -553,14 +256,14 @@
                                 <p class="font-bold text-white">Prayer Meeting &amp; Vespers</p>
                                 <p class="text-xs text-gray-500">Wed/Fri @ 7:15 PM</p>
                             </div>
-                            <a href="https://www.stroudsburgsda.org/vespers" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
                         </div>
                         <div class="flex justify-between items-center border-b border-white/5 pb-3">
                             <div>
                                 <p class="font-bold text-white">Evening Prayer Line</p>
                                 <p class="text-xs text-gray-500">Mon/Thu @ 8:00 PM</p>
                             </div>
-                            <a href="https://www.stroudsburgsda.org/prayer" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
                         </div>
                         <div class="flex justify-between items-center">
                             <div>
@@ -585,16 +288,5 @@
     </div>
 
     <footer>STROUDSBURG SEVENTH-DAY ADVENTIST CHURCH | 2001 West Main Street, Stroudsburg, PA 18360</footer>
-
-    <script>
-        function revealQuizAnswer(element, isCorrect) {
-            document.getElementById('quiz-answer-revealed').style.display = 'block';
-            document.getElementById('correct-answer').classList.add('correct-reveal');
-            if(!isCorrect) {
-                element.style.opacity = '0.5';
-                element.style.textDecoration = 'line-through';
-            }
-        }
-    </script>
 </body>
 </html>
