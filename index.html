@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midweek Bulletin | Stroudsburg SDA</title>
+    <title>Sabbath Announcements | Stroudsburg SDA</title>
     
     <!-- Dependencies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -73,7 +73,7 @@
             padding: 15px 18px;
             color: var(--gray-text);
             text-transform: uppercase;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 700;
             letter-spacing: 1px;
             text-decoration: none;
@@ -102,6 +102,22 @@
             margin-bottom: 30px;
         }
 
+        /* Calendar Row Styling */
+        .calendar-row {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .calendar-row:last-child { border-bottom: none; }
+        .date-box {
+            min-width: 80px;
+            text-align: center;
+            margin-right: 30px;
+        }
+        .date-box .month { font-size: 0.7rem; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; }
+        .date-box .day { font-size: 1.8rem; font-weight: 900; line-height: 1; }
+
         .accent-box {
             border-left: 3px solid var(--accent-teal);
             background: rgba(40, 204, 158, 0.05);
@@ -109,11 +125,51 @@
             margin: 25px 0;
         }
 
-        .reflection-panel {
+        /* Inline Flyer Frame */
+        .flyer-frame {
+            border: 1px solid #222;
+            border-radius: 4px;
+            max-width: 480px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 25px auto;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+        }
+
+        /* Interactive Quiz Layout */
+        .quiz-panel {
             background: var(--accent-teal);
             color: var(--black);
             padding: 35px;
             margin-top: 40px;
+        }
+
+        .option-item {
+            background: rgba(0,0,0,0.08);
+            padding: 12px 15px;
+            margin-top: 10px;
+            border: 1px solid rgba(0,0,0,0.1);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .option-item:hover { background: rgba(0,0,0,0.15); }
+
+        .correct-reveal {
+            background: rgba(255,255,255,0.3) !important;
+            border: 2px solid #000 !important;
+        }
+
+        #quiz-answer-revealed {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0,0,0,0.1);
+            font-weight: 800;
+            text-transform: uppercase;
         }
 
         h2.section-title {
@@ -127,15 +183,10 @@
 
         h2.section-title span { color: var(--accent-teal); }
 
-        .flyer-frame {
-            border: 1px solid #222;
-            border-radius: 4px;
-            max-width: 480px;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 25px auto;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+        .inline-link {
+            color: var(--accent-teal);
+            font-weight: 700;
+            text-decoration: underline;
         }
 
         footer {
@@ -152,12 +203,15 @@
 
     <header>
         <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-        <h1>MIDWEEK <span>MOMENTUM</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Stroudsburg Seventh-day Adventist Church</p>
+        <h1>STROUDSBURG <span>SABBATH</span></h1>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, June 20, 2026</p>
     </header>
 
     <nav class="nav-wrapper">
         <div class="nav-container">
+            <a href="#today" class="nav-link">Today</a>
+            <a href="#calendar" class="nav-link" style="color: var(--accent-teal);">Calendar</a>
+            <a href="#wm-series" class="nav-link">Women's Ministry</a>
             <a href="#momentum" class="nav-link">Sabbath School</a>
             <a href="#liberty" class="nav-link">Religious Liberty</a>
             <a href="#connect" class="nav-link">Connect</a>
@@ -166,7 +220,175 @@
 
     <div class="page-content">
         
-        <!-- SECTION 1: SABBATH SCHOOL MOMENTUM (UNABRIDGED) -->
+        <!-- SECTION 1: TODAY AT STROUDSBURG -->
+        <section id="today">
+            <h2 class="section-title">Today at <span>Stroudsburg</span></h2>
+            
+            <!-- Warm Baby Shower Thanks Acknowledgement Card -->
+            <div class="glass-card mb-6" style="border-top: 4px solid var(--accent-teal);">
+                <h3 class="text-teal-400 font-black uppercase text-sm mb-3 tracking-widest"><i class="fas fa-baby-carriage mr-2"></i>Heartfelt Gratitude</h3>
+                <p class="text-sm text-gray-200 leading-relaxed mb-4">
+                    The Nelson Family would like to extend our heartfelt thanks to the Stroudsburg SDA family for the beautiful baby shower you lovingly organized for us. We are truly grateful for your kindness, love, care, and support during this special time in our lives.
+                </p>
+                <p class="text-sm text-gray-200 leading-relaxed">
+                    Everything was beautifully done, and it was such a blessing to spend time with our church family. Your thoughtfulness and generosity made the day incredibly special, and we will cherish the memories for years to come. Thank you again for making us feel so loved and celebrated. We appreciate each and every one of you.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- June Recess Notice Card -->
+                <div class="glass-card" style="border-left: 4px solid var(--accent-teal);">
+                    <h3 class="text-teal-400 font-black uppercase text-sm mb-4 tracking-widest">Sabbath Schedule Status</h3>
+                    <div class="p-4 bg-white/5 border border-white/10 rounded">
+                        <p class="text-xs font-bold text-teal-400 uppercase tracking-wider mb-1"><i class="fas fa-calendar-times mr-2"></i>Afternoon Recess</p>
+                        <p class="text-sm text-gray-300 leading-relaxed">Please remember, there will be no Bible Class and AYS in June; both will resume in July.</p>
+                    </div>
+                </div>
+                
+                <!-- Weekly Zoom / In-Person Meetings Schedule Card -->
+                <div class="glass-card">
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Weekly Services Rhythm</h3>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><strong>Wed/Fri @ 7:15 PM:</strong> Prayer Meeting &amp; Friday Evening Vesper continue on Zoom.</li>
+                        <li><strong>Mon/Thu @ 8:00 - 8:30 PM:</strong> Closer Walk Prayer Line on Zoom.</li>
+                        <li><strong>Every 1st &amp; 3rd Tuesday @ 10:00 AM:</strong> New Beginnings Senior Ministry meets at the Community Service Center.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CALENDAR OF EVENTS -->
+        <section id="calendar">
+            <h2 class="section-title">Sabbath <span>Calendar</span></h2>
+            <div class="glass-card">
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jun</div><div class="day">12-20</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">PA Conference Event</p>
+                        <p class="text-gray-400 text-sm">Pennsylvania Conference Camp Meeting running at Blue Mountain Academy.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jun</div><div class="day">20</div></div>
+                    <div>
+                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest">Sabbath Services</p>
+                        <p class="text-gray-400 text-sm">Today: Nelson family thank-you shared. Afternoon class recess continues.</p>
+                    </div>
+                </div>
+                <div class="calendar-row" style="border-left: 3px solid var(--accent-teal); padding-left: 10px;">
+                    <div class="date-box"><div class="month">Jun</div><div class="day">27</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Communion Service</p>
+                        <p class="text-teal-400 text-sm font-bold">Next Sabbath: Holy Communion service. Let us all prepare our hearts for this special day.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jun</div><div class="day">28</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry</p>
+                        <p class="text-gray-400 text-sm">Restoration Hour of Prayer: Sis. Fiona Harewood ("God Didn't Hurt You, People Did.")</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jul</div><div class="day">04</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Community Outreach</p>
+                        <p class="text-gray-400 text-sm">After Divine Service: END GAME community literature distribution.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jul</div><div class="day">26</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry Event</p>
+                        <p class="text-gray-400 text-sm">Restoration Hour of Prayer: Sis. Vernie Charles ("Not Everyone Deserves Access to You.")</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Aug</div><div class="day">22</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry Event</p>
+                        <p class="text-gray-400 text-sm">End It Now presentation from Sister Legett.</p>
+                    </div>
+                </div>
+
+                <!-- EXPLICIT VBS CANCELLATION NOTICE BLOCK -->
+                <div class="p-6 bg-red-950/20 border border-red-900/50 rounded mt-6" style="border-left: 4px solid #ef4444;">
+                    <h4 class="text-red-400 font-black uppercase text-xs tracking-widest mb-1"><i class="fas fa-exclamation-triangle mr-2"></i>VBS Cancellation Announcement</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        It is with regret that Sis Terina Jackson, our Vacation Bible School coordinator, informs the church that this year’s VBS has been canceled. Please continue to pray for our local youth and future children's programs.
+                    </p>
+                </div>
+
+                <!-- SICK & SHUT-IN PRAYER LIST -->
+                <div class="accent-box" style="margin-top: 30px;">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-3"><i class="fas fa-hand-holding-heart text-teal-400 mr-2"></i>Sick &amp; Shut-In Prayer List</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">Please support our sick and shut-in members in your daily prayers. A card, call, or visitation is a powerful way to share Christ’s love:</p>
+                    
+                    <div class="space-y-4 text-sm border-t border-white/10 pt-4">
+                        <div>
+                            <p class="font-bold text-teal-400">Sister Patricia Francis</p>
+                            <p class="text-xs text-gray-400">Forest Hill Rehab Center</p>
+                            <p class="text-xs text-gray-400">1000 Evergreen Ave, Weatherly, PA 18255</p>
+                            <p class="text-xs text-teal-400/80 italic mt-1"><i class="fas fa-car mr-1"></i>Visitation is welcomed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: WOMEN'S MINISTRY SERIES -->
+        <section id="wm-series">
+            <h2 class="section-title">Women's <span>Ministry</span></h2>
+            <div class="glass-card">
+                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">Church Hurt Series</h3>
+                <p class="text-teal-400 font-bold mb-6 italic text-sm">Restoration Hour of Prayer (Upcoming Quarter)</p>
+                
+                <p class="mb-6 text-gray-200">Women’s Ministry is planning a powerful and deeply meaningful quarter. The Restoration Hour of Prayer will continue to cover the important topic of “Church Hurt.”</p>
+                
+                <div class="accent-box">
+                    <p class="text-white font-bold mb-1 text-sm uppercase tracking-widest">Understanding the Reality</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">“Church hurt” refers to the emotional, psychological, or spiritual harm inflicted by church leaders or fellow believers. It can leave deep wounds, but recognizing your pain is valid is the first step toward healing.</p>
+                    
+                    <strong class="text-xs uppercase text-white block mb-2 tracking-widest">Sources of Church Hurt:</strong>
+                    <ul class="list-disc list-inside text-xs text-gray-400 space-y-1 mb-4">
+                        <li><strong>Misuse of Spiritual Authority:</strong> Leaders using scripture or spiritual language to control, shame, or exploit others.</li>
+                        <li><strong>Relational Harm:</strong> Gossip, betrayal, exclusion, or failure of the church to support you in a crisis.</li>
+                        <li><strong>Toxic Church Culture:</strong> Prioritizing numerical growth over people or allowing immature/unhealthy patterns to go unchecked.</li>
+                    </ul>
+
+                    <strong class="text-xs uppercase text-white block mb-2 tracking-widest">Steps for Healing:</strong>
+                    <ul class="list-disc list-inside text-xs text-gray-400 space-y-1">
+                        <li><strong>Grieve &amp; Detangle:</strong> Allow yourself to feel the pain. It is important to separate your personal faith and view of God from the imperfect, fallible humans who caused your pain.</li>
+                        <li><strong>Set Boundaries:</strong> You have the right to step away from a toxic environment or take a break from attending services to protect your mental health.</li>
+                        <li><strong>Seek Support:</strong> Healing is rarely a solo journey. Speaking with a licensed mental health professional can help you process religious trauma or deep-seated emotional wounds.</li>
+                    </ul>
+                </div>
+
+                <h4 class="text-white font-black uppercase text-sm mb-4 tracking-widest">Upcoming Speakers:</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                    <div class="p-4 bg-white/5 border border-white/10">
+                        <span class="text-teal-400 font-bold block mb-1">June 28</span>
+                        <strong class="text-white block">Sister Fiona Harewood</strong>
+                        <span class="text-xs text-gray-400 italic">"God Didn't Hurt You, People Did."</span>
+                    </div>
+                    <div class="p-4 bg-white/5 border border-white/10">
+                        <span class="text-teal-400 font-bold block mb-1">July 26</span>
+                        <strong class="text-white block">Sister Vernie Charles</strong>
+                        <span class="text-xs text-gray-400 italic">"Not Everyone Deserves Access to You."</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm border-t border-white/5 pt-6 text-gray-400">
+                    <div><strong>August 22:</strong> End It Now - Special presentation from Sister Legett</div>
+                </div>
+
+                <p class="mt-6 text-xs text-center text-gray-500">
+                    Because this is such an important series, the full calendar and topic details are already live on our website, so you can preview what’s to come. Just head over to the <a href="https://stroudsburgsdachurch.org/womens-ministry/" target="_blank" class="inline-link">women’s ministry section of the church website</a> to see the complete listing.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SABBATH SCHOOL MOMENTUM (MOVED TO END) -->
         <section id="momentum">
             <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
             <div class="glass-card">
@@ -189,7 +411,7 @@
                 <p class="mb-8 text-gray-200">As you continue to study this week, ask God not just to teach you how to witness, but to shape you into someone whose life makes others curious about Him. Sometimes the most powerful sermon you will ever preach is the one you live.</p>
 
                 <!-- INTERACTIVE DISCUSSION PANEL -->
-                <div class="reflection-panel rounded">
+                <div class="quiz-panel rounded">
                     <h4 class="font-black uppercase mb-4 text-xs tracking-widest text-black"><i class="fas fa-comments mr-2"></i>Sabbath Discussion Prep</h4>
                     <p class="font-bold text-black mb-3">Food for Thought:</p>
                     <p class="text-sm text-black italic bg-white/20 p-4 rounded leading-relaxed font-semibold">
@@ -199,7 +421,7 @@
             </div>
         </section>
 
-        <!-- SECTION 2: RELIGIOUS LIBERTY (UNABRIDGED) -->
+        <!-- SECTION 5: RELIGIOUS LIBERTY (MOVED TO END) -->
         <section id="liberty">
             <h2 class="section-title">Religious <span>Liberty</span></h2>
             <div class="glass-card">
@@ -244,7 +466,7 @@
             </div>
         </section>
 
-        <!-- SECTION 3: CONNECT & GIVE (STABLE FOOTER PORTALS) -->
+        <!-- SECTION 6: CONNECT & GIVE (STABLE FOOTER PORTALS) -->
         <section id="connect">
             <h2 class="section-title">Connect <span>&amp; Give</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -256,14 +478,14 @@
                                 <p class="font-bold text-white">Prayer Meeting &amp; Vespers</p>
                                 <p class="text-xs text-gray-500">Wed/Fri @ 7:15 PM</p>
                             </div>
-                            <a href="https://us02web.zoom.us/j/83627497272?pwd=vMBxBKQnDQYllVfvCsjhm47Hr3kZIL.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+                            <a href="https://www.stroudsburgsda.org/vespers" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
                         </div>
                         <div class="flex justify-between items-center border-b border-white/5 pb-3">
                             <div>
                                 <p class="font-bold text-white">Evening Prayer Line</p>
                                 <p class="text-xs text-gray-500">Mon/Thu @ 8:00 PM</p>
                             </div>
-                            <a href="https://us02web.zoom.us/j/87137997104?pwd=gclaZWpBp5sSDvLuf6dGJtdbaTbSKu.1" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
+                            <a href="https://www.stroudsburgsda.org/prayer" target="_blank" class="text-teal-400 hover:text-white transition"><i class="fas fa-video fa-lg"></i></a>
                         </div>
                         <div class="flex justify-between items-center">
                             <div>
