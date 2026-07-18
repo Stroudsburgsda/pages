@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midweek Momentum | Stroudsburg SDA</title>
+    <title>Sabbath Announcements | Stroudsburg SDA</title>
     
     <!-- Dependencies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -25,7 +25,7 @@
             color: white;
             font-family: 'Inter', sans-serif;
             margin: 0;
-            line-height: 1.75;
+            line-height: 1.7;
         }
 
         header {
@@ -102,6 +102,22 @@
             margin-bottom: 30px;
         }
 
+        /* Calendar Row Styling */
+        .calendar-row {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .calendar-row:last-child { border-bottom: none; }
+        .date-box {
+            min-width: 80px;
+            text-align: center;
+            margin-right: 30px;
+        }
+        .date-box .month { font-size: 0.7rem; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; }
+        .date-box .day { font-size: 1.8rem; font-weight: 900; line-height: 1; }
+
         .accent-box {
             border-left: 3px solid var(--accent-teal);
             background: rgba(40, 204, 158, 0.05);
@@ -109,8 +125,20 @@
             margin: 25px 0;
         }
 
-        /* Highlight Boxes */
-        .highlight-panel {
+        /* Inline Flyer Frame */
+        .flyer-frame {
+            border: 1px solid #222;
+            border-radius: 4px;
+            max-width: 480px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 25px auto;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+        }
+
+        /* Interactive Quiz & Discussion Elements */
+        .quiz-panel {
             background: var(--accent-teal);
             color: var(--black);
             padding: 35px;
@@ -148,74 +176,258 @@
 
     <header>
         <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-        <h1>MIDWEEK <span>MOMENTUM</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath Study Prep • July 18, 2026</p>
+        <h1>STROUDSBURG <span>SABBATH</span></h1>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, July 18, 2026</p>
     </header>
 
     <nav class="nav-wrapper">
         <div class="nav-container">
+            <a href="#today" class="nav-link">Today</a>
+            <a href="#calendar" class="nav-link" style="color: var(--accent-teal);">Calendar</a>
+            <a href="#education" class="nav-link">Graduates</a>
+            <a href="#wm-series" class="nav-link">Women's Ministry</a>
+            <a href="#health" class="nav-link">Health Fair</a>
             <a href="#momentum" class="nav-link">Sabbath School</a>
             <a href="#prophecy" class="nav-link">Prophecy Watch</a>
-            <a href="#connect" class="nav-link">Midweek Zoom</a>
+            <a href="#connect" class="nav-link">Connect</a>
         </div>
     </nav>
 
     <div class="page-content">
         
-        <!-- SECTION 1: SABBATH SCHOOL MOMENTUM -->
+        <!-- SECTION 1: TODAY AT STROUDSBURG -->
+        <section id="today">
+            <h2 class="section-title">Today at <span>Stroudsburg</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <!-- Sabbath Schedule Status Card -->
+                <div class="glass-card mb-0" style="border-left: 4px solid var(--accent-teal);">
+                    <h3 class="text-teal-400 font-black uppercase text-sm mb-4 tracking-widest">Sabbath Schedule</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white/5 border border-white/10 rounded">
+                            <p class="text-xs font-bold text-teal-400 uppercase tracking-wider mb-1"><i class="fas fa-clock mr-2"></i>AYS Program Resumed</p>
+                            <p class="text-sm text-gray-200 font-semibold mb-2">AYS meets today at 5:00 PM.</p>
+                            <p class="text-xs text-gray-400 leading-relaxed">Please remember that there will be no afternoon Bible Class today (recess continues for Bible Class through July).</p>
+                        </div>
+                        <div class="p-4 bg-white/5 border border-white/10 rounded">
+                            <p class="text-xs font-bold text-teal-400 uppercase tracking-wider mb-1"><i class="fas fa-users-class mr-2"></i>Men's Ministry Meeting</p>
+                            <p class="text-sm text-gray-200 font-semibold">There will be a men’s ministry meeting immediately after the service today in the classroom.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Weekly Zoom / In-Person Meetings Schedule Card -->
+                <div class="glass-card mb-0">
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Weekly Services Rhythm</h3>
+                    <ul class="space-y-3 text-xs text-gray-400">
+                        <li><strong>Wed/Fri @ 7:15 PM:</strong> Prayer Meeting &amp; Friday Evening Vesper continue on Zoom.</li>
+                        <li><strong>Mon/Thu @ 8:00 - 8:30 PM:</strong> Closer Walk Prayer Line on Zoom.</li>
+                        <li><strong>Every 1st &amp; 3rd Tuesday @ 10:00 AM:</strong> New Beginnings Senior Ministry meets at the Community Service Center.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CALENDAR OF EVENTS -->
+        <section id="calendar">
+            <h2 class="section-title">Sabbath <span>Calendar</span></h2>
+            <div class="glass-card">
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jul</div><div class="day">12-20</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">PA Conference Event</p>
+                        <p class="text-gray-400 text-sm">Pennsylvania Conference Camp Meeting running at Blue Mountain Academy.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jul</div><div class="day">18</div></div>
+                    <div>
+                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest">Today's Services</p>
+                        <p class="text-gray-400 text-sm">AYS Resumes at 5:00 PM. Men's Ministry meeting held immediately post-divine service.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jul</div><div class="day">25</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Education Department</p>
+                        <p class="text-gray-400 text-sm">3:00 PM: Graduate Honors Service recognizing our 2026 graduates.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Jul</div><div class="day">26</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry</p>
+                        <p class="text-gray-400 text-sm">Restoration Hour of Prayer: Sis. Vernie Charles ("Not Everyone Deserves Access to You.")</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Aug</div><div class="day">22</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry Event</p>
+                        <p class="text-gray-400 text-sm">End It Now program presentation with guest speaker Sister Legett.</p>
+                    </div>
+                </div>
+                <div class="calendar-row" style="border-left: 3px solid var(--accent-teal); padding-left: 10px;">
+                    <div class="date-box"><div class="month">Aug</div><div class="day">23</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Community Outreach</p>
+                        <p class="text-teal-400 text-sm font-bold">12:00 PM: Stroudsburg Community Health Fair and Back-to-School Backpack Drive.</p>
+                    </div>
+                </div>
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Aug</div><div class="day">30</div></div>
+                    <div>
+                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry Event</p>
+                        <p class="text-gray-400 text-sm">SOJO Spa Day (Headcount and transportation reservations needed ASAP).</p>
+                    </div>
+                </div>
+
+                <!-- SISTER PATRICIA & SHUT-IN PRAYER DETAILS -->
+                <div class="accent-box" style="margin-top: 30px;">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-heart text-teal-400 mr-2"></i>Church Care &amp; Visitation</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">Please continue to hold <strong>Sister Patricia Francis</strong> in your daily prayers and consider visiting her at the facility:</p>
+                    <div class="mb-4">
+                        <p class="text-sm text-white font-bold">Forest Hill Rehab Center</p>
+                        <p class="text-xs text-gray-400">1000 Evergreen Ave, Weatherly, PA 18255</p>
+                    </div>
+                    <div class="border-t border-white/5 pt-3">
+                        <p class="text-xs text-teal-400 font-bold uppercase tracking-wider mb-1">Remember Our Sick &amp; Shut-In Members</p>
+                        <p class="text-xs text-gray-400 leading-relaxed">Let us commit to lifting all of our sick, homebound, and shut-in brothers and sisters in regular prayer, calling them to check in, and sharing the love of our church community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: EDUCATION DEPARTMENT -->
+        <section id="education">
+            <h2 class="section-title">Education <span>Department</span></h2>
+            <div class="glass-card" style="border-top: 4px solid var(--accent-teal);">
+                <h3 class="text-teal-400 font-black uppercase text-sm mb-3 tracking-widest"><i class="fas fa-graduation-cap mr-2"></i>Graduate Honors Service</h3>
+                <p class="text-sm text-gray-200 leading-relaxed mb-4">
+                    Calling all 2026 graduates! If you have not yet completed the graduation form located on the bulletin board in the lobby, please do so **ASAP**. 
+                </p>
+                <div class="p-4 bg-white/5 border border-white/10 rounded mb-4">
+                    <p class="text-sm text-white font-bold mb-1">Honors Service Details</p>
+                    <p class="text-xs text-gray-400">We will officially honor our 2026 graduates during an upcoming special youth service:</p>
+                    <p class="text-sm text-teal-400 font-semibold mt-1">July 25th, 2026 at 3:00 PM (AY Service)</p>
+                </div>
+                <p class="text-xs text-gray-400">
+                    We invite our entire church family to plan to attend to support, bless, and congratulate this year's hard-working graduates as they mark this milestone.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: WOMEN'S MINISTRY -->
+        <section id="wm-series">
+            <h2 class="section-title">Women's <span>Ministry</span></h2>
+            <div class="glass-card">
+                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">Church Hurt Series</h3>
+                <p class="text-teal-400 font-bold mb-6 italic text-sm">Restoration Hour of Prayer (Upcoming Quarter)</p>
+                
+                <p class="mb-6 text-gray-200">Women’s Ministry is planning a powerful and deeply meaningful quarter. The Restoration Hour of Prayer will continue to cover the important topic of “Church Hurt.”</p>
+                
+                <div class="accent-box">
+                    <p class="text-white font-bold mb-1 text-xs uppercase tracking-widest text-teal-400">Next Sunday's Service Details</p>
+                    <p class="text-sm text-white font-semibold mb-2">Restoration Hour of Prayer — Next Sunday, July 26th</p>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        We will continue our healing and restoration discussion next Sunday. Our speaker will be <strong>Sister Vernie Charles</strong>. Everyone—men, women, and youth—is cordially invited to attend and benefit from this powerful message.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                    <div class="p-4 bg-white/5 border border-white/10 rounded">
+                        <span class="text-teal-400 font-bold block mb-1">July 26</span>
+                        <strong class="text-white block">Sister Vernie Charles</strong>
+                        <span class="text-xs text-gray-400 italic">"Not Everyone Deserves Access to You."</span>
+                    </div>
+                    <div class="p-4 bg-white/5 border border-white/10 rounded">
+                        <span class="text-teal-400 font-bold block mb-1">August 22</span>
+                        <strong class="text-white block">Sister Legett</strong>
+                        <span class="text-xs text-gray-400 italic">"End It Now Campaign Presentation"</span>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-white/5 border border-white/10 rounded mb-6">
+                    <h4 class="text-white uppercase font-bold text-xs tracking-widest mb-2"><i class="fas fa-spa text-teal-400 mr-2"></i>SOJO Spa Day — August 30th</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">
+                        Ladies, if you plan on attending our upcoming fellowship and relaxation retreat at **SOJO Spa Day on August 30th**, please coordinate with our ministry leadership ASAP. A precise headcount is required to secure group reservations and finalize transportation arrangements.
+                    </p>
+                    <p class="text-xs text-teal-400 font-bold">Please contact immediately:</p>
+                    <ul class="list-disc list-inside text-xs text-gray-400 space-y-1 mt-1">
+                        <li>Sister Jean-Marie Williams</li>
+                        <li>Sister Mfon Joseph</li>
+                        <li>Sister Audrey Yansen</li>
+                    </ul>
+                </div>
+
+                <p class="mt-6 text-xs text-center text-gray-500">
+                    The full series calendar and topic details are live on our website, so you can preview what’s to come. Just head over to the <a href="https://stroudsburgsdachurch.org/womens-ministry/" target="_blank" class="inline-link">women’s ministry section of the church website</a> to see the complete listing.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 5: HEALTH MINISTRY -->
+        <section id="health">
+            <h2 class="section-title">Health <span>Ministry</span></h2>
+            <div class="glass-card">
+                <h3 class="text-xl font-bold mb-2 text-white uppercase tracking-wider">Stroudsburg Community Health Fair</h3>
+                <p class="text-teal-400 font-bold mb-6 italic text-sm">Sunday, August 23rd @ 12:00 PM</p>
+                
+                <p class="mb-6 text-gray-200">
+                    This promises to be a vital day of community service and outreach! Plan to join us for an afternoon offering screenings, educational resources, and activities for the community:
+                </p>
+                
+                <ul class="list-disc list-inside text-xs text-gray-400 space-y-2 mb-6 ml-2">
+                    <li><strong>Resource Booths:</strong> Operated by several prominent county and community organizations.</li>
+                    <li><strong>Back-to-School Backpack Drive:</strong> Providing school supplies for neighborhood kids.</li>
+                    <li><strong>Free Screenings:</strong> Blood pressure checks and blood sugar testings.</li>
+                    <li><strong>Wellness Classes:</strong> Practical exercise demonstrations and nutritional instruction.</li>
+                    <li><strong>Barber Services:</strong> Local barbers on site offering cuts for students.</li>
+                </ul>
+
+                <p class="text-xs text-teal-400 font-bold uppercase tracking-widest text-center mb-6">
+                    Mark your calendars, invite your friends, and plan to support this important community outreach initiative!
+                </p>
+
+                <!-- OUTREACH CAMPAIGN FLYER IMAGE EMBED -->
+                <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/07/Health-Fair.jpeg" alt="Community Health Fair Flyer" class="flyer-frame" />
+            </div>
+        </section>
+
+        <!-- SECTION 6: SABBATH SCHOOL MOMENTUM -->
         <section id="momentum">
             <h2 class="section-title">Sabbath School <span>Momentum</span></h2>
             <div class="glass-card">
                 <p class="text-teal-400 font-bold mb-2 uppercase tracking-widest text-xs">Lesson for Sabbath 7/18/2026</p>
                 <h3 class="text-2xl font-black mb-6 uppercase tracking-tight">Unity in Christ: What Kind of Church Are We Becoming?</h3>
                 
-                <p class="mb-4 text-gray-200">
-                    This week, we’re studying the topic Unity in Christ. As we go through the study, it’s worth asking ourselves a simple but searching question: <strong>What kind of church are we becoming?</strong>
-                </p>
-
-                <p class="mb-4 text-gray-200">
-                    Paul's first letter to the Corinthians reminds us that one of the greatest threats to the church isn't always persecution from the outside; it can be division from within. The church in Corinth wasn't divided over doctrine alone. Personal preferences, favorite leaders, pride, and competition had quietly become more important than their shared identity in Christ. The result was fractured relationships and a weakened witness.
-                </p>
+                <p class="mb-4 text-gray-200">This week, we’re studying the topic Unity in Christ. As we go through the study, it’s worth asking ourselves a simple but searching question: <strong>What kind of church are we becoming?</strong></p>
+                
+                <p class="mb-4 text-gray-200">Paul's first letter to the Corinthians reminds us that one of the greatest threats to the church isn't always persecution from the outside; it can be division from within. The church in Corinth wasn't divided over doctrine alone. Personal preferences, favorite leaders, pride, and competition had quietly become more important than their shared identity in Christ. The result was fractured relationships and a weakened witness.</p>
 
                 <div class="accent-box">
                     <p class="text-white font-bold text-lg mb-2">Is Corinth Closer Than We Think?</p>
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        If we're honest, Corinth doesn't feel all that distant. Corinth almost feels like Stroudsburg. It's easy to rally around people, ministries, traditions, or worship styles. We can become passionate about being "right" while forgetting that Jesus prayed for His followers to be one.
-                    </p>
+                    <p class="text-gray-200 italic">If we're honest, Corinth doesn't feel all that distant. Corinth almost feels like Stroudsburg. It's easy to rally around people, ministries, traditions, or worship styles. We can become passionate about being "right" while forgetting that Jesus prayed for His followers to be one. Unity doesn't require that we all think alike or express our faith in identical ways. Rather, biblical unity means that Christ remains at the center, shaping our attitudes, our conversations, and our relationships.</p>
                 </div>
 
-                <p class="mb-4 text-gray-200">
-                    Unity doesn't require that we all think alike or express our faith in identical ways. Rather, biblical unity means that Christ remains at the center, shaping our attitudes, our conversations, and our relationships.
-                </p>
-
-                <p class="mb-4 text-gray-200">
-                    This week's lesson invites us to examine not only what we believe but how we treat one another. Paul redirects the Corinthians away from human leaders and back to the One who was crucified for them. The church is strongest when Christ is the focus and every member understands that we are part of one body with different gifts, serving the same Savior.
-                </p>
-
-                <p class="mb-4 text-gray-200">
-                    The lesson also embedded a powerful reminder about spiritual maturity. Mature believers don't measure success by popularity or influence. Instead, they embrace the "mind of Christ," a life marked by humility, self-sacrifice, and servant leadership. The Cross isn't just the means of our salvation; it becomes the pattern for how we live with one another every day.
-                </p>
-
-                <p class="mb-4 text-gray-200">
-                    The world is searching for authentic community. One of the greatest testimonies the church can offer isn't perfect agreement on every preference; it's a community of believers who genuinely love one another because Jesus has transformed them.
-                </p>
-
-                <p class="mb-6 text-gray-200">
-                    As we continue to walk through this new quarter together, may our study do more than increase our biblical knowledge. May it reshape our hearts, deepen our love for Christ, and strengthen the bonds that unite His family.
-                </p>
+                <p class="mb-4 text-gray-200">This week's lesson invites us to examine not only what we believe but how we treat one another. Paul redirects the Corinthians away from human leaders and back to the One who was crucified for them. The church is strongest when Christ is the focus and every member understands that we are part of one body with different gifts, serving the same Savior.</p>
+                
+                <p class="mb-4 text-gray-200">The lesson also embedded a powerful reminder about spiritual maturity. Mature believers don't measure success by popularity or influence. Instead, they embrace the "mind of Christ," a life marked by humility, self-sacrifice, and servant leadership. The Cross isn't just the means of our salvation; it becomes the pattern for how we live with one another every day.</p>
+                
+                <p class="mb-8 text-gray-200">The world is searching for authentic community. One of the greatest testimonies the church can offer isn't perfect agreement on every preference; it's a community of believers who genuinely love one another because Jesus has transformed them. As we continue to walk through this new quarter together, may our study do more than increase our biblical knowledge. May it reshape our hearts, deepen our love for Christ, and strengthen the bonds that unite His family.</p>
 
                 <!-- INTERACTIVE DISCUSSION PANEL -->
-                <div class="highlight-panel rounded">
+                <div class="quiz-panel rounded">
                     <h4 class="font-black uppercase mb-4 text-xs tracking-widest text-black"><i class="fas fa-comments mr-2"></i>Sabbath Discussion Prep</h4>
                     <p class="font-bold text-black mb-3">Food for Thought:</p>
                     <p class="text-sm text-black italic bg-white/20 p-4 rounded leading-relaxed font-semibold">
-                        "Growing in Christ isn't simply about accumulating biblical knowledge; it is about allowing that knowledge to transform the way we think, serve, and love others. How is your spiritual maturity strengthening the unity of Christ's body rather than contributing to its divisions?"
+                        "Growing in Christ isn't simply about accumulating biblical knowledge; it's about allowing that knowledge to transform the way we think, serve, and love others. How is your spiritual maturity strengthening the unity of Christ's body rather than contributing to its divisions?"
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 2: MIDWEEK PROPHECY WATCH -->
+        <!-- SECTION 7: PROPHECY WATCH -->
         <section id="prophecy">
             <h2 class="section-title">Prophecy <span>Watch</span></h2>
             <div class="glass-card">
@@ -231,7 +443,7 @@
                 </p>
 
                 <div class="accent-box">
-                    <p class="text-white font-bold text-lg mb-2"><i class="fas fa-gavel text-teal-400 mr-2"></i>The Babel Blueprint</p>
+                    <p class="text-white font-bold text-lg mb-2"><i class="fas fa-landmark text-teal-400 mr-2"></i>The Babel Blueprint</p>
                     <p class="text-sm text-gray-300 leading-relaxed mb-4">
                         This is not a new idea. The Bible first introduces it in <strong>Genesis 11</strong> at the Tower of Babel. Humanity sought unity, not to glorify God, but to exalt itself. Their ambition was to build a society independent of their Creator. God intervened, confusing their languages and scattering the people across the earth.
                     </p>
@@ -276,13 +488,12 @@
             </div>
         </section>
 
-        <!-- SECTION 3: CONNECT & GIVE (STABLE MIDWEEK ACCESS PORTALS) -->
+        <!-- SECTION 8: CONNECT & GIVE (STABLE FOOTER PORTALS) -->
         <section id="connect">
-            <h2 class="section-title">Connect <span>With Us</span></h2>
+            <h2 class="section-title">Connect <span>&amp; Give</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Service Links -->
                 <div class="glass-card !p-8">
-                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-5"><i class="fas fa-video mr-2"></i>Midweek Zoom Links</h3>
+                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-5">Service Links</h3>
                     <div class="space-y-3 text-sm">
                         <div class="flex justify-between items-center border-b border-white/5 pb-3">
                             <div>
@@ -307,11 +518,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Stewardship Card -->
                 <div class="glass-card !p-8 flex flex-col justify-center items-center text-center">
-                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-5"><i class="fas fa-heart mr-2"></i>Online Giving</h3>
-                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-6 py-3 font-bold uppercase text-xs text-center hover:bg-teal-400 transition mb-6 w-full">Give Tithe &amp; Offering</a>
+                    <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-5">Tithe &amp; Offerings</h3>
+                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-6 py-3 font-bold uppercase text-xs text-center hover:bg-teal-400 transition mb-6 w-full">Give Online Now</a>
                     <div class="flex gap-6 text-2xl text-gray-500">
                         <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a>
