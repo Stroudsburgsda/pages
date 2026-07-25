@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midweek Announcements | Stroudsburg SDA</title>
+    <title>Sabbath Announcements | Stroudsburg SDA</title>
     
     <!-- Dependencies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -93,18 +93,19 @@
 
         section {
             padding-top: 40px;
-            margin-bottom: 80px;
+            margin-bottom: 70px;
         }
 
         .glass-card {
             background: #0d0d0d;
-            padding: 40px;
+            padding: 35px;
             border: 1px solid #1a1a1a;
             margin-bottom: 30px;
+            border-radius: 12px;
         }
 
-        .hero-flyer-card {
-            background: linear-gradient(145deg, #121212 0%, #080808 100%);
+        .outreach-hero-card {
+            background: linear-gradient(145deg, #0d1e19 0%, #080d0b 100%);
             border: 2px solid var(--accent-teal);
             box-shadow: 0 10px 40px rgba(40, 204, 158, 0.15);
         }
@@ -120,7 +121,7 @@
         .date-box {
             min-width: 80px;
             text-align: center;
-            margin-right: 30px;
+            margin-right: 25px;
         }
         .date-box .month { font-size: 0.7rem; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; }
         .date-box .day { font-size: 1.8rem; font-weight: 900; line-height: 1; }
@@ -128,15 +129,16 @@
         .accent-box {
             border-left: 3px solid var(--accent-teal);
             background: rgba(40, 204, 158, 0.05);
-            padding: 30px;
-            margin: 25px 0;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
         }
 
-        /* Hero Flyer Frame */
-        .hero-flyer-frame {
+        /* Inline Flyer Frame */
+        .flyer-frame {
             border: 1px solid #333;
             border-radius: 8px;
-            max-width: 650px;
+            max-width: 550px;
             width: 100%;
             height: auto;
             display: block;
@@ -148,7 +150,7 @@
             font-size: 2rem;
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             border-bottom: 2px solid #1a1a1a;
             padding-bottom: 10px;
         }
@@ -161,15 +163,16 @@
             text-decoration: underline;
         }
 
-        .yt-button {
-            background-color: #ff0000;
-            color: white;
+        .cta-button {
+            background-color: var(--accent-teal);
+            color: black;
+            font-weight: 900;
             transition: all 0.3s ease;
         }
-        .yt-button:hover {
-            background-color: #cc0000;
+        .cta-button:hover {
+            background-color: #20aa83;
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 10px 20px rgba(40, 204, 158, 0.3);
         }
 
         footer {
@@ -186,14 +189,14 @@
 
     <header>
         <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-        <h1>STROUDSBURG <span>MIDWEEK</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Wednesday, July 22, 2026</p>
+        <h1>STROUDSBURG <span>SABBATH</span></h1>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 4px; font-size: 0.65rem;">Sabbath, July 25, 2026</p>
     </header>
 
     <nav class="nav-wrapper">
         <div class="nav-container">
-            <a href="#series-spotlight" class="nav-link" style="color: var(--accent-teal);">Series Spotlight</a>
-            <a href="#weekly-rhythm" class="nav-link">Weekly Services</a>
+            <a href="#today" class="nav-link" style="color: var(--accent-teal);">Today</a>
+            <a href="#outpost" class="nav-link">Mission Outpost</a>
             <a href="#upcoming" class="nav-link">Upcoming Events</a>
             <a href="#care" class="nav-link">Church Care</a>
             <a href="#connect" class="nav-link">Connect &amp; Give</a>
@@ -202,82 +205,84 @@
 
     <div class="page-content">
         
-        <!-- SECTION 1: FRONT & CENTER SERIES SPOTLIGHT -->
-        <section id="series-spotlight">
-            <div class="glass-card hero-flyer-card p-6 md:p-10 text-center rounded-xl">
-                <div class="inline-block bg-teal-500/10 text-teal-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3 border border-teal-500/30">
-                    <i class="fas fa-fire mr-1"></i> Happening This Week
-                </div>
-                <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tight text-white mb-2">
-                    Summer Series: <span class="text-teal-400">END GAME</span>
-                </h2>
-                <p class="text-gray-300 text-sm md:text-base max-w-2xl mx-auto mb-6">
-                    Join us for our powerful ongoing summer series! Experience deep prophetic insights, inspiring messages, and warm Christian fellowship as we explore hope in the last days.
-                </p>
-
-                <!-- FRONT AND CENTER FLYER IMAGE -->
-                <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="block transition hover:opacity-95">
-                    <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/05/RL-Summer-1.png" alt="END GAME Summer Series Flyer" class="hero-flyer-frame" />
-                </a>
-
-                <!-- YOUTUBE BROADCAST CALL TO ACTION CARD -->
-                <div class="mt-8 bg-white/5 border border-white/10 rounded-lg p-6 max-w-2xl mx-auto">
-                    <h3 class="text-lg font-bold text-white mb-2 uppercase tracking-wide">
-                        <i class="fab fa-youtube text-red-500 mr-2"></i> Can't Join Us In Person?
-                    </h3>
-                    <p class="text-xs md:text-sm text-gray-300 mb-5 leading-relaxed">
-                        Whether you are traveling, recovering at home, or located far away, you don't have to miss a single night! We invite everyone to tune in live on our official YouTube channel and worship with us online.
+        <!-- SECTION 1: TODAY AT STROUDSBURG -->
+        <section id="today">
+            <h2 class="section-title">Today at <span>Stroudsburg</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Graduate Honors Highlight Card -->
+                <div class="glass-card mb-0" style="border-left: 4px solid var(--accent-teal);">
+                    <div class="inline-block bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3 border border-teal-500/30">
+                        <i class="fas fa-graduation-cap mr-1"></i> Special Service Today
+                    </div>
+                    <h3 class="text-xl font-black text-white uppercase mb-2">2026 Graduate Honors</h3>
+                    <p class="text-teal-400 text-sm font-bold mb-3"><i class="far fa-clock mr-1"></i> 3:00 PM – 4:00 PM</p>
+                    <p class="text-gray-300 text-xs md:text-sm leading-relaxed mb-4">
+                        Join us in person this afternoon as we honor and celebrate our 2026 graduates! Let us wrap our young people in love and prayer as they achieve this landmark milestone.
                     </p>
-                    <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="yt-button px-8 py-3.5 rounded-md font-bold uppercase text-xs inline-flex items-center gap-2 tracking-wider shadow-lg">
-                        <i class="fab fa-youtube text-base"></i> Tune In Live On YouTube
-                    </a>
+                    <p class="text-xs text-gray-400 font-bold border-t border-white/10 pt-3">
+                        <i class="fas fa-users text-teal-400 mr-1"></i> AYS Service follows immediately at 5:00 PM.
+                    </p>
+                </div>
+
+                <!-- Weekly Rhythm Schedule Card -->
+                <div class="glass-card mb-0">
+                    <h3 class="text-white font-bold uppercase text-xs tracking-widest mb-4">
+                        <i class="fas fa-clock mr-2"></i> Weekly Worship Rhythm
+                    </h3>
+                    <ul class="space-y-3 text-xs text-gray-300">
+                        <li class="pb-2 border-b border-white/10">
+                            <strong class="text-teal-400 block mb-0.5">Wednesdays &amp; Fridays @ 7:15 PM</strong>
+                            Prayer Meeting (Wednesdays) &amp; Vespers (Fridays) live on Zoom.
+                        </li>
+                        <li class="pb-2 border-b border-white/10">
+                            <strong class="text-teal-400 block mb-0.5">Mondays &amp; Thursdays @ 8:00 - 8:30 PM</strong>
+                            Closer Walk Prayer Line on Zoom.
+                        </li>
+                        <li>
+                            <strong class="text-teal-400 block mb-0.5">1st &amp; 3rd Tuesdays @ 10:00 AM</strong>
+                            New Beginnings Senior Ministry at the Community Service Center.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 2: WEEKLY SERVICES RHYTHM -->
-        <section id="weekly-rhythm">
-            <h2 class="section-title">Weekly <span>Services</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <div class="glass-card mb-0" style="border-left: 4px solid var(--accent-teal);">
-                    <h3 class="text-teal-400 font-black uppercase text-xs tracking-widest mb-4">
-                        <i class="fas fa-video mr-2"></i> Zoom Services This Week
-                    </h3>
-                    <div class="space-y-4 text-xs md:text-sm">
-                        <div class="p-3 bg-white/5 rounded border border-white/10">
-                            <p class="text-white font-bold mb-1">Wednesday &amp; Friday @ 7:15 PM</p>
-                            <p class="text-gray-400">Prayer Meeting (Wednesdays) &amp; Friday Evening Vespers continue live on Zoom.</p>
-                            <a href="https://www.stroudsburgsda.org/vespers" target="_blank" class="inline-link text-xs mt-2 inline-block">Join Zoom Room &rarr;</a>
-                        </div>
-                        <div class="p-3 bg-white/5 rounded border border-white/10">
-                            <p class="text-white font-bold mb-1">Monday &amp; Thursday @ 8:00 - 8:30 PM</p>
-                            <p class="text-gray-400">Closer Walk Prayer Line on Zoom. Start and end your week in prayer.</p>
-                            <a href="https://www.stroudsburgsda.org/prayer" target="_blank" class="inline-link text-xs mt-2 inline-block">Join Prayer Line &rarr;</a>
-                        </div>
+        <!-- SECTION 2: MISSION OUTPOST CALL TO ACTION -->
+        <section id="outpost">
+            <div class="glass-card outreach-hero-card p-6 md:p-10 text-center">
+                <div class="inline-block bg-teal-500/20 text-teal-300 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-3 border border-teal-500/40">
+                    <i class="fas fa-bullhorn mr-1"></i> Conference-Wide Call To Action
+                </div>
+                <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tight text-white mb-2">
+                    Church Family! <span class="text-teal-400">We Need You!</span>
+                </h2>
+                <p class="text-teal-400 font-bold text-sm uppercase tracking-wider mb-4">
+                    Mission Outpost Outreach | Sabbath, August 29, 2026
+                </p>
+                <p class="text-gray-300 text-xs md:text-sm max-w-2xl mx-auto mb-6 leading-relaxed">
+                    This year, we are joining members from across the Pennsylvania Conference at <strong>Easton SDA Church</strong> for a joint community outreach effort! We will carpool to Easton to serve alongside our sister church and be a blessing to the local community.
+                </p>
+
+                <!-- Outpost Details Box -->
+                <div class="bg-black/60 border border-teal-500/30 rounded-lg p-5 max-w-xl mx-auto text-left mb-6 space-y-3 text-xs md:text-sm">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-teal-400 mt-1"></i>
+                        <div><strong class="text-white">Goal:</strong> 20–30 members representing Stroudsburg!</div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-tshirt text-teal-400 mt-1"></i>
+                        <div><strong class="text-white">FREE Outreach T-Shirts:</strong> Provided free of charge by the conference. (Please commit to attending if requesting a shirt!)</div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-hourglass-half text-red-400 mt-1"></i>
+                        <div><strong class="text-red-400">CRITICAL DEADLINE:</strong> RSVP &amp; T-shirt sizes needed by <u>Friday, July 31</u>!</div>
                     </div>
                 </div>
 
-                <div class="glass-card mb-0">
-                    <h3 class="text-white font-bold uppercase text-xs tracking-widest mb-4">
-                        <i class="fas fa-clock mr-2"></i> Upcoming Sabbath Schedule
-                    </h3>
-                    <ul class="space-y-3 text-xs text-gray-300">
-                        <li class="pb-2 border-b border-white/10">
-                            <strong class="text-teal-400 block mb-0.5">9:20 AM - Sabbath School</strong>
-                            Join us in person or via Zoom for interactive lesson study.
-                        </li>
-                        <li class="pb-2 border-b border-white/10">
-                            <strong class="text-teal-400 block mb-0.5">11:00 AM - Divine Worship</strong>
-                            Live in the sanctuary &amp; streamed on YouTube.
-                        </li>
-                        <li>
-                            <strong class="text-teal-400 block mb-0.5">3:00 PM - Special Youth / Graduate Honors (July 25)</strong>
-                            AY Graduate Honors Service recognizing our 2026 graduates.
-                        </li>
-                    </ul>
-                </div>
-
+                <a href="https://bit.ly/4bagJeq" target="_blank" class="cta-button px-8 py-4 rounded-md font-black uppercase text-xs inline-flex items-center gap-2 tracking-wider shadow-lg">
+                    <i class="fas fa-paper-plane text-sm"></i> Sign Up For Mission Outpost Now
+                </a>
             </div>
         </section>
 
@@ -286,24 +291,17 @@
             <h2 class="section-title">Upcoming <span>Events</span></h2>
             <div class="glass-card">
                 
+                <!-- Tomorrow: Women's Ministry -->
                 <div class="calendar-row" style="border-left: 3px solid var(--accent-teal); padding-left: 10px;">
-                    <div class="date-box"><div class="month">Jul</div><div class="day">25</div></div>
-                    <div>
-                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest"><i class="fas fa-graduation-cap mr-1"></i> Education Department</p>
-                        <p class="text-white text-sm font-bold">3:00 PM: 2026 Graduate Honors Service</p>
-                        <p class="text-gray-400 text-xs">All 2026 graduates are reminded to fill out the form in the lobby bulletin board ASAP!</p>
-                    </div>
-                </div>
-
-                <div class="calendar-row">
                     <div class="date-box"><div class="month">Jul</div><div class="day">26</div></div>
                     <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry</p>
+                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest"><i class="fas fa-heart mr-1"></i> Women's Ministry – Tomorrow</p>
                         <p class="text-white text-sm font-bold">Restoration Hour of Prayer: Sis. Vernie Charles</p>
-                        <p class="text-gray-400 text-xs">Continuing the "Church Hurt" series topic: <em>"Not Everyone Deserves Access to You."</em></p>
+                        <p class="text-gray-400 text-xs">Continuing our powerful "Church Hurt" series. Everyone is warmly invited to attend!</p>
                     </div>
                 </div>
 
+                <!-- Aug 22: End It Now -->
                 <div class="calendar-row">
                     <div class="date-box"><div class="month">Aug</div><div class="day">22</div></div>
                     <div>
@@ -313,26 +311,42 @@
                     </div>
                 </div>
 
-                <div class="calendar-row">
+                <!-- Aug 23: Community Health Fair -->
+                <div class="calendar-row" style="border-left: 3px solid var(--accent-teal); padding-left: 10px;">
                     <div class="date-box"><div class="month">Aug</div><div class="day">23</div></div>
                     <div>
-                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest"><i class="fas fa-heartbeat mr-1"></i> Health Ministry</p>
+                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest"><i class="fas fa-notes-medical mr-1"></i> Health Ministry</p>
                         <p class="text-white text-sm font-bold">12:00 PM: Stroudsburg Community Health Fair &amp; Backpack Drive</p>
-                        <p class="text-gray-400 text-xs">Free screenings, community booths, barber services, nutrition classes, and backpack giveaways.</p>
+                        <p class="text-gray-400 text-xs mb-3">Free health screenings, community booths, barber services, exercise/nutrition classes, and backpack giveaways.</p>
+                        <!-- Health Fair Flyer Thumbnail Embed -->
+                        <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2026/07/Health-Fair.jpeg" target="_blank" class="block">
+                            <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/07/Health-Fair.jpeg" alt="Health Fair Flyer" class="flyer-frame my-2 max-w-md" />
+                        </a>
                     </div>
                 </div>
 
+                <!-- Aug 29: Mission Outpost -->
+                <div class="calendar-row">
+                    <div class="date-box"><div class="month">Aug</div><div class="day">29</div></div>
+                    <div>
+                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest"><i class="fas fa-hands-helping mr-1"></i> Conference Outreach</p>
+                        <p class="text-white text-sm font-bold">Mission Outpost @ Easton SDA Church</p>
+                        <p class="text-gray-400 text-xs">Joint outreach day with sister churches. <a href="https://bit.ly/4bagJeq" target="_blank" class="inline-link">RSVP by July 31</a> for your free T-shirt.</p>
+                    </div>
+                </div>
+
+                <!-- Aug 30: SOJO Spa Day -->
                 <div class="calendar-row">
                     <div class="date-box"><div class="month">Aug</div><div class="day">30</div></div>
                     <div>
                         <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry</p>
                         <p class="text-white text-sm font-bold">SOJO Spa Day Retreat</p>
-                        <p class="text-gray-400 text-xs">Please contact Sis. Jean-Marie Williams, Sis. Mfon Joseph, or Sis. Audrey Yansen ASAP for headcount &amp; transit.</p>
+                        <p class="text-gray-400 text-xs"><strong>IMPORTANT:</strong> Headcount needed ASAP for transportation! Please contact Sis. Jean-Marie Williams, Sis. Mfon Joseph, or Sis. Audrey Yansen if you plan to attend.</p>
                     </div>
                 </div>
 
                 <p class="mt-6 text-xs text-center text-gray-400">
-                    For full series listings and details, visit the <a href="https://stroudsburgsdachurch.org/womens-ministry/" target="_blank" class="inline-link">Women's Ministry Portal</a> on our website.
+                    Explore topic listings and resources on the <a href="https://stroudsburgsdachurch.org/womens-ministry/" target="_blank" class="inline-link">Women's Ministry Portal</a>.
                 </p>
 
             </div>
@@ -344,13 +358,13 @@
             <div class="glass-card">
                 <div class="accent-box my-0">
                     <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-heart text-teal-400 mr-2"></i>Sick &amp; Shut-In Prayer List</h4>
-                    <p class="text-sm text-gray-300 leading-relaxed mb-3">Please keep <strong>Sister Patricia Francis</strong> and all our homebound members in your daily prayers and thoughts:</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-3">Please remember <strong>Sister Patricia Francis</strong> and all our homebound members in your daily prayers and thoughts:</p>
                     <div class="p-3 bg-white/5 rounded border border-white/10 mb-3">
                         <p class="text-sm text-white font-bold">Forest Hill Rehab Center</p>
                         <p class="text-xs text-gray-400">1000 Evergreen Ave, Weatherly, PA 18255</p>
                     </div>
                     <p class="text-xs text-gray-400 leading-relaxed">
-                        Reach out with a phone call, card, or visit to brighten their week with Christ's love!
+                        Reach out with a phone call, card, or visit to encourage them with Christ's love!
                     </p>
                 </div>
             </div>
@@ -390,7 +404,7 @@
 
                 <div class="glass-card !p-8 flex flex-col justify-center items-center text-center">
                     <h3 class="font-black text-teal-400 uppercase text-xs tracking-widest mb-5">Tithe &amp; Offerings</h3>
-                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-6 py-3 font-bold uppercase text-xs text-center hover:bg-teal-400 transition mb-6 w-full rounded">Give Online Now</a>
+                    <a href="https://www.stroudsburgsda.org/giving" target="_blank" class="bg-white text-black px-6 py-3 font-bold uppercase text-xs text-center hover:bg-teal-400 transition mb-6 w-full rounded font-bold">Give Online Now</a>
                     <div class="flex gap-6 text-2xl text-gray-500">
                         <a href="https://www.facebook.com/StroudsburgSDA" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/stroudsburg_sda" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-instagram"></i></a>
