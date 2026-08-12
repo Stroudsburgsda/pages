@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabbath Bulletin | Stroudsburg SDA Church</title>
+    <title>Midweek Momentum | Stroudsburg SDA Church</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,6 +16,7 @@
             --black: #000000;
             --gray-text: #999999;
             --yt-red: #ff0000;
+            --sky-accent: #38bdf8;
         }
 
         html { scroll-behavior: smooth; }
@@ -91,8 +92,8 @@
         }
 
         section {
-            padding-top: 30px;
-            margin-bottom: 50px;
+            padding-top: 20px;
+            margin-bottom: 45px;
         }
 
         .glass-card {
@@ -107,6 +108,12 @@
             background: linear-gradient(145deg, #0d1e19 0%, #080d0b 100%);
             border: 2px solid var(--accent-teal);
             box-shadow: 0 10px 40px rgba(40, 204, 158, 0.15);
+        }
+
+        .liberty-hero-card {
+            background: linear-gradient(145deg, #0f172a 0%, #080d14 100%);
+            border: 2px solid var(--sky-accent);
+            box-shadow: 0 10px 40px rgba(56, 189, 248, 0.12);
         }
 
         /* Calendar Row Styling */
@@ -133,6 +140,14 @@
             border-radius: 0 8px 8px 0;
         }
 
+        .sky-accent-box {
+            border-left: 3px solid var(--sky-accent);
+            background: rgba(56, 189, 248, 0.05);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
         /* Inline Flyer Frame */
         .flyer-frame {
             border: 1px solid #333;
@@ -154,23 +169,12 @@
         }
 
         h2.section-title span { color: var(--accent-teal); }
+        h2.section-title span.sky { color: var(--sky-accent); }
 
         .inline-link {
             color: var(--accent-teal);
             font-weight: 700;
             text-decoration: underline;
-        }
-
-        .cta-button {
-            background-color: var(--accent-teal);
-            color: black;
-            font-weight: 900;
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #20aa83;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(40, 204, 158, 0.3);
         }
 
         footer {
@@ -187,50 +191,34 @@
 
     <header>
         <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-        <h1>SABBATH <span>BULLETIN</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem;">Stroudsburg Seventh-day Adventist Church | Sabbath, August 8, 2026</p>
+        <h1>MIDWEEK <span>MOMENTUM</span></h1>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem;">Stroudsburg Seventh-day Adventist Church | Wednesday, August 12, 2026</p>
     </header>
 
     <nav class="nav-wrapper">
         <div class="nav-container">
-            <a href="#today" class="nav-link" style="color: var(--accent-teal);">Today At Stroudsburg</a>
-            <a href="#outreach" class="nav-link">Aug 15 Outreach</a>
+            <a href="#outreach" class="nav-link" style="color: var(--accent-teal);">Aug 15 Outreach</a>
             <a href="#momentum" class="nav-link">Lesson Study</a>
             <a href="#liberty" class="nav-link">Religious Liberty</a>
-            <a href="#highlights" class="nav-link">Event Flyers</a>
             <a href="#upcoming" class="nav-link">Upcoming Events</a>
-            <a href="#connect" class="nav-link">Connect & Give</a>
+            <a href="#connect" class="nav-link">Connect &amp; Prayer Lines</a>
         </div>
     </nav>
 
     <div class="page-content">
 
-        <section id="today">
-            <h2 class="section-title">Today At <span>Stroudsburg</span></h2>
-
-            <!-- Today Alert Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div class="glass-card !mb-0 border-l-4 border-amber-500 bg-amber-950/20">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-exclamation-triangle text-amber-400 text-xl"></i>
-                        <h3 class="font-black text-amber-400 uppercase text-sm tracking-wider">Emergency Board Meeting</h3>
+        <section id="rhythms">
+            <div class="glass-card bg-neutral-900/80 p-5 border-l-4 border-teal-500">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1"><i class="fas fa-satellite-dish mr-2"></i>Midweek &amp; Weekly Prayer Services</h4>
+                        <p class="text-xs text-gray-300">Stay connected throughout the week in prayer, worship, and fellowship.</p>
                     </div>
-                    <p class="text-xs text-gray-200">There will be an <strong>Emergency Board Meeting</strong> immediately following today's Divine Service. All board members are asked to attend.</p>
+                    <a href="https://us02web.zoom.us/j/797422531" target="_blank" class="bg-teal-500 text-black px-4 py-2 font-black uppercase text-xs rounded hover:bg-teal-400 transition flex items-center gap-2">
+                        <i class="fas fa-video"></i> Join Zoom Portal
+                    </a>
                 </div>
-
-                <div class="glass-card !mb-0 border-l-4 border-teal-500 bg-teal-950/20">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-users text-teal-400 text-xl"></i>
-                        <h3 class="font-black text-teal-400 uppercase text-sm tracking-wider">AYS Program</h3>
-                    </div>
-                    <p class="text-xs text-gray-200">Join us for Adventist Youth Society (AYS) this afternoon. All youth, young adults, and church family are encouraged to participate.</p>
-                </div>
-            </div>
-
-            <!-- Weekly Rhythms Banner -->
-            <div class="glass-card bg-neutral-900/60 p-5">
-                <h4 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-3"><i class="fas fa-calendar-week mr-2"></i>Weekly Rhythms &amp; Prayer Lines</h4>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs mt-4 pt-4 border-t border-neutral-800">
                     <div class="border-l-2 border-teal-500/40 pl-3 py-1">
                         <p class="font-bold text-white uppercase">Prayer Meeting &amp; Vespers</p>
                         <p class="text-gray-400">Wednesdays &amp; Fridays @ 7:15 PM (Zoom)</p>
@@ -253,13 +241,13 @@
                     <i class="fas fa-bullhorn mr-1"></i> Community Outreach Initiative
                 </div>
                 <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tight text-white mb-2">
-                    Community Outreach: <span class="text-teal-400">Sabbath, August 15!</span>
+                    Community Outreach: <span class="text-teal-400">This Coming Sabbath, Aug 15!</span>
                 </h2>
                 <p class="text-teal-300 font-bold text-sm uppercase tracking-wider mb-4">
                     Going Outside the Walls to Share Hope with Our Neighbors
                 </p>
                 <p class="text-gray-300 text-xs md:text-sm max-w-2xl mx-auto mb-6 leading-relaxed">
-                    After Divine Service and lunch next Sabbath, August 15, we are heading out into our local community to connect with our neighbors and share the love of Christ! God has commissioned us to <strong>GO and TELL</strong>.
+                    After Divine Service and lunch this coming Sabbath, August 15, we are heading out into our local community to connect with our neighbors and share the love of Christ! God has commissioned us to <strong>GO and TELL</strong>.
                 </p>
 
                 <!-- Activity Grid -->
@@ -311,93 +299,120 @@
             
             <div class="glass-card" style="border-left: 4px solid var(--accent-teal); background: linear-gradient(145deg, #121917 0%, #0d0d0d 100%);">
                 <div class="inline-block bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3 border border-teal-500/30">
-                    <i class="fas fa-gift mr-1"></i> Spiritual Gifts Study | Sabbath 8/8/2026
+                    <i class="fas fa-heart mr-1"></i> 1 Corinthians 13 Study | Sabbath 8/15/2026 Preview
                 </div>
-                <h3 class="text-2xl md:text-3xl font-black text-white uppercase mb-4">Discovering the Gifts God Has Given You</h3>
+                <h3 class="text-2xl md:text-3xl font-black text-white uppercase mb-4">A Portrait Worth Studying</h3>
                 
                 <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
                     <p>
-                        Have you ever wondered why God gave you your particular abilities, passions, and opportunities? Was it simply for your growth, or for something much bigger?
+                        This week's lesson, <strong>“A Portrait of Love,”</strong> takes us to one of the most familiar passages in 1 Corinthians. We’re exploring 1 Corinthians 13. Paul is not simply giving us a beautiful description of love. He is showing us what the Christian life should look like when Christ’s love is at work in us. The lesson reminds us that love is not merely an emotion or something we say; it is an attitude expressed through our actions, words, and choices.
                     </p>
                     <p>
-                        This week's lesson, <strong>"Spiritual Gifts,"</strong> reminds us that we all have been intentionally equipped by the Holy Spirit for a purpose. Paul compares the church to a living body, diverse in function, yet united in mission. No member is unnecessary, no gift is insignificant, and no one has been called to sit on the sidelines. Every spiritual gift is an expression of God's grace, designed to strengthen His church and reveal His character to the world.
+                        It is easy to read, <em>“Love is patient, love is kind,”</em> and think of someone else who needs to become more loving. But Paul's words were written to a church struggling with pride, division, competition, and self-interest. His portrait of love was not theoretical—it was a direct challenge to how believers treated one another.
                     </p>
                     <p>
-                        However, the lesson goes beyond identifying spiritual gifts. Paul addresses a deeper issue: the temptation to value certain gifts above others or to use them for personal recognition rather than service. Before discussing how gifts should function, Paul points us to the <em>"more excellent way"</em> of love. Spiritual gifts without Christlike love become noise. Knowledge without love breeds pride. Service without love becomes obligation. But when love is at the center, diversity becomes unity, and individual gifts become instruments through which Christ ministers to His people.
+                        Look closely at Paul's language. He not only tells us what love does: <strong>it is patient, it is kind, it rejoices in truth, it believes, hopes, and endures.</strong> But he also tells us what love does <em>not</em>: love does not envy, boast, become arrogant, seek its own way, keep a record of wrongs, or delight in another person's failure. Love is revealed not simply by what we feel, but by how we behave when relationships become difficult.
                     </p>
                     <p>
-                        As you study this week's lesson, resist the urge to simply ask, <em>"What is my spiritual gift?"</em> Instead, ask: <strong>How can God use me to strengthen someone else's faith? How can my life make Christ more visible in my church? Am I seeking recognition, or am I seeking to serve?</strong>
+                        Paul's portrait of love is ultimately a portrait of Jesus. Christ perfectly demonstrated the patience, kindness, humility, forgiveness, endurance, and self-giving love described in 1 Corinthians 13. When we study this chapter, we are not merely learning how to become "nicer" people. We are looking at the character of Christ and asking the Holy Spirit to reproduce that character in us.
                     </p>
                     <p>
-                        The church does not become healthy because everyone has the same gift. It becomes healthy when every believer faithfully uses the gift God has entrusted to them in humility, love, and dependence upon the Holy Spirit.
+                        That makes this week's lesson especially important for our church. Spiritual gifts, knowledge, faith, generosity, and even sacrifice can accomplish much, but without love, they lose their true significance. Love is not one quality among many; it is the atmosphere in which everything else in the Christian life must operate. And unlike the gifts that will one day fulfill their purpose, love will never pass away.
                     </p>
                     <p>
-                        So, open your Bible, pray before you begin, and invite the Holy Spirit to do more than teach you about spiritual gifts. Ask Him to transform you into a faithful steward of the gifts He has already placed in your hands.
+                        So this week, don't simply read 1 Corinthians 13. Study it slowly. Pray through it. Put your name beside each characteristic and ask where Christ is inviting you to grow. Perhaps the Holy Spirit is calling you to become more patient with someone, more generous with forgiveness, less concerned with being right, or more willing to love when there is nothing to gain in return.
                     </p>
                 </div>
 
                 <div class="accent-box mt-6 mb-0">
-                    <h4 class="text-teal-400 font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-lightbulb mr-2"></i>Food For Thought</h4>
+                    <h4 class="text-teal-400 font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-paint-brush mr-2"></i>Food For Thought</h4>
                     <p class="text-gray-200 text-xs md:text-sm italic leading-relaxed">
-                        "If the Holy Spirit withdrew every spiritual gift you were using except the ones motivated by genuine love for God and others, how much of your ministry would remain?"
+                        "If 1 Corinthians 13 is a portrait of Jesus, and your life is the canvas, what aspect of Christ's love is the Holy Spirit asking you to paint more clearly this week?"
                     </p>
                 </div>
             </div>
         </section>
 
         <section id="liberty">
-            <h2 class="section-title">Religious Liberty <span>&amp; Christian Living</span></h2>
+            <h2 class="section-title">Religious Liberty <span>Corner</span></h2>
             
-            <div class="glass-card" style="border-left: 4px solid #38bdf8; background: linear-gradient(145deg, #0f172a 0%, #0d0d0d 100%);">
+            <div class="glass-card liberty-hero-card p-6 md:p-8">
                 <div class="inline-block bg-sky-500/10 text-sky-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3 border border-sky-500/30">
                     <i class="fas fa-balance-scale mr-1"></i> Religious Liberty Feature
                 </div>
-                <h3 class="text-2xl md:text-3xl font-black text-white uppercase mb-4">Standing for Freedom of Conscience</h3>
+                <h3 class="text-2xl md:text-3xl font-black text-white uppercase mb-2">When Faith &amp; Your Job Collide: Know Where You Stand</h3>
+                <p class="text-sky-300 font-bold text-xs uppercase tracking-wider mb-6">Freedom of Conscience &amp; Workplace Accommodations</p>
                 
                 <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
-                    <p>
-                        Religious liberty is easy to support when everyone agrees. The real test comes when a person’s convictions are different from the majority, unpopular with society, or inconvenient to those in authority.
+                    <p class="text-base text-white font-semibold">
+                        Could your religious convictions cost you your job? For many believers, that is not a hypothetical question.
                     </p>
                     <p>
-                        The Bible gives us a powerful example in Daniel 3. King Nebuchadnezzar did not simply erect an image. He commanded everyone to participate in an act of worship. Shadrach, Meshach, and Abednego were loyal citizens, but when the command of the government conflicted with the command of God, they respectfully refused. Their answer was clear: <em>“We will not serve thy gods, nor worship the golden image which thou hast set up.”</em> (Daniel 3:18, KJV).
+                        Just this month, a Michigan healthcare system agreed to a $410,000 settlement in a religious-discrimination lawsuit brought by a Christian physician assistant who said she was terminated after requesting a religious accommodation concerning workplace requirements that conflicted with her beliefs. As part of the settlement, the healthcare system also agreed to implement a religious-accommodation policy and provide training regarding religious accommodation.
                     </p>
                     <p>
-                        Religious liberty protects more than our ability to attend church. It protects the freedom of conscience, the right to worship according to conviction, and the right not to be forced to violate that conviction. As Seventh-day Adventists, this principle has special significance. Revelation 13 warns of a time when worship, civil authority, and economic pressure will become intertwined. What happened on the plain of Dura reminds us that forced worship is not true worship.
+                        Whatever one thinks about the particular issue involved in that case, the religious-liberty principle should concern every Seventh-day Adventist: <strong>What happens when the requirements of an employer conflict with a sincerely held religious conviction?</strong> For Adventists, that question has special significance because we already know one primary area in which conflict can arise: the seventh-day Sabbath.
                     </p>
-                    <p>
-                        This is why we should care about religious freedom for everyone, not only when our own beliefs are affected. Ellen G. White wrote: <em>“The banner of truth and religious liberty held aloft by the founders of the gospel church and by God’s witnesses during the centuries that have passed since then, has, in this last conflict, been committed to our hands.”</em> (The Acts of the Apostles, p. 68).
-                    </p>
-                </div>
 
-                <div class="accent-box mt-6 mb-0" style="border-left-color: #38bdf8; background: rgba(56, 189, 248, 0.05);">
-                    <h4 class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-scroll mr-2"></i>Thought &amp; Scriptural Focus</h4>
-                    <p class="text-gray-200 text-xs md:text-sm italic leading-relaxed mb-2">
-                        "If we expect others to defend our freedom to keep the Sabbath tomorrow, we must be willing to defend the principle of freedom of conscience today."
-                    </p>
-                    <p class="text-sky-300 text-xs md:text-sm font-bold">
-                        “We ought to obey God rather than men.” — Acts 5:29, KJV
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="highlights">
-            <h2 class="section-title">Featured <span>Events &amp; Flyers</span></h2>
-            
-            <div class="max-w-2xl mx-auto">
-                <!-- Community Health Fair Flyer Card -->
-                <div class="glass-card mb-0 flex flex-col justify-between">
-                    <div>
-                        <div class="inline-block bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3 border border-teal-500/30">
-                            <i class="fas fa-heartbeat mr-1"></i> Health Ministry
-                        </div>
-                        <h3 class="text-xl font-black text-white uppercase mb-2">Community Health Fair &amp; Backpack Drive</h3>
-                        <p class="text-teal-400 text-xs font-bold mb-1"><i class="far fa-calendar-alt mr-1"></i> Sunday, August 23, 2026 @ 12:00 PM</p>
-                        <p class="text-gray-400 text-xs mb-4">Community organization booths, backpack drive, health screenings, barbers &amp; exercise classes!</p>
+                    <!-- Subhead 1 -->
+                    <div class="pt-2">
+                        <h4 class="text-sky-400 font-black uppercase text-sm tracking-wider mb-1"><i class="fas fa-gavel mr-2"></i>The Law Has Changed in an Important Way</h4>
+                        <p>
+                            In 2023, the United States Supreme Court issued an important decision in <em>Groff v. DeJoy</em>, a case involving a Christian postal worker who sought accommodation from Sunday work. For decades, employers had often relied upon a relatively low standard for claiming that accommodating an employee’s religion created an “undue hardship.”
+                        </p>
+                        <p class="mt-2">
+                            The Supreme Court rejected that interpretation. Under the clarified standard, an employer must show that the burden of an accommodation would be <strong>substantial in the overall context of the employer’s business</strong>. That matters. Federal law generally requires covered employers to reasonably accommodate sincerely held religious practices unless the accommodation would create such an undue hardship. Possible accommodations can include scheduling changes, voluntary shift swaps, reassignment, or adjustments to workplace policies. For a Seventh-day Adventist requesting Sabbath accommodation, this strengthened standard can be extremely important.
+                        </p>
                     </div>
-                    <a href="https://stroudsburgsdachurch.org/wp-content/uploads/2026/07/C26954AB-9DD3-4FE3-9F44-9C4146E5E941.png" target="_blank" class="block">
-                        <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/07/C26954AB-9DD3-4FE3-9F44-9C4146E5E941.png" alt="Health Fair Flyer" class="flyer-frame" />
-                    </a>
+
+                    <!-- Subhead 2 -->
+                    <div class="pt-2">
+                        <h4 class="text-sky-400 font-black uppercase text-sm tracking-wider mb-1"><i class="fas fa-scroll mr-2"></i>But There Is a Larger Issue</h4>
+                        <p>
+                            Religious liberty is not merely about winning court cases. It is about conscience. Daniel was told not to pray. The three Hebrew young men were commanded to worship. The apostles were ordered not to preach. In each case, human authority eventually crossed a boundary that belonged to God. Their response was not rebellion for rebellion’s sake. It was faithful obedience:
+                        </p>
+                        <p class="text-sky-300 font-bold italic my-2 pl-4 border-l-2 border-sky-400">
+                            “We ought to obey God rather than men.” — Acts 5:29
+                        </p>
+                        <p>
+                            And Bible prophecy tells us that the question of conscience will become even more serious. Revelation 13 describes a time when religious observance, government authority, and economic pressure become intertwined, eventually reaching the point where people cannot “buy or sell” without submitting to the imposed system. For Seventh-day Adventists, therefore, religious liberty is not a side issue. It is part of our prophetic identity.
+                        </p>
+                    </div>
+
+                    <!-- Subhead 3 -->
+                    <div class="pt-2">
+                        <h4 class="text-sky-400 font-black uppercase text-sm tracking-wider mb-1"><i class="fas fa-hands-helping mr-2"></i>Why Should We Defend Someone Who Believes Differently?</h4>
+                        <p>
+                            Because religious liberty cannot mean freedom only for people who believe as we do. Today the controversy may involve another Christian’s conviction. Tomorrow it may involve a Muslim’s prayer practice, a Jewish believer’s holy day, or someone else’s sincere religious observance.
+                        </p>
+                        <p class="mt-2">
+                            And one day the question may be: <strong>Will you work on the seventh-day Sabbath?</strong> If we want our conscience protected when that day comes, we must defend the principle of freedom of conscience now, even when the person asking for protection believes differently than we do.
+                        </p>
+                    </div>
+
+                    <!-- Subhead 4 -->
+                    <div class="pt-2 bg-black/40 p-4 rounded-lg border border-sky-500/20">
+                        <h4 class="text-sky-300 font-black uppercase text-xs tracking-widest mb-2"><i class="fas fa-search-location mr-2"></i>Religious Liberty Watch</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-2">
+                            Pay attention when you hear words such as: <em>“religious accommodation,” “freedom of conscience,” “compelled religious activity,” “undue hardship,”</em> and <em>“church and state.”</em>
+                        </p>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            These are not merely legal phrases. They concern a question that will become increasingly important as we approach the final events described in Scripture: <strong>Who has authority over the conscience?</strong> Government has legitimate authority. Employers have legitimate authority. But neither has unlimited authority over a person’s relationship with God.
+                        </p>
+                        <p class="text-sky-300 font-bold text-xs mt-2 italic">
+                            “Render therefore unto Caesar the things which are Caesar’s; and unto God the things that are God’s.” — Matthew 22:21
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sky-accent-box mt-6 mb-0">
+                    <h4 class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-lightbulb mr-2"></i>This Week's Religious Liberty Thought</h4>
+                    <p class="text-gray-200 text-xs md:text-sm italic leading-relaxed mb-2">
+                        "Do not wait until your Sabbath is threatened to become interested in religious liberty. Learn the principles now. Know your rights now. Respect the conscience of others now. And most importantly, develop the kind of relationship with Christ that will enable you to stand faithfully when obedience becomes costly."
+                    </p>
+                    <p class="text-sky-300 font-bold text-xs uppercase tracking-wider">
+                        Religious liberty protects the freedom to choose. Prophecy reminds us that one day that choice may come with a price.
+                    </p>
                 </div>
             </div>
         </section>
