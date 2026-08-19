@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabbath Bulletin | Stroudsburg SDA Church</title>
+    <title>Midweek Bulletin | Stroudsburg SDA Church</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,13 +31,13 @@
         }
 
         header {
-            padding: 50px 20px 25px;
+            padding: 45px 20px 20px;
             text-align: center;
             background: linear-gradient(to bottom, #111, #000);
         }
 
         .logo-img {
-            max-height: 80px;
+            max-height: 75px;
             width: auto;
             margin: 0 auto 15px;
             filter: grayscale(1) brightness(2);
@@ -52,6 +52,7 @@
         }
 
         h1 span { color: var(--accent-teal); }
+        h1 span.sky { color: var(--sky-accent); }
 
         /* Sticky Navigation Bar */
         .nav-wrapper {
@@ -105,16 +106,10 @@
             border-radius: 12px;
         }
 
-        .outreach-hero-card {
-            background: linear-gradient(145deg, #0d1e19 0%, #080d0b 100%);
-            border: 2px solid var(--accent-teal);
-            box-shadow: 0 10px 40px rgba(40, 204, 158, 0.15);
-        }
-
         .liberty-hero-card {
-            background: linear-gradient(145deg, #0f172a 0%, #080d14 100%);
+            background: linear-gradient(145deg, #0b1329 0%, #060913 100%);
             border: 2px solid var(--sky-accent);
-            box-shadow: 0 10px 40px rgba(56, 189, 248, 0.12);
+            box-shadow: 0 10px 40px rgba(56, 189, 248, 0.15);
         }
 
         /* Calendar Row Styling */
@@ -132,14 +127,6 @@
         }
         .date-box .month { font-size: 0.7rem; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; }
         .date-box .day { font-size: 1.7rem; font-weight: 900; line-height: 1; }
-
-        .accent-box {
-            border-left: 3px solid var(--accent-teal);
-            background: rgba(40, 204, 158, 0.05);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
 
         .sky-accent-box {
             border-left: 3px solid var(--sky-accent);
@@ -162,7 +149,7 @@
         h2.section-title span.sky { color: var(--sky-accent); }
 
         .inline-link {
-            color: var(--accent-teal);
+            color: var(--sky-accent);
             font-weight: 700;
             text-decoration: underline;
         }
@@ -181,16 +168,15 @@
 
     <header>
         <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img">
-        <h1>SABBATH <span>BULLETIN</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem;">Stroudsburg Seventh-day Adventist Church | Sabbath, August 15, 2026</p>
+        <h1>MIDWEEK <span class="sky">MOMENTUM</span></h1>
+        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem;">Stroudsburg Seventh-day Adventist Church | Wednesday, August 19, 2026</p>
     </header>
 
     <nav class="nav-wrapper">
         <div class="nav-container">
-            <a href="#today" class="nav-link" style="color: var(--accent-teal);">Today at Stroudsburg</a>
-            <a href="#rhythms" class="nav-link">Weekly Rhythms</a>
+            <a href="#liberty" class="nav-link" style="color: var(--sky-accent);">Religious Liberty</a>
+            <a href="#rhythms" class="nav-link">Midweek Services</a>
             <a href="#momentum" class="nav-link">Lesson Study</a>
-            <a href="#liberty" class="nav-link">Religious Liberty</a>
             <a href="#upcoming" class="nav-link">Upcoming Events</a>
             <a href="#connect" class="nav-link">Connect &amp; Give</a>
         </div>
@@ -198,120 +184,198 @@
 
     <div class="page-content">
 
-        <section id="today">
-            <h2 class="section-title">Today <span>at Stroudsburg</span></h2>
-
-            <!-- Community Outreach Hero Card -->
-            <div class="glass-card outreach-hero-card p-6 md:p-8 text-center mb-6">
-                <div class="inline-block bg-teal-500/20 text-teal-300 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-3 border border-teal-500/40">
-                    <i class="fas fa-bullhorn mr-1"></i> Community Outreach Initiative
+        <section id="liberty">
+            <h2 class="section-title">Religious Liberty <span class="sky">Corner</span></h2>
+            
+            <div class="glass-card liberty-hero-card p-6 md:p-8">
+                <div class="inline-block bg-sky-500/20 text-sky-300 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-4 border border-sky-500/40">
+                    <i class="fas fa-balance-scale mr-2"></i> Prophetic &amp; Legal Analysis
                 </div>
-                <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-2">
-                    Community Outreach Today!
+                
+                <h3 class="text-2xl md:text-3xl font-black text-white uppercase mb-2 leading-snug">
+                    When Government Promotes Religion: Should Christians Be Concerned?
                 </h3>
-                <p class="text-teal-300 font-bold text-xs md:text-sm uppercase tracking-wider mb-4">
-                    Immediately Following Divine Service &amp; Fellowship Lunch
+                <p class="text-sky-300 font-bold text-xs md:text-sm uppercase tracking-wider mb-6">
+                    Public Schools, Church-State Separation, and Freedom of Conscience
                 </p>
-                <p class="text-gray-300 text-xs md:text-sm max-w-2xl mx-auto mb-6 leading-relaxed">
-                    After Divine Service and lunch today, we are heading out into our local community to connect with our neighbors and share the love of Christ! God has commissioned us to <strong>GO and TELL</strong>.
-                </p>
+                
+                <div class="space-y-5 text-gray-300 text-sm leading-relaxed">
+                    <p class="text-base text-white font-semibold leading-relaxed">
+                        At first glance, this may sound like good news for Christians: <strong>The Ten Commandments are returning to public-school classrooms.</strong>
+                    </p>
 
-                <!-- Activity Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left max-w-3xl mx-auto mb-6">
-                    <div class="bg-black/60 border border-teal-500/30 rounded-lg p-4">
-                        <div class="flex items-center gap-2 text-teal-400 font-bold text-xs uppercase mb-1">
-                            <i class="fas fa-praying-hands"></i> Prayer Requests
-                        </div>
-                        <p class="text-gray-300 text-xs">Collecting prayer requests and offering on-the-spot prayer for neighbors.</p>
+                    <p>
+                        Texas enacted a law requiring public schools to display the Ten Commandments when qualifying displays are donated. Similar efforts have emerged in other states. Now the controversy could be heading to the United States Supreme Court, which was asked this week to review the Texas law.
+                    </p>
+
+                    <div class="p-4 bg-sky-950/40 border-l-4 border-sky-400 rounded-r-lg my-3">
+                        <p class="text-sky-200 font-semibold italic text-sm">
+                            As Bible-believing Christians, shouldn’t we celebrate? Perhaps the better question is: <strong>What happens when government begins deciding how religion should be promoted?</strong>
+                        </p>
                     </div>
 
-                    <div class="bg-black/60 border border-teal-500/30 rounded-lg p-4">
-                        <div class="flex items-center gap-2 text-teal-400 font-bold text-xs uppercase mb-1">
-                            <i class="fas fa-book-open"></i> Share Literature
-                        </div>
-                        <p class="text-gray-300 text-xs">Sharing uplifting Christian literature and message tracts.</p>
+                    <!-- Subhead: A Very Adventist Concern -->
+                    <div class="pt-2">
+                        <h4 class="text-sky-400 font-black uppercase text-base tracking-wider mb-2 flex items-center gap-2">
+                            <i class="fas fa-church"></i> A Very Adventist Concern
+                        </h4>
+                        <p>
+                            Seventh-day Adventists strongly believe in the Ten Commandments. We believe the seventh-day Sabbath remains part of God’s moral law:
+                        </p>
+                        <p class="text-sky-300 font-bold italic my-3 pl-4 border-l-2 border-sky-400 text-sm">
+                            “Remember the sabbath day, to keep it holy.” — Exodus 20:8
+                        </p>
+                        <p>
+                            But Adventists have historically defended another biblical principle just as strongly: <strong>Government should protect religion without controlling, establishing, or enforcing religion.</strong>
+                        </p>
+                        <p class="mt-2">
+                            That distinction matters. Today government may promote something with which we agree. Tomorrow government may promote a religious practice with which we do not agree.
+                        </p>
                     </div>
 
-                    <div class="bg-black/60 border border-teal-500/30 rounded-lg p-4">
-                        <div class="flex items-center gap-2 text-teal-400 font-bold text-xs uppercase mb-1">
-                            <i class="fas fa-notes-medical"></i> Health Fair Invites
+                    <!-- Subhead: Think About the Fourth Commandment -->
+                    <div class="pt-2">
+                        <h4 class="text-sky-400 font-black uppercase text-base tracking-wider mb-2 flex items-center gap-2">
+                            <i class="fas fa-calendar-week"></i> Think About the Fourth Commandment
+                        </h4>
+                        <p class="text-white font-semibold">
+                            Here is an uncomfortable question for Sabbath keepers:
+                        </p>
+                        <p class="mt-1">
+                            What if government becomes increasingly comfortable promoting Christianity, but the Christianity being promoted eventually identifies Sunday, rather than the seventh-day Sabbath, as the nation’s sacred day?
+                        </p>
+                        <p class="mt-2">
+                            Would we still want government determining religious observance?
+                        </p>
+                        <p class="mt-2">
+                            This is why Adventists should be careful not to measure religious-liberty developments simply by asking: <em>“Is Christianity winning?”</em> The better question is: <strong>“Is freedom of conscience being protected?”</strong>
+                        </p>
+                    </div>
+
+                    <!-- Subhead: Our Own Church Is Speaking About This -->
+                    <div class="pt-2">
+                        <h4 class="text-sky-400 font-black uppercase text-base tracking-wider mb-2 flex items-center gap-2">
+                            <i class="fas fa-bullhorn"></i> Our Own Church Is Speaking About This
+                        </h4>
+                        <p>
+                            The Seventh-day Adventist Church in North America recently addressed this very issue before the federal Religious Liberty Commission.
+                        </p>
+                        <p class="mt-2">
+                            The church reaffirmed its historic position that <strong>government should vigorously protect the free exercise of religion while remaining neutral in matters of faith.</strong>
+                        </p>
+                        <p class="mt-2">
+                            That is an important distinction. Religious liberty does not require a government hostile toward Christianity. Neither does it require a government that promotes Christianity. It requires a government that protects the Christian, the Jew, the Muslim, the atheist, and the Seventh-day Adventist from being forced in matters of conscience.
+                        </p>
+                    </div>
+
+                    <!-- Subhead: Revelation 13 Should Make Us Think -->
+                    <div class="pt-2 bg-black/50 p-5 rounded-lg border border-sky-500/30">
+                        <h4 class="text-sky-300 font-black uppercase text-sm tracking-widest mb-3 flex items-center gap-2">
+                            <i class="fas fa-scroll"></i> Revelation 13 Should Make Us Think
+                        </h4>
+                        <p class="text-gray-300 mb-3">
+                            For Adventists, this discussion goes beyond American constitutional law. Revelation 13 describes a remarkable future union involving religion, political authority, worship, and coercion.
+                        </p>
+                        <p class="text-gray-300 mb-3">
+                            The warning is not that society will become completely irreligious. The warning is that <strong>religion itself will eventually receive the power of the state to enforce worship.</strong> That distinction is crucial. The final crisis is fundamentally a crisis over worship and conscience.
+                        </p>
+
+                        <div class="my-3 p-3 bg-sky-900/30 border-l-2 border-sky-400 text-sky-200 font-mono text-xs space-y-1">
+                            <p>“And causeth the earth and them which dwell therein to worship…” — Revelation 13:12</p>
+                            <p>“And that no man might buy or sell…” — Revelation 13:17</p>
                         </div>
-                        <p class="text-gray-300 text-xs">Distributing invitations to our upcoming Community Health Fair on Aug 23.</p>
+
+                        <p class="text-xs text-sky-300 font-bold uppercase tracking-wider mb-1">The Progression Should Command Our Attention:</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-bold text-white mb-2">
+                            <span class="bg-sky-950 px-3 py-1 rounded border border-sky-500/40">1. Religion</span>
+                            <span class="bg-sky-950 px-3 py-1 rounded border border-sky-500/40">2. Government Authority</span>
+                            <span class="bg-sky-950 px-3 py-1 rounded border border-sky-500/40">3. Worship</span>
+                            <span class="bg-sky-950 px-3 py-1 rounded border border-sky-500/40">4. Economic Pressure</span>
+                            <span class="bg-sky-950 px-3 py-1 rounded border border-sky-500/40">5. Coercion</span>
+                        </div>
+                    </div>
+
+                    <!-- Subhead: This Does Not Mean the Texas Law "Fulfills Revelation 13" -->
+                    <div class="pt-2">
+                        <h4 class="text-sky-400 font-black uppercase text-base tracking-wider mb-2 flex items-center gap-2">
+                            <i class="fas fa-microscope"></i> Responsible Prophetic Understanding
+                        </h4>
+                        <p>
+                            We must be responsible students of prophecy. A law displaying the Ten Commandments in a classroom is not the mark of the beast, nor should every church-state controversy be labeled a direct fulfillment of Revelation 13.
+                        </p>
+                        <p class="mt-2">
+                            But developments like these should cause Adventists to think seriously about a principle: <strong>Should government have the power to advance religious belief in the first place?</strong>
+                        </p>
+                        <p class="mt-2 text-sky-200 font-medium">
+                            Because once that principle is accepted, the question eventually becomes: <em>Which religion? Which interpretation? Which commandment? Which day of worship?</em>
+                        </p>
+                    </div>
+
+                    <!-- Religious Liberty Watch Box -->
+                    <div class="bg-black/60 p-5 rounded-lg border border-sky-500/40 space-y-2 text-xs md:text-sm">
+                        <h4 class="text-sky-300 font-black uppercase tracking-widest text-xs flex items-center gap-2">
+                            <i class="fas fa-eye"></i> Religious Liberty Watch
+                        </h4>
+                        <p class="text-gray-300">
+                            This week, don’t merely watch whether Christianity gains greater influence in government. Watch the relationship between religious institutions and government power.
+                        </p>
+                        <ul class="space-y-1.5 text-gray-300 list-disc list-inside pt-1">
+                            <li>There is a difference between <strong>protecting Christians from persecution</strong> and <strong>giving Christianity governmental authority</strong>.</li>
+                            <li>There is a difference between <strong>allowing prayer</strong> and <strong>prescribing prayer</strong>.</li>
+                            <li>There is a difference between <strong>protecting Sabbath observance</strong> and <strong>government determining a day of worship</strong>.</li>
+                            <li>And there is a profound difference between <strong>religious freedom</strong> and <strong>religious power</strong>.</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- T-Shirt & Re-group Details -->
-                <div class="bg-black/80 border border-teal-500/40 rounded-lg p-5 max-w-2xl mx-auto text-left space-y-3 text-xs md:text-sm mb-2">
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-tshirt text-teal-400 mt-1"></i>
-                        <div>
-                            <strong class="text-white uppercase tracking-wider">What To Wear:</strong>
-                            <p class="text-gray-300 mt-0.5">Adults: Please wear your <strong class="text-teal-300">NEED PRAYER</strong> T-shirt.<br>Youth: Please wear your <strong class="text-teal-300">Communion in Action</strong> T-shirt.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3 border-t border-teal-500/20 pt-3">
-                        <i class="fas fa-sync text-teal-400 mt-1"></i>
-                        <div>
-                            <strong class="text-white uppercase tracking-wider">Post-Outreach Testimony Regroup:</strong>
-                            <p class="text-gray-300 mt-0.5">After outreach, we will regroup at the church to pray together and share our testimonies and experiences! There is something powerful and encouraging about hearing how God used each of us.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Schedule Cards for Today -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="glass-card !mb-0 p-5 border-l-4 border-amber-500 flex items-center justify-between">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-amber-400 block mb-1">
-                            <i class="fas fa-users mr-1"></i> Youth Program
-                        </span>
-                        <h4 class="text-lg font-black text-white">AYS (Adventist Youth Society)</h4>
-                        <p class="text-xs text-gray-400 mt-1">Resumes today in the sanctuary.</p>
-                    </div>
-                    <div class="bg-amber-500/20 border border-amber-500/40 text-amber-300 text-sm font-black px-4 py-2 rounded">
-                        5:00 PM
-                    </div>
-                </div>
-
-                <div class="glass-card !mb-0 p-5 border-l-4 border-teal-400 flex items-center justify-between">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-teal-400 block mb-1">
-                            <i class="fas fa-building mr-1"></i> Leadership Meeting
-                        </span>
-                        <h4 class="text-lg font-black text-white">Building Committee Meeting</h4>
-                        <p class="text-xs text-gray-400 mt-1">Meeting in the classroom tonight.</p>
-                    </div>
-                    <div class="bg-teal-500/20 border border-teal-500/40 text-teal-300 text-sm font-black px-4 py-2 rounded">
-                        8:00 PM
-                    </div>
+                <!-- Thought Box -->
+                <div class="sky-accent-box mt-6 mb-0">
+                    <h4 class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
+                        <i class="fas fa-lightbulb"></i> This Week's Religious Liberty Thought
+                    </h4>
+                    <p class="text-gray-200 text-xs md:text-sm italic leading-relaxed mb-3">
+                        "As Seventh-day Adventists, we should never fear genuine religious freedom. But neither should we become so excited when government favors Christianity that we forget our prophetic message about what can happen when church and state join hands."
+                    </p>
+                    <p class="text-gray-300 text-xs md:text-sm italic leading-relaxed mb-3">
+                        "Today, government may support a religious idea we cherish. Tomorrow, the same power may be used to enforce one we cannot obey. The safest government for the church is not one that controls religion, but one that protects every person’s freedom to choose whom and how they will worship."
+                    </p>
+                    <p class="text-sky-300 font-black text-sm uppercase tracking-wider">
+                        “Choose you this day whom ye will serve.” — Joshua 24:15
+                    </p>
                 </div>
             </div>
         </section>
 
         <section id="rhythms">
-            <div class="glass-card bg-neutral-900/80 p-5 border-l-4 border-teal-500">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <h2 class="section-title">Midweek <span>Worship Rhythms</span></h2>
+            <div class="glass-card bg-neutral-900/80 p-6 border-l-4 border-teal-500">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
                     <div>
-                        <h4 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1"><i class="fas fa-satellite-dish mr-2"></i>This Week at Stroudsburg</h4>
-                        <p class="text-xs text-gray-300">Stay connected throughout the week in prayer, worship, and fellowship.</p>
+                        <h4 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1">
+                            <i class="fas fa-satellite-dish mr-2"></i> Stay Connected Online
+                        </h4>
+                        <p class="text-xs text-gray-300">Join our church family during the week for prayer, study, and spiritual renewal.</p>
                     </div>
-                    <a href="https://us02web.zoom.us/j/797422531" target="_blank" class="bg-teal-500 text-black px-4 py-2 font-black uppercase text-xs rounded hover:bg-teal-400 transition flex items-center gap-2">
+                    <a href="https://us02web.zoom.us/j/797422531" target="_blank" class="bg-teal-500 text-black px-5 py-2.5 font-black uppercase text-xs rounded hover:bg-teal-400 transition flex items-center gap-2 shrink-0">
                         <i class="fas fa-video"></i> Join Zoom Portal
                     </a>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs mt-4 pt-4 border-t border-neutral-800">
-                    <div class="border-l-2 border-teal-500/40 pl-3 py-1">
-                        <p class="font-bold text-white uppercase">Prayer Meeting &amp; Vespers</p>
-                        <p class="text-gray-400">Wednesdays &amp; Fridays @ 7:15 PM (Zoom)</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs pt-4 border-t border-neutral-800">
+                    <div class="bg-black/40 p-3 rounded border border-teal-500/20">
+                        <p class="font-bold text-white uppercase text-xs mb-1">Prayer Meeting &amp; Vespers</p>
+                        <p class="text-teal-400 font-semibold">Wednesdays &amp; Fridays @ 7:15 PM</p>
+                        <p class="text-gray-400 text-[11px] mt-1">Live on Zoom</p>
                     </div>
-                    <div class="border-l-2 border-teal-500/40 pl-3 py-1">
-                        <p class="font-bold text-white uppercase">Closer Walk Prayer Line</p>
-                        <p class="text-gray-400">Mondays &amp; Thursdays @ 8:00–8:30 PM (Zoom)</p>
+                    <div class="bg-black/40 p-3 rounded border border-teal-500/20">
+                        <p class="font-bold text-white uppercase text-xs mb-1">Closer Walk Prayer Line</p>
+                        <p class="text-teal-400 font-semibold">Mondays &amp; Thursdays @ 8:00–8:30 PM</p>
+                        <p class="text-gray-400 text-[11px] mt-1">Live on Zoom</p>
                     </div>
-                    <div class="border-l-2 border-teal-500/40 pl-3 py-1">
-                        <p class="font-bold text-white uppercase">New Beginnings Senior Ministry</p>
-                        <p class="text-gray-400">1st &amp; 3rd Tuesdays @ 10:00 AM (CSC)</p>
+                    <div class="bg-black/40 p-3 rounded border border-teal-500/20">
+                        <p class="font-bold text-white uppercase text-xs mb-1">New Beginnings Senior Ministry</p>
+                        <p class="text-teal-400 font-semibold">1st &amp; 3rd Tuesdays @ 10:00 AM</p>
+                        <p class="text-gray-400 text-[11px] mt-1">Community Service Center</p>
                     </div>
                 </div>
             </div>
@@ -322,7 +386,7 @@
             
             <div class="glass-card" style="border-left: 4px solid var(--accent-teal); background: linear-gradient(145deg, #121917 0%, #0d0d0d 100%);">
                 <div class="inline-block bg-teal-500/10 text-teal-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3 border border-teal-500/30">
-                    <i class="fas fa-heart mr-1"></i> 1 Corinthians 13 Study | Sabbath 8/15/2026
+                    <i class="fas fa-heart mr-1"></i> 1 Corinthians 13 Study | Sabbath 8/15–8/22/2026
                 </div>
                 <h3 class="text-2xl md:text-3xl font-black text-white uppercase mb-4">A Portrait Worth Studying</h3>
                 
@@ -340,10 +404,7 @@
                         Paul's portrait of love is ultimately a portrait of Jesus. Christ perfectly demonstrated the patience, kindness, humility, forgiveness, endurance, and self-giving love described in 1 Corinthians 13. When we study this chapter, we are not merely learning how to become "nicer" people. We are looking at the character of Christ and asking the Holy Spirit to reproduce that character in us.
                     </p>
                     <p>
-                        That makes this week's lesson especially important for our church. Spiritual gifts, knowledge, faith, generosity, and even sacrifice can accomplish much, but without love, they lose their true significance. Love is not one quality among many; it is the atmosphere in which everything else in the Christian life must operate. And unlike the gifts that will one day fulfill their purpose, love will never pass away.
-                    </p>
-                    <p>
-                        So this week, don't simply read 1 Corinthians 13. Study it slowly. Pray through it. Put your name beside each characteristic and ask where Christ is inviting you to grow. Perhaps the Holy Spirit is calling you to become more patient with someone, more generous with forgiveness, less concerned with being right, or more willing to love when there is nothing to gain in return.
+                        That makes this week's lesson especially important for our church. Spiritual gifts, knowledge, faith, generosity, and even sacrifice can accomplish much, but without love, they lose their true significance. Love is not one quality among many; it is the atmosphere in which everything else in the Christian life must operate.
                     </p>
                 </div>
 
@@ -356,121 +417,27 @@
             </div>
         </section>
 
-        <section id="liberty">
-            <h2 class="section-title">Religious Liberty <span>Corner</span></h2>
-            
-            <div class="glass-card liberty-hero-card p-6 md:p-8">
-                <div class="inline-block bg-sky-500/10 text-sky-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-3 border border-sky-500/30">
-                    <i class="fas fa-balance-scale mr-1"></i> Religious Liberty Feature
-                </div>
-                <h3 class="text-2xl md:text-3xl font-black text-white uppercase mb-2">When Faith &amp; Your Job Collide: Know Where You Stand</h3>
-                <p class="text-sky-300 font-bold text-xs uppercase tracking-wider mb-6">Freedom of Conscience &amp; Workplace Accommodations</p>
-                
-                <div class="space-y-4 text-gray-300 text-sm leading-relaxed">
-                    <p class="text-base text-white font-semibold">
-                        Could your religious convictions cost you your job? For many believers, that is not a hypothetical question.
-                    </p>
-                    <p>
-                        Just this month, a Michigan healthcare system agreed to a $410,000 settlement in a religious-discrimination lawsuit brought by a Christian physician assistant who said she was terminated after requesting a religious accommodation concerning workplace requirements that conflicted with her beliefs. As part of the settlement, the healthcare system also agreed to implement a religious-accommodation policy and provide training regarding religious accommodation.
-                    </p>
-                    <p>
-                        Whatever one thinks about the particular issue involved in that case, the religious-liberty principle should concern every Seventh-day Adventist: <strong>What happens when the requirements of an employer conflict with a sincerely held religious conviction?</strong> For Adventists, that question has special significance because we already know one primary area in which conflict can arise: the seventh-day Sabbath.
-                    </p>
-
-                    <!-- Subhead 1 -->
-                    <div class="pt-2">
-                        <h4 class="text-sky-400 font-black uppercase text-sm tracking-wider mb-1"><i class="fas fa-gavel mr-2"></i>The Law Has Changed in an Important Way</h4>
-                        <p>
-                            In 2023, the United States Supreme Court issued an important decision in <em>Groff v. DeJoy</em>, a case involving a Christian postal worker who sought accommodation from Sunday work. For decades, employers had often relied upon a relatively low standard for claiming that accommodating an employee’s religion created an “undue hardship.”
-                        </p>
-                        <p class="mt-2">
-                            The Supreme Court rejected that interpretation. Under the clarified standard, an employer must show that the burden of an accommodation would be <strong>substantial in the overall context of the employer’s business</strong>. That matters. Federal law generally requires covered employers to reasonably accommodate sincerely held religious practices unless the accommodation would create such an undue hardship. Possible accommodations can include scheduling changes, voluntary shift swaps, reassignment, or adjustments to workplace policies. For a Seventh-day Adventist requesting Sabbath accommodation, this strengthened standard can be extremely important.
-                        </p>
-                    </div>
-
-                    <!-- Subhead 2 -->
-                    <div class="pt-2">
-                        <h4 class="text-sky-400 font-black uppercase text-sm tracking-wider mb-1"><i class="fas fa-scroll mr-2"></i>But There Is a Larger Issue</h4>
-                        <p>
-                            Religious liberty is not merely about winning court cases. It is about conscience. Daniel was told not to pray. The three Hebrew young men were commanded to worship. The apostles were ordered not to preach. In each case, human authority eventually crossed a boundary that belonged to God. Their response was not rebellion for rebellion’s sake. It was faithful obedience:
-                        </p>
-                        <p class="text-sky-300 font-bold italic my-2 pl-4 border-l-2 border-sky-400">
-                            “We ought to obey God rather than men.” — Acts 5:29
-                        </p>
-                        <p>
-                            And Bible prophecy tells us that the question of conscience will become even more serious. Revelation 13 describes a time when religious observance, government authority, and economic pressure become intertwined, eventually reaching the point where people cannot “buy or sell” without submitting to the imposed system. For Seventh-day Adventists, therefore, religious liberty is not a side issue. It is part of our prophetic identity.
-                        </p>
-                    </div>
-
-                    <!-- Subhead 3 -->
-                    <div class="pt-2">
-                        <h4 class="text-sky-400 font-black uppercase text-sm tracking-wider mb-1"><i class="fas fa-hands-helping mr-2"></i>Why Should We Defend Someone Who Believes Differently?</h4>
-                        <p>
-                            Because religious liberty cannot mean freedom only for people who believe as we do. Today the controversy may involve another Christian’s conviction. Tomorrow it may involve a Muslim’s prayer practice, a Jewish believer’s holy day, or someone else’s sincere religious observance.
-                        </p>
-                        <p class="mt-2">
-                            And one day the question may be: <strong>Will you work on the seventh-day Sabbath?</strong> If we want our conscience protected when that day comes, we must defend the principle of freedom of conscience now, even when the person asking for protection believes differently than we do.
-                        </p>
-                    </div>
-
-                    <!-- Subhead 4 -->
-                    <div class="pt-2 bg-black/40 p-4 rounded-lg border border-sky-500/20">
-                        <h4 class="text-sky-300 font-black uppercase text-xs tracking-widest mb-2"><i class="fas fa-search-location mr-2"></i>Religious Liberty Watch</h4>
-                        <p class="text-xs text-gray-300 leading-relaxed mb-2">
-                            Pay attention when you hear words such as: <em>“religious accommodation,” “freedom of conscience,” “compelled religious activity,” “undue hardship,”</em> and <em>“church and state.”</em>
-                        </p>
-                        <p class="text-xs text-gray-300 leading-relaxed">
-                            These are not merely legal phrases. They concern a question that will become increasingly important as we approach the final events described in Scripture: <strong>Who has authority over the conscience?</strong> Government has legitimate authority. Employers have legitimate authority. But neither has unlimited authority over a person’s relationship with God.
-                        </p>
-                        <p class="text-sky-300 font-bold text-xs mt-2 italic">
-                            “Render therefore unto Caesar the things which are Caesar’s; and unto God the things that are God’s.” — Matthew 22:21
-                        </p>
-                    </div>
-                </div>
-
-                <div class="sky-accent-box mt-6 mb-0">
-                    <h4 class="text-sky-400 font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-lightbulb mr-2"></i>This Week's Religious Liberty Thought</h4>
-                    <p class="text-gray-200 text-xs md:text-sm italic leading-relaxed mb-2">
-                        "Do not wait until your Sabbath is threatened to become interested in religious liberty. Learn the principles now. Know your rights now. Respect the conscience of others now. And most importantly, develop the kind of relationship with Christ that will enable you to stand faithfully when obedience becomes costly."
-                    </p>
-                    <p class="text-sky-300 font-bold text-xs uppercase tracking-wider">
-                        Religious liberty protects the freedom to choose. Prophecy reminds us that one day that choice may come with a price.
-                    </p>
-                </div>
-            </div>
-        </section>
-
         <section id="upcoming">
             <h2 class="section-title">Upcoming <span>Events</span></h2>
             <div class="glass-card">
                 
-                <!-- Aug 15: Community Outreach -->
-                <div class="calendar-row" style="border-left: 3px solid var(--accent-teal); padding-left: 10px;">
-                    <div class="date-box"><div class="month">Aug</div><div class="day">15</div></div>
-                    <div>
-                        <p class="font-bold text-teal-400 uppercase text-xs tracking-widest"><i class="fas fa-walking mr-1"></i> Local Outreach (Today)</p>
-                        <p class="text-white text-sm font-bold">Community Outreach Day (After Service &amp; Lunch)</p>
-                        <p class="text-gray-400 text-xs">Collecting prayer requests, sharing tracts, and distributing Health Fair invites in our community. Wear "NEED PRAYER" (Adults) or "Communion in Action" (Youth) T-shirts.</p>
-                    </div>
-                </div>
-
                 <!-- Aug 22: End It Now -->
-                <div class="calendar-row">
-                    <div class="date-box"><div class="month">Aug</div><div class="day">22</div></div>
+                <div class="calendar-row border-l-4 border-amber-500 pl-3">
+                    <div class="date-box"><div class="month text-amber-400">Aug</div><div class="day">22</div></div>
                     <div>
-                        <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry</p>
+                        <p class="font-bold text-amber-400 uppercase text-xs tracking-widest"><i class="fas fa-shield-alt mr-1"></i> Women's Ministry</p>
                         <p class="text-white text-sm font-bold">End It Now Campaign</p>
-                        <p class="text-gray-400 text-xs">Special presentation featuring guest speaker Sister Legett.</p>
+                        <p class="text-gray-400 text-xs">Special Sabbath presentation featuring guest speaker Sister Legett. Raising awareness against domestic violence and abuse.</p>
                     </div>
                 </div>
 
                 <!-- Aug 23: Community Health Fair -->
-                <div class="calendar-row" style="border-left: 3px solid var(--accent-teal); padding-left: 10px;">
+                <div class="calendar-row border-l-4 border-teal-400 pl-3">
                     <div class="date-box"><div class="month">Aug</div><div class="day">23</div></div>
                     <div>
                         <p class="font-bold text-teal-400 uppercase text-xs tracking-widest"><i class="fas fa-notes-medical mr-1"></i> Health Ministry</p>
                         <p class="text-white text-sm font-bold">12:00 PM: Stroudsburg Community Health Fair &amp; Backpack Drive</p>
-                        <p class="text-gray-400 text-xs">Free health screenings, community organization booths, barber services, exercise/nutrition classes, and backpack giveaways! Mark your calendars and invite friends.</p>
+                        <p class="text-gray-400 text-xs">Free health screenings (blood sugar &amp; pressure), community booths, barber services, nutrition classes, and backpack giveaways! Mark your calendars and invite friends.</p>
                     </div>
                 </div>
 
@@ -480,7 +447,7 @@
                     <div>
                         <p class="font-bold text-teal-400 uppercase text-xs tracking-widest"><i class="fas fa-hands-helping mr-1"></i> Conference Outreach</p>
                         <p class="text-white text-sm font-bold">Mission Outpost @ Easton SDA Church</p>
-                        <p class="text-gray-400 text-xs">Joint outreach day with sister churches across the conference. <a href="https://bit.ly/4bagJeq" target="_blank" class="inline-link">Sign up online</a> to participate.</p>
+                        <p class="text-gray-400 text-xs">Joint outreach day with sister churches across the conference. Carpooling from Stroudsburg to Easton for community service.</p>
                     </div>
                 </div>
 
@@ -490,7 +457,7 @@
                     <div>
                         <p class="font-bold text-white uppercase text-xs tracking-widest">Women's Ministry</p>
                         <p class="text-white text-sm font-bold">SOJO Spa Day Retreat</p>
-                        <p class="text-gray-400 text-xs"><strong>IMPORTANT:</strong> Headcount needed ASAP for transportation! Please see Sister Jean-Marie Williams, Sister Mfon Joseph, or Sister Audrey Yansen as soon as possible if you plan to attend.</p>
+                        <p class="text-gray-400 text-xs">Please see Sister Jean-Marie Williams, Sister Mfon Joseph, or Sister Audrey Yansen for final details regarding transportation and attendance.</p>
                     </div>
                 </div>
 
