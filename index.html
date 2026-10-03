@@ -1,561 +1,849 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabbath Bulletin | Stroudsburg SDA Church</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stroudsburg Seventh-day Adventist Church | Digital Bulletin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --primary-dark: #12243a;
+      --accent: #d4a359;
+      --accent-hover: #b8863f;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 6px 16px -2px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 16px 32px -4px rgba(15, 23, 42, 0.12);
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+    }
 
-    <style>
-        :root {
-            --accent-teal: #28cc9e;
-            --dark-base: #1a1a1a;
-            --black: #000000;
-            --gray-text: #999999;
-            --yt-red: #ff0000;
-            --sky-accent: #38bdf8;
-            --amber-accent: #f59e0b;
-            --rose-accent: #f43f5e;
-            --purple-accent: #a855f7;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        body {
-            background-color: var(--black);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            line-height: 1.7;
-        }
+    /* Top Sticky Navigation */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+    }
 
-        header {
-            padding: 45px 20px 20px;
-            text-align: center;
-            background: linear-gradient(to bottom, #111111, #000000);
-        }
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
 
-        .logo-img {
-            max-height: 75px;
-            width: auto;
-            margin: 0 auto 15px;
-            filter: grayscale(1) brightness(2);
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
 
-        h1 {
-            font-size: clamp(1.8rem, 5vw, 3.2rem);
-            font-weight: 900;
-            letter-spacing: -1px;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
+    .brand i {
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
 
-        h1 span.teal { color: var(--accent-teal); }
-        h1 span.sky { color: var(--sky-accent); }
-        h1 span.purple { color: var(--purple-accent); }
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      list-style: none;
+    }
 
-        /* Sticky Navigation Bar */
-        .nav-wrapper {
-            border-bottom: 1px solid #222;
-            position: sticky;
-            top: 0;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            overflow-x: auto;
-        }
+    .nav-links a:hover {
+      color: var(--primary);
+    }
 
-        .nav-link {
-            padding: 15px 16px;
-            color: var(--gray-text);
-            text-transform: uppercase;
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-decoration: none;
-            white-space: nowrap;
-            transition: 0.3s;
-        }
+    .nav-btn-youtube {
+      background: #dc2626;
+      color: #fff !important;
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
 
-        .nav-link:hover { color: var(--accent-teal); }
+    .nav-btn-youtube:hover {
+      background: #b91c1c;
+      color: #fff !important;
+    }
 
-        /* Page Layout */
-        .page-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 25px 20px;
-        }
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #ffffff;
+      padding: 3.75rem 1.5rem 3.25rem;
+      text-align: center;
+      position: relative;
+    }
 
-        section {
-            padding-top: 20px;
-            margin-bottom: 45px;
-        }
+    .hero-content {
+      max-width: 820px;
+      margin: 0 auto;
+    }
 
-        .glass-card {
-            background: #0d0d0d;
-            padding: 30px;
-            border: 1px solid #1a1a1a;
-            margin-bottom: 25px;
-            border-radius: 12px;
-        }
+    .badge-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      color: #f1f5f9;
+    }
 
-        .liberty-hero-card {
-            background: linear-gradient(145deg, #0b1329 0%, #060913 100%);
-            border: 2px solid var(--sky-accent);
-            box-shadow: 0 10px 40px rgba(56, 189, 248, 0.15);
-        }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
 
-        .family-hero-card {
-            background: linear-gradient(145deg, #1b0e29 0%, #0a0512 100%);
-            border: 2px solid var(--purple-accent);
-            box-shadow: 0 10px 40px rgba(168, 85, 247, 0.2);
-        }
+    .hero p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      max-width: 650px;
+      margin: 0 auto 1.5rem;
+    }
 
-        .memorial-card {
-            background: linear-gradient(145deg, #181512 0%, #0d0c0b 100%);
-            border: 1px solid rgba(212, 175, 55, 0.35);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-        }
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
-        /* Calendar Row Styling */
-        .calendar-row {
-            display: flex;
-            align-items: center;
-            padding: 18px 0;
-            border-bottom: 1px solid #1a1a1a;
-        }
-        .calendar-row:last-child { border-bottom: none; }
-        .date-box {
-            min-width: 75px;
-            text-align: center;
-            margin-right: 20px;
-        }
-        .date-box .month { font-size: 0.7rem; font-weight: 900; color: var(--accent-teal); text-transform: uppercase; }
-        .date-box .day { font-size: 1.7rem; font-weight: 900; line-height: 1; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.35rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
 
-        .sky-accent-box {
-            border-left: 3px solid var(--sky-accent);
-            background: rgba(56, 189, 248, 0.05);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
+    .btn-accent {
+      background: var(--accent);
+      color: #12243a;
+    }
 
-        .purple-accent-box {
-            border-left: 3px solid var(--purple-accent);
-            background: rgba(168, 85, 247, 0.08);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
+    .btn-accent:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
 
-        .accent-box {
-            border-left: 3px solid var(--accent-teal);
-            background: rgba(40, 204, 158, 0.05);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
+    .btn-outline-light {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+    }
 
-        h2.section-title {
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #1a1a1a;
-            padding-bottom: 10px;
-        }
+    .btn-outline-light:hover {
+      background: rgba(255,255,255,0.18);
+    }
 
-        h2.section-title span { color: var(--accent-teal); }
-        h2.section-title span.sky { color: var(--sky-accent); }
-        h2.section-title span.purple { color: var(--purple-accent); }
+    /* Main Container */
+    .container {
+      max-width: 1140px;
+      margin: -2rem auto 4rem;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
 
-        .flyer-frame {
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            transition: transform 0.3s ease;
-        }
+    /* Section Styling */
+    .section-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 2.25rem;
+      margin-bottom: 2.25rem;
+      box-shadow: var(--shadow-sm);
+    }
 
-        footer {
-            border-top: 1px solid #111;
-            padding: 40px 20px;
-            text-align: center;
-            color: #444;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-        }
-    </style>
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.7rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-title i {
+      color: var(--accent);
+      font-size: 1.4rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Today Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card-today {
+      background: var(--surface-alt);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+      width: fit-content;
+    }
+
+    .tag-blue {
+      background: #e2e8f0;
+      color: var(--primary-dark);
+    }
+
+    .tag-amber {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .card-today h3 {
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.65rem;
+    }
+
+    .card-today p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    /* Series Banner */
+    .series-banner {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      margin-bottom: 2.25rem;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 2.25rem;
+      align-items: center;
+    }
+
+    .series-content h2 {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .series-content h2 span {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .series-badge {
+      display: inline-block;
+      background: rgba(212, 163, 89, 0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .series-desc {
+      font-size: 0.96rem;
+      color: #cbd5e1;
+      margin-bottom: 1.25rem;
+    }
+
+    .series-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.06);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .meta-row {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+      color: #f1f5f9;
+    }
+
+    .meta-row i {
+      color: var(--accent);
+      width: 16px;
+    }
+
+    .series-img-wrap {
+      text-align: center;
+    }
+
+    .series-img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      border: 2px solid rgba(255,255,255,0.15);
+    }
+
+    /* Rhythms & Quick Links */
+    .rhythms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .rhythm-box {
+      background: var(--surface-alt);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .rhythm-box:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .rhythm-box h4 {
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .rhythm-box h4 i {
+      color: var(--accent);
+    }
+
+    .rhythm-schedule {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .rhythm-box p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .link-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+
+    .link-action:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Upcoming Events Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 1.25rem;
+      background: var(--surface-alt);
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--primary);
+    }
+
+    .timeline-date {
+      min-width: 90px;
+      text-align: center;
+      background: #ffffff;
+      padding: 0.65rem 0.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      height: fit-content;
+    }
+
+    .timeline-date .month {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: var(--accent-hover);
+      display: block;
+    }
+
+    .timeline-date .day {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1;
+    }
+
+    .timeline-body h4 {
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline-body p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Conference Section */
+    .conference-box {
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .conference-box h4 {
+      color: var(--primary-dark);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .conference-box h4 i {
+      color: var(--accent);
+    }
+
+    .conference-box p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      line-height: 1.55;
+    }
+
+    .conference-box a {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-dark);
+      color: #94a3b8;
+      padding: 3rem 1.5rem 2rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .footer-col p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-bottom {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 860px) {
+      .series-banner {
+        grid-template-columns: 1fr;
+      }
+      .series-img {
+        max-width: 260px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2018/10/Stroudsburg-SDA-Logo-Blue_White.png" alt="SDA Logo" class="logo-img" onerror="this.src='https://placehold.co/200x60/1a1a1a/ffffff?text=Stroudsburg+SDA'">
-        <h1>SABBATH <span class="teal">BULLETIN</span></h1>
-        <p style="color: var(--gray-text); text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem;">Stroudsburg Seventh-day Adventist Church | Sabbath, September 26, 2026</p>
+  <!-- Top Sticky Navigation -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <i class="fa-solid fa-church"></i>
+        <span>Stroudsburg SDA</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#today">Today's Focus</a></li>
+        <li><a href="#series">Evangelistic Series</a></li>
+        <li><a href="#rhythms">Weekly Rhythms</a></li>
+        <li><a href="#upcoming">Upcoming</a></li>
+        <li><a href="#conference">PA Conference</a></li>
+        <li>
+          <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="nav-btn-youtube">
+            <i class="fa-brands fa-youtube"></i> Watch Live
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="badge-date">
+        <i class="fa-regular fa-calendar"></i> Sabbath, October 3, 2026
+      </div>
+      <h1>Stroudsburg Seventh-day Adventist Church</h1>
+      <p>Welcome to our house of worship. May your heart be renewed and your spirit strengthened by God’s grace and truth today.</p>
+      <div class="hero-actions">
+        <a href="#today" class="btn btn-accent"><i class="fa-solid fa-bell"></i> Today's Announcements</a>
+        <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="btn btn-outline-light"><i class="fa-brands fa-youtube"></i> Live Stream</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Today at Stroudsburg -->
+    <section id="today" class="section-card">
+      <h2 class="section-title">
+        <i class="fa-solid fa-bullhorn"></i> Today at Stroudsburg
+      </h2>
+      <p class="section-subtitle">Announcements and member updates for Sabbath, October 3, 2026</p>
+
+      <div class="grid-2">
+        <!-- Prayer Update: David Foster -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-blue"><i class="fa-solid fa-hands-praying"></i> Pastoral Care</span>
+            <h3>Prayer for Bro. David Foster</h3>
+            <p>Let us continue to keep our dear Brother David Foster lifted up in our earnest prayers as he is currently back in the hospital.</p>
+          </div>
+        </div>
+
+        <!-- Thanksgiving Food Drive -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-amber"><i class="fa-solid fa-heart"></i> Community Outreach</span>
+            <h3>Community Services Thanksgiving Drive</h3>
+            <p>Our Community Services Department is launching this year’s Thanksgiving drive. Many local families depend on the support provided by our community service center, and as Thanksgiving approaches, we want to bless them with supplies for a holiday meal.</p>
+            <p>To contribute financially, please mark <strong>"Thanksgiving Drive"</strong> on your tithe envelope before placing it in the offering collection. For all other donations, please contact Sister Nadine Gayle, Community Services Director.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Evangelistic Series -->
+    <section id="series" class="series-banner">
+      <div class="series-content">
+        <span class="series-badge"><i class="fa-solid fa-satellite-dish"></i> Happening Now — In Progress</span>
+        <h2>Revelation <span>of Hope</span></h2>
+        <p class="series-desc">Discover what the Bible says about our world, our future, and the steadfast hope we have in Jesus Christ. Featuring powerful nightly presentations by Pastor Howard Grant-Langley.</p>
         
-        <div class="mt-3 flex justify-center">
-            <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase px-4 py-1.5 rounded-full shadow-lg transition duration-200">
-                <i class="fab fa-youtube text-sm"></i> Watch Live on YouTube <i class="fas fa-external-link-alt text-[10px] ml-1"></i>
-            </a>
+        <div class="series-meta">
+          <div class="meta-row">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span><strong>September 25 – October 10, 2026</strong></span>
+          </div>
+          <div class="meta-row">
+            <i class="fa-solid fa-clock"></i>
+            <span><strong>7:00 PM Nightly</strong> (Every evening except Thursdays)</span>
+          </div>
+          <div class="meta-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>2001 W Main St, Stroudsburg, PA 18301 &amp; Live on YouTube</span>
+          </div>
         </div>
-    </header>
 
-    <nav class="nav-wrapper">
-        <div class="nav-container">
-            <a href="#today" class="nav-link" style="color: var(--accent-teal);"><i class="fas fa-bell mr-1"></i> Today</a>
-            <a href="#revelation-hope" class="nav-link" style="color: #f59e0b;"><i class="fas fa-bible mr-1"></i> Revelation of Hope</a>
-            <a href="#conference" class="nav-link" style="color: #38bdf8;"><i class="fas fa-church mr-1"></i> PA Conference</a>
-            <a href="#rhythms" class="nav-link"><i class="fas fa-satellite-dish mr-1"></i> Quick Links</a>
-            <a href="#upcoming" class="nav-link"><i class="fas fa-calendar-alt mr-1"></i> Upcoming Events</a>
-            <a href="#connect" class="nav-link"><i class="fas fa-hand-holding-heart mr-1"></i> Give</a>
-            <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener noreferrer" class="nav-link text-red-500 hover:text-red-400 font-extrabold"><i class="fab fa-youtube mr-1"></i> Live Stream</a>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="btn btn-accent">
+            <i class="fa-brands fa-youtube"></i> Watch Series Live
+          </a>
         </div>
-    </nav>
+      </div>
 
-    <div class="page-content">
+      <div class="series-img-wrap">
+        <img 
+          src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-22-at-9.26.08-AM-1.jpeg" 
+          alt="Revelation of Hope with Pastor Howard Grant-Langley" 
+          class="series-img"
+          onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-22-at-9.26.08-AM.jpeg';"
+        />
+      </div>
+    </section>
 
-        <section id="today">
-            <h2 class="section-title">Today at <span>Stroudsburg</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- Community Guest Day Welcome -->
-                <div class="glass-card bg-neutral-900/80 border-l-4 border-teal-500 p-5 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-1">
-                            <span class="text-[11px] font-bold text-teal-400 uppercase tracking-widest">
-                                <i class="fas fa-user-friends mr-1"></i> Welcome Guests &amp; Family
-                            </span>
-                            <span class="text-[10px] bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded font-bold">Today</span>
-                        </div>
-                        <h4 class="text-base font-bold text-white uppercase mb-1">Community Guest Day</h4>
-                        <p class="text-xs text-gray-300 mb-3">A warm and heartfelt welcome to all our friends, family members, neighbors, and visiting guests! We are thrilled to worship together with you today. May your heart be refreshed and blessed by God's presence.</p>
-                    </div>
-                    <span class="text-[11px] text-teal-300 font-semibold"><i class="fas fa-heart mr-1"></i> We are so glad you are here with us!</span>
-                </div>
+    <!-- Weekly Worship Rhythms & Quick Links -->
+    <section id="rhythms" class="section-card">
+      <h2 class="section-title">
+        <i class="fa-solid fa-clock-rotate-left"></i> Weekly Rhythms &amp; Quick Links
+      </h2>
+      <p class="section-subtitle">Stay connected through our prayer services, study circles, and fellowships</p>
 
-                <!-- Prayer & Care: Bro. David Foster -->
-                <div class="glass-card bg-neutral-900/80 border-l-4 border-sky-500 p-5 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-1">
-                            <span class="text-[11px] font-bold text-sky-400 uppercase tracking-widest">
-                                <i class="fas fa-pray mr-1"></i> Member Care &amp; Prayer
-                            </span>
-                            <span class="text-[10px] bg-sky-500/20 text-sky-300 px-2 py-0.5 rounded font-bold">Prayer Request</span>
-                        </div>
-                        <h4 class="text-base font-bold text-white uppercase mb-1">Bro. David Foster</h4>
-                        <p class="text-xs text-gray-300 mb-3">Let us continue to keep our dear <strong>Bro. David Foster</strong> in our prayers. He is currently at home. Please reach out to him or his caretaker regarding visitation. If you need contact information, please connect with the church elders or <strong>Bro. Eric Williams</strong>.</p>
-                    </div>
-                    <span class="text-[11px] text-sky-300 font-semibold"><i class="fas fa-hands-praying mr-1"></i> "The effective, fervent prayer of a righteous man avails much."</span>
-                </div>
+      <div class="rhythms-grid">
+        <!-- Revelation of Hope Nightly -->
+        <div class="rhythm-box">
+          <h4><i class="fa-solid fa-bible"></i> Revelation of Hope</h4>
+          <div class="rhythm-schedule">Nightly @ 7:00 PM (Except Thursdays)</div>
+          <p>Join us in person or on our YouTube channel each evening as we study biblical prophecy, hope, and faith for today.</p>
+          <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="link-action">
+            Watch Livestream <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
 
-                <!-- Thanksgiving Drive -->
-                <div class="glass-card bg-neutral-900/80 border-l-4 border-amber-500 p-5 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-1">
-                            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-widest">
-                                <i class="fas fa-box-open mr-1"></i> Community Services
-                            </span>
-                            <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-bold">Drive Launch</span>
-                        </div>
-                        <h4 class="text-base font-bold text-white uppercase mb-1">Thanksgiving Food Drive</h4>
-                        <p class="text-xs text-gray-300 mb-3">Our Community Services Department is launching this year’s Thanksgiving drive. Many local families depend on the support provided by our community service center, and as Thanksgiving approaches, we want to bless them with supplies for a holiday meal. To contribute financially, please mark <strong>"Thanksgiving Drive"</strong> on your tithe envelope before placing it in the offering collection.</p>
-                    </div>
-                    <p class="text-[11px] text-amber-300 font-semibold"><i class="fas fa-user-tag mr-1"></i> For all other donations: Sis. Nadine Gayle (Director)</p>
-                </div>
-            </div>
-        </section>
+        <!-- Prayer Meeting & Vespers -->
+        <div class="rhythm-box">
+          <h4><i class="fa-solid fa-video"></i> Prayer Meeting &amp; Vespers</h4>
+          <div class="rhythm-schedule">Wednesdays &amp; Fridays @ 7:15 PM</div>
+          <p>Gather with our church family mid-week for dedicated intercessory prayer and welcoming the Sabbath together on Zoom.</p>
+          <a href="https://www.stroudsburgsda.org/vespers" target="_blank" rel="noopener" class="link-action">
+            Open Zoom Portal <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
 
-        <!-- PA Conference Announcements -->
-        <section id="conference">
-            <h2 class="section-title">Pennsylvania Conference <span>Announcements</span></h2>
-            
-            <div class="glass-card p-6 md:p-8" style="background: linear-gradient(145deg, #091326 0%, #030712 100%); border: 2px solid #38bdf8; box-shadow: 0 10px 40px rgba(56, 189, 248, 0.15);">
-                <div class="flex flex-wrap items-center gap-2 mb-4">
-                    <span class="bg-sky-500/20 text-sky-300 px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest border border-sky-500/40">
-                        <i class="fas fa-church mr-1.5"></i> PA Conference • September 2026
-                    </span>
-                    <span class="text-xs text-gray-400 font-semibold">
-                        Wider Church Opportunities &amp; Gatherings
-                    </span>
-                </div>
+        <!-- Closer Walk Prayer Line -->
+        <div class="rhythm-box">
+          <h4><i class="fa-solid fa-phone"></i> Closer Walk Prayer Line</h4>
+          <div class="rhythm-schedule">Mondays &amp; Thursdays | 8:00 – 8:30 PM</div>
+          <p>Start and finish your week grounded in devotion, shared requests, and intentional prayer on Zoom.</p>
+          <a href="https://www.stroudsburgsda.org/prayer" target="_blank" rel="noopener" class="link-action">
+            Join Prayer Line <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <!-- College Student Retreat -->
-                    <div class="bg-black/60 rounded-xl p-5 border border-sky-500/30 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="text-[10px] uppercase font-bold text-sky-400 tracking-wider">
-                                    <i class="fas fa-graduation-cap mr-1"></i> College Retreat
-                                </span>
-                                <span class="text-[10px] bg-sky-500/20 text-sky-300 px-2 py-0.5 rounded font-bold">Sept 25–27, 2026</span>
-                            </div>
-                            <h4 class="text-base font-bold text-white uppercase mb-1">“Filled to Overflow”</h4>
-                            <p class="text-xs text-sky-300 font-semibold mb-2">Blue Mountain Academy | Hamburg, PA</p>
-                            <p class="text-xs text-gray-300 leading-relaxed mb-4">
-                                College students are invited to be “Filled to Overflow” at a weekend getaway designed just for them. Take time to recharge, build community, and grow spiritually.
-                            </p>
-                        </div>
-                        <a href="https://paconference.org/events" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between bg-sky-500 hover:bg-sky-400 text-black text-xs font-black uppercase px-3.5 py-2 rounded-lg transition">
-                            <span>Register &amp; Learn More</span>
-                            <i class="fas fa-external-link-alt text-[10px]"></i>
-                        </a>
-                    </div>
+        <!-- Senior Ministry -->
+        <div class="rhythm-box">
+          <h4><i class="fa-solid fa-users"></i> New Beginnings Senior Ministry</h4>
+          <div class="rhythm-schedule">1st &amp; 3rd Tuesdays @ 10:30 AM</div>
+          <p>Fellowship, inspiration, and warm community at the Community Service Center for our valued seniors.</p>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Community Service Center</span>
+        </div>
+      </div>
+    </section>
 
-                    <!-- Fall Women's Retreat -->
-                    <div class="bg-black/60 rounded-xl p-5 border border-pink-500/30 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="text-[10px] uppercase font-bold text-pink-400 tracking-wider">
-                                    <i class="fas fa-female mr-1"></i> Women's Ministries
-                                </span>
-                                <span class="text-[10px] bg-pink-500/20 text-pink-300 px-2 py-0.5 rounded font-bold">Oct 9–11, 2026</span>
-                            </div>
-                            <h4 class="text-base font-bold text-white uppercase mb-1">Fall Women’s Retreat</h4>
-                            <p class="text-xs text-pink-300 font-semibold mb-2">Laurel Lake Camp | Rossiter, PA</p>
-                            <p class="text-xs text-gray-300 leading-relaxed mb-4">
-                                Women and teen girls are invited to our fall retreat with guest speakers <strong>Monica Zill</strong> and <strong>Nina Martinez</strong>. Enjoy fall mountain beauty, heartfelt worship, and spiritual renewal.
-                            </p>
-                        </div>
-                        <a href="https://paconference.org/events" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between bg-pink-500 hover:bg-pink-400 text-black text-xs font-black uppercase px-3.5 py-2 rounded-lg transition">
-                            <span>Details at PA Conference</span>
-                            <i class="fas fa-external-link-alt text-[10px]"></i>
-                        </a>
-                    </div>
+    <!-- Upcoming Events Timeline -->
+    <section id="upcoming" class="section-card">
+      <h2 class="section-title">
+        <i class="fa-solid fa-calendar-check"></i> Upcoming Events
+      </h2>
+      <p class="section-subtitle">Mark your calendars and plan ahead for these upcoming dates</p>
 
-                    <!-- Devotionals Still Needed -->
-                    <div class="bg-black/60 rounded-xl p-5 border border-amber-500/30 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="text-[10px] uppercase font-bold text-amber-400 tracking-wider">
-                                    <i class="fas fa-pen-nib mr-1"></i> Devotional Book
-                                </span>
-                                <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-bold">Submissions Open</span>
-                            </div>
-                            <h4 class="text-base font-bold text-white uppercase mb-1">Devotionals Still Needed</h4>
-                            <p class="text-xs text-amber-300 font-semibold mb-2">Share Your Story of God’s Grace</p>
-                            <p class="text-xs text-gray-300 leading-relaxed mb-4">
-                                Passionate about helping others grow spiritually? Have you experienced God moving in your life? It’s not too late—we still need a few more devotional submissions for the next PA Conference devotional book!
-                            </p>
-                        </div>
-                        <a href="https://paconference.org/devotional-book" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between bg-amber-500 hover:bg-amber-400 text-black text-xs font-black uppercase px-3.5 py-2 rounded-lg transition">
-                            <span>Submit a Devotional</span>
-                            <i class="fas fa-external-link-alt text-[10px]"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="month">Oct</span>
+            <span class="day">10</span>
+          </div>
+          <div class="timeline-body">
+            <h4>Revelation of Hope — Grand Finale</h4>
+            <p>Concludes Saturday, October 10, 2026. Make plans to attend every remaining evening meeting leading up to the final weekend.</p>
+          </div>
+        </div>
 
-        <section id="revelation-hope">
-            <h2 class="section-title">Evangelistic Series <span style="color: #f59e0b;">Revelation of Hope</span></h2>
-            
-            <div class="glass-card p-6 md:p-8" style="background: linear-gradient(145deg, #1f1504 0%, #0a0701 100%); border: 2px solid #f59e0b; box-shadow: 0 10px 40px rgba(245, 158, 11, 0.2);">
-                <div class="flex flex-col lg:flex-row gap-8 items-center">
-                    
-                    <div class="w-full lg:w-1/2 flex justify-center">
-                        <img src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-22-at-9.26.08-AM.jpeg" 
-                             alt="Revelation of Hope Evangelistic Series Flyer" 
-                             class="flyer-frame w-full max-w-md h-auto object-cover border border-amber-500/40 rounded-xl"
-                             onerror="this.src='https://placehold.co/600x900/1f1504/ffffff?text=Revelation+of+Hope+Sept+25+-+Oct+10'">
-                    </div>
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="month">Oct</span>
+            <span class="day">17</span>
+          </div>
+          <div class="timeline-body">
+            <h4>Health Emphasis Day</h4>
+            <p>Join us for Health Emphasis Day on October 17, 2026. Our Health Ministries team is preparing a spirit-filled program designed to uplift our spiritual and physical well-being.</p>
+          </div>
+        </div>
 
-                    <div class="w-full lg:w-1/2 space-y-4">
-                        <div class="inline-block bg-amber-500/20 text-amber-300 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest border border-amber-500/40">
-                            <i class="fas fa-fire mr-2"></i> In Progress • Nightly Through Oct 10!
-                        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="month">Oct</span>
+            <span class="day">18</span>
+          </div>
+          <div class="timeline-body">
+            <h4>Breast Cancer Awareness Pink Breakfast</h4>
+            <p>Also from the Health Ministries Department — please save the date for this year’s Breast Cancer Awareness Pink Breakfast on October 18, 2026. More details will follow.</p>
+          </div>
+        </div>
 
-                        <p class="text-amber-400 font-bold text-xs uppercase tracking-widest">With everything happening in our world...</p>
-                        <h3 class="text-3xl md:text-4xl font-black text-white uppercase leading-tight">
-                            Is There Still <span class="text-amber-400">Hope?</span>
-                        </h3>
-                        <p class="text-amber-200 font-extrabold text-sm uppercase tracking-wider">
-                            REVELATION OF HOPE COMMUNITY BIBLE SERIES
-                        </p>
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="month">Nov</span>
+            <span class="day">--</span>
+          </div>
+          <div class="timeline-body">
+            <h4>Thanksgiving Food Distribution</h4>
+            <p>Holiday meal packages distributed by Community Services to families throughout the Pocono area.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                        <p class="text-xs text-gray-300 leading-relaxed">
-                            Discover what the Bible says about our world, our future, and the hope we have in Jesus. Join us for an uplifting community Bible series exploring prophecy, faith, hope, and God's promises for the days ahead.
-                        </p>
+    <!-- Pennsylvania Conference Announcements -->
+    <section id="conference" class="section-card">
+      <h2 class="section-title">
+        <i class="fa-solid fa-mountain-sun"></i> Pennsylvania Conference Announcements
+      </h2>
+      <p class="section-subtitle">Conference-wide ministry opportunities, retreats, and devotional updates</p>
 
-                        <div class="p-4 bg-amber-950/40 border-l-4 border-amber-400 rounded-r-lg text-xs space-y-1.5 text-amber-100">
-                            <p class="font-black text-sm text-amber-300"><i class="fas fa-user-tie mr-2"></i> Guest Speaker: Pastor Howard Grant-Langley</p>
-                            <p class="font-bold"><i class="fas fa-calendar-alt mr-2"></i> September 25 – October 10, 2026</p>
-                            <p class="font-bold"><i class="fas fa-clock mr-2"></i> 7:00 PM Nightly <span class="text-amber-400">(Except Thursdays)</span></p>
-                            <p class="font-semibold"><i class="fas fa-map-marker-alt mr-2"></i> 2001 W Main St, Stroudsburg, PA 18301 | Free Admission</p>
-                        </div>
+      <div class="conference-box">
+        <h4><i class="fa-solid fa-person-dress"></i> Fall Women’s Retreat</h4>
+        <p>Women and teen girls are invited to our fall women’s retreat, <strong>October 9–11, 2026</strong>, at Laurel Lake Camp, Rossiter, Pa. Speakers include Monica Zill and Nina Martinez. It’s a weekend to get away, enjoy fall beauty, worship, and grow in your relationship with God.</p>
+        <a href="https://paconference.org/events" target="_blank" rel="noopener">Learn more &amp; register at paconference.org/events &rarr;</a>
+      </div>
 
-                        <div class="pt-2 flex flex-wrap gap-3 items-center">
-                            <span class="bg-red-600 text-white font-black text-xs px-4 py-2 rounded flex items-center gap-2">
-                                <i class="fab fa-youtube text-lg"></i> In Person &amp; Live on YouTube
-                            </span>
-                            <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-black font-black uppercase text-xs px-5 py-2.5 rounded transition">
-                                YouTube Channel <i class="fas fa-external-link-alt ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
+      <div class="conference-box">
+        <h4><i class="fa-solid fa-pen-nib"></i> Devotionals Still Needed</h4>
+        <p>Are you passionate about helping people grow in their spiritual lives? Do you long to encourage and strengthen others in their daily lives? Have you experienced God moving in your own life? If you answered yes to any of these questions, then you’ll want to be a part of our next Pennsylvania Conference devotional book! It’s not too late—we still need a few more devotionals.</p>
+        <a href="https://paconference.org/devotional-book" target="_blank" rel="noopener">Submit your devotional at paconference.org/devotional-book &rarr;</a>
+      </div>
+    </section>
 
-                </div>
-            </div>
-        </section>
+  </main>
 
-        <section id="rhythms">
-            <h2 class="section-title">Church <span>Quick Links &amp; Rhythms</span></h2>
-            <div class="glass-card bg-neutral-900/80 p-6 border-l-4 border-teal-500">
-                <div class="mb-5">
-                    <h4 class="text-xs font-bold uppercase tracking-widest text-teal-400 mb-1">
-                        <i class="fas fa-link mr-2"></i> Direct Church Access Portals
-                    </h4>
-                    <p class="text-xs text-gray-300">Easily connect to weekly worship, study, intercessory prayer lines, and our nightly evangelistic series livestream using our direct links below.</p>
-                </div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Stroudsburg SDA Church</h4>
+        <p>2001 W Main St<br>Stroudsburg, PA 18301</p>
+        <p>A welcoming community rooted in the word of God and preparing for the soon coming of our Savior.</p>
+      </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-                    <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-500 text-white px-4 py-3 rounded-lg font-black uppercase text-xs transition flex items-center justify-between">
-                        <span class="flex items-center gap-2">
-                            <i class="fab fa-youtube text-base"></i> Church YouTube
-                        </span>
-                        <span class="text-[10px] bg-black/30 px-2 py-0.5 rounded font-bold">@StroudsburgSDAChurch <i class="fas fa-external-link-alt ml-1"></i></span>
-                    </a>
+      <div class="footer-col">
+        <h4>Quick Access</h4>
+        <p><a href="https://www.stroudsburgsda.org/vespers" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;">Prayer Meeting &amp; Vespers Zoom</a></p>
+        <p><a href="https://www.stroudsburgsda.org/prayer" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;">Closer Walk Prayer Line</a></p>
+        <p><a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;">YouTube Channel</a></p>
+        <p><a href="https://paconference.org" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;">PA Conference of SDA</a></p>
+      </div>
 
-                    <a href="https://www.stroudsburgsda.org/vespers" target="_blank" class="bg-teal-500 hover:bg-teal-400 text-black px-4 py-3 rounded-lg font-black uppercase text-xs transition flex items-center justify-between">
-                        <span class="flex items-center gap-2">
-                            <i class="fas fa-video text-sm"></i> Prayer Meeting &amp; Vespers
-                        </span>
-                        <span class="text-[10px] bg-black/20 px-2 py-0.5 rounded font-bold">stroudsburgsda.org/vespers <i class="fas fa-external-link-alt ml-1"></i></span>
-                    </a>
-
-                    <a href="https://www.stroudsburgsda.org/prayer" target="_blank" class="bg-sky-500 hover:bg-sky-400 text-black px-4 py-3 rounded-lg font-black uppercase text-xs transition flex items-center justify-between">
-                        <span class="flex items-center gap-2">
-                            <i class="fas fa-phone-volume text-sm"></i> Closer Walk Prayer Line
-                        </span>
-                        <span class="text-[10px] bg-black/20 px-2 py-0.5 rounded font-bold">stroudsburgsda.org/prayer <i class="fas fa-external-link-alt ml-1"></i></span>
-                    </a>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs pt-4 border-t border-neutral-800">
-                    <div class="bg-black/40 p-3 rounded border border-amber-500/30">
-                        <p class="font-bold text-white uppercase text-xs mb-1">Revelation of Hope Series</p>
-                        <p class="text-amber-400 font-semibold">Every Evening (Except Thursdays) @ 7:00 PM</p>
-                        <p class="text-gray-400 text-[11px] mt-1">In Person &amp; Live on YouTube: <a href="https://www.youtube.com/@StroudsburgSDAChurch" target="_blank" class="underline text-amber-300">@StroudsburgSDAChurch</a></p>
-                    </div>
-                    <div class="bg-black/40 p-3 rounded border border-teal-500/20">
-                        <p class="font-bold text-white uppercase text-xs mb-1">Closer Walk Prayer Line</p>
-                        <p class="text-teal-400 font-semibold">Mondays &amp; Thursdays @ 8:00–8:30 PM</p>
-                        <p class="text-gray-400 text-[11px] mt-1">Live on Zoom via <a href="https://www.stroudsburgsda.org/prayer" target="_blank" class="underline text-teal-300">stroudsburgsda.org/prayer</a></p>
-                    </div>
-                    <div class="bg-black/40 p-3 rounded border border-teal-500/20">
-                        <p class="font-bold text-white uppercase text-xs mb-1">New Beginnings Senior Ministry</p>
-                        <p class="text-teal-400 font-semibold">1st &amp; 3rd Tuesdays @ 10:30 AM</p>
-                        <p class="text-gray-400 text-[11px] mt-1">Community Service Center</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="upcoming">
-            <h2 class="section-title">Upcoming <span>Events</span></h2>
-            <div class="glass-card">
-                
-                <!-- Sept 25 - Oct 10: Revelation of Hope -->
-                <div class="calendar-row border-l-4 border-amber-400 pl-3">
-                    <div class="date-box"><div class="month text-amber-400">Sept/Oct</div><div class="day">25-10</div></div>
-                    <div>
-                        <p class="font-bold text-amber-400 uppercase text-xs tracking-widest"><i class="fas fa-fire mr-1"></i> In Progress Nightly</p>
-                        <p class="text-white text-sm font-bold">Revelation of Hope: Is There Still Hope?</p>
-                        <p class="text-gray-400 text-xs">7:00 PM Nightly (except Thursdays) through Oct 10 | Guest Speaker: Pastor Howard Grant-Langley. Join in person or via YouTube Live.</p>
-                    </div>
-                </div>
-
-                <!-- Oct 9-11: Fall Women's Retreat -->
-                <div class="calendar-row border-l-4 border-pink-400 pl-3">
-                    <div class="date-box"><div class="month text-pink-400">Oct</div><div class="day">9-11</div></div>
-                    <div>
-                        <p class="font-bold text-pink-400 uppercase text-xs tracking-widest"><i class="fas fa-female mr-1"></i> PA Conference Event</p>
-                        <p class="text-white text-sm font-bold">Fall Women’s Retreat (Laurel Lake Camp)</p>
-                        <p class="text-gray-400 text-xs">Rossiter, PA | Speakers: Monica Zill &amp; Nina Martinez. Register at paconference.org/events.</p>
-                    </div>
-                </div>
-
-                <!-- Oct 17: Health Emphasis Day -->
-                <div class="calendar-row border-l-4 border-sky-400 pl-3">
-                    <div class="date-box"><div class="month text-sky-400">Oct</div><div class="day">17</div></div>
-                    <div>
-                        <p class="font-bold text-sky-400 uppercase text-xs tracking-widest"><i class="fas fa-heartbeat mr-1"></i> Health Ministries</p>
-                        <p class="text-white text-sm font-bold">Health Emphasis Day</p>
-                        <p class="text-gray-400 text-xs">Join us for Health Emphasis Day on October 17, 2026. Our Health Ministries team is preparing a spirit-filled program designed to uplift our spiritual and physical well-being.</p>
-                    </div>
-                </div>
-
-                <!-- Oct 18: Pink Breakfast -->
-                <div class="calendar-row border-l-4 border-pink-400 pl-3">
-                    <div class="date-box"><div class="month text-pink-400">Oct</div><div class="day">18</div></div>
-                    <div>
-                        <p class="font-bold text-pink-400 uppercase text-xs tracking-widest"><i class="fas fa-ribbon mr-1"></i> Health Ministries</p>
-                        <p class="text-white text-sm font-bold">Breast Cancer Awareness Pink Breakfast</p>
-                        <p class="text-gray-400 text-xs">Please save the date for this year’s Breast Cancer Awareness Pink Breakfast on October 18, 2026. More details will follow.</p>
-                    </div>
-                </div>
-
-                <!-- Ongoing: Thanksgiving Drive -->
-                <div class="calendar-row border-l-4 border-amber-500 pl-3">
-                    <div class="date-box"><div class="month text-amber-500">Oct/Nov</div><div class="day"><i class="fas fa-gift"></i></div></div>
-                    <div>
-                        <p class="font-bold text-amber-500 uppercase text-xs tracking-widest"><i class="fas fa-box-open mr-1"></i> Outreach Drive</p>
-                        <p class="text-white text-sm font-bold">Community Services Thanksgiving Food Drive</p>
-                        <p class="text-gray-400 text-xs">Contribute via tithe envelope marked "Thanksgiving Drive" or see Sister Nadine Gayle for supply drop-offs.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="connect">
-            <h2 class="section-title">Connect &amp; <span>Give</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="glass-card text-center p-6 border-t-4 border-teal-500">
-                    <div class="text-3xl text-teal-400 mb-3"><i class="fas fa-hand-holding-dollar"></i></div>
-                    <h4 class="text-base font-bold uppercase text-white mb-2">Online Giving &amp; Tithes</h4>
-                    <p class="text-xs text-gray-400 mb-4">Support our local church ministries, Thanksgiving drive, and community outreach.</p>
-                    <a href="https://adventistgiving.org" target="_blank" class="inline-block bg-teal-500 hover:bg-teal-400 text-black font-extrabold uppercase text-xs px-6 py-2.5 rounded transition">
-                        Give via Adventist Giving <i class="fas fa-external-link-alt ml-1"></i>
-                    </a>
-                </div>
-
-                <div class="glass-card text-center p-6 border-t-4 border-red-500">
-                    <div class="text-3xl text-red-500 mb-3"><i class="fab fa-youtube"></i></div>
-                    <h4 class="text-base font-bold uppercase text-white mb-2">YouTube Channel</h4>
-                    <p class="text-xs text-gray-400 mb-4">Subscribe and watch our Divine Worship services and sermon archives live.</p>
-                    <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener noreferrer" class="inline-block bg-red-600 hover:bg-red-500 text-white font-extrabold uppercase text-xs px-6 py-2.5 rounded transition">
-                        Visit YouTube Channel <i class="fas fa-external-link-alt ml-1"></i>
-                    </a>
-                </div>
-
-                <div class="glass-card text-center p-6 border-t-4 border-sky-500">
-                    <div class="text-3xl text-sky-400 mb-3"><i class="fas fa-map-marker-alt"></i></div>
-                    <h4 class="text-base font-bold uppercase text-white mb-2">Join Us In Person</h4>
-                    <p class="text-xs text-gray-400 mb-1 font-semibold text-gray-200">Stroudsburg Seventh-day Adventist Church</p>
-                    <p class="text-xs text-gray-400 mb-4">2001 W Main St, Stroudsburg, PA 18301</p>
-                    <a href="https://maps.google.com/?q=2001+W+Main+St,+Stroudsburg,+PA+18301" target="_blank" class="inline-block bg-neutral-800 hover:bg-neutral-700 text-white font-bold uppercase text-xs px-6 py-2.5 rounded border border-neutral-600 transition">
-                        Get Directions <i class="fas fa-location-arrow ml-1"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
+      <div class="footer-col">
+        <h4>Weekly Worship</h4>
+        <p><strong>Sabbath School:</strong> Saturday 9:30 AM</p>
+        <p><strong>Divine Service:</strong> Saturday 11:00 AM</p>
+        <p><strong>Revelation of Hope:</strong> Nightly 7:00 PM (excl. Thu)</p>
+      </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Stroudsburg Seventh-day Adventist Church. All rights reserved.</p>
-        <p class="mt-2 text-[10px] text-gray-600">"We ought to obey God rather than men." — Acts 5:29</p>
-    </footer>
+    <div class="footer-bottom">
+      &copy; 2026 Stroudsburg Seventh-day Adventist Church. All rights reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
