@@ -242,9 +242,9 @@
     }
 
     /* Today Grid */
-    .grid-3 {
+    .grid-2 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1.5rem;
     }
 
@@ -277,11 +277,6 @@
       color: var(--primary-dark);
     }
 
-    .tag-green {
-      background: #dcfce7;
-      color: #166534;
-    }
-
     .tag-amber {
       background: #fef3c7;
       color: #92400e;
@@ -298,89 +293,6 @@
       color: var(--text-muted);
       margin-bottom: 0.75rem;
       line-height: 1.6;
-    }
-
-    /* Series Banner */
-    .series-banner {
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-      color: #fff;
-      border-radius: var(--radius-lg);
-      padding: 2.25rem;
-      margin-bottom: 2.25rem;
-      box-shadow: var(--shadow-md);
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 2.25rem;
-      align-items: center;
-    }
-
-    .series-content h2 {
-      font-family: var(--font-serif);
-      font-size: 2.1rem;
-      line-height: 1.2;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .series-content h2 span {
-      color: var(--accent);
-      font-style: italic;
-    }
-
-    .series-badge {
-      display: inline-block;
-      background: rgba(212, 163, 89, 0.2);
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
-    }
-
-    .series-desc {
-      font-size: 0.96rem;
-      color: #cbd5e1;
-      margin-bottom: 1.25rem;
-    }
-
-    .series-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      background: rgba(255,255,255,0.06);
-      padding: 1rem 1.25rem;
-      border-radius: var(--radius-sm);
-      margin-bottom: 1.5rem;
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .meta-row {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      font-size: 0.9rem;
-      color: #f1f5f9;
-    }
-
-    .meta-row i {
-      color: var(--accent);
-      width: 16px;
-    }
-
-    .series-img-wrap {
-      text-align: center;
-    }
-
-    .series-img {
-      width: 100%;
-      max-width: 320px;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-lg);
-      border: 2px solid rgba(255,255,255,0.15);
     }
 
     /* Rhythms & Quick Links */
@@ -494,6 +406,7 @@
     .timeline-body p {
       font-size: 0.9rem;
       color: var(--text-muted);
+      line-height: 1.55;
     }
 
     /* Conference Section */
@@ -571,12 +484,6 @@
     }
 
     @media (max-width: 860px) {
-      .series-banner {
-        grid-template-columns: 1fr;
-      }
-      .series-img {
-        max-width: 260px;
-      }
       .nav-links {
         display: none;
       }
@@ -597,7 +504,6 @@
       </a>
       <ul class="nav-links">
         <li><a href="#today">Today's Focus</a></li>
-        <li><a href="#series">Evangelistic Series</a></li>
         <li><a href="#rhythms">Weekly Rhythms</a></li>
         <li><a href="#upcoming">Upcoming</a></li>
         <li><a href="#conference">PA Conference</a></li>
@@ -614,7 +520,7 @@
   <header class="hero">
     <div class="hero-content">
       <div class="badge-date">
-        <i class="fa-regular fa-calendar"></i> Sabbath, October 3, 2026
+        <i class="fa-regular fa-calendar"></i> Sabbath, October 10, 2026
       </div>
       <h1>Stroudsburg Seventh-day Adventist Church</h1>
       <p>Welcome to our house of worship. May your heart be renewed and your spirit strengthened by God’s grace and truth today.</p>
@@ -633,24 +539,15 @@
       <h2 class="section-title">
         <i class="fa-solid fa-bullhorn"></i> Today at Stroudsburg
       </h2>
-      <p class="section-subtitle">Announcements and member updates for Sabbath, October 3, 2026</p>
+      <p class="section-subtitle">Announcements and member updates for Sabbath, October 10, 2026</p>
 
-      <div class="grid-3">
-        <!-- Prayer Update: David Foster -->
+      <div class="grid-2">
+        <!-- Adventurer Club Meeting -->
         <div class="card-today">
           <div>
-            <span class="card-tag tag-blue"><i class="fa-solid fa-hands-praying"></i> Pastoral Care</span>
-            <h3>Prayer for Bro. David Foster</h3>
-            <p>Let us keep our dear Bro. David Foster in our prayers. He is currently hospitalized at St. Luke's. Please follow the instructions shared by the communication department if you would like to visit him.</p>
-          </div>
-        </div>
-
-        <!-- Prayer Focus: Pathfinders Campout -->
-        <div class="card-today">
-          <div>
-            <span class="card-tag tag-green"><i class="fa-solid fa-campground"></i> Youth &amp; Family</span>
-            <h3>Pathfinders Conference Campout</h3>
-            <p>Let us also keep our Pathfinders and their families in prayer as they are camping with Pathfinders from across the Pennsylvania Conference this weekend.</p>
+            <span class="card-tag tag-blue"><i class="fa-solid fa-child"></i> Adventurer Ministry</span>
+            <h3>Stroudsburg Gems Adventurer Club</h3>
+            <p>The Stroudsburg Gems Adventurer Club will meet today from <strong>4:00 to 5:30 pm</strong>.</p>
           </div>
         </div>
 
@@ -666,45 +563,6 @@
       </div>
     </section>
 
-    <!-- Featured Evangelistic Series -->
-    <section id="series" class="series-banner">
-      <div class="series-content">
-        <span class="series-badge"><i class="fa-solid fa-satellite-dish"></i> Happening Now — In Progress</span>
-        <h2>Revelation <span>of Hope</span></h2>
-        <p class="series-desc">Discover what the Bible says about our world, our future, and the steadfast hope we have in Jesus Christ. Featuring powerful nightly presentations by Pastor Howard Grant-Langley[cite: 1].</p>
-        
-        <div class="series-meta">
-          <div class="meta-row">
-            <i class="fa-solid fa-calendar-days"></i>
-            <span><strong>September 25 – October 10, 2026</strong>[cite: 1]</span>
-          </div>
-          <div class="meta-row">
-            <i class="fa-solid fa-clock"></i>
-            <span><strong>7:00 PM Nightly</strong> (Every evening except Thursdays)[cite: 1]</span>
-          </div>
-          <div class="meta-row">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>2001 W Main St, Stroudsburg, PA 18301 &amp; Live on YouTube</span>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="btn btn-accent">
-            <i class="fa-brands fa-youtube"></i> Watch Series Live
-          </a>
-        </div>
-      </div>
-
-      <div class="series-img-wrap">
-        <img 
-          src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-22-at-9.26.08-AM-1.jpeg" 
-          alt="Revelation of Hope with Pastor Howard Grant-Langley" 
-          class="series-img"
-          onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-22-at-9.26.08-AM.jpeg';"
-        />
-      </div>
-    </section>
-
     <!-- Weekly Worship Rhythms & Quick Links -->
     <section id="rhythms" class="section-card">
       <h2 class="section-title">
@@ -713,21 +571,11 @@
       <p class="section-subtitle">Stay connected through our prayer services, study circles, and fellowships</p>
 
       <div class="rhythms-grid">
-        <!-- Revelation of Hope Nightly -->
-        <div class="rhythm-box">
-          <h4><i class="fa-solid fa-bible"></i> Revelation of Hope</h4>
-          <div class="rhythm-schedule">Nightly @ 7:00 PM (Except Thursdays)</div>
-          <p>Join us in person or on our YouTube channel each evening as we study biblical prophecy, hope, and faith for today.</p>
-          <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="link-action">
-            Watch Livestream <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
         <!-- Prayer Meeting & Vespers -->
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-video"></i> Prayer Meeting &amp; Vespers</h4>
           <div class="rhythm-schedule">Wednesdays &amp; Fridays @ 7:15 PM</div>
-          <p>Gather with our church family mid-week for dedicated intercessory prayer and welcoming the Sabbath together on Zoom.</p>
+          <p>Our Wednesday Evening Prayer Meeting and Friday Evening Vesper will continue this week. Join us on Zoom at 7:15 p.m.</p>
           <a href="https://www.stroudsburgsda.org/vespers" target="_blank" rel="noopener" class="link-action">
             Open Zoom Portal <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -737,7 +585,7 @@
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-phone"></i> Closer Walk Prayer Line</h4>
           <div class="rhythm-schedule">Mondays &amp; Thursdays | 8:00 – 8:30 PM</div>
-          <p>Start and finish your week grounded in devotion, shared requests, and intentional prayer on Zoom.</p>
+          <p>Remember our Closer Walk Prayer Line on Mondays and Thursdays from 8:00 to 8:30 p.m. on Zoom.</p>
           <a href="https://www.stroudsburgsda.org/prayer" target="_blank" rel="noopener" class="link-action">
             Join Prayer Line <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -747,7 +595,7 @@
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-users"></i> New Beginnings Senior Ministry</h4>
           <div class="rhythm-schedule">1st &amp; 3rd Tuesdays @ 10:30 AM</div>
-          <p>Fellowship, inspiration, and warm community at the Community Service Center for our valued seniors.</p>
+          <p>The New Beginnings Senior Ministry meets every 1st and 3rd Tuesday at 10:30 am at the Community Service Center.</p>
           <span style="font-size: 0.85rem; color: var(--text-muted);">Community Service Center</span>
         </div>
       </div>
@@ -764,22 +612,11 @@
         <div class="timeline-item">
           <div class="timeline-date">
             <span class="month">Oct</span>
-            <span class="day">10</span>
-          </div>
-          <div class="timeline-body">
-            <h4>Revelation of Hope — Grand Finale</h4>
-            <p>Concludes Saturday, October 10, 2026. Make plans to attend every remaining evening meeting leading up to the final weekend.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">
-            <span class="month">Oct</span>
             <span class="day">17</span>
           </div>
           <div class="timeline-body">
             <h4>Health Emphasis Day</h4>
-            <p>Join us for Health Emphasis Day on October 17, 2026. Our Health Ministries team is preparing a spirit-filled program designed to uplift our spiritual and physical well-being.</p>
+            <p>Join us for Health Emphasis Day next Sabbath, October 17, 2026. The Health Ministry Department has planned a full day of spiritual and health and wellness information.</p>
           </div>
         </div>
 
@@ -790,7 +627,18 @@
           </div>
           <div class="timeline-body">
             <h4>Breast Cancer Awareness Pink Breakfast</h4>
-            <p>Also from the Health Ministries Department — please save the date for this year’s Breast Cancer Awareness Pink Breakfast on October 18, 2026. More details will follow.</p>
+            <p>Also, please join us for the Breast Cancer Awareness Pink Breakfast at <strong>11:00 am</strong> on October 18th, 2026. More details will follow.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="month">Nov</span>
+            <span class="day">01</span>
+          </div>
+          <div class="timeline-body">
+            <h4>Memorial Service: Bro. David Foster</h4>
+            <p>This is to inform you that brother David Foster’s memorial service is scheduled for <strong>November 1, 2026</strong>, at the Mount Vernon Seventh-Day Adventist Church located at 230 S Columbus Ave, Mt Vernon, NY 10553. More details about the time and service will be shared when it becomes available.</p>
           </div>
         </div>
 
@@ -813,12 +661,6 @@
         <i class="fa-solid fa-mountain-sun"></i> Pennsylvania Conference Announcements
       </h2>
       <p class="section-subtitle">Conference-wide ministry opportunities, retreats, and devotional updates</p>
-
-      <div class="conference-box">
-        <h4><i class="fa-solid fa-person-dress"></i> Fall Women’s Retreat</h4>
-        <p>Women and teen girls are invited to our fall women’s retreat, <strong>October 9–11, 2026</strong>, at Laurel Lake Camp, Rossiter, Pa. Speakers include Monica Zill and Nina Martinez. It’s a weekend to get away, enjoy fall beauty, worship, and grow in your relationship with God.</p>
-        <a href="https://paconference.org/events" target="_blank" rel="noopener">Learn more &amp; register at paconference.org/events &rarr;</a>
-      </div>
 
       <div class="conference-box">
         <h4><i class="fa-solid fa-pen-nib"></i> Devotionals Still Needed</h4>
@@ -850,7 +692,7 @@
         <h4>Weekly Worship</h4>
         <p><strong>Sabbath School:</strong> Saturday 9:30 AM</p>
         <p><strong>Divine Service:</strong> Saturday 11:00 AM</p>
-        <p><strong>Revelation of Hope:</strong> Nightly 7:00 PM (excl. Thu)[cite: 1]</p>
+        <p><strong>Prayer Meeting &amp; Vespers:</strong> Wed &amp; Fri 7:15 PM</p>
       </div>
     </div>
 
