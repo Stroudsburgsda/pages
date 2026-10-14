@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stroudsburg Seventh-day Adventist Church | Digital Bulletin</title>
+  <title>Stroudsburg Seventh-day Adventist Church | Midweek Momentum</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -241,61 +241,144 @@
       margin-bottom: 1.75rem;
     }
 
-    /* Today Grid */
-    .grid-2 {
+    /* Article Typography & Callouts */
+    .article-content {
+      font-size: 1.02rem;
+      color: #334155;
+      line-height: 1.8;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+    }
+
+    .article-heading {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+      margin: 1.75rem 0 0.75rem;
+      font-weight: 700;
+    }
+
+    .quote-box {
+      border-left: 4px solid var(--accent);
+      background: var(--surface-alt);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--primary-dark);
+    }
+
+    .reflection-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      padding: 1.5rem;
+      border-radius: var(--radius-sm);
+      margin: 1.75rem 0;
+    }
+
+    .reflection-box h4 {
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .reflection-box h4 i {
+      color: var(--accent);
+    }
+
+    /* Event Flyer Cards Grid */
+    .flyer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
+      gap: 2rem;
+      align-items: start;
     }
 
-    .card-today {
+    .flyer-card {
       background: var(--surface-alt);
       border-radius: var(--radius-md);
-      padding: 1.5rem;
       border: 1px solid var(--border);
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
     }
 
-    .card-tag {
-      display: inline-flex;
+    .flyer-img-wrap {
+      width: 100%;
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 0.4rem;
+      padding: 0.5rem;
+    }
+
+    .flyer-img {
+      max-width: 100%;
+      max-height: 480px;
+      object-fit: contain;
+      border-radius: var(--radius-sm);
+    }
+
+    .flyer-body {
+      padding: 1.5rem;
+    }
+
+    .flyer-tag {
+      display: inline-block;
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       font-weight: 700;
       padding: 0.25rem 0.65rem;
       border-radius: 999px;
-      margin-bottom: 0.85rem;
-      width: fit-content;
-    }
-
-    .tag-blue {
+      margin-bottom: 0.75rem;
       background: #e2e8f0;
       color: var(--primary-dark);
     }
 
-    .tag-amber {
-      background: #fef3c7;
-      color: #92400e;
-    }
-
-    .card-today h3 {
-      font-size: 1.2rem;
+    .flyer-body h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
       color: var(--primary-dark);
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.5rem;
     }
 
-    .card-today p {
+    .flyer-body p {
       font-size: 0.92rem;
       color: var(--text-muted);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
       line-height: 1.6;
     }
 
-    /* Rhythms & Quick Links */
+    .meta-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .meta-list li {
+      font-size: 0.88rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .meta-list li i {
+      color: var(--accent);
+      width: 16px;
+    }
+
+    /* Rhythms Grid */
     .rhythms-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -356,7 +439,7 @@
       text-decoration: underline;
     }
 
-    /* Upcoming Events Timeline */
+    /* Timeline */
     .timeline {
       display: flex;
       flex-direction: column;
@@ -503,10 +586,11 @@
         <span>Stroudsburg SDA</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#today">Today's Focus</a></li>
+        <li><a href="#momentum">Lesson Study</a></li>
+        <li><a href="#liberty">Religious Liberty</a></li>
+        <li><a href="#features">Flyers &amp; Spotlights</a></li>
         <li><a href="#rhythms">Weekly Rhythms</a></li>
         <li><a href="#upcoming">Upcoming</a></li>
-        <li><a href="#conference">PA Conference</a></li>
         <li>
           <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="nav-btn-youtube">
             <i class="fa-brands fa-youtube"></i> Watch Live
@@ -520,62 +604,174 @@
   <header class="hero">
     <div class="hero-content">
       <div class="badge-date">
-        <i class="fa-regular fa-calendar"></i> Sabbath, October 10, 2026
+        <i class="fa-regular fa-calendar"></i> Wednesday, October 14, 2026 &bull; Midweek Edition
       </div>
-      <h1>Stroudsburg Seventh-day Adventist Church</h1>
-      <p>Welcome to our house of worship. May your heart be renewed and your spirit strengthened by God’s grace and truth today.</p>
+      <h1>Midweek Momentum &amp; Announcements</h1>
+      <p>Reflecting on God's Word, standing for liberty of conscience, and preparing together for the upcoming Sabbath.</p>
       <div class="hero-actions">
-        <a href="#today" class="btn btn-accent"><i class="fa-solid fa-bell"></i> Today's Announcements</a>
-        <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="btn btn-outline-light"><i class="fa-brands fa-youtube"></i> Live Stream</a>
+        <a href="#momentum" class="btn btn-accent"><i class="fa-solid fa-book-bible"></i> Midweek Lesson Study</a>
+        <a href="#liberty" class="btn btn-outline-light"><i class="fa-solid fa-landmark"></i> Religious Liberty Watch</a>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main Container -->
   <main class="container">
 
-    <!-- Today at Stroudsburg -->
-    <section id="today" class="section-card">
+    <!-- 1. Midweek Momentum (Lesson Study) at Top -->
+    <section id="momentum" class="section-card">
       <h2 class="section-title">
-        <i class="fa-solid fa-bullhorn"></i> Today at Stroudsburg
+        <i class="fa-solid fa-book-open"></i> Midweek Momentum: The Gift of Prophecy
       </h2>
-      <p class="section-subtitle">Announcements and member updates for Sabbath, October 10, 2026</p>
+      <p class="section-subtitle">Sabbath School Lesson Study Preview for Sabbath, October 17, 2026</p>
 
-      <div class="grid-2">
-        <!-- Adventurer Club Meeting -->
-        <div class="card-today">
-          <div>
-            <span class="card-tag tag-blue"><i class="fa-solid fa-child"></i> Adventurer Ministry</span>
-            <h3>Stroudsburg Gems Adventurer Club</h3>
-            <p>The Stroudsburg Gems Adventurer Club will meet today from <strong>4:00 to 5:30 pm</strong>.</p>
+      <div class="article-content">
+        <h3 class="article-heading">Old Testament Prophets</h3>
+        <p>Have you ever been so discouraged by the results of your efforts that you began to wonder whether anything you did really mattered?</p>
+        <p>This week, we meet Elijah, a prophet who witnessed God's extraordinary power on Mount Carmel, yet later found himself exhausted, afraid, and ready to give up. How could someone who had experienced so much of God's power reach such a low point?</p>
+        <p>Elijah's story reminds us that God’s servants can experience human weakness without God abandoning them. God understands the humanness/humanity of His instruments.</p>
+        <p>That’s only part of this week's lesson! What made Micaiah willing to stand alone when hundreds of other prophets told the king what he wanted to hear? Why did King Josiah's officials seek out Huldah for spiritual guidance? And what can the experiences of these prophets teach us about recognizing God's truth and responding to His call?</p>
+
+        <div class="reflection-box">
+          <h4><i class="fa-solid fa-compass"></i> Your Midweek Challenge</h4>
+          <p style="margin-bottom: 0.75rem;">Set aside some time to study the lesson, explore the Bible passages for the remaining days, and reflect on this question:</p>
+          <div class="quote-box" style="margin: 0.5rem 0 0.75rem;">
+            “Am I willing to hear God's truth even when it challenges my expectations, exposes my weaknesses, or calls me out of my comfort zone?”
+          </div>
+          <p style="margin-bottom: 0;">Let's come to Sabbath School prepared not just to recount what the prophets did, but to share what their experiences reveal about God and what He desires to do in our lives.</p>
+        </div>
+
+        <p style="font-weight: 700; color: var(--primary-dark);">Don’t just read the lesson; let the lesson read you and change you.</p>
+      </div>
+    </section>
+
+    <!-- 2. Religious Liberty: Then & Now at Top -->
+    <section id="liberty" class="section-card">
+      <h2 class="section-title">
+        <i class="fa-solid fa-scale-balanced"></i> Religious Liberty: Then &amp; Now
+      </h2>
+      <p class="section-subtitle">The Sunday Law That Went to Congress: When an Adventist Leader Challenged the United States Government</p>
+
+      <div class="article-content">
+        <p>Imagine waking up one morning to discover that Congress was considering a law that could affect how you observe your faith.</p>
+        <p>Not a local ordinance. Not a workplace policy. A national law establishing Sunday as a day of rest.</p>
+        <p>For Seventh-day Adventists in 1888, this was not a hypothetical situation. It was happening. And one Adventist leader was determined to speak out.</p>
+
+        <h3 class="article-heading">The Blair Sunday-Rest Bill of 1888</h3>
+        <p>In May 1888, Senator Henry W. Blair of New Hampshire introduced Senate Bill 2983, commonly known as the Blair Sunday-Rest Bill. The legislation sought to secure Sunday rest by restricting certain forms of labor, commerce, transportation, and recreation under federal jurisdiction.</p>
+        <p>Supporters argued that the nation needed a common day of rest to protect workers, families, and society. To many Americans, the proposal sounded reasonable. After all, what could be wrong with giving people a day to rest?</p>
+        <p>But Seventh-day Adventists recognized a serious problem. Why should the government determine which day Americans should observe? The proposed legislation favored Sunday, the traditional Christian day of worship, raising serious concerns for those who observed a different day.</p>
+
+        <h3 class="article-heading">One Adventist Stood Before Congress</h3>
+        <p>On December 13, 1888, Alonzo T. Jones, a Seventh-day Adventist minister, appeared before the United States Senate Committee on Education and Labor to oppose the proposed legislation. Jones was not a senator, lawyer, or powerful political figure. He was a minister representing a relatively small religious community. But his message challenged the very foundation of the proposed law.</p>
+        <p>Jones argued that government had no rightful authority to enforce religious observance, even when the majority supported it. His position was significant because he did not simply ask Congress to exempt Seventh-day Adventists. He challenged the government’s authority to legislate religious observance in the first place.</p>
+
+        <h3 class="article-heading">The Danger of a Well-Intentioned Law</h3>
+        <p>Here is what makes this historical event so important. The proposed Sunday legislation was presented, in part, as a measure to promote rest and protect society. Those were goals many Americans could appreciate. But Adventists understood that even a law presented as beneficial could threaten religious freedom if it gave government authority over religious practice.</p>
+        <p>Consider the question: If government can establish Sunday observance because most Christians support it, what prevents government from enforcing other religious practices in the future? And what happens to the minority whose convictions differ?</p>
+        <p>For Adventists, the issue was never whether Sunday worshipers had the right to observe Sunday. They absolutely did. The issue was whether that observance should be enforced through civil law.</p>
+
+        <h3 class="article-heading">What Happened to the Bill?</h3>
+        <p>The Blair Sunday-Rest Bill did not become law. But the controversy was far from over. Sunday laws continued to exist in several states, and Sabbath-keeping Adventists continued facing legal difficulties.</p>
+        <p>The national debate revealed something that our pioneers understood clearly: Religious freedom can be threatened even when those proposing restrictions believe they are doing something good. That is why religious liberty requires more than good intentions. It requires clear limits on government authority.</p>
+
+        <h3 class="article-heading">Why This Matters Today</h3>
+        <p>More than 130 years have passed since A. T. Jones appeared before Congress. Yet the questions raised in 1888 remain relevant. When religious organizations seek government support, where should the boundaries be drawn? When lawmakers promote policies rooted in religious traditions, how do we ensure that minority faiths remain protected? And perhaps most importantly: Would we recognize a threat to religious liberty if the proposed law supported something we personally believed in?</p>
+        <p>As Seventh-day Adventists, we must remember that protecting religious freedom is not the same as opposing Christianity in public life. Christians have every right to participate in public discussions, advocate for their beliefs, and practice their faith. But there is an important difference between persuading someone to embrace a religious belief and using government authority to require religious observance.</p>
+        <p>Jesus never commissioned His followers to compel worship through civil power. He invited people to follow Him:</p>
+
+        <div class="quote-box">
+          “If any man will come after me, let him deny himself, and take up his cross, and follow me.” — Matthew 16:24
+        </div>
+        <p>The invitation begins with a choice.</p>
+
+        <div class="reflection-box">
+          <h4><i class="fa-solid fa-landmark-flag"></i> From the Adventist Archives: Did You Know?</h4>
+          <p>A. T. Jones’s 1888 testimony before the Senate committee became an important part of early Adventist religious-liberty literature. His arguments were published in a work titled <em>The National Sunday Law</em>. The publication preserved the Adventist opposition to government-enforced religious observance and helped educate church members about the importance of religious freedom.</p>
+          <p style="margin-bottom: 0;">The Blair Bill ultimately failed, but the experience strengthened the growing Adventist religious-liberty movement. Our pioneers understood that freedom of conscience was worth defending before it was lost.</p>
+        </div>
+
+        <div class="quote-box">
+          <strong>Religious Liberty Thought for the Week:</strong><br>
+          A law does not become harmless simply because its supporters have good intentions. When government begins determining religious observance, freedom of conscience is placed at risk. Our Adventist pioneers understood this principle more than a century ago. The question is whether we understand it just as clearly today.<br><br>
+          <em>“Render therefore unto Caesar the things which are Caesar’s; and unto God the things that are God’s.” — Matthew 22:21</em>
+        </div>
+
+        <div style="background: var(--surface-alt); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px dashed var(--border); margin-top: 1.5rem;">
+          <h4 style="color: var(--primary-dark); font-size: 1rem; margin-bottom: 0.35rem;"><i class="fa-solid fa-arrow-right-long" style="color: var(--accent);"></i> Coming Next Week</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0;"><strong>Why Adventists Became Defenders of Everyone’s Religious Freedom:</strong> Next week, we’ll explore the origins of the Adventist Religious Liberty movement, the National Religious Liberty Association, and the publications that helped carry its message across America.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Event Flyers & Spotlights Grid -->
+    <section id="features" class="section-card">
+      <h2 class="section-title">
+        <i class="fa-solid fa-images"></i> Special Notices &amp; Event Flyers
+      </h2>
+      <p class="section-subtitle">Details and flyers for upcoming weekend services and memorial arrangements</p>
+
+      <div class="flyer-grid">
+        <!-- Health Emphasis Weekend Flyer -->
+        <div class="flyer-card">
+          <div class="flyer-img-wrap">
+            <img 
+              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-03-at-7.00.59-PM.jpeg" 
+              alt="Health Ministries Weekend Flyer" 
+              class="flyer-img"
+              onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-03-at-7.00.59-PM.jpeg';"
+            />
+          </div>
+          <div class="flyer-body">
+            <span class="flyer-tag">Health Ministries Weekend</span>
+            <h3>Health Emphasis Day &amp; Pink Breakfast</h3>
+            <p>Join us for a full weekend dedicated to physical, mental, and spiritual wellness organized by our Health Ministries Department.</p>
+            <ul class="meta-list">
+              <li><i class="fa-regular fa-calendar-check"></i> <strong>Sabbath, Oct 17:</strong> Health Emphasis Day (Full Day Program)</li>
+              <li><i class="fa-regular fa-clock"></i> <strong>Sunday, Oct 18 @ 11:00 AM:</strong> Breast Cancer Awareness Pink Breakfast</li>
+              <li><i class="fa-solid fa-location-dot"></i> Stroudsburg SDA Church</li>
+            </ul>
           </div>
         </div>
 
-        <!-- Thanksgiving Food Drive -->
-        <div class="card-today">
-          <div>
-            <span class="card-tag tag-amber"><i class="fa-solid fa-heart"></i> Community Outreach</span>
-            <h3>Community Services Thanksgiving Drive</h3>
-            <p>Our Community Services Department is launching this year’s Thanksgiving drive. Many local families depend on the support provided by our community service center, and as Thanksgiving approaches, we want to bless them with supplies for a holiday meal.</p>
-            <p>To contribute financially, please mark <strong>"Thanksgiving Drive"</strong> on your tithe envelope before placing it in the offering collection. For all other donations, please contact Sister Nadine Gayle, Community Services Director.</p>
+        <!-- David Foster Memorial Flyer -->
+        <div class="flyer-card">
+          <div class="flyer-img-wrap">
+            <img 
+              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/39859424-D887-4CB0-AC9F-11B93CAEE37F.png" 
+              alt="Memorial Service for Brother David Foster" 
+              class="flyer-img"
+              onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/39859424-D887-4CB0-AC9F-11B93CAEE37F.png';"
+            />
+          </div>
+          <div class="flyer-body">
+            <span class="flyer-tag">Memorial Service</span>
+            <h3>In Loving Memory: Bro. David Foster</h3>
+            <p>Please join family and friends in honoring and celebrating the life and faith of our beloved brother David Foster.</p>
+            <ul class="meta-list">
+              <li><i class="fa-regular fa-calendar-check"></i> <strong>Sunday, November 1, 2026</strong></li>
+              <li><i class="fa-regular fa-clock"></i> <strong>3:00 PM</strong></li>
+              <li><i class="fa-solid fa-church"></i> Mount Vernon Seventh-day Adventist Church</li>
+              <li><i class="fa-solid fa-location-dot"></i> 230 S Columbus Ave, Mt Vernon, NY 10553</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Weekly Worship Rhythms & Quick Links -->
+    <!-- 4. Weekly Worship Rhythms & Quick Links -->
     <section id="rhythms" class="section-card">
       <h2 class="section-title">
         <i class="fa-solid fa-clock-rotate-left"></i> Weekly Rhythms &amp; Quick Links
       </h2>
-      <p class="section-subtitle">Stay connected through our prayer services, study circles, and fellowships</p>
+      <p class="section-subtitle">Stay connected throughout the week via our regular online prayer portals and ministries</p>
 
       <div class="rhythms-grid">
         <!-- Prayer Meeting & Vespers -->
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-video"></i> Prayer Meeting &amp; Vespers</h4>
           <div class="rhythm-schedule">Wednesdays &amp; Fridays @ 7:15 PM</div>
-          <p>Our Wednesday Evening Prayer Meeting and Friday Evening Vesper will continue this week. Join us on Zoom at 7:15 p.m.</p>
+          <p>Our Wednesday Evening Prayer Meeting and Friday Evening Vesper continue on Zoom at 7:15 p.m.</p>
           <a href="https://www.stroudsburgsda.org/vespers" target="_blank" rel="noopener" class="link-action">
             Open Zoom Portal <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -585,7 +781,7 @@
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-phone"></i> Closer Walk Prayer Line</h4>
           <div class="rhythm-schedule">Mondays &amp; Thursdays | 8:00 – 8:30 PM</div>
-          <p>Remember our Closer Walk Prayer Line on Mondays and Thursdays from 8:00 to 8:30 p.m. on Zoom.</p>
+          <p>Join us on Zoom for dedicated intercession and prayer every Monday and Thursday evening.</p>
           <a href="https://www.stroudsburgsda.org/prayer" target="_blank" rel="noopener" class="link-action">
             Join Prayer Line <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -595,18 +791,18 @@
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-users"></i> New Beginnings Senior Ministry</h4>
           <div class="rhythm-schedule">1st &amp; 3rd Tuesdays @ 10:30 AM</div>
-          <p>The New Beginnings Senior Ministry meets every 1st and 3rd Tuesday at 10:30 am at the Community Service Center.</p>
+          <p>The New Beginnings Senior Ministry meets at the Community Service Center.</p>
           <span style="font-size: 0.85rem; color: var(--text-muted);">Community Service Center</span>
         </div>
       </div>
     </section>
 
-    <!-- Upcoming Events Timeline -->
+    <!-- 5. Upcoming Events Timeline -->
     <section id="upcoming" class="section-card">
       <h2 class="section-title">
         <i class="fa-solid fa-calendar-check"></i> Upcoming Events
       </h2>
-      <p class="section-subtitle">Mark your calendars and plan ahead for these upcoming dates</p>
+      <p class="section-subtitle">Mark your calendars for these upcoming worship services, health programs, and outreach drives</p>
 
       <div class="timeline">
         <div class="timeline-item">
@@ -616,7 +812,7 @@
           </div>
           <div class="timeline-body">
             <h4>Health Emphasis Day</h4>
-            <p>Join us for Health Emphasis Day next Sabbath, October 17, 2026. The Health Ministry Department has planned a full day of spiritual and health and wellness information.</p>
+            <p>The Health Ministry Department has planned a full day of spiritual, physical health, and wellness information this Sabbath.</p>
           </div>
         </div>
 
@@ -627,7 +823,7 @@
           </div>
           <div class="timeline-body">
             <h4>Breast Cancer Awareness Pink Breakfast</h4>
-            <p>Also, please join us for the Breast Cancer Awareness Pink Breakfast at <strong>11:00 am</strong> on October 18th, 2026. More details will follow.</p>
+            <p>Join us at <strong>11:00 am</strong> on Sunday, October 18, 2026, for our annual Breast Cancer Awareness Pink Breakfast.</p>
           </div>
         </div>
 
@@ -638,7 +834,7 @@
           </div>
           <div class="timeline-body">
             <h4>Memorial Service: Bro. David Foster</h4>
-            <p>This is to inform you that brother David Foster’s memorial service is scheduled for <strong>November 1, 2026</strong>, at the Mount Vernon Seventh-Day Adventist Church located at 230 S Columbus Ave, Mt Vernon, NY 10553. More details about the time and service will be shared when it becomes available.</p>
+            <p>Memorial service celebrating the life of Brother David Foster at <strong>3:00 PM</strong> at the Mount Vernon Seventh-day Adventist Church (230 S Columbus Ave, Mt Vernon, NY 10553).</p>
           </div>
         </div>
 
@@ -648,19 +844,19 @@
             <span class="day">--</span>
           </div>
           <div class="timeline-body">
-            <h4>Thanksgiving Food Distribution</h4>
-            <p>Holiday meal packages distributed by Community Services to families throughout the Pocono area.</p>
+            <h4>Community Services Thanksgiving Food Drive</h4>
+            <p>Our Community Services Department is collecting donations to provide Thanksgiving meal supplies to local families. To contribute financially, please mark "Thanksgiving Drive" on your tithe envelope, or contact Sister Nadine Gayle.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pennsylvania Conference Announcements -->
+    <!-- 6. Pennsylvania Conference Announcements -->
     <section id="conference" class="section-card">
       <h2 class="section-title">
         <i class="fa-solid fa-mountain-sun"></i> Pennsylvania Conference Announcements
       </h2>
-      <p class="section-subtitle">Conference-wide ministry opportunities, retreats, and devotional updates</p>
+      <p class="section-subtitle">Conference-wide ministry opportunities and publications</p>
 
       <div class="conference-box">
         <h4><i class="fa-solid fa-pen-nib"></i> Devotionals Still Needed</h4>
