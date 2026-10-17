@@ -241,11 +241,11 @@
       margin-bottom: 1.75rem;
     }
 
-    /* Grid Layouts */
-    .grid-3 {
+    /* Today Grid */
+    .grid-today {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.25rem;
     }
 
     .card-today {
@@ -277,6 +277,11 @@
       color: var(--primary-dark);
     }
 
+    .tag-gold {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
     .tag-pink {
       background: #fce7f3;
       color: #9d174d;
@@ -288,16 +293,15 @@
     }
 
     .card-today h3 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--primary-dark);
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.5rem;
     }
 
     .card-today p {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
-      margin-bottom: 0.75rem;
-      line-height: 1.6;
+      line-height: 1.55;
     }
 
     /* Flyers Grid */
@@ -647,7 +651,16 @@
       </h2>
       <p class="section-subtitle">Announcements and ministry notices for Sabbath, October 17, 2026</p>
 
-      <div class="grid-3">
+      <div class="grid-today">
+        <!-- Bible Class -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-gold"><i class="fa-solid fa-book-bible"></i> Bible Study</span>
+            <h3>Bible Class</h3>
+            <p>Bible Class resumes today at <strong>3:15 PM</strong> and will continue every Sabbath in the sanctuary.</p>
+          </div>
+        </div>
+
         <!-- AYS Meeting -->
         <div class="card-today">
           <div>
@@ -670,9 +683,8 @@
         <div class="card-today">
           <div>
             <span class="card-tag tag-amber"><i class="fa-solid fa-heart"></i> Community Outreach</span>
-            <h3>Community Services Thanksgiving Drive</h3>
-            <p>Please remember our Community Services Department’s Thanksgiving drive. Many local families depend on the support provided by our community service center, and as Thanksgiving approaches, we want to bless them with supplies for a holiday meal.</p>
-            <p>To contribute financially, please mark <strong>"Thanksgiving Drive"</strong> on your tithe envelope before placing it in the offering collection. For all other donations, please contact Sister Nadine Gayle, Community Services Director.</p>
+            <h3>Thanksgiving Drive</h3>
+            <p>Please remember our Community Services Department’s Thanksgiving drive. To contribute financially, mark <strong>"Thanksgiving Drive"</strong> on your tithe envelope, or contact Sister Nadine Gayle.</p>
           </div>
         </div>
       </div>
@@ -698,15 +710,15 @@
           </div>
           <div class="flyer-body">
             <span class="flyer-tag" style="background: #dbeafe; color: #1e40af;">Community Outreach</span>
-            <h3>Veterans Day Parade Outreach</h3>
-            <p>Join us as we distribute literature and connect with our community during the parade.</p>
+            <h3>Veterans Day Parade Outreach[cite: 1]</h3>
+            <p>Join us as we distribute literature and connect with our community[cite: 1] during the parade.</p>
             <ul class="meta-list">
-              <li><i class="fa-regular fa-calendar-check"></i> <strong>Sunday, November 1, 2026</strong></li>
-              <li><i class="fa-regular fa-clock"></i> <strong>12:00 PM</strong></li>
-              <li><i class="fa-solid fa-location-dot"></i> Meet at Stroudsburg SDA Church</li>
+              <li><i class="fa-regular fa-calendar-check"></i> <strong>Sunday, November 1, 2026[cite: 1]</strong></li>
+              <li><i class="fa-regular fa-clock"></i> <strong>12:00 PM[cite: 1]</strong></li>
+              <li><i class="fa-solid fa-location-dot"></i> Meet at Stroudsburg SDA Church[cite: 1]</li>
             </ul>
             <div class="tshirt-badge">
-              <i class="fa-solid fa-shirt"></i> Wear your NEED PRAYER? T-shirt
+              <i class="fa-solid fa-shirt"></i> Wear your NEED PRAYER? T-shirt[cite: 1]
             </div>
           </div>
         </div>
@@ -766,6 +778,14 @@
       <p class="section-subtitle">Stay connected through our prayer services, study circles, and fellowships</p>
 
       <div class="rhythms-grid">
+        <!-- Sanctuary Bible Class -->
+        <div class="rhythm-box">
+          <h4><i class="fa-solid fa-book-bible"></i> Sanctuary Bible Class</h4>
+          <div class="rhythm-schedule">Sabbaths @ 3:15 PM</div>
+          <p>Join us in the sanctuary each Sabbath afternoon as we delve deeply into God's Word together.</p>
+          <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Church Sanctuary</span>
+        </div>
+
         <!-- Prayer Meeting & Vespers -->
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-video"></i> Prayer Meeting &amp; Vespers</h4>
@@ -909,6 +929,7 @@
         <h4>Weekly Worship</h4>
         <p><strong>Sabbath School:</strong> Saturday 9:30 AM</p>
         <p><strong>Divine Service:</strong> Saturday 11:00 AM</p>
+        <p><strong>Bible Class:</strong> Saturday 3:15 PM</p>
         <p><strong>AYS:</strong> Saturday 5:00 PM</p>
         <p><strong>Prayer Meeting &amp; Vespers:</strong> Wed &amp; Fri 7:15 PM</p>
       </div>
