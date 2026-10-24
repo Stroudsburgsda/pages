@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stroudsburg Seventh-day Adventist Church | Midweek Momentum</title>
+  <title>Stroudsburg Seventh-day Adventist Church | Digital Bulletin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -241,89 +241,132 @@
       margin-bottom: 1.75rem;
     }
 
-    /* Article Content */
-    .article-content {
-      font-size: 1.02rem;
-      color: #334155;
-      line-height: 1.8;
+    /* Grid Layouts */
+    .grid-today {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
     }
 
-    .article-content p {
+    .card-today {
+      background: var(--surface-alt);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+      width: fit-content;
+    }
+
+    .tag-blue {
+      background: #e2e8f0;
+      color: var(--primary-dark);
+    }
+
+    .tag-gold {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .tag-amber {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .card-today h3 {
+      font-size: 1.18rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.55rem;
+    }
+
+    .card-today p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Banquet Feature Banner */
+    .banquet-banner {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      margin-bottom: 2.25rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .banquet-badge {
+      display: inline-block;
+      background: rgba(212, 163, 89, 0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .banquet-banner h2 {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 0.65rem;
+    }
+
+    .banquet-banner h2 span {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .banquet-banner p {
+      font-size: 0.98rem;
+      color: #cbd5e1;
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    .banquet-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 1.25rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       margin-bottom: 1.25rem;
     }
 
-    .article-heading {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      color: var(--primary-dark);
-      margin: 1.75rem 0 0.75rem;
-      font-weight: 700;
-    }
-
-    .quote-box {
-      border-left: 4px solid var(--accent);
-      background: var(--surface-alt);
-      padding: 1.25rem 1.5rem;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      margin: 1.5rem 0;
-      font-style: italic;
-      color: var(--primary-dark);
-    }
-
-    .reflection-box {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--primary);
-      padding: 1.5rem;
-      border-radius: var(--radius-sm);
-      margin: 1.75rem 0;
-    }
-
-    .reflection-box h4 {
-      font-size: 1.05rem;
-      color: var(--primary-dark);
-      margin-bottom: 0.5rem;
+    .banquet-meta-item {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-    }
-
-    .reflection-box h4 i {
-      color: var(--accent);
-    }
-
-    .truth-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-      margin: 1.5rem 0 1.75rem;
-    }
-
-    .truth-card {
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 1.25rem;
-    }
-
-    .truth-card h5 {
-      color: var(--primary-dark);
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .truth-card h5 i {
-      color: var(--accent);
-    }
-
-    .truth-card p {
+      gap: 0.65rem;
       font-size: 0.92rem;
-      color: var(--text-muted);
-      margin-bottom: 0;
-      line-height: 1.55;
+      color: #f1f5f9;
+    }
+
+    .banquet-meta-item i {
+      color: var(--accent);
+      font-size: 1.1rem;
+      width: 18px;
     }
 
     /* Flyers Grid */
@@ -634,12 +677,12 @@
         <span>Stroudsburg SDA</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#potluck">Sabbath Potluck</a></li>
-        <li><a href="#momentum">Lesson Study</a></li>
-        <li><a href="#liberty">Religious Liberty</a></li>
-        <li><a href="#features">Flyers &amp; Spotlights</a></li>
+        <li><a href="#today">Today's Focus</a></li>
+        <li><a href="#banquet">Year-End Banquet</a></li>
+        <li><a href="#features">Flyers &amp; Notices</a></li>
         <li><a href="#rhythms">Weekly Rhythms</a></li>
         <li><a href="#upcoming">Upcoming</a></li>
+        <li><a href="#conference">PA Conference</a></li>
         <li>
           <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="nav-btn-youtube">
             <i class="fa-brands fa-youtube"></i> Watch Live
@@ -653,186 +696,134 @@
   <header class="hero">
     <div class="hero-content">
       <div class="badge-date">
-        <i class="fa-regular fa-calendar"></i> Wednesday, October 21, 2026 &bull; Midweek Edition
+        <i class="fa-regular fa-calendar"></i> Sabbath, October 24, 2026
       </div>
-      <h1>Midweek Momentum &amp; Announcements</h1>
-      <p>Reflecting on God's Word, standing for liberty of conscience, and preparing together for our upcoming Sabbath worship and fellowship.</p>
+      <h1>Stroudsburg Seventh-day Adventist Church</h1>
+      <p>Welcome to our house of worship. May your heart be renewed and your spirit strengthened by God’s grace and truth today.</p>
       <div class="hero-actions">
-        <a href="#potluck" class="btn btn-accent"><i class="fa-solid fa-utensils"></i> Sabbath Potluck Notice</a>
-        <a href="#momentum" class="btn btn-outline-light"><i class="fa-solid fa-book-bible"></i> Midweek Lesson Study</a>
+        <a href="#today" class="btn btn-accent"><i class="fa-solid fa-bell"></i> Today's Announcements</a>
+        <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="btn btn-outline-light"><i class="fa-brands fa-youtube"></i> Live Stream</a>
       </div>
     </div>
   </header>
 
-  <!-- Main Container -->
+  <!-- Main Content -->
   <main class="container">
 
-    <!-- Church Family Potluck Spotlight -->
-    <section id="potluck" class="section-card" style="border-left: 5px solid var(--accent);">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: center;">
+    <!-- Church Family Potluck Banner -->
+    <section class="section-card" style="border-left: 5px solid var(--accent); padding: 1.75rem 2rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; align-items: center;">
         <div>
-          <span class="flyer-tag" style="background: #fef3c7; color: #92400e;">
-            <i class="fa-solid fa-people-roof"></i> Church Family Fellowship
-          </span>
-          <h2 style="font-family: var(--font-serif); font-size: 1.9rem; color: var(--primary-dark); margin-bottom: 0.75rem;">
-            Church Family Potluck This Sabbath
+          <span class="card-tag tag-gold"><i class="fa-solid fa-people-roof"></i> Fellowship Lunch Today</span>
+          <h2 style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--primary-dark); margin-bottom: 0.5rem;">
+            Church Family Potluck Today
           </h2>
-          <p style="font-size: 1.02rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.7;">
-            Join us for a church family potluck this Sabbath, <strong>October 24, 2026</strong>, immediately following Divine Worship! Please bring a dish to share as we enjoy food and fellowship together before Bible Class and AY.
+          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.75rem;">
+            Join us for our church family potluck today immediately following Divine Worship! Please bring a dish to share as we enjoy food and fellowship together before Bible Class (3:15 PM) and AY (5:00 PM).
           </p>
-          <ul class="meta-list">
-            <li><i class="fa-regular fa-calendar-check"></i> <strong>Sabbath, October 24, 2026</strong> (After Divine Worship)</li>
-            <li><i class="fa-solid fa-utensils"></i> Bring a dish to share</li>
-            <li><i class="fa-solid fa-book-bible"></i> Followed by Bible Class (3:15 PM) &amp; AY (5:00 PM)</li>
-          </ul>
         </div>
         <div style="text-align: center;">
           <img 
             src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/5E2C7938-A4E8-4F3B-A4B6-EB104D363829.png" 
             alt="Church Family Potluck" 
-            style="max-width: 100%; max-height: 340px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 1px solid var(--border);"
+            style="max-width: 100%; max-height: 220px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border);"
             onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/5E2C7938-A4E8-4F3B-A4B6-EB104D363829.png';"
           />
         </div>
       </div>
     </section>
 
-    <!-- 1. Midweek Momentum (Lesson Study) -->
-    <section id="momentum" class="section-card">
+    <!-- Today at Stroudsburg -->
+    <section id="today" class="section-card">
       <h2 class="section-title">
-        <i class="fa-solid fa-book-open"></i> Midweek Momentum: The Gift of Prophecy
+        <i class="fa-solid fa-bullhorn"></i> Today at Stroudsburg
       </h2>
-      <p class="section-subtitle">Sabbath School Lesson Study Preview for Sabbath, October 24, 2026</p>
+      <p class="section-subtitle">Announcements and ministry notices for Sabbath, October 24, 2026</p>
 
-      <div class="article-content">
-        <h3 class="article-heading">New Testament Prophets</h3>
-        <p>Happy Wednesday, Sabbath School!</p>
-        <p>Have you ever wondered how we can recognize God’s voice amid all the voices competing for our attention? This week’s lesson, <em>New Testament Prophets</em>, reminds us that while times and circumstances may change, the Holy Spirit remains the source of true prophecy.</p>
-        <p>As you study this week, consider these three important truths:</p>
-
-        <div class="truth-cards">
-          <div class="truth-card">
-            <h5><i class="fa-solid fa-cross"></i> Jesus Is the Center</h5>
-            <p>All true prophetic messages point us to Christ and deepen our understanding of His love and plan of salvation.</p>
-          </div>
-          <div class="truth-card">
-            <h5><i class="fa-solid fa-gift"></i> Spiritual Gifts Have a Purpose</h5>
-            <p>Prophecy is not merely about revealing what is to come. It also strengthens, encourages, and comforts God’s people. How can we use our own spiritual gifts to build others up?</p>
-          </div>
-          <div class="truth-card">
-            <h5><i class="fa-solid fa-shield-halved"></i> Discernment Is Essential</h5>
-            <p>Not every message that appears spiritual comes from God. We must test what we hear against His Word and keep Jesus at the center of our faith.</p>
+      <div class="grid-today">
+        <!-- Adventurer Club -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-blue"><i class="fa-solid fa-child"></i> Adventurer Ministry</span>
+            <h3>Stroudsburg Gems Adventurers</h3>
+            <p>The Stroudsburg Gems Adventurer Club will meet today from <strong>4:00 PM to 5:30 PM</strong>.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.88rem; color: var(--text);">
+              <strong>Leaders Needed:</strong> We are looking for individuals interested in serving as Adventurer Club leaders. If interested, please speak with <strong>Sister Mfon Joseph</strong> or <strong>Sister Napiela Nelson</strong>.
+            </p>
           </div>
         </div>
 
-        <p style="font-size: 1.1rem; font-weight: 700; color: var(--primary-dark);">
-          Let’s Make This Sabbath School Lesson a Conversation, Not Just a Reading Assignment!
-        </p>
-        <p>Here’s your midweek challenge: Set aside time to revisit the daily readings, reflect on the questions, and come to Sabbath School ready to contribute. Choose one insight, one question, or one personal application from this week’s lesson that you can share with the class. Perhaps a Scripture stood out to you, a truth challenged your thinking, or a question made you look more closely at God’s Word. Bring it with you!</p>
-        <p>And remember, participation isn't reserved for those who have all the answers. Sometimes the most meaningful discussions begin with an honest question or a perspective that helps someone else see Scripture in a new way. Your voice matters, your insights are valuable, and your participation can be a blessing to the entire class.</p>
-
-        <div class="reflection-box">
-          <h4><i class="fa-solid fa-comments"></i> Coming Prepared</h4>
-          <p style="margin-bottom: 0;">Let’s come to Sabbath School prepared not simply to listen, but to engage, encourage one another, and grow together in faith. Our class is richer when every member comes ready to participate!</p>
-        </div>
-
-        <p style="font-weight: 700; color: var(--primary-dark);">See you on Sabbath, family! ❤️</p>
-      </div>
-    </section>
-
-    <!-- 2. Religious Liberty: Then & Now -->
-    <section id="liberty" class="section-card">
-      <h2 class="section-title">
-        <i class="fa-solid fa-scale-balanced"></i> Religious Liberty: Then &amp; Now
-      </h2>
-      <p class="section-subtitle">When Adventists Became Defenders of Everyone’s Freedom: The Movement That Began With a Few Believers and Reached the World</p>
-
-      <div class="article-content">
-        <p>Imagine being arrested for practicing your faith, fighting for your rights, and then deciding that protecting your own religious freedom wasn’t enough. You would fight for the religious freedom of people who didn’t even believe what you believed.</p>
-        <p>That is exactly the direction our Adventist pioneers took. Last week, we learned how A. T. Jones stood before Congress in 1888 to oppose a proposed national Sunday law. But the story did not end when that legislation failed. Something much bigger was beginning.</p>
-
-        <h3 class="article-heading">From Persecution to Organization</h3>
-        <p>By the late 1880s, Seventh-day Adventists had experienced the consequences of religious legislation firsthand. Sabbath keepers had been arrested, fined, and imprisoned under Sunday laws. At the same time, religious organizations were pushing for greater government recognition of Christian practices.</p>
-        <p>Our pioneers realized that simply defending individual Adventists in court was not enough. They needed to educate the public, influence lawmakers, and defend the constitutional principles that protected freedom of conscience.</p>
-        <p>So, on July 21, 1889, the National Religious Liberty Association was organized with just 110 members. Think about that: a relatively small denomination, still establishing itself in America, decided to take on a national issue involving religion, government, and individual freedom. And its mission would eventually reach far beyond the United States.</p>
-
-        <h3 class="article-heading">The Power of the Printed Word</h3>
-        <p>Even before the association was formally organized, Adventists recognized the importance of educating the public. In January 1886, they began publishing a periodical called <em>The American Sentinel</em>. Its purpose was to defend religious liberty and oppose the improper union of church and state. The publication challenged Sunday legislation, addressed constitutional questions, and presented arguments for protecting religious minorities.</p>
-        <p>This was not simply a church newsletter. It was an effort to influence the national conversation about religious freedom. Our pioneers understood something that remains true today: if people do not understand their freedoms, they may not recognize when those freedoms are being threatened.</p>
-
-        <h3 class="article-heading">Defending the Freedom of All</h3>
-        <p>The early Adventists faced a difficult question: Should they defend only Sabbath keepers? Or should they defend the religious freedom of people whose beliefs they considered incorrect?</p>
-        <p>Their developing answer was significant: <strong>Religious liberty must belong to everyone, or it is not truly religious liberty.</strong></p>
-        <p>One example came during the 1890s, when anti-Catholic movements sought government policies that would restrict the freedom of Catholic families to educate their children according to their religious convictions. Adventist religious liberty advocates, including <em>American Sentinel</em> editor Calvin P. Bollman, challenged such efforts.</p>
-        <p>Consider the significance. Adventists strongly disagreed with important teachings of the Roman Catholic Church. Yet they recognized that government interference with Catholic religious freedom threatened the very principle that protected Adventists. They understood that defending someone’s religious liberty did not mean endorsing that person’s theology. It meant defending the freedom to follow conscience without improper government interference. That is a lesson the church must never forget.</p>
-
-        <h3 class="article-heading">From a National Movement to an International Mission</h3>
-        <p>In 1893, the movement expanded into the International Religious Liberty Association (IRLA). That same year, Adventist religious liberty advocates adopted a declaration of principles affirming both respect for legitimate civil government and opposition to government legislation on religious questions.</p>
-        <p>Their position was clear: Civil government has an important role in maintaining order and protecting society. But government must not assume authority over religious conscience.</p>
-        <p>The movement continued to grow. In 1906, the church began publishing <em>Liberty</em> magazine, carrying forward the work of educating readers about religious freedom. What began as a response to Sunday-law persecution developed into an enduring ministry advocating freedom of conscience.</p>
-
-        <h3 class="article-heading">What Would Our Pioneers Think of Us Today?</h3>
-        <p>Our pioneers faced arrests, imprisonment, and public opposition. Yet they organized, published, educated, and advocated. They did not remain silent simply because the issue was controversial.</p>
-        <p>Today, we have access to information, legal resources, public officials, and opportunities to speak about religious freedom that many early Adventists could scarcely have imagined. But how much do we actually know about religious liberty? Do we understand the rights we enjoy? Do we pay attention when those rights are challenged? And are we willing to defend religious freedom when the person affected belongs to another faith?</p>
-        <p>Religious liberty cannot become important to us only when Adventists are affected.</p>
-
-        <div class="quote-box">
-          “Therefore all things whatsoever ye would that men should do to you, do ye even so to them.” — Matthew 7:12
-        </div>
-        <p>We want others to respect our right to worship on the seventh-day Sabbath. We want employers to respect our sincerely held religious convictions. We want government to protect our freedom to practice our faith. But Christ calls us to extend that same respect to others. We cannot demand freedom for ourselves while remaining indifferent when someone else’s conscience is threatened.</p>
-
-        <div class="reflection-box">
-          <h4><i class="fa-solid fa-landmark-flag"></i> From the Adventist Archives: Did You Know?</h4>
-          <p>The International Religious Liberty Association traces its origins to the National Religious Liberty Association established in 1889. In 1893, its declaration of principles affirmed:</p>
-          <div class="quote-box" style="margin: 0.5rem 0 0.75rem;">
-            “We believe it is right, and should be the privilege of every man to worship according to the dictates of his own conscience.”
+        <!-- Bible Class -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-gold"><i class="fa-solid fa-book-bible"></i> Bible Study</span>
+            <h3>Sanctuary Bible Class</h3>
+            <p>Bible Class meets today at <strong>3:15 PM</strong> in the sanctuary and continues every Sabbath afternoon.</p>
           </div>
-          <p style="margin-bottom: 0;">That principle became central to the Adventist approach to religious liberty. Our pioneers recognized that freedom of conscience was not a privilege reserved for one denomination. It was a right that should be protected for all.</p>
         </div>
 
-        <div class="quote-box">
-          <strong>Religious Liberty Thought for the Week:</strong><br>
-          Our pioneers did not fight for religious freedom simply so Adventists could be free. They fought because they believed freedom of conscience was a principle worth defending for everyone. Their legacy challenges us to do more than remember history. It challenges us to continue their work. Because religious liberty is not merely something we inherit. It is something we have a responsibility to preserve.<br><br>
-          <em>“Proclaim liberty throughout all the land unto all the inhabitants thereof.” — Leviticus 25:10</em>
+        <!-- AYS Meeting -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-blue"><i class="fa-solid fa-users"></i> Youth &amp; Young Adults</span>
+            <h3>AYS Today</h3>
+            <p>Join us for Adventist Youth Society (AYS) this afternoon at <strong>5:00 PM</strong>.</p>
+          </div>
         </div>
 
-        <div style="background: var(--surface-alt); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px dashed var(--border); margin-top: 1.5rem;">
-          <h4 style="color: var(--primary-dark); font-size: 1rem; margin-bottom: 0.35rem;"><i class="fa-solid fa-arrow-right-long" style="color: var(--accent);"></i> Coming Next Week</h4>
-          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0;"><strong>Week 4: Could It Happen Again? What Adventist History Teaches Us About Religious Freedom Today:</strong> More than 130 years have passed since Adventists were arrested for violating Sunday laws. Could religious legislation once again become a serious issue in America? Next week, we’ll examine the lessons of history and consider why our pioneers’ warnings still deserve attention.</p>
+        <!-- Thanksgiving Food Drive -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-amber"><i class="fa-solid fa-heart"></i> Community Outreach</span>
+            <h3>Community Thanksgiving Drive</h3>
+            <p>Our Community Services Department is launching this year’s Thanksgiving drive to bless local families with holiday meal supplies.</p>
+            <p style="font-size: 0.88rem;">To contribute financially, mark <strong>"Thanksgiving Drive"</strong> on your tithe envelope. For all other donations, contact <strong>Sister Nadine Gayle</strong>, Community Services Director.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. Event Flyers & Spotlights Grid -->
+    <!-- Year-End Banquet Spotlight Banner -->
+    <section id="banquet" class="banquet-banner">
+      <span class="banquet-badge"><i class="fa-solid fa-champagne-glasses"></i> Save the Date — December 19, 2026</span>
+      <h2>End of Year Banquet: <span>It's Officially ON!</span></h2>
+      <p>
+        You’ve been asking, and the Family Life Department is excited to announce that the year-end banquet is officially ON! The committee is planning a wonderful evening of food, fellowship, fun, and celebration for the entire family and all ages—with our youth especially invited to come out in large numbers!
+      </p>
+      
+      <div class="banquet-meta-grid">
+        <div class="banquet-meta-item">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span><strong>Saturday, Dec 19, 2026</strong></span>
+        </div>
+        <div class="banquet-meta-item">
+          <i class="fa-regular fa-clock"></i>
+          <span><strong>7:00 PM – 11:00 PM</strong></span>
+        </div>
+        <div class="banquet-meta-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span><strong>The Poconos Club</strong></span>
+        </div>
+        <div class="banquet-meta-item">
+          <i class="fa-solid fa-utensils"></i>
+          <span><strong>West Indian, Vegetarian &amp; Vegan Catered</strong></span>
+        </div>
+      </div>
+
+      <p style="font-size: 0.92rem; color: #f1f5f9; margin-bottom: 0;">
+        <i class="fa-solid fa-piggy-bank" style="color: var(--accent); margin-right: 0.4rem;"></i>
+        <strong>Tip:</strong> Start putting aside just <strong>$10 a week</strong> toward your banquet ticket now! More details will be shared in the coming weeks.
+      </p>
+    </section>
+
+    <!-- Special Notices & Event Flyers -->
     <section id="features" class="section-card">
       <h2 class="section-title">
         <i class="fa-solid fa-images"></i> Special Notices &amp; Event Flyers
       </h2>
-      <p class="section-subtitle">Details and flyers for upcoming weekend services, ministries, and community initiatives</p>
+      <p class="section-subtitle">Upcoming outreach opportunities, memorials, and retreats</p>
 
       <div class="flyer-grid">
-        <!-- Women's Ministries Retreat 2027 Flyer -->
-        <div class="flyer-card">
-          <div class="flyer-img-wrap">
-            <img 
-              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/IMG-20261021-WA0012.jpg.jpeg" 
-              alt="Women's Ministry Retreat 2027 - Heaven at Last" 
-              class="flyer-img"
-              onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/IMG-20261021-WA0012.jpg.jpeg';"
-            />
-          </div>
-          <div class="flyer-body">
-            <span class="flyer-tag" style="background: #fce7f3; color: #9d174d;">Women's Ministry</span>
-            <h3>Women’s Ministry Retreat 2027</h3>
-            <p>Theme: <em>Heaven at Last</em>. Featuring inspiring speakers <strong>Tina Hill</strong> and <strong>Michelle Mota Poiser</strong>. Ladies, begin making payments now to secure your spot!</p>
-            <ul class="meta-list">
-              <li><i class="fa-regular fa-calendar-check"></i> <strong>April 23–25, 2027</strong></li>
-              <li><i class="fa-solid fa-users"></i> See any member of the Women’s Ministry team</li>
-              <li><i class="fa-solid fa-credit-card"></i> Installment payments open now</li>
-            </ul>
-          </div>
-        </div>
-
         <!-- Veterans Day Parade Outreach Flyer -->
         <div class="flyer-card">
           <div class="flyer-img-wrap">
@@ -845,8 +836,8 @@
           </div>
           <div class="flyer-body">
             <span class="flyer-tag" style="background: #dbeafe; color: #1e40af;">Community Outreach</span>
-            <h3>Veterans Day Parade Outreach</h3>
-            <p>Join us as we distribute literature and connect with our community[cite: 1] during the parade.</p>
+            <h3>Veterans Day Parade Outreach[cite: 1]</h3>
+            <p>Join us next Sunday as we distribute literature and connect with our community[cite: 1] during the parade.</p>
             <ul class="meta-list">
               <li><i class="fa-regular fa-calendar-check"></i> <strong>Sunday, November 1, 2026[cite: 1]</strong></li>
               <li><i class="fa-regular fa-clock"></i> <strong>12:00 PM[cite: 1]</strong></li>
@@ -880,40 +871,51 @@
             </ul>
           </div>
         </div>
+
+        <!-- Women's Ministries Retreat 2027 Flyer -->
+        <div class="flyer-card">
+          <div class="flyer-img-wrap">
+            <img 
+              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/IMG-20261021-WA0012.jpg.jpeg" 
+              alt="Women's Ministry Retreat 2027 - Heaven at Last" 
+              class="flyer-img"
+              onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/IMG-20261021-WA0012.jpg.jpeg';"
+            />
+          </div>
+          <div class="flyer-body">
+            <span class="flyer-tag" style="background: #fce7f3; color: #9d174d;">Women's Ministry</span>
+            <h3>Women’s Ministry Retreat 2027</h3>
+            <p>Theme: <em>Heaven at Last</em>. Guest speakers: <strong>Tina Hill</strong> and <strong>Michelle Mota Poiser</strong>. A flyer indicating cost was sent via church text. Ladies, you can begin making payments now to secure your spot!</p>
+            <ul class="meta-list">
+              <li><i class="fa-regular fa-calendar-check"></i> <strong>April 23–25, 2027</strong></li>
+              <li><i class="fa-solid fa-users"></i> See any Women’s Ministry team member</li>
+              <li><i class="fa-solid fa-credit-card"></i> Installment payments open now</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 4. Weekly Worship Rhythms & Quick Links -->
+    <!-- Weekly Worship Rhythms & Quick Links -->
     <section id="rhythms" class="section-card">
       <h2 class="section-title">
-        <i class="fa-solid fa-clock-rotate-left"></i> Weekly Rhythms &amp; Quick Links
+        <i class="fa-solid fa-clock-rotate-left"></i> This Week at Stroudsburg
       </h2>
-      <p class="section-subtitle">Stay connected throughout the week via our regular online prayer portals and ministries</p>
+      <p class="section-subtitle">Weekly ministries, community support, and online prayer portals</p>
 
       <div class="rhythms-grid">
-        <!-- Sanctuary Bible Class -->
-        <div class="rhythm-box">
-          <h4><i class="fa-solid fa-book-bible"></i> Sanctuary Bible Class</h4>
-          <div class="rhythm-schedule">Sabbaths @ 3:15 PM</div>
-          <p>Delve deeply into scripture together in the sanctuary each Sabbath afternoon following potluck and fellowship.</p>
-          <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Church Sanctuary</span>
-        </div>
-
-        <!-- Prayer Meeting & Vespers -->
-        <div class="rhythm-box">
-          <h4><i class="fa-solid fa-video"></i> Prayer Meeting &amp; Vespers</h4>
-          <div class="rhythm-schedule">Wednesdays &amp; Fridays @ 7:15 PM</div>
-          <p>Our Wednesday Evening Prayer Meeting and Friday Evening Vesper continue on Zoom at 7:15 p.m.</p>
-          <a href="https://www.stroudsburgsda.org/vespers" target="_blank" rel="noopener" class="link-action">
-            Open Zoom Portal <i class="fa-solid fa-arrow-right"></i>
-          </a>
+        <!-- Pocono Grace Series Support Notice -->
+        <div class="rhythm-box" style="border-left: 3px solid var(--accent);">
+          <h4><i class="fa-solid fa-church"></i> Pocono Grace Series</h4>
+          <div class="rhythm-schedule" style="color: #b45309;">Support Online / In Person</div>
+          <p>Please continue to support Pocono Grace’s Evangelistic Series in person or online via their YouTube channel this week. <strong>There will be no Wednesday prayer meeting or Friday Evening Vesper.</strong></p>
         </div>
 
         <!-- Closer Walk Prayer Line -->
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-phone"></i> Closer Walk Prayer Line</h4>
           <div class="rhythm-schedule">Mondays &amp; Thursdays | 8:00 – 8:30 PM</div>
-          <p>Join us on Zoom for dedicated intercession and prayer every Monday and Thursday evening.</p>
+          <p>Remember our Closer Walk Prayer Line on Mondays and Thursdays from 8:00 to 8:30 p.m. on Zoom.</p>
           <a href="https://www.stroudsburgsda.org/prayer" target="_blank" rel="noopener" class="link-action">
             Join Prayer Line <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -923,31 +925,20 @@
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-users"></i> New Beginnings Senior Ministry</h4>
           <div class="rhythm-schedule">1st &amp; 3rd Tuesdays @ 10:30 AM</div>
-          <p>The New Beginnings Senior Ministry meets at the Community Service Center.</p>
+          <p>The New Beginnings Senior Ministry meets every 1st and 3rd Tuesday at 10:30 am at the Community Service Center.</p>
           <span style="font-size: 0.85rem; color: var(--text-muted);">Community Service Center</span>
         </div>
       </div>
     </section>
 
-    <!-- 5. Upcoming Events Timeline -->
+    <!-- Upcoming Events Timeline -->
     <section id="upcoming" class="section-card">
       <h2 class="section-title">
         <i class="fa-solid fa-calendar-check"></i> Upcoming Events
       </h2>
-      <p class="section-subtitle">Mark your calendars for these upcoming worship services, community outreach days, and fellowships</p>
+      <p class="section-subtitle">Mark your calendars and save the dates for these upcoming ministry gatherings</p>
 
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">
-            <span class="month">Oct</span>
-            <span class="day">24</span>
-          </div>
-          <div class="timeline-body">
-            <h4>Church Family Potluck</h4>
-            <p>Join us this Sabbath immediately following Divine Worship for a church family potluck. Please bring a dish to share as we enjoy fellowship before Bible Class (3:15 PM) and AY (5:00 PM).</p>
-          </div>
-        </div>
-
         <div class="timeline-item">
           <div class="timeline-date">
             <span class="month">Nov</span>
@@ -955,7 +946,7 @@
           </div>
           <div class="timeline-body">
             <h4>Veterans Day Parade Outreach[cite: 1]</h4>
-            <p><strong>Sunday, November 1 at 12:00 PM[cite: 1].</strong> Meet at Stroudsburg SDA Church[cite: 1] to distribute literature and connect with our community[cite: 1]. Wear your <strong>NEED PRAYER? T-shirt[cite: 1]</strong>!</p>
+            <p><strong>Sunday, November 1 at 12:00 PM[cite: 1].</strong> Meet at Stroudsburg SDA Church[cite: 1] as we distribute literature and connect with our community[cite: 1]. Don't forget to wear your <strong>NEED PRAYER? T-shirt[cite: 1]</strong>!</p>
           </div>
         </div>
 
@@ -976,8 +967,8 @@
             <span class="day">--</span>
           </div>
           <div class="timeline-body">
-            <h4>Community Services Thanksgiving Food Drive</h4>
-            <p>Collecting donations to provide holiday meal supplies for local families. Mark "Thanksgiving Drive" on your tithe envelope, or contact Sister Nadine Gayle.</p>
+            <h4>Thanksgiving Food Distribution</h4>
+            <p>Community Services holiday food distribution supporting local families. Mark "Thanksgiving Drive" on your tithe envelope to support.</p>
           </div>
         </div>
 
@@ -987,8 +978,8 @@
             <span class="day">19</span>
           </div>
           <div class="timeline-body">
-            <h4>End of Year Banquet</h4>
-            <p>Save the date for Saturday, December 19th, 2026. More details will follow.</p>
+            <h4>Year-End Banquet: "It's Officially ON!"</h4>
+            <p><strong>Saturday, December 19, 2026 (7:00 PM – 11:00 PM) at The Poconos Club.</strong> Enjoy a full evening of fellowship, celebration, and catered food (West Indian dishes, vegetarian, and vegan options). Start putting aside $10/week toward your ticket!</p>
           </div>
         </div>
 
@@ -999,13 +990,13 @@
           </div>
           <div class="timeline-body">
             <h4>Women’s Ministry Retreat 2027</h4>
-            <p><strong>April 23–25, 2027.</strong> Theme: <em>Heaven at Last</em>. Speakers: <strong>Tina Hill</strong> and <strong>Michelle Mota Poiser</strong>. See any Women's Ministry team member to register and start installment payments.</p>
+            <p><strong>April 23–25, 2027.</strong> Theme: <em>Heaven at Last</em>. Speakers: <strong>Tina Hill</strong> and <strong>Michelle Mota Poiser</strong>. See any Women's Ministry team member for details and to start payment plans (cost details sent via church text message).</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. Pennsylvania Conference Announcements -->
+    <!-- Pennsylvania Conference Announcements -->
     <section id="conference" class="section-card">
       <h2 class="section-title">
         <i class="fa-solid fa-mountain-sun"></i> Pennsylvania Conference Announcements
@@ -1032,7 +1023,6 @@
 
       <div class="footer-col">
         <h4>Quick Access</h4>
-        <p><a href="https://www.stroudsburgsda.org/vespers" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;">Prayer Meeting &amp; Vespers Zoom</a></p>
         <p><a href="https://www.stroudsburgsda.org/prayer" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;">Closer Walk Prayer Line</a></p>
         <p><a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;">YouTube Channel</a></p>
         <p><a href="https://paconference.org" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: none;">PA Conference of SDA</a></p>
@@ -1043,8 +1033,8 @@
         <p><strong>Sabbath School:</strong> Saturday 9:30 AM</p>
         <p><strong>Divine Service:</strong> Saturday 11:00 AM</p>
         <p><strong>Sanctuary Bible Class:</strong> Saturday 3:15 PM</p>
+        <p><strong>Adventurers:</strong> Saturday 4:00 PM</p>
         <p><strong>AYS:</strong> Saturday 5:00 PM</p>
-        <p><strong>Prayer Meeting &amp; Vespers:</strong> Wed &amp; Fri 7:15 PM</p>
       </div>
     </div>
 
