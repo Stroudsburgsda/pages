@@ -287,6 +287,11 @@
       color: #92400e;
     }
 
+    .tag-rose {
+      background: #ffe4e6;
+      color: #9f1239;
+    }
+
     .card-today h3 {
       font-size: 1.18rem;
       color: var(--primary-dark);
@@ -298,84 +303,6 @@
       color: var(--text-muted);
       line-height: 1.6;
       margin-bottom: 0.5rem;
-    }
-
-    /* Article Content */
-    .article-content {
-      font-size: 1.02rem;
-      color: #334155;
-      line-height: 1.8;
-    }
-
-    .article-content p {
-      margin-bottom: 1.25rem;
-    }
-
-    .article-heading {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      color: var(--primary-dark);
-      margin: 1.75rem 0 0.75rem;
-      font-weight: 700;
-    }
-
-    .quote-box {
-      border-left: 4px solid var(--accent);
-      background: var(--surface-alt);
-      padding: 1.25rem 1.5rem;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      margin: 1.5rem 0;
-      font-style: italic;
-      color: var(--primary-dark);
-    }
-
-    .reflection-box {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--primary);
-      padding: 1.5rem;
-      border-radius: var(--radius-sm);
-      margin: 1.75rem 0;
-    }
-
-    .reflection-box h4 {
-      font-size: 1.05rem;
-      color: var(--primary-dark);
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .reflection-box h4 i {
-      color: var(--accent);
-    }
-
-    .insight-list {
-      list-style: none;
-      padding: 0;
-      margin: 1.25rem 0 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-
-    .insight-list li {
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.25rem;
-      display: flex;
-      gap: 0.75rem;
-      align-items: flex-start;
-      font-size: 0.95rem;
-      color: #334155;
-    }
-
-    .insight-list li i {
-      color: var(--accent);
-      margin-top: 0.25rem;
-      font-size: 1rem;
     }
 
     /* Banquet Feature Banner */
@@ -445,6 +372,60 @@
       color: var(--accent);
       font-size: 1.1rem;
       width: 18px;
+    }
+
+    /* Family Life Article Box */
+    .family-life-card {
+      background: var(--surface-alt);
+      border-radius: var(--radius-md);
+      border-left: 5px solid var(--accent);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .family-life-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .family-life-card p {
+      font-size: 0.98rem;
+      color: #334155;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .quote-box {
+      border-left: 4px solid var(--accent);
+      background: #ffffff;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 1.25rem 0;
+      font-style: italic;
+      color: var(--primary-dark);
+    }
+
+    .challenge-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .challenge-box h4 {
+      font-size: 1rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .challenge-box h4 i {
+      color: var(--accent);
     }
 
     /* Flyers Grid */
@@ -531,20 +512,6 @@
     .meta-list li i {
       color: var(--accent);
       width: 16px;
-    }
-
-    .tshirt-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #fef3c7;
-      color: #92400e;
-      border: 1px solid #fde68a;
-      padding: 0.5rem 0.85rem;
-      border-radius: var(--radius-sm);
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-top: 0.5rem;
     }
 
     /* Rhythms Grid */
@@ -756,8 +723,8 @@
       </a>
       <ul class="nav-links">
         <li><a href="#today">Today's Focus</a></li>
-        <li><a href="#momentum">Lesson Study</a></li>
-        <li><a href="#liberty">Religious Liberty</a></li>
+        <li><a href="#banquet">Year-End Banquet</a></li>
+        <li><a href="#family-moment">Family Life Moment</a></li>
         <li><a href="#features">Flyers &amp; Notices</a></li>
         <li><a href="#rhythms">Weekly Rhythms</a></li>
         <li><a href="#upcoming">Upcoming</a></li>
@@ -775,7 +742,7 @@
   <header class="hero">
     <div class="hero-content">
       <div class="badge-date">
-        <i class="fa-regular fa-calendar"></i> Sabbath, October 31, 2026
+        <i class="fa-regular fa-calendar"></i> Sabbath, November 7, 2026
       </div>
       <h1>Stroudsburg Seventh-day Adventist Church</h1>
       <p>Welcome to our house of worship. May your heart be renewed and your spirit strengthened by God’s grace and truth today.</p>
@@ -789,61 +756,41 @@
   <!-- Main Content -->
   <main class="container">
 
-    <!-- Potluck Thank You Spotlight Banner -->
-    <section class="section-card" style="border-left: 5px solid var(--accent); padding: 1.75rem 2rem;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; align-items: center;">
-        <div>
-          <span class="card-tag tag-gold"><i class="fa-solid fa-heart"></i> Grateful Hearts</span>
-          <h2 style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--primary-dark); margin-bottom: 0.5rem;">
-            Thank You for Making Potluck Special!
-          </h2>
-          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.75rem;">
-            A heartfelt thank you to everyone who prepared dishes, served, assisted with setup, and helped clean up for our church family potluck. Your dedication and hospitality made our time of fellowship a true blessing!
-          </p>
-        </div>
-        <div style="text-align: center;">
-          <img 
-            src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/4C4AB8FE-D336-41DC-93EF-85A1FAFC0570.png" 
-            alt="Thank You for Potluck" 
-            style="max-width: 100%; max-height: 240px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border);"
-            onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/4C4AB8FE-D336-41DC-93EF-85A1FAFC0570.png';"
-          />
-        </div>
-      </div>
-    </section>
-
     <!-- Today at Stroudsburg -->
     <section id="today" class="section-card">
       <h2 class="section-title">
         <i class="fa-solid fa-bullhorn"></i> Today at Stroudsburg
       </h2>
-      <p class="section-subtitle">Announcements and ministry notices for Sabbath, October 31, 2026</p>
+      <p class="section-subtitle">Announcements and ministry notices for Sabbath, November 7, 2026</p>
 
       <div class="grid-today">
-        <!-- Bible Class -->
+        <!-- Adventurer Club -->
         <div class="card-today">
           <div>
-            <span class="card-tag tag-gold"><i class="fa-solid fa-book-bible"></i> Bible Study</span>
-            <h3>Sanctuary Bible Class</h3>
-            <p>Bible Class meets today at <strong>3:15 PM</strong> in the sanctuary and continues every Sabbath afternoon.</p>
+            <span class="card-tag tag-blue"><i class="fa-solid fa-child"></i> Adventurer Ministry</span>
+            <h3>Stroudsburg Gems Adventurers</h3>
+            <p>The Stroudsburg Gems Adventurer Club will meet today from <strong>4:00 PM to 5:30 PM</strong>.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.88rem; color: var(--text);">
+              <strong>Leaders Needed:</strong> We are looking for individuals interested in serving as Adventurer Club leaders. If interested, please speak with <strong>Sister Mfon Joseph</strong> or <strong>Sister Napiela Nelson</strong>.
+            </p>
           </div>
         </div>
 
-        <!-- AYS Meeting -->
+        <!-- Church Board Meeting -->
         <div class="card-today">
           <div>
-            <span class="card-tag tag-blue"><i class="fa-solid fa-users"></i> Youth &amp; Young Adults</span>
-            <h3>AYS Today</h3>
-            <p>Join us for Adventist Youth Society (AYS) this afternoon at <strong>5:00 PM</strong>.</p>
+            <span class="card-tag tag-gold"><i class="fa-solid fa-users-gear"></i> Church Administration</span>
+            <h3>Church Board Meeting</h3>
+            <p>There will be a Church Board meeting <strong>today at 5:30 PM</strong>.</p>
           </div>
         </div>
 
-        <!-- Tomorrow Outreach Reminder -->
+        <!-- No AYS Today -->
         <div class="card-today">
           <div>
-            <span class="card-tag tag-blue"><i class="fa-solid fa-bullhorn"></i> Tomorrow</span>
-            <h3>Veterans Day Parade Outreach</h3>
-            <p>Tomorrow, <strong>Sunday, November 1 at 12:00 PM</strong>. Meet at the church to distribute literature. Wear your <strong>NEED PRAYER? T-shirt</strong>!</p>
+            <span class="card-tag tag-rose"><i class="fa-solid fa-circle-xmark"></i> Notice</span>
+            <h3>No AYS Today</h3>
+            <p>Please note that there will be <strong>no AYS meeting today</strong>.</p>
           </div>
         </div>
 
@@ -851,118 +798,20 @@
         <div class="card-today">
           <div>
             <span class="card-tag tag-amber"><i class="fa-solid fa-heart"></i> Community Outreach</span>
-            <h3>Community Thanksgiving Drive</h3>
-            <p>Our Community Services Department is collecting donations to provide supplies for holiday meals to local families.</p>
-            <p style="font-size: 0.88rem;">Mark <strong>"Thanksgiving Drive"</strong> on your tithe envelope or contact <strong>Sister Nadine Gayle</strong>, Community Services Director.</p>
+            <h3>Thanksgiving Drive</h3>
+            <p>Our Community Services Department is launching this year’s Thanksgiving drive to bless local families with holiday meal supplies.</p>
+            <p style="font-size: 0.88rem;">To contribute financially, mark <strong>"Thanksgiving Drive"</strong> on your tithe envelope. For all other donations, contact <strong>Sister Nadine Gayle</strong>, Community Services Director.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Midweek Momentum (Lesson Study) -->
-    <section id="momentum" class="section-card">
-      <h2 class="section-title">
-        <i class="fa-solid fa-book-open"></i> Midweek Momentum: The Gift of Prophecy
-      </h2>
-      <p class="section-subtitle">Lesson Study: The Gift of Prophecy — Revelation and Inspiration</p>
-
-      <div class="article-content">
-        <p>As we continue to study this quarter’s lesson on prophecy, I hope you see God’s desire to connect with humanity. This week, as we explore <em>Revelation and Inspiration</em>, we learn not simply how the Bible came to us, but how God used human messengers to communicate His truth.</p>
-        <p>As you study, look for these powerful insights:</p>
-
-        <ul class="insight-list">
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            <div><strong>God wants us to know Him.</strong> Why has He chosen to communicate with humanity in so many different ways?</div>
-          </li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            <div><strong>God's message, human messengers.</strong> How did the Holy Spirit work through people with their own personalities, experiences, and writing styles?</div>
-          </li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            <div><strong>God's message was meant to endure.</strong> Why was it important for prophetic messages to be written down?</div>
-          </li>
-          <li>
-            <i class="fa-solid fa-circle-check"></i>
-            <div><strong>God knows how to get our attention.</strong> What can we learn from the dramatic and symbolic ways He sometimes communicated?</div>
-          </li>
-        </ul>
-
-        <div class="reflection-box">
-          <h4><i class="fa-solid fa-question-circle"></i> Weekly Personal Reflection</h4>
-          <p style="margin-bottom: 0.75rem;">Have you ever struggled to understand something in the Bible? How does knowing more about revelation and inspiration shape your confidence in God's Word?</p>
-          <div class="quote-box" style="margin: 0.5rem 0 0.75rem;">
-            “While God used human messengers, His message points us to divine truth.”
-          </div>
-          <p style="margin-bottom: 0;">Come prepared to participate! Bring a Scripture that stood out to you, a question you've wrestled with, or an insight that strengthened your faith. Let's learn from one another as we explore how God has communicated His truth.</p>
-        </div>
-
-        <p style="font-weight: 700; color: var(--primary-dark);">
-          Don't wait until Sabbath to open your Bible. Study throughout the week, invite the Holy Spirit to guide your understanding, and come ready to share! Let's move beyond simply reading the Word to understanding why we can trust the God who gave it to us.
-        </p>
-      </div>
-    </section>
-
-    <!-- Religious Liberty: Then & Now -->
-    <section id="liberty" class="section-card">
-      <h2 class="section-title">
-        <i class="fa-solid fa-scale-balanced"></i> Religious Liberty: Then &amp; Now
-      </h2>
-      <p class="section-subtitle">Could It Happen Again? The Lessons of Yesterday and the Warnings of Today</p>
-
-      <div class="article-content">
-        <p>In the late 1800s, Seventh-day Adventists were arrested, fined, and imprisoned for working on Sunday. In 1888, Senator Henry W. Blair introduced legislation seeking to establish Sunday rest under federal law.</p>
-        <p>Our Adventist pioneers recognized the danger. They organized, spoke before Congress, published religious liberty literature, and challenged the idea that government should determine religious observance.</p>
-        <p>More than 130 years later, we must ask: <strong>Could something similar happen again?</strong> And perhaps the more important question is: <strong>Would we recognize the warning signs?</strong></p>
-
-        <h3 class="article-heading">America in 2026: A Changing Religious Landscape</h3>
-        <p>Across America, discussions about the relationship between Christianity and government have intensified. In recent years, several states have advanced legislation concerning religious displays and religious instruction in public schools. Louisiana and Texas, for example, enacted laws requiring displays of the Ten Commandments in public-school classrooms, prompting legal challenges over the constitutional separation of church and state.</p>
-        <p>Meanwhile, debates about Christian nationalism, religious influence in public policy, and the government’s responsibility to protect religious expression continue to shape the national conversation. Some Christians welcome these developments as a restoration of America’s religious heritage. Others, including religious liberty advocates, question whether increased governmental involvement in religion could eventually threaten freedom of conscience.</p>
-        <p>The concern is not that Christians are participating in government. The concern arises when government begins using its authority to promote or enforce religious observance. That distinction is essential.</p>
-
-        <h3 class="article-heading">The Parallel Our Pioneers Would Recognize</h3>
-        <p>Consider what happened in 1888. Supporters of Sunday legislation argued that a common day of rest would benefit society, families, and workers. Those goals sounded reasonable. But Adventists understood that when government establishes a religiously significant day as a legal requirement, people whose convictions differ may face serious consequences.</p>
-        <p>Today, conversations about religion and government often begin with similarly appealing objectives: strengthening families, restoring morality, preserving traditions, and promoting national unity. These goals are not inherently wrong. But history teaches us to ask: <em>At what point does promoting religious values become enforcing religious practice? And who decides which religious beliefs receive government support?</em></p>
-
-        <h3 class="article-heading">What About Sunday Legislation Today?</h3>
-        <p>There is an important distinction we must make. America does not currently have a federal law requiring Sunday worship. Some states continue to maintain Sunday-related restrictions, often called blue laws, governing certain commercial activities. Such laws have historically been justified for both religious and secular reasons. A Sunday closing law is not automatically a law compelling worship.</p>
-        <p>Nevertheless, Adventist history reminds us why legislation involving religiously significant days deserves careful examination. The critical issue is whether government protects a person’s freedom to choose or uses civil authority to compel religious observance.</p>
-
-        <h3 class="article-heading">Ellen White’s Warning</h3>
-        <div class="quote-box">
-          “The dignitaries of church and state will unite to bribe, persuade, or compel all classes to honor the Sunday.”<br>
-          <span style="font-size: 0.9rem; font-weight: 600;">— The Great Controversy, p. 592</span>
-        </div>
-        <p>For Seventh-day Adventists, this warning has long been connected to our understanding of Revelation 13, which describes a future crisis involving worship, civil authority, and economic pressure (Revelation 13:17). Revelation 14:12 then identifies God’s faithful people: <em>“Here is the patience of the saints: here are they that keep the commandments of God, and the faith of Jesus.”</em></p>
-        <p>The issue is not merely a day. It is worship, obedience, and allegiance to God. But we must be careful not to declare every religious law, political movement, or court decision a fulfillment of prophecy. Prophecy calls us to be watchful, not reckless in our conclusions.</p>
-
-        <h3 class="article-heading">History Also Teaches Us Something Hopeful</h3>
-        <p>There is another lesson from the 1880s that we should not overlook: <strong>The Blair Sunday-Rest Bill failed.</strong> Our pioneers did not simply predict trouble and wait for it to happen. They acted. They educated their communities, wrote articles, challenged legislation, appealed to lawmakers, defended the rights of religious minorities, and helped establish a religious liberty ministry that continues today. Their example reminds us that Christians can be both prophetically aware and actively engaged in protecting freedom.</p>
-
-        <h3 class="article-heading">What Is Our Responsibility Today?</h3>
-        <p>Religious liberty is not merely the responsibility of pastors, lawyers, or church administrators. Every church member has a role. We can educate ourselves about religious freedom, follow legislative developments, communicate respectfully with elected officials, and defend the rights of those whose beliefs differ from our own. We can also remember that religious liberty begins with how we treat one another: Do we respect another person’s conscience? Do we defend religious freedom only when Adventists are affected? Are we willing to speak when someone’s freedom is threatened, even when we disagree with their beliefs?</p>
-
-        <div class="reflection-box">
-          <h4><i class="fa-solid fa-landmark-flag"></i> From the Adventist Archives: Did You Know?</h4>
-          <p>The Seventh-day Adventist Church’s organized religious liberty work traces its roots to the National Religious Liberty Association, established in 1889. What began during an era of Sunday-law prosecutions developed into an international ministry advocating religious freedom. Today, the church continues that work through its Public Affairs and Religious Liberty ministry and the International Religious Liberty Association. The mission remains rooted in the same principle: <strong>Religious freedom must be protected for everyone, not merely for those who share our faith.</strong></p>
-        </div>
-
-        <div class="quote-box">
-          <strong>Religious Liberty Thought for the Week:</strong><br>
-          The greatest danger is not simply that history might repeat itself. It is that we might forget the lessons history has already taught us. Our pioneers recognized the danger of allowing civil authority to enforce religious observance. They refused to remain silent. They defended their convictions while advocating freedom for others.<br><br>
-          <em>“Watch ye, stand fast in the faith, quit you like men, be strong.” — 1 Corinthians 16:13</em><br><br>
-          Religious liberty is not merely an Adventist heritage. It is an Adventist responsibility.
         </div>
       </div>
     </section>
 
     <!-- Year-End Banquet Spotlight Banner -->
     <section id="banquet" class="banquet-banner">
-      <span class="banquet-badge"><i class="fa-solid fa-champagne-glasses"></i> Save the Date — December 19, 2026</span>
-      <h2>End of Year Banquet: <span>It's Officially ON!</span></h2>
+      <span class="banquet-badge"><i class="fa-solid fa-champagne-glasses"></i> Official Update — Tickets $75</span>
+      <h2>2026 Church Family Life Banquet <span>Update!</span></h2>
       <p>
-        The Family Life Department is excited to invite the entire church family to our year-end banquet! Join us for a memorable evening of celebration, games, and fellowship with delicious catered West Indian cuisine alongside fully covered vegetarian and vegan menus.
+        The Family Life Department is excited to announce that authentic Caribbean catering has been secured, and tickets are officially <strong>$75 per person</strong>! A signup sheet is on the church bulletin board—please add your name to indicate your intention to attend and begin submitting your payments.
       </p>
       
       <div class="banquet-meta-grid">
@@ -979,15 +828,58 @@
           <span><strong>The Poconos Club</strong></span>
         </div>
         <div class="banquet-meta-item">
-          <i class="fa-solid fa-utensils"></i>
-          <span><strong>West Indian, Vegetarian &amp; Vegan Catered</strong></span>
+          <i class="fa-solid fa-ticket"></i>
+          <span><strong>$75 per person (All Ages Welcome)</strong></span>
         </div>
       </div>
 
-      <p style="font-size: 0.92rem; color: #f1f5f9; margin-bottom: 0;">
-        <i class="fa-solid fa-piggy-bank" style="color: var(--accent); margin-right: 0.4rem;"></i>
-        <strong>Tip:</strong> Start putting aside just <strong>$10 a week</strong> toward your banquet ticket now!
-      </p>
+      <div style="background: rgba(255, 255, 255, 0.08); padding: 1rem 1.25rem; border-radius: var(--radius-sm); border: 1px dashed rgba(255,255,255,0.25);">
+        <p style="font-size: 0.94rem; color: #f1f5f9; margin-bottom: 0;">
+          <i class="fa-solid fa-hand-holding-dollar" style="color: var(--accent); margin-right: 0.4rem;"></i>
+          <strong>How to Pay:</strong> When submitting your funds through online giving, please select <strong>“2026 Church Banquet.”</strong> Get your outfits ready, invite family and friends, and get excited for an unforgettable evening of Caribbean cuisine, fellowship, fun, and celebration as we close out 2026 together in grand style!
+        </p>
+      </div>
+    </section>
+
+    <!-- Family Life Moment -->
+    <section id="family-moment" class="section-card">
+      <h2 class="section-title">
+        <i class="fa-solid fa-house-chimney-window"></i> Family Life Moment | Stronger Together
+      </h2>
+      <p class="section-subtitle">Are We Living Together or Truly Connecting?</p>
+
+      <div class="family-life-card">
+        <h3>Building Meaningful Connection at Home</h3>
+        <p>
+          It’s possible to live under the same roof, share meals, attend church, and even serve in ministry together, yet feel miles apart emotionally.
+        </p>
+        <p>
+          Sometimes the people closest to us receive the least of our intentional attention. Your spouse may need more than your presence. Your children may need more than your provision. Your family may need more than your prayers for them. They may need you to pray <em>with</em> them.
+        </p>
+
+        <div class="challenge-box">
+          <h4><i class="fa-solid fa-stopwatch"></i> This Week’s Family Life Challenge</h4>
+          <p style="margin-bottom: 0.75rem;">
+            Set aside 15 minutes of uninterrupted time with your spouse, child, or another family member. Put away the phones. Listen without defending, correcting, or interrupting.
+          </p>
+          <div class="quote-box" style="margin: 0.5rem 0 0.75rem;">
+            “What is one thing I could do to help you feel more loved, heard, or supported?”
+          </div>
+          <p style="margin-bottom: 0; font-size: 0.92rem; color: var(--text-muted);">
+            Then listen to understand, not simply to respond.
+          </p>
+        </div>
+
+        <div class="quote-box">
+          “Let us not love with words or speech but with actions and in truth.”<br>
+          <span style="font-size: 0.9rem; font-weight: 600;">— 1 John 3:18 (NIV)</span>
+        </div>
+
+        <p style="font-weight: 700; color: var(--primary-dark); margin-bottom: 0;">
+          Remember: Strong families don’t happen by accident. They are built through intentional love, prayer, communication, forgiveness, and daily choices.<br>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--accent-hover);">— Brought to you by the Family Life Ministries Department &bull; Stronger Together!</span>
+        </p>
+      </div>
     </section>
 
     <!-- Special Notices & Event Flyers -->
@@ -995,57 +887,9 @@
       <h2 class="section-title">
         <i class="fa-solid fa-images"></i> Special Notices &amp; Event Flyers
       </h2>
-      <p class="section-subtitle">Upcoming outreach opportunities, memorials, and retreats</p>
+      <p class="section-subtitle">Upcoming retreats, fellowship banquets, and ministry initiatives</p>
 
       <div class="flyer-grid">
-        <!-- Veterans Day Parade Outreach Flyer -->
-        <div class="flyer-card">
-          <div class="flyer-img-wrap">
-            <img 
-              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/8489918D-5317-4611-9EBA-F7D8C8305E77.png" 
-              alt="Veterans Day Parade Outreach Flyer" 
-              class="flyer-img"
-              onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/8489918D-5317-4611-9EBA-F7D8C8305E77.png';"
-            />
-          </div>
-          <div class="flyer-body">
-            <span class="flyer-tag" style="background: #dbeafe; color: #1e40af;">Community Outreach</span>
-            <h3>Veterans Day Parade Outreach</h3>
-            <p>Join us tomorrow as we distribute literature and connect with our community during the parade.</p>
-            <ul class="meta-list">
-              <li><i class="fa-regular fa-calendar-check"></i> <strong>Sunday, November 1, 2026</strong></li>
-              <li><i class="fa-regular fa-clock"></i> <strong>12:00 PM</strong></li>
-              <li><i class="fa-solid fa-location-dot"></i> Meet at Stroudsburg SDA Church</li>
-            </ul>
-            <div class="tshirt-badge">
-              <i class="fa-solid fa-shirt"></i> Wear your NEED PRAYER? T-shirt
-            </div>
-          </div>
-        </div>
-
-        <!-- David Foster Memorial Flyer -->
-        <div class="flyer-card">
-          <div class="flyer-img-wrap">
-            <img 
-              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/39859424-D887-4CB0-AC9F-11B93CAEE37F.png" 
-              alt="Memorial Service for Brother David Foster" 
-              class="flyer-img"
-              onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/39859424-D887-4CB0-AC9F-11B93CAEE37F.png';"
-            />
-          </div>
-          <div class="flyer-body">
-            <span class="flyer-tag">Memorial Service</span>
-            <h3>In Loving Memory: Bro. David Foster</h3>
-            <p>Please join family and friends in honoring and celebrating the life and faith of our beloved brother David Foster tomorrow.</p>
-            <ul class="meta-list">
-              <li><i class="fa-regular fa-calendar-check"></i> <strong>Sunday, November 1, 2026</strong></li>
-              <li><i class="fa-regular fa-clock"></i> <strong>3:00 PM</strong></li>
-              <li><i class="fa-solid fa-church"></i> Mount Vernon Seventh-day Adventist Church</li>
-              <li><i class="fa-solid fa-location-dot"></i> 230 S Columbus Ave, Mt Vernon, NY 10553</li>
-            </ul>
-          </div>
-        </div>
-
         <!-- Women's Ministries Retreat 2027 Flyer -->
         <div class="flyer-card">
           <div class="flyer-img-wrap">
@@ -1059,7 +903,7 @@
           <div class="flyer-body">
             <span class="flyer-tag" style="background: #fce7f3; color: #9d174d;">Women's Ministry</span>
             <h3>Women’s Ministry Retreat 2027</h3>
-            <p>Theme: <em>Heaven at Last</em>. Guest speakers: <strong>Tina Hill</strong> and <strong>Michelle Mota Poiser</strong>. Ladies, you can begin making payments now to secure your spot!</p>
+            <p>Theme: <em>Heaven at Last</em>. Guest speakers: <strong>Tina Hill</strong> and <strong>Michelle Mota Poiser</strong>. Ladies, if you are interested in attending, please see any member of the Women’s Ministry team. You can begin making payments now to secure your spot!</p>
             <ul class="meta-list">
               <li><i class="fa-regular fa-calendar-check"></i> <strong>April 23–25, 2027</strong></li>
               <li><i class="fa-solid fa-users"></i> See any Women’s Ministry team member</li>
@@ -1073,24 +917,16 @@
     <!-- Weekly Worship Rhythms & Quick Links -->
     <section id="rhythms" class="section-card">
       <h2 class="section-title">
-        <i class="fa-solid fa-clock-rotate-left"></i> Weekly Rhythms &amp; Quick Links
+        <i class="fa-solid fa-clock-rotate-left"></i> This Week at Stroudsburg
       </h2>
       <p class="section-subtitle">Weekly ministries, prayer lines, and study fellowship</p>
 
       <div class="rhythms-grid">
-        <!-- Sanctuary Bible Class -->
-        <div class="rhythm-box">
-          <h4><i class="fa-solid fa-book-bible"></i> Sanctuary Bible Class</h4>
-          <div class="rhythm-schedule">Sabbaths @ 3:15 PM</div>
-          <p>Join us in the sanctuary each Sabbath afternoon as we delve deeply into God's Word together.</p>
-          <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Church Sanctuary</span>
-        </div>
-
         <!-- Prayer Meeting & Vespers -->
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-video"></i> Prayer Meeting &amp; Vespers</h4>
           <div class="rhythm-schedule">Wednesdays &amp; Fridays @ 7:15 PM</div>
-          <p>Join our church family for weekly intercessory prayer and welcoming the Sabbath together on Zoom.</p>
+          <p>Wednesday evening prayer meeting and Friday evening vesper continue this week at 7:15 p.m. on Zoom.</p>
           <a href="https://www.stroudsburgsda.org/vespers" target="_blank" rel="noopener" class="link-action">
             Open Zoom Portal <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -1127,33 +963,11 @@
         <div class="timeline-item">
           <div class="timeline-date">
             <span class="month">Nov</span>
-            <span class="day">01</span>
-          </div>
-          <div class="timeline-body">
-            <h4>Veterans Day Parade Outreach</h4>
-            <p><strong>Sunday, November 1 at 12:00 PM.</strong> Meet at Stroudsburg SDA Church as we distribute literature and connect with our community. Don't forget to wear your <strong>NEED PRAYER? T-shirt</strong>!</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">
-            <span class="month">Nov</span>
-            <span class="day">01</span>
-          </div>
-          <div class="timeline-body">
-            <h4>Memorial Service: Bro. David Foster</h4>
-            <p>Memorial service celebrating the life of Brother David Foster at <strong>3:00 PM</strong> at the Mount Vernon Seventh-day Adventist Church (230 S Columbus Ave, Mt Vernon, NY 10553).</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">
-            <span class="month">Nov</span>
             <span class="day">--</span>
           </div>
           <div class="timeline-body">
-            <h4>Thanksgiving Food Distribution</h4>
-            <p>Community Services holiday food distribution supporting local families. Mark "Thanksgiving Drive" on your tithe envelope to support.</p>
+            <h4>Community Services Thanksgiving Food Distribution</h4>
+            <p>Holiday meal packages distributed by Community Services to local families. Mark "Thanksgiving Drive" on your tithe envelope to support.</p>
           </div>
         </div>
 
@@ -1174,8 +988,8 @@
             <span class="day">19</span>
           </div>
           <div class="timeline-body">
-            <h4>Year-End Banquet: "It's Officially ON!"</h4>
-            <p><strong>Saturday, December 19, 2026 (7:00 PM – 11:00 PM) at The Poconos Club.</strong> Enjoy a full evening of fellowship, celebration, and catered food (West Indian dishes, vegetarian, and vegan options).</p>
+            <h4>2026 Church Family Life Banquet: $75/Person</h4>
+            <p><strong>Saturday, December 19, 2026 (7:00 PM – 11:00 PM) at The Poconos Club.</strong> Enjoy authentic Caribbean cuisine, fellowship, fun, and celebration for all ages. Sign up on the church bulletin board and designate payments to “2026 Church Banquet.”</p>
           </div>
         </div>
 
@@ -1269,7 +1083,7 @@
         <p><strong>Sabbath School:</strong> Saturday 9:30 AM</p>
         <p><strong>Divine Service:</strong> Saturday 11:00 AM</p>
         <p><strong>Sanctuary Bible Class:</strong> Saturday 3:15 PM</p>
-        <p><strong>AYS:</strong> Saturday 5:00 PM</p>
+        <p><strong>Adventurers:</strong> Saturday 4:00 PM</p>
         <p><strong>Prayer Meeting &amp; Vespers:</strong> Wed &amp; Fri 7:15 PM</p>
       </div>
     </div>
