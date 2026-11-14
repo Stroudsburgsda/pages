@@ -287,9 +287,9 @@
       color: #92400e;
     }
 
-    .tag-rose {
-      background: #ffe4e6;
-      color: #9f1239;
+    .tag-green {
+      background: #dcfce7;
+      color: #166534;
     }
 
     .card-today h3 {
@@ -305,89 +305,20 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Banquet Feature Banner */
-    .banquet-banner {
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-      color: #ffffff;
-      border-radius: var(--radius-lg);
-      padding: 2.25rem;
-      margin-bottom: 2.25rem;
-      box-shadow: var(--shadow-md);
-    }
-
-    .banquet-badge {
-      display: inline-block;
-      background: rgba(212, 163, 89, 0.2);
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
-    }
-
-    .banquet-banner h2 {
-      font-family: var(--font-serif);
-      font-size: 2.1rem;
-      line-height: 1.2;
-      color: #fff;
-      margin-bottom: 0.65rem;
-    }
-
-    .banquet-banner h2 span {
-      color: var(--accent);
-      font-style: italic;
-    }
-
-    .banquet-banner p {
-      font-size: 0.98rem;
-      color: #cbd5e1;
-      margin-bottom: 1.25rem;
-      line-height: 1.7;
-    }
-
-    .banquet-meta-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      background: rgba(255, 255, 255, 0.06);
-      padding: 1.25rem;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      margin-bottom: 1.25rem;
-    }
-
-    .banquet-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      font-size: 0.92rem;
-      color: #f1f5f9;
-    }
-
-    .banquet-meta-item i {
-      color: var(--accent);
-      font-size: 1.1rem;
-      width: 18px;
-    }
-
     /* Family Life Article Box */
     .family-life-card {
       background: var(--surface-alt);
       border-radius: var(--radius-md);
       border-left: 5px solid var(--accent);
       padding: 1.75rem 2rem;
-      margin-bottom: 1.75rem;
+      margin-bottom: 0.5rem;
     }
 
     .family-life-card h3 {
       font-family: var(--font-serif);
       font-size: 1.45rem;
       color: var(--primary-dark);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
 
     .family-life-card p {
@@ -428,10 +359,95 @@
       color: var(--accent);
     }
 
+    /* Banquet Feature Banner */
+    .banquet-banner {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      margin-bottom: 2.25rem;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 2.25rem;
+      align-items: center;
+    }
+
+    .banquet-badge {
+      display: inline-block;
+      background: rgba(212, 163, 89, 0.2);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .banquet-banner h2 {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 0.65rem;
+    }
+
+    .banquet-banner h2 span {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .banquet-banner p {
+      font-size: 0.96rem;
+      color: #cbd5e1;
+      margin-bottom: 1.25rem;
+      line-height: 1.65;
+    }
+
+    .banquet-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.85rem;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 1.15rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      margin-bottom: 1.25rem;
+    }
+
+    .banquet-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+      color: #f1f5f9;
+    }
+
+    .banquet-meta-item i {
+      color: var(--accent);
+      font-size: 1.05rem;
+      width: 18px;
+    }
+
+    .banquet-img-wrap {
+      text-align: center;
+    }
+
+    .banquet-img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
     /* Flyers Grid */
     .flyer-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       align-items: start;
     }
@@ -703,6 +719,13 @@
     }
 
     @media (max-width: 860px) {
+      .banquet-banner {
+        grid-template-columns: 1fr;
+      }
+      .banquet-img {
+        max-width: 280px;
+        margin: 0 auto;
+      }
       .nav-links {
         display: none;
       }
@@ -723,9 +746,9 @@
       </a>
       <ul class="nav-links">
         <li><a href="#today">Today's Focus</a></li>
-        <li><a href="#banquet">Year-End Banquet</a></li>
         <li><a href="#family-moment">Family Life Moment</a></li>
-        <li><a href="#features">Flyers &amp; Notices</a></li>
+        <li><a href="#banquet">Year-End Banquet</a></li>
+        <li><a href="#features">Event Flyers</a></li>
         <li><a href="#rhythms">Weekly Rhythms</a></li>
         <li><a href="#upcoming">Upcoming</a></li>
         <li><a href="#conference">PA Conference</a></li>
@@ -742,7 +765,7 @@
   <header class="hero">
     <div class="hero-content">
       <div class="badge-date">
-        <i class="fa-regular fa-calendar"></i> Sabbath, November 7, 2026
+        <i class="fa-regular fa-calendar"></i> Sabbath, November 14, 2026
       </div>
       <h1>Stroudsburg Seventh-day Adventist Church</h1>
       <p>Welcome to our house of worship. May your heart be renewed and your spirit strengthened by God’s grace and truth today.</p>
@@ -761,36 +784,39 @@
       <h2 class="section-title">
         <i class="fa-solid fa-bullhorn"></i> Today at Stroudsburg
       </h2>
-      <p class="section-subtitle">Announcements and ministry notices for Sabbath, November 7, 2026</p>
+      <p class="section-subtitle">Announcements and ministry notices for Sabbath, November 14, 2026</p>
 
       <div class="grid-today">
-        <!-- Adventurer Club -->
+        <!-- Pathfinder Announcements -->
         <div class="card-today">
           <div>
-            <span class="card-tag tag-blue"><i class="fa-solid fa-child"></i> Adventurer Ministry</span>
-            <h3>Stroudsburg Gems Adventurers</h3>
-            <p>The Stroudsburg Gems Adventurer Club will meet today from <strong>4:00 PM to 5:30 PM</strong>.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.88rem; color: var(--text);">
-              <strong>Leaders Needed:</strong> We are looking for individuals interested in serving as Adventurer Club leaders. If interested, please speak with <strong>Sister Mfon Joseph</strong> or <strong>Sister Napiela Nelson</strong>.
+            <span class="card-tag tag-green"><i class="fa-solid fa-campground"></i> Pathfinder Ministry</span>
+            <h3>Pathfinder Club &amp; Winter Drives</h3>
+            <p>Pathfinder Club meets <strong>today at 3:00 PM</strong> and <strong>tomorrow at 10:00 AM</strong>.</p>
+            <p style="font-size: 0.88rem; color: var(--text);">
+              <strong>Blanket &amp; Sleeping Bag Drive (Nov 14 – Dec 31):</strong> Collecting new or slightly used blankets and sleeping bags to benefit the homeless. Drop donations in the lobby box.
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text);">
+              <strong>Food Drive (Nov 14 – Dec 5):</strong> Partnering with Community Services to collect non-perishable food and dried goods (canned goods, cereal, pasta, dried beans, rice, etc.).
             </p>
           </div>
         </div>
 
-        <!-- Church Board Meeting -->
+        <!-- Men's Ministry -->
         <div class="card-today">
           <div>
-            <span class="card-tag tag-gold"><i class="fa-solid fa-users-gear"></i> Church Administration</span>
-            <h3>Church Board Meeting</h3>
-            <p>There will be a Church Board meeting <strong>today at 5:30 PM</strong>.</p>
+            <span class="card-tag tag-blue"><i class="fa-solid fa-user-tie"></i> Men's Ministry</span>
+            <h3>Men’s Ministry Meeting</h3>
+            <p>Men’s Ministry leader <strong>Bro. Eric Williams</strong> would like to meet all men in the classroom immediately after service today.</p>
           </div>
         </div>
 
-        <!-- No AYS Today -->
+        <!-- AYS Today -->
         <div class="card-today">
           <div>
-            <span class="card-tag tag-rose"><i class="fa-solid fa-circle-xmark"></i> Notice</span>
-            <h3>No AYS Today</h3>
-            <p>Please note that there will be <strong>no AYS meeting today</strong>.</p>
+            <span class="card-tag tag-gold"><i class="fa-solid fa-users"></i> Youth &amp; Young Adults</span>
+            <h3>AYS Today</h3>
+            <p>Adventist Youth Society (AYS) meets this afternoon at <strong>4:30 PM</strong>.</p>
           </div>
         </div>
 
@@ -799,97 +825,178 @@
           <div>
             <span class="card-tag tag-amber"><i class="fa-solid fa-heart"></i> Community Outreach</span>
             <h3>Thanksgiving Drive</h3>
-            <p>Our Community Services Department is launching this year’s Thanksgiving drive to bless local families with holiday meal supplies.</p>
-            <p style="font-size: 0.88rem;">To contribute financially, mark <strong>"Thanksgiving Drive"</strong> on your tithe envelope. For all other donations, contact <strong>Sister Nadine Gayle</strong>, Community Services Director.</p>
+            <p>Our Community Services Department is launching this year’s Thanksgiving drive to bless local families with supplies for a holiday meal.</p>
+            <p style="font-size: 0.88rem;">To contribute financially, mark <strong>"Thanksgiving Drive"</strong> on your tithe envelope before placing it in the offering collection. For all other donations, contact <strong>Sister Nadine Gayle</strong>, Community Services Director.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Family Life Moment Spotlight -->
+    <section id="family-moment" class="section-card">
+      <h2 class="section-title">
+        <i class="fa-solid fa-house-chimney-window"></i> Family Life Moment | Stronger Together
+      </h2>
+      <p class="section-subtitle">Week 2: Don’t Wait Until They’re Tired of Asking</p>
+
+      <div class="family-life-card">
+        <h3>Don’t Wait Until They’re Tired of Asking</h3>
+        <p>
+          Sometimes the greatest threat to a relationship isn’t a major argument. It’s the little things that go unheard, unnoticed, or unresolved over time.
+        </p>
+        <p>
+          When your spouse repeatedly asks for quality time, affection, appreciation, or understanding, they’re not necessarily complaining. They may be saying, <em>“I miss you. I need you. I want us to be closer.”</em>
+        </p>
+        <p>
+          When your child repeatedly asks you to spend time with them, they may be saying, <em>“I need to know that I matter to you.”</em>
+        </p>
+        <p>
+          And sometimes, when the asking stops, it doesn’t mean the need has disappeared. It may mean the person has grown tired of feeling unheard.
+        </p>
+
+        <div class="challenge-box">
+          <h4><i class="fa-solid fa-hand-holding-heart"></i> This Week’s Family Life Challenge</h4>
+          <p style="margin-bottom: 0.65rem;">
+            Think about something your spouse, child, parent, or another family member has been asking of you. Have you been listening? Have you made an effort to respond?
+          </p>
+          <p style="margin-bottom: 0.65rem; font-weight: 600; color: var(--primary-dark);">
+            Don’t wait for silence to realize that someone has been crying out for connection.
+          </p>
+          <p style="margin-bottom: 0; font-size: 0.94rem; color: var(--text-muted);">
+            Take one intentional step this week to show that you’ve heard them. It doesn’t have to be grand. Sometimes a hug, a conversation, an apology, or simply following through on a promise can make a difference.
+          </p>
+        </div>
+
+        <div class="quote-box">
+          “Be quick to listen, slow to speak and slow to become angry.”<br>
+          <span style="font-size: 0.9rem; font-weight: 600;">— James 1:19 (NIV)</span>
+        </div>
+
+        <p style="margin-bottom: 0.75rem;">
+          <strong>Remember:</strong> Love isn’t just about what we feel for one another. It’s also about how we respond to one another’s needs.
+        </p>
+        <p style="font-weight: 700; color: var(--primary-dark); margin-bottom: 0;">
+          Let’s not become so busy doing the work of the Lord that we neglect the precious people He has entrusted to our care.<br>
+          <span style="font-size: 0.9rem; font-weight: 600; color: var(--accent-hover);">— Brought to you by the Family Life Ministries Department &bull; Stronger Together!</span>
+        </p>
       </div>
     </section>
 
     <!-- Year-End Banquet Spotlight Banner -->
     <section id="banquet" class="banquet-banner">
-      <span class="banquet-badge"><i class="fa-solid fa-champagne-glasses"></i> Official Update — Tickets $75</span>
-      <h2>2026 Church Family Life Banquet <span>Update!</span></h2>
-      <p>
-        The Family Life Department is excited to announce that authentic Caribbean catering has been secured, and tickets are officially <strong>$75 per person</strong>! A signup sheet is on the church bulletin board—please add your name to indicate your intention to attend and begin submitting your payments.
-      </p>
-      
-      <div class="banquet-meta-grid">
-        <div class="banquet-meta-item">
-          <i class="fa-regular fa-calendar-check"></i>
-          <span><strong>Saturday, Dec 19, 2026</strong></span>
-        </div>
-        <div class="banquet-meta-item">
-          <i class="fa-regular fa-clock"></i>
-          <span><strong>7:00 PM – 11:00 PM</strong></span>
-        </div>
-        <div class="banquet-meta-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <span><strong>The Poconos Club</strong></span>
-        </div>
-        <div class="banquet-meta-item">
-          <i class="fa-solid fa-ticket"></i>
-          <span><strong>$75 per person (All Ages Welcome)</strong></span>
-        </div>
-      </div>
-
-      <div style="background: rgba(255, 255, 255, 0.08); padding: 1rem 1.25rem; border-radius: var(--radius-sm); border: 1px dashed rgba(255,255,255,0.25);">
-        <p style="font-size: 0.94rem; color: #f1f5f9; margin-bottom: 0;">
-          <i class="fa-solid fa-hand-holding-dollar" style="color: var(--accent); margin-right: 0.4rem;"></i>
-          <strong>How to Pay:</strong> When submitting your funds through online giving, please select <strong>“2026 Church Banquet.”</strong> Get your outfits ready, invite family and friends, and get excited for an unforgettable evening of Caribbean cuisine, fellowship, fun, and celebration as we close out 2026 together in grand style!
-        </p>
-      </div>
-    </section>
-
-    <!-- Family Life Moment -->
-    <section id="family-moment" class="section-card">
-      <h2 class="section-title">
-        <i class="fa-solid fa-house-chimney-window"></i> Family Life Moment | Stronger Together
-      </h2>
-      <p class="section-subtitle">Are We Living Together or Truly Connecting?</p>
-
-      <div class="family-life-card">
-        <h3>Building Meaningful Connection at Home</h3>
+      <div>
+        <span class="banquet-badge"><i class="fa-solid fa-champagne-glasses"></i> Save the Date — December 19, 2026</span>
+        <h2>2026 End of Year <span>Banquet</span></h2>
         <p>
-          It’s possible to live under the same roof, share meals, attend church, and even serve in ministry together, yet feel miles apart emotionally.
+          The committee is planning a wonderful evening of food, fellowship, fun, and celebration for the entire family! A sign-up sheet will be placed on the church bulletin board. Please add your name to indicate your intention to attend and begin submitting your payments.
         </p>
-        <p>
-          Sometimes the people closest to us receive the least of our intentional attention. Your spouse may need more than your presence. Your children may need more than your provision. Your family may need more than your prayers for them. They may need you to pray <em>with</em> them.
-        </p>
-
-        <div class="challenge-box">
-          <h4><i class="fa-solid fa-stopwatch"></i> This Week’s Family Life Challenge</h4>
-          <p style="margin-bottom: 0.75rem;">
-            Set aside 15 minutes of uninterrupted time with your spouse, child, or another family member. Put away the phones. Listen without defending, correcting, or interrupting.
-          </p>
-          <div class="quote-box" style="margin: 0.5rem 0 0.75rem;">
-            “What is one thing I could do to help you feel more loved, heard, or supported?”
+        
+        <div class="banquet-meta-grid">
+          <div class="banquet-meta-item">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span><strong>Saturday, Dec 19, 2026</strong></span>
           </div>
-          <p style="margin-bottom: 0; font-size: 0.92rem; color: var(--text-muted);">
-            Then listen to understand, not simply to respond.
+          <div class="banquet-meta-item">
+            <i class="fa-regular fa-clock"></i>
+            <span><strong>7:00 PM – 11:00 PM</strong></span>
+          </div>
+          <div class="banquet-meta-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span><strong>The Poconos Club</strong></span>
+          </div>
+          <div class="banquet-meta-item">
+            <i class="fa-solid fa-utensils"></i>
+            <span><strong>Caribbean Cuisine &amp; Celebration</strong></span>
+          </div>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.08); padding: 1rem 1.25rem; border-radius: var(--radius-sm); border: 1px dashed rgba(255,255,255,0.25);">
+          <p style="font-size: 0.92rem; color: #f1f5f9; margin-bottom: 0;">
+            <i class="fa-solid fa-hand-holding-dollar" style="color: var(--accent); margin-right: 0.4rem;"></i>
+            <strong>Giving Designation:</strong> When submitting your funds through church giving, please select <strong>“2026 Church Banquet.”</strong> Get your outfits ready, invite your family and friends, and get excited for an unforgettable evening!
           </p>
         </div>
+      </div>
 
-        <div class="quote-box">
-          “Let us not love with words or speech but with actions and in truth.”<br>
-          <span style="font-size: 0.9rem; font-weight: 600;">— 1 John 3:18 (NIV)</span>
-        </div>
-
-        <p style="font-weight: 700; color: var(--primary-dark); margin-bottom: 0;">
-          Remember: Strong families don’t happen by accident. They are built through intentional love, prayer, communication, forgiveness, and daily choices.<br>
-          <span style="font-size: 0.9rem; font-weight: 600; color: var(--accent-hover);">— Brought to you by the Family Life Ministries Department &bull; Stronger Together!</span>
-        </p>
+      <div class="banquet-img-wrap">
+        <img 
+          src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/11/B6963362-0828-45F1-B56F-F9CE05F25E74.png" 
+          alt="2026 End of Year Banquet Flyer" 
+          class="banquet-img"
+        />
       </div>
     </section>
 
     <!-- Special Notices & Event Flyers -->
     <section id="features" class="section-card">
       <h2 class="section-title">
-        <i class="fa-solid fa-images"></i> Special Notices &amp; Event Flyers
+        <i class="fa-solid fa-images"></i> Event Flyers &amp; Community Drives
       </h2>
-      <p class="section-subtitle">Upcoming retreats, fellowship banquets, and ministry initiatives</p>
+      <p class="section-subtitle">Details and flyers for our current outreach drives, banquets, and upcoming retreats</p>
 
       <div class="flyer-grid">
+        <!-- Thanksgiving Drive Flyer -->
+        <div class="flyer-card">
+          <div class="flyer-img-wrap">
+            <img 
+              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-13-at-3.57.18-PM.jpeg" 
+              alt="Community Services Thanksgiving Drive Flyer" 
+              class="flyer-img"
+            />
+          </div>
+          <div class="flyer-body">
+            <span class="flyer-tag" style="background: #fef3c7; color: #92400e;">Community Services</span>
+            <h3>2026 Thanksgiving Drive</h3>
+            <p>Help bless local families with supplies for a holiday meal this Thanksgiving season.</p>
+            <ul class="meta-list">
+              <li><i class="fa-solid fa-envelope-open-text"></i> <strong>Financial Gifts:</strong> Mark "Thanksgiving Drive" on your tithe envelope</li>
+              <li><i class="fa-solid fa-hand-holding-heart"></i> <strong>Other Donations:</strong> Contact Sister Nadine Gayle, Community Services Director</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pathfinder Winter Drives Flyer -->
+        <div class="flyer-card">
+          <div class="flyer-img-wrap">
+            <img 
+              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-13-at-4.04.14-PM.jpeg" 
+              alt="Pathfinder Blanket and Food Drive Flyer" 
+              class="flyer-img"
+            />
+          </div>
+          <div class="flyer-body">
+            <span class="flyer-tag" style="background: #dcfce7; color: #166534;">Pathfinder &amp; Community Services</span>
+            <h3>Blanket &amp; Non-Perishable Food Drives</h3>
+            <p>Help our Pathfinders and Community Services Department bless neighbors in need this winter season.</p>
+            <ul class="meta-list">
+              <li><i class="fa-solid fa-bed"></i> <strong>Blankets &amp; Sleeping Bags:</strong> Nov 14 – Dec 31 (Lobby collection box)</li>
+              <li><i class="fa-solid fa-box-open"></i> <strong>Non-Perishable Food Drive:</strong> Nov 14 – Dec 5 (Canned goods, cereal, pasta, dried beans, rice, etc.)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- End of Year Banquet Flyer -->
+        <div class="flyer-card">
+          <div class="flyer-img-wrap">
+            <img 
+              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/11/B6963362-0828-45F1-B56F-F9CE05F25E74.png" 
+              alt="2026 End of Year Banquet Flyer" 
+              class="flyer-img"
+            />
+          </div>
+          <div class="flyer-body">
+            <span class="flyer-tag" style="background: #fef3c7; color: #92400e;">Family Life Ministry</span>
+            <h3>2026 End of Year Banquet</h3>
+            <p>An unforgettable evening of delicious Caribbean cuisine, fellowship, fun, and celebration for the entire family.</p>
+            <ul class="meta-list">
+              <li><i class="fa-regular fa-calendar-check"></i> <strong>Saturday, December 19, 2026</strong></li>
+              <li><i class="fa-regular fa-clock"></i> <strong>7:00 PM – 11:00 PM</strong></li>
+              <li><i class="fa-solid fa-clipboard-list"></i> Sign up on the church bulletin board</li>
+              <li><i class="fa-solid fa-hand-holding-dollar"></i> Select <strong>“2026 Church Banquet”</strong> in church giving</li>
+            </ul>
+          </div>
+        </div>
+
         <!-- Women's Ministries Retreat 2027 Flyer -->
         <div class="flyer-card">
           <div class="flyer-img-wrap">
@@ -897,13 +1004,12 @@
               src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/IMG-20261021-WA0012.jpg.jpeg" 
               alt="Women's Ministry Retreat 2027 - Heaven at Last" 
               class="flyer-img"
-              onerror="this.onerror=null; this.src='https://stroudsburgsdachurch.org/wp-content/uploads/2026/10/IMG-20261021-WA0012.jpg.jpeg';"
             />
           </div>
           <div class="flyer-body">
             <span class="flyer-tag" style="background: #fce7f3; color: #9d174d;">Women's Ministry</span>
             <h3>Women’s Ministry Retreat 2027</h3>
-            <p>Theme: <em>Heaven at Last</em>. Guest speakers: <strong>Tina Hill</strong> and <strong>Michelle Mota Poiser</strong>. Ladies, if you are interested in attending, please see any member of the Women’s Ministry team. You can begin making payments now to secure your spot!</p>
+            <p>Theme: <em>Heaven at Last</em>. Guest speakers: <strong>Tina Hill</strong> and <strong>Michelle Mota Poiser</strong>. Ladies, if you are interested in attending, please see any member of the Women’s Ministry team for further information. You can begin making payments now to secure your spot!</p>
             <ul class="meta-list">
               <li><i class="fa-regular fa-calendar-check"></i> <strong>April 23–25, 2027</strong></li>
               <li><i class="fa-solid fa-users"></i> See any Women’s Ministry team member</li>
@@ -926,7 +1032,7 @@
         <div class="rhythm-box">
           <h4><i class="fa-solid fa-video"></i> Prayer Meeting &amp; Vespers</h4>
           <div class="rhythm-schedule">Wednesdays &amp; Fridays @ 7:15 PM</div>
-          <p>Wednesday evening prayer meeting and Friday evening vesper continue this week at 7:15 p.m. on Zoom.</p>
+          <p>Wednesday evening prayer meeting and Friday evening vesper continue this week at 7:15 p.m.</p>
           <a href="https://www.stroudsburgsda.org/vespers" target="_blank" rel="noopener" class="link-action">
             Open Zoom Portal <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -957,17 +1063,39 @@
       <h2 class="section-title">
         <i class="fa-solid fa-calendar-check"></i> Upcoming Events
       </h2>
-      <p class="section-subtitle">Mark your calendars for these upcoming worship services, community outreach days, and fellowships</p>
+      <p class="section-subtitle">Mark your calendars for these upcoming outreach drives, worship services, and fellowships</p>
 
       <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="month">Nov-Dec</span>
+            <span class="day">14-5</span>
+          </div>
+          <div class="timeline-body">
+            <h4>Pathfinder &amp; Community Services Non-Perishable Food Drive</h4>
+            <p>Runs November 14 through December 5. Collecting canned goods, cereal, pasta, dried beans, rice, and other dried goods.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="month">Nov-Dec</span>
+            <span class="day">14-31</span>
+          </div>
+          <div class="timeline-body">
+            <h4>Pathfinder Blanket &amp; Sleeping Bag Drive for the Homeless</h4>
+            <p>Runs November 14 through December 31. Place new or slightly used blankets and sleeping bags in the lobby collection box.</p>
+          </div>
+        </div>
+
         <div class="timeline-item">
           <div class="timeline-date">
             <span class="month">Nov</span>
             <span class="day">--</span>
           </div>
           <div class="timeline-body">
-            <h4>Community Services Thanksgiving Food Distribution</h4>
-            <p>Holiday meal packages distributed by Community Services to local families. Mark "Thanksgiving Drive" on your tithe envelope to support.</p>
+            <h4>Community Services Thanksgiving Drive</h4>
+            <p>Providing local families with supplies for a holiday meal. Mark "Thanksgiving Drive" on your tithe envelope or contact Sister Nadine Gayle.</p>
           </div>
         </div>
 
@@ -988,8 +1116,8 @@
             <span class="day">19</span>
           </div>
           <div class="timeline-body">
-            <h4>2026 Church Family Life Banquet: $75/Person</h4>
-            <p><strong>Saturday, December 19, 2026 (7:00 PM – 11:00 PM) at The Poconos Club.</strong> Enjoy authentic Caribbean cuisine, fellowship, fun, and celebration for all ages. Sign up on the church bulletin board and designate payments to “2026 Church Banquet.”</p>
+            <h4>End of Year Banquet</h4>
+            <p><strong>Saturday, December 19, 2026 (7:00 PM – 11:00 PM).</strong> Enjoy delicious Caribbean cuisine, fellowship, fun, and celebration for the entire family. Sign up on the church bulletin board and select “2026 Church Banquet” when submitting funds.</p>
           </div>
         </div>
 
@@ -1000,7 +1128,7 @@
           </div>
           <div class="timeline-body">
             <h4>Women’s Ministry Retreat 2027</h4>
-            <p><strong>April 23–25, 2027.</strong> Theme: <em>Heaven at Last</em>. Speakers: <strong>Tina Hill</strong> and <strong>Michelle Mota Poiser</strong>. See any Women's Ministry team member for details and to start payment plans.</p>
+            <p><strong>April 23–25, 2027.</strong> Theme: <em>Heaven at Last</em>. Speakers: <strong>Tina Hill</strong> and <strong>Michelle Mota Poiser</strong>. See any Women's Ministry team member for details and to start payments to secure your spot.</p>
           </div>
         </div>
       </div>
@@ -1083,7 +1211,7 @@
         <p><strong>Sabbath School:</strong> Saturday 9:30 AM</p>
         <p><strong>Divine Service:</strong> Saturday 11:00 AM</p>
         <p><strong>Sanctuary Bible Class:</strong> Saturday 3:15 PM</p>
-        <p><strong>Adventurers:</strong> Saturday 4:00 PM</p>
+        <p><strong>AYS:</strong> Saturday 4:30 PM</p>
         <p><strong>Prayer Meeting &amp; Vespers:</strong> Wed &amp; Fri 7:15 PM</p>
       </div>
     </div>
