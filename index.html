@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stroudsburg Seventh-day Adventist Church | Midweek Momentum</title>
+  <title>Stroudsburg Seventh-day Adventist Church | Digital Bulletin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -241,104 +241,115 @@
       margin-bottom: 1.75rem;
     }
 
-    /* Article Content */
-    .article-content {
-      font-size: 1.02rem;
-      color: #334155;
-      line-height: 1.8;
+    /* Grid Layouts */
+    .grid-today {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
     }
 
-    .article-content p {
-      margin-bottom: 1.25rem;
-    }
-
-    .scripture-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #fef3c7;
-      color: #92400e;
-      font-size: 0.85rem;
-      font-weight: 700;
-      padding: 0.35rem 0.85rem;
-      border-radius: 999px;
-      margin-bottom: 1.25rem;
-    }
-
-    .reflection-box {
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--primary);
-      padding: 1.5rem;
-      border-radius: var(--radius-sm);
-      margin: 1.75rem 0;
-    }
-
-    .reflection-box h4 {
-      font-size: 1.05rem;
-      color: var(--primary-dark);
-      margin-bottom: 0.65rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .reflection-box h4 i {
-      color: var(--accent);
-    }
-
-    /* Family Life Article Box */
-    .family-life-card {
+    .card-today {
       background: var(--surface-alt);
       border-radius: var(--radius-md);
-      border-left: 5px solid var(--accent);
-      padding: 1.75rem 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .family-life-card h3 {
-      font-family: var(--font-serif);
-      font-size: 1.45rem;
-      color: var(--primary-dark);
-      margin-bottom: 0.75rem;
-    }
-
-    .family-life-card p {
-      font-size: 0.98rem;
-      color: #334155;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .quote-box {
-      border-left: 4px solid var(--accent);
-      background: #ffffff;
-      padding: 1.25rem 1.5rem;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      margin: 1.25rem 0;
-      font-style: italic;
-      color: var(--primary-dark);
-    }
-
-    .challenge-box {
-      background: #ffffff;
+      padding: 1.5rem;
       border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1.25rem 1.5rem;
-      margin: 1.25rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
-    .challenge-box h4 {
-      font-size: 1rem;
+    .card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+      width: fit-content;
+    }
+
+    .tag-blue {
+      background: #e2e8f0;
       color: var(--primary-dark);
+    }
+
+    .tag-gold {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .tag-amber {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .tag-green {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .tag-red {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .card-today h3 {
+      font-size: 1.18rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.55rem;
+    }
+
+    .card-today p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
       margin-bottom: 0.5rem;
+    }
+
+    /* Video / Ministry Spotlight Card */
+    .ministry-spotlight {
+      background: var(--surface-alt);
+      border-radius: var(--radius-md);
+      border-left: 5px solid var(--primary);
+      padding: 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .video-embed-wrap {
+      width: 100%;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      background: #0f172a;
+    }
+
+    /* Allergen Alert Box */
+    .allergen-alert {
+      background: #fffbeb;
+      border: 1px solid #f59e0b;
+      border-left: 4px solid #d97706;
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.86rem;
+      color: #78350f;
+      line-height: 1.5;
+    }
+
+    .allergen-alert strong {
+      color: #92400e;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-    }
-
-    .challenge-box h4 i {
-      color: var(--accent);
+      gap: 0.4rem;
+      margin-bottom: 0.25rem;
     }
 
     /* Banquet Feature Banner */
@@ -701,7 +712,8 @@
     }
 
     @media (max-width: 860px) {
-      .banquet-banner {
+      .banquet-banner,
+      .ministry-spotlight {
         grid-template-columns: 1fr;
       }
       .banquet-img {
@@ -727,8 +739,8 @@
         <span>Stroudsburg SDA</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#momentum">Lesson Study</a></li>
-        <li><a href="#family-moment">Family Life Moment</a></li>
+        <li><a href="#today">Today's Focus</a></li>
+        <li><a href="#ministry-video">Ministry Spotlight</a></li>
         <li><a href="#banquet">Year-End Banquet</a></li>
         <li><a href="#features">Event Flyers</a></li>
         <li><a href="#rhythms">Weekly Rhythms</a></li>
@@ -747,13 +759,13 @@
   <header class="hero">
     <div class="hero-content">
       <div class="badge-date">
-        <i class="fa-regular fa-calendar"></i> Wednesday, November 18, 2026 &bull; Midweek Edition
+        <i class="fa-regular fa-calendar"></i> Sabbath, November 21, 2026
       </div>
-      <h1>Midweek Momentum &amp; Announcements</h1>
-      <p>Approaching God's Word with humility, fostering unity in the household of faith, and staying connected with our church community.</p>
+      <h1>Stroudsburg Seventh-day Adventist Church</h1>
+      <p>Welcome to our house of worship. May your heart be renewed and your spirit strengthened by God’s grace and truth today.</p>
       <div class="hero-actions">
-        <a href="#momentum" class="btn btn-accent"><i class="fa-solid fa-book-open"></i> Midweek Momentum</a>
-        <a href="#family-moment" class="btn btn-outline-light"><i class="fa-solid fa-heart"></i> Family Life Moment</a>
+        <a href="#today" class="btn btn-accent"><i class="fa-solid fa-bell"></i> Today's Announcements</a>
+        <a href="https://www.youtube.com/@StroudsburgSDAChurch/" target="_blank" rel="noopener" class="btn btn-outline-light"><i class="fa-brands fa-youtube"></i> Live Stream</a>
       </div>
     </div>
   </header>
@@ -761,103 +773,86 @@
   <!-- Main Content -->
   <main class="container">
 
-    <!-- 1. Midweek Momentum -->
-    <section id="momentum" class="section-card">
+    <!-- Today at Stroudsburg -->
+    <section id="today" class="section-card">
       <h2 class="section-title">
-        <i class="fa-solid fa-book-bible"></i> Midweek Momentum: Are We Listening to What God Is Saying?
+        <i class="fa-solid fa-bullhorn"></i> Today at Stroudsburg
       </h2>
-      <p class="section-subtitle">Sabbath School Lesson Study Preview: Interpreting Prophetic Writings</p>
+      <p class="section-subtitle">Announcements and ministry notices for Sabbath, November 21, 2026</p>
 
-      <div class="article-content">
-        <div class="scripture-pill">
-          <i class="fa-solid fa-scroll"></i> Scripture Focus: Luke 24:27
+      <div class="grid-today">
+        <!-- Adventurer Club -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-blue"><i class="fa-solid fa-child"></i> Adventurer Ministry</span>
+            <h3>Stroudsburg Gems Adventurer Club</h3>
+            <p>The Stroudsburg Gems Adventurer Club will meet today from <strong>4:00 to 5:30 PM</strong>.</p>
+          </div>
         </div>
 
-        <p>Have you ever been convinced you understood something, only to discover that you had completely missed the point?</p>
-
-        <p>This week's Sabbath School lesson, <em>Interpreting Prophetic Writings</em>, reminds us that how we approach Scripture is just as important as reading it.</p>
-
-        <p>Following the crucifixion, the disciples on the road to Emmaus were discouraged because Jesus had not fulfilled their expectations of the Messiah. They knew the prophecies, but their understanding was shaped by what they wanted to happen rather than what Scripture actually taught.</p>
-
-        <p>It took Jesus walking them through the Scriptures to help them see what they had missed.</p>
-
-        <p style="font-weight: 600; color: var(--primary-dark);">I think there's an important lesson here for all of us. We can know what the Bible says without fully understanding what it means.</p>
-
-        <p>One of the key points in this week's lesson is that the Bible should be its own interpreter. We need to consider the historical setting, the context of the passage, and what the rest of Scripture teaches before drawing conclusions.</p>
-
-        <p>We also need to be careful about taking verses out of context to support our positions. Remember, even Satan quoted Scripture when tempting Jesus in the wilderness. The words were biblical, but their application was misleading.</p>
-
-        <p>The same principles apply when studying the prophetic writings of Ellen G. White. Context matters, and we need to understand the principles being communicated rather than relying on isolated statements.</p>
-
-        <p>Ultimately, our goal in studying Scripture should not be to prove ourselves right, but to better understand God, strengthen our relationship with Him, and allow His Word to shape our lives.</p>
-
-        <div class="reflection-box">
-          <h4><i class="fa-solid fa-compass"></i> Something to Ponder</h4>
-          <p style="margin-bottom: 0.75rem;">
-            When we study the Bible, are we genuinely seeking to understand what God is saying, or are we looking for verses that support what we already believe?
-          </p>
-          <p style="margin-bottom: 0.75rem;">
-            And if Scripture challenges something we've believed for years, are we willing to reconsider our position?
-          </p>
-          <p style="margin-bottom: 0; font-weight: 600; color: var(--primary-dark);">
-            May we always approach God's Word with humility, an open mind, and a willingness to be taught.
-          </p>
+        <!-- Men's Ministry Breakfast -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-gold"><i class="fa-solid fa-utensils"></i> Men's Ministry</span>
+            <h3>Men’s Caribbean Breakfast</h3>
+            <p>All men are invited to a Men’s Breakfast <strong>tomorrow, Sunday, November 22 at 10:00 AM</strong>. Come out and enjoy a hearty Caribbean Breakfast and fellowship.</p>
+          </div>
         </div>
 
-        <p style="font-weight: 700; color: var(--primary-dark); margin-bottom: 0;">Have a blessed remainder of the week!</p>
+        <!-- AYS Today -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-blue"><i class="fa-solid fa-users"></i> Youth &amp; Young Adults</span>
+            <h3>AYS Today</h3>
+            <p>Adventist Youth Society (AYS) meets this afternoon at <strong>4:30 PM</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Pathfinder Club Drives -->
+        <div class="card-today">
+          <div>
+            <span class="card-tag tag-green"><i class="fa-solid fa-campground"></i> Pathfinder Club Drives</span>
+            <h3>Blanket &amp; Food Drives</h3>
+            <p style="font-size: 0.88rem; color: var(--text);">
+              <strong>Blanket &amp; Sleeping Bag Drive (Through Dec 31):</strong> Collecting new or slightly used blankets and sleeping bags to benefit the homeless. Drop donations in the lobby box.
+            </p>
+            <p style="font-size: 0.88rem; color: var(--text);">
+              <strong>Food Drive (Through Dec 5):</strong> Partnering with Community Services to collect non-perishable food and dried goods (canned goods, cereal, pasta, dried beans, rice, etc.).
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 2. Family Life Moment Spotlight -->
-    <section id="family-moment" class="section-card">
+    <!-- Christian Record Services for the Blind Video Highlight -->
+    <section id="ministry-video" class="section-card">
       <h2 class="section-title">
-        <i class="fa-solid fa-heart"></i> Family Life Moment | Stronger Together
+        <i class="fa-solid fa-hands-holding-circle"></i> Ministry Spotlight: Christian Record Services for the Blind
       </h2>
-      <p class="section-subtitle">Week 3: We Are Family, Even When We Disagree!</p>
+      <p class="section-subtitle">Supporting accessible spiritual resources, Braille literature, and community engagement initiatives</p>
 
-      <div class="family-life-card">
-        <h3>We Are Family, Even When We Disagree!</h3>
-        <p>
-          We often talk about strengthening our marriages and families, but let’s not forget another family God has blessed us with — our church family, the household of faith.
-        </p>
-        <p>
-          As children of the living God, we are brothers and sisters in Christ. And just like our families at home, we won’t always agree on everything.
-        </p>
-        <p>
-          We have different personalities, perspectives, experiences, and ways of doing things. But our differences don’t have to divide us.
-        </p>
-        <p>
-          We can disagree without disrespecting. We can correct without condemning. We can express our opinions without diminishing someone else’s worth.
-        </p>
-        <p style="font-weight: 600; color: var(--primary-dark);">
-          Unity doesn’t mean we all think alike. It means we choose to love and respect one another, even when we see things differently.
-        </p>
-
-        <div class="challenge-box">
-          <h4><i class="fa-solid fa-people-arrows"></i> This Week’s Family Life Challenge</h4>
-          <p style="margin-bottom: 0.65rem;">
-            Think about someone in our church family with whom you’ve disagreed, misunderstood, or perhaps grown distant.
+      <div class="ministry-spotlight">
+        <div>
+          <span class="card-tag tag-blue"><i class="fa-solid fa-eye"></i> NAD Ministry Highlight</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.45rem; color: var(--primary-dark); margin-bottom: 0.75rem;">
+            Community Engagement Volunteers &mdash; First Response Initiative
+          </h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.65;">
+            Christian Record Services for the Blind provides free Christian publications, Bible study guides, Braille books, large-print materials, audio downloads, and National Camps for Blind Children across North America.
           </p>
-          <div class="quote-box" style="margin: 0.5rem 0 0.75rem;">
-            Ask yourself: “Have I allowed a difference of opinion to become a barrier to fellowship?”
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.25rem; line-height: 1.65;">
+            Watch this special feature highlighting how volunteers and local churches connect with and serve individuals who are blind or visually impaired.
+          </p>
+          <a href="https://christianrecord.org" target="_blank" rel="noopener" class="link-action">
+            Learn more at christianrecord.org <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="video-embed-wrap">
+          <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe src="https://player.vimeo.com/video/1246432947?autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Community Engagement Volunteers - First Response Initiative"></iframe>
           </div>
-          <p style="margin-bottom: 0; font-size: 0.94rem; color: var(--text-muted);">
-            This week, make an intentional effort to extend kindness, offer encouragement, initiate a conversation, or take a step toward reconciliation.
-          </p>
         </div>
-
-        <div class="quote-box">
-          “Be devoted to one another in love. Honor one another above yourselves.”<br>
-          <span style="font-size: 0.9rem; font-weight: 600;">— Romans 12:10 (NIV)</span>
-        </div>
-
-        <p style="margin-bottom: 0.75rem;">
-          <strong>Remember:</strong> The world should be able to recognize that we belong to Jesus by the way we love one another — not just when we agree, but especially when we don’t.
-        </p>
-        <p style="font-weight: 700; color: var(--primary-dark); margin-bottom: 0;">
-          We are one family, serving one God, united in one mission. Let’s live like it!<br>
-          <span style="font-size: 0.9rem; font-weight: 600; color: var(--accent-hover);">— Brought to you by the Family Life Ministries Department &bull; Stronger Together!</span>
-        </p>
       </div>
     </section>
 
@@ -867,7 +862,7 @@
         <span class="banquet-badge"><i class="fa-solid fa-champagne-glasses"></i> Save the Date — December 19, 2026</span>
         <h2>2026 End of Year <span>Banquet</span></h2>
         <p>
-          The committee is planning a wonderful evening of food, fellowship, fun, and celebration for the entire family! A sign-up sheet is posted on the church bulletin board. Please add your name to indicate your intention to attend and begin submitting your payments.
+          The committee is planning a wonderful evening of food, fellowship, fun, and celebration for the entire family! A sign-up sheet will be placed on the church bulletin board. Please add your name to indicate your intention to attend and begin submitting your payments.
         </p>
         
         <div class="banquet-meta-grid">
@@ -885,7 +880,7 @@
           </div>
           <div class="banquet-meta-item">
             <i class="fa-solid fa-utensils"></i>
-            <span><strong>Caribbean Cuisine ($75/person)</strong></span>
+            <span><strong>Caribbean Cuisine &amp; Celebration</strong></span>
           </div>
         </div>
 
@@ -909,27 +904,48 @@
     <!-- Special Notices & Event Flyers -->
     <section id="features" class="section-card">
       <h2 class="section-title">
-        <i class="fa-solid fa-images"></i> Event Flyers &amp; Community Drives
+        <i class="fa-solid fa-images"></i> Event Flyers &amp; Community Outreach
       </h2>
-      <p class="section-subtitle">Details and flyers for our current outreach drives, banquets, and upcoming retreats</p>
+      <p class="section-subtitle">Details and flyers for fellowship meals, community drives, banquets, and upcoming retreats</p>
 
       <div class="flyer-grid">
-        <!-- Thanksgiving Drive Flyer -->
+        <!-- Fellowship Potluck & Allergen Caution Flyer -->
         <div class="flyer-card">
           <div class="flyer-img-wrap">
             <img 
-              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-13-at-3.57.18-PM.jpeg" 
-              alt="Community Services Thanksgiving Drive Flyer" 
+              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/11/5E3B9577-65BF-446B-A72D-18905623639A.png" 
+              alt="Church Fellowship Potluck & Allergen Notice" 
               class="flyer-img"
             />
           </div>
           <div class="flyer-body">
-            <span class="flyer-tag" style="background: #fef3c7; color: #92400e;">Community Services</span>
-            <h3>2026 Thanksgiving Drive</h3>
-            <p>Help bless local families with supplies for a holiday meal this Thanksgiving season.</p>
+            <span class="flyer-tag" style="background: #fef3c7; color: #92400e;">Fellowship &amp; Hospitality</span>
+            <h3>Church Family Potluck &amp; Allergen Notice</h3>
+            <p>Thank you for sharing dishes and warm fellowship at our church potluck! Please label your dishes clearly to help keep everyone safe.</p>
+            <div class="allergen-alert">
+              <strong><i class="fa-solid fa-triangle-exclamation"></i> Food Allergen Caution</strong>
+              While nuts are highlighted on the notice, please exercise caution and clearly label dishes containing <strong>any common food allergens</strong> (including peanuts, tree nuts, dairy, eggs, wheat/gluten, soy, and sesame) so members and guests with sensitivities can dine safely.
+            </div>
+          </div>
+        </div>
+
+        <!-- Christmas Day Community Lunch Flyer -->
+        <div class="flyer-card">
+          <div class="flyer-img-wrap">
+            <img 
+              src="https://stroudsburgsdachurch.org/wp-content/uploads/2026/11/BCFCF24F-E657-43A9-BFF0-E3BC528A2F6C.png" 
+              alt="Christmas Day Community Lunch Flyer" 
+              class="flyer-img"
+            />
+          </div>
+          <div class="flyer-body">
+            <span class="flyer-tag" style="background: #fee2e2; color: #991b1b;">Community Outreach</span>
+            <h3>Christmas Day Community Lunch</h3>
+            <p>Join us on Christmas Day as we share a warm holiday meal, joy, and Christ's love with neighbors and families in our community.</p>
             <ul class="meta-list">
-              <li><i class="fa-solid fa-envelope-open-text"></i> <strong>Financial Gifts:</strong> Mark "Thanksgiving Drive" on your tithe envelope</li>
-              <li><i class="fa-solid fa-hand-holding-heart"></i> <strong>Other Donations:</strong> Contact Sister Nadine Gayle, Community Services Director</li>
+              <li><i class="fa-regular fa-calendar-check"></i> <strong>Friday, December 25, 2026</strong></li>
+              <li><i class="fa-solid fa-utensils"></i> Free Holiday Meal &amp; Warm Fellowship</li>
+              <li><i class="fa-solid fa-location-dot"></i> Stroudsburg SDA Church</li>
             </ul>
           </div>
         </div>
@@ -948,8 +964,8 @@
             <h3>Blanket &amp; Non-Perishable Food Drives</h3>
             <p>Help our Pathfinders and Community Services Department bless neighbors in need this winter season.</p>
             <ul class="meta-list">
-              <li><i class="fa-solid fa-bed"></i> <strong>Blankets &amp; Sleeping Bags:</strong> Nov 14 – Dec 31 (Lobby collection box)</li>
-              <li><i class="fa-solid fa-box-open"></i> <strong>Non-Perishable Food Drive:</strong> Nov 14 – Dec 5 (Canned goods, cereal, pasta, dried beans, rice, etc.)</li>
+              <li><i class="fa-solid fa-bed"></i> <strong>Blankets &amp; Sleeping Bags:</strong> Collected through December 31 (Lobby collection box)</li>
+              <li><i class="fa-solid fa-box-open"></i> <strong>Non-Perishable Food Drive:</strong> Collected through December 5 (Canned goods, cereal, pasta, dried beans, rice, etc.)</li>
             </ul>
           </div>
         </div>
@@ -1047,34 +1063,23 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-date">
-            <span class="month">Nov-Dec</span>
-            <span class="day">14-5</span>
+            <span class="month">Nov</span>
+            <span class="day">22</span>
+          </div>
+          <div class="timeline-body">
+            <h4>Men’s Ministry Caribbean Breakfast</h4>
+            <p>Tomorrow, Sunday, November 22 at 10:00 AM. All men are invited for a hearty Caribbean Breakfast and fellowship.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="month">Dec</span>
+            <span class="day">05</span>
           </div>
           <div class="timeline-body">
             <h4>Pathfinder &amp; Community Services Non-Perishable Food Drive</h4>
-            <p>Runs November 14 through December 5. Collecting canned goods, cereal, pasta, dried beans, rice, and other dried goods.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">
-            <span class="month">Nov-Dec</span>
-            <span class="day">14-31</span>
-          </div>
-          <div class="timeline-body">
-            <h4>Pathfinder Blanket &amp; Sleeping Bag Drive for the Homeless</h4>
-            <p>Runs November 14 through December 31. Place new or slightly used blankets and sleeping bags in the lobby collection box.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">
-            <span class="month">Nov</span>
-            <span class="day">--</span>
-          </div>
-          <div class="timeline-body">
-            <h4>Community Services Thanksgiving Drive</h4>
-            <p>Providing local families with supplies for a holiday meal. Mark "Thanksgiving Drive" on your tithe envelope or contact Sister Nadine Gayle.</p>
+            <p>Runs through December 5. Collecting canned goods, cereal, pasta, dried beans, rice, and other dried goods.</p>
           </div>
         </div>
 
@@ -1096,7 +1101,29 @@
           </div>
           <div class="timeline-body">
             <h4>End of Year Banquet</h4>
-            <p><strong>Saturday, December 19, 2026 (7:00 PM – 11:00 PM).</strong> Enjoy delicious Caribbean cuisine, fellowship, fun, and celebration for the entire family. Sign up on the church bulletin board and select “2026 Church Banquet” when submitting funds.</p>
+            <p><strong>Saturday, December 19, 2026 (7:00 PM – 11:00 PM) at The Poconos Club.</strong> Enjoy delicious Caribbean cuisine, fellowship, fun, and celebration for the entire family. Sign up on the church bulletin board and select “2026 Church Banquet” when submitting funds.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="month">Dec</span>
+            <span class="day">25</span>
+          </div>
+          <div class="timeline-body">
+            <h4>Christmas Day Community Lunch</h4>
+            <p><strong>Friday, December 25, 2026.</strong> Serving a warm Christmas Day meal and sharing fellowship with our local community.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <span class="month">Dec</span>
+            <span class="day">31</span>
+          </div>
+          <div class="timeline-body">
+            <h4>Pathfinder Blanket &amp; Sleeping Bag Drive for the Homeless</h4>
+            <p>Runs through December 31. Place new or slightly used blankets and sleeping bags in the lobby collection box.</p>
           </div>
         </div>
 
@@ -1124,7 +1151,7 @@
       <div class="conference-box" style="border-left: 4px solid var(--accent);">
         <h4><i class="fa-solid fa-book-bible"></i> OneVoice27: Journey Through The Desire of Ages</h4>
         <p>
-          The Pennsylvania Conference is excited to join OneVoice27, a worldwide Seventh-day Adventist Church initiative inviting members to know Jesus more deeply and share His love ahead of a global digital harvest in September 2027. Beginning <strong>November 1</strong>, members are invited to journey through <em>The Desire of Ages</em> and the Gospels using a special reading journal with daily Scripture readings. Pick up your free gift journal from the pastor!
+          The Pennsylvania Conference is excited to join OneVoice27, a worldwide Seventh-day Adventist Church initiative inviting members to know Jesus more deeply and share His love ahead of a global digital harvest in September 2027. Members are invited to journey through <em>The Desire of Ages</em> and the Gospels using a special reading journal with daily Scripture readings. Pick up your free gift journal from the pastor!
         </p>
         <a href="https://paconference.org/onevoice27" target="_blank" rel="noopener">Learn more &amp; download resources at paconference.org/onevoice27 &rarr;</a>
       </div>
@@ -1190,6 +1217,7 @@
         <p><strong>Sabbath School:</strong> Saturday 9:30 AM</p>
         <p><strong>Divine Service:</strong> Saturday 11:00 AM</p>
         <p><strong>Sanctuary Bible Class:</strong> Saturday 3:15 PM</p>
+        <p><strong>Adventurers:</strong> Saturday 4:00 PM</p>
         <p><strong>AYS:</strong> Saturday 4:30 PM</p>
         <p><strong>Prayer Meeting &amp; Vespers:</strong> Wed &amp; Fri 7:15 PM</p>
       </div>
@@ -1200,5 +1228,6 @@
     </div>
   </footer>
 
+  <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 </html>
